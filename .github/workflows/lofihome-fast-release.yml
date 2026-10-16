@@ -1,0 +1,43 @@
+name: LOFIHOME fast release
+run-name: LOFIHOME draft ${{ inputs.release_id }}
+on:
+  workflow_dispatch:
+    inputs:
+      release_id:
+        required: true
+        type: string
+      delta_sha:
+        required: true
+        type: string
+      quick_sha:
+        required: true
+        type: string
+      manifest_sha:
+        required: true
+        type: string
+permissions:
+  contents: write
+concurrency:
+  group: lofihome-release
+  cancel-in-progress: false
+jobs:
+  assemble:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Reconstruct, verify, and publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_ID: ${{ inputs.release_id }}
+          DELTA_SHA: ${{ inputs.delta_sha }}
+          QUICK_SHA: ${{ inputs.quick_sha }}
+          MANIFEST_SHA: ${{ inputs.manifest_sha }}
+        run: >-
+          python automation/fast_release.py cloud
+          --release-id "$RELEASE_ID"
+          --delta-sha "$DELTA_SHA"
+          --quick-sha "$QUICK_SHA"
+          --manifest-sha "$MANIFEST_SHA"
