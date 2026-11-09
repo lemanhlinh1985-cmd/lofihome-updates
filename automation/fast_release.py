@@ -85,7 +85,13 @@ def reconstruct(base,delta,output):
         if metadata(output)!={k:spec['target'][k] for k in ('bytes','sha256')}:raise ValueError('Reconstructed archive differs')
         return spec
 
+def release_host_tag(manifest):
+    if 'sketchup_major' not in manifest and type(manifest.get('sketchup_min_major')) is int and manifest['sketchup_min_major']==21:return 'SU2021-PLUS'
+    if 'sketchup_min_major' not in manifest and type(manifest.get('sketchup_major')) is int and manifest['sketchup_major']==23:return 'SU2023-ONLY'
+    raise ValueError('Invalid SketchUp host range')
+
 def verify_pair(full,quick,manifest):
+    host_tag=release_host_tag(manifest)
     entries=inventory(full);patch=inventory(quick)
     if metadata(full)!={k:manifest[k] for k in ('bytes','sha256')} or metadata(quick)!={k:manifest['quick'][k] for k in ('bytes','sha256')}:raise ValueError('Asset mismatch')
     with zipfile.ZipFile(quick) as z:
@@ -97,7 +103,7 @@ def verify_pair(full,quick,manifest):
     with zipfile.ZipFile(full) as z:
         for n in (PREFIX+'.rb',PREFIX+'/main.rb'):
             if b'PhaoChiV305CornerLiteHost.allow_load?' not in z.read(n):raise ValueError('Host guard missing')
-        if f"ext.version = 'V{manifest['version']}-SU2023-ONLY'".encode() not in z.read(PREFIX+'.rb'):raise ValueError('Version mismatch')
+        if f"ext.version = 'V{manifest['version']}-{host_tag}'".encode() not in z.read(PREFIX+'.rb'):raise ValueError('Version mismatch')
         for n in ('portable_library.rb','portable_payloads.rb','portable_library/library.dat','portable_library/payload_index.json','portable_library/manifest.json','material_library/catalog.json','licensing.rb','license_store.rb','html/license.html','html/license.js','update_archive.rb','internet_update.rb'):
             if PREFIX+'/'+n not in entries:raise ValueError('Required file missing')
     return len(entries)
@@ -131,7 +137,7 @@ def cloud(release_id,delta_sha,quick_sha,manifest_sha):
             if hashlib.sha256(data).hexdigest()!=sha:raise ValueError('Downloaded asset mismatch')
             (temp/name).write_bytes(data)
         manifest=json.loads((temp/'latest.json').read_text('utf-8'))
-        if manifest['format']!='LOFIHOME_UPDATE_1' or manifest['product']!='LOFIHOME' or manifest['sketchup_major']!=23 or tag!='v'+manifest['version']:raise ValueError('Invalid manifest')
+        if manifest['format']!='LOFIHOME_UPDATE_1' or manifest['product']!='LOFIHOME' or not release_host_tag(manifest) or tag!='v'+manifest['version']:raise ValueError('Invalid manifest')
         name=asset_url(manifest['url'])
         if '/'+tag+'/' not in manifest['url'] or asset_url(manifest['quick']['url'])!=quick_names[0] or '/'+tag+'/' not in manifest['quick']['url']:raise ValueError('Wrong target tag')
         if set(names)-{DELTA_NAME,quick_names[0],'latest.json',name}:raise ValueError('Unexpected release assets')
