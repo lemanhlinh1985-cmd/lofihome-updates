@@ -1,0 +1,30 @@
+name: LOFIHOME - Kiem tra thu vien DXF
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'cnc-library/dxf/**'
+      - 'automation/lofihome_dxf.py'
+      - '.github/workflows/lofihome-dxf.yml'
+  pull_request:
+    paths:
+      - 'cnc-library/dxf/**'
+      - 'automation/lofihome_dxf.py'
+      - '.github/workflows/lofihome-dxf.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Kiem tra ten tep, ma bam va danh muc DXF
+        run: python3 automation/lofihome_dxf.py check --root .
