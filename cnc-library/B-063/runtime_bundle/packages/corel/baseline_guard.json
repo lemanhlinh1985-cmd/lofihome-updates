@@ -1,0 +1,139 @@
+{
+  "format": "LOFIHOME_LIBRARY_OVERLAY_1",
+  "product": "LOFIHOME.Corel",
+  "baseline_version": "1.0.26",
+  "version_file": "corel_version.json",
+  "version_file_sha256": "11fd2689877abfe5060373fe2ff8308dff38062933d43ba78389c535f5091b65",
+  "installation_path": "%LOCALAPPDATA%\\LOFIHOME\\Corel",
+  "sample": {
+    "id": "b-063",
+    "runtime_id": "patterns__capnhat_b-063",
+    "name": "B-063",
+    "revision": 2,
+    "width_mm": 600,
+    "height_mm": 1300,
+    "holes": 290,
+    "source_json_sha256": "1e41c874e93b78f9a7669684d723dfdb7c2a0ae1478c026b1efbba9ca80c602a"
+  },
+  "files": [
+    {
+      "path": "cnc_source_198/catalog.json",
+      "before_sha256": "46f3c00e35c65368ba4b368bf04bb9b1c4ba0539931949661c7f33870620afb9",
+      "sha256": "c4412699401e7246bb861bdf8683972e838a336680bf39de5f0628801f7e31e4",
+      "bytes": 131848
+    },
+    {
+      "path": "cnc_source_198/patterns/B-063.dxf",
+      "before_sha256": null,
+      "sha256": "51f5271613861d0cd8248ac81db6f50acc49f1fd930166ee1dd779f5b45b7f1f",
+      "bytes": 2422422
+    },
+    {
+      "path": "cnc_source_198/patterns/B-063.json",
+      "before_sha256": null,
+      "sha256": "ece9782c5a99f9571e7bf7dc54378668b390f9b7374b3bdd7002cbcf3ade1061",
+      "bytes": 769341
+    },
+    {
+      "path": "cnc_source_198/prepared/patterns__capnhat_b-063.json",
+      "before_sha256": null,
+      "sha256": "ece9782c5a99f9571e7bf7dc54378668b390f9b7374b3bdd7002cbcf3ade1061",
+      "bytes": 769341
+    },
+    {
+      "path": "cnc_source_198/prepared/patterns__capnhat_b-063.svg",
+      "before_sha256": null,
+      "sha256": "488d12b9ba2e7e186ee51d2d6fa851a779e4610351ab03dbee2d9fd461c51460",
+      "bytes": 392118
+    },
+    {
+      "path": "html/cnc/b063_sample_preset.js",
+      "before_sha256": null,
+      "sha256": "c0d3f9d1f8a5167a57f2c60117f4cd3412a650e016e8b3f143446ac5225b8f07",
+      "bytes": 6014
+    },
+    {
+      "path": "html/cnc/dxf_r12.js",
+      "before_sha256": null,
+      "sha256": "77df5d04792de511096ffd13e4e03253dbaab7ca42bc09e0391963f60db1c453",
+      "bytes": 34290
+    },
+    {
+      "path": "html/cnc/index.html",
+      "before_sha256": "b0a39926473fafddaf9e375f9593cb869e112a07e28a9587ad06e1e401705198",
+      "sha256": "327aaa9112e9d7a0f3482862b7c84a279f2abc83040695fead348effedbc9bca",
+      "bytes": 7747
+    },
+    {
+      "path": "html/cnc/panel_geometry.js",
+      "before_sha256": "06fea13d042aeb59a2f114f0f90dff057ea1591cb23c7ad745833b27e0e74c70",
+      "sha256": "1889062cadca3aa1ddfc766a2b0eb7822b3d266f4f5b894df8df0c367b75d8bd",
+      "bytes": 74417
+    },
+    {
+      "path": "html/cnc/panel_ui.js",
+      "before_sha256": "78ef78758c67411846285957299bf1fcc511652cccd124149e12e87327030b43",
+      "sha256": "7d256650d0c38307e474369c97db3e06d947e36b17c039b12af6bea7aec1d0e6",
+      "bytes": 148726
+    },
+    {
+      "path": "html/cnc/source_catalog.js",
+      "before_sha256": "beae7d746713d4a2c7216fcd3ad309726c06c8021731d48979a10b94ec4668f3",
+      "sha256": "bb2d30928e876ed187fa266f9894a1f236af61468e365687f002ec7f150cb45c",
+      "bytes": 131880
+    },
+    {
+      "path": "html/cnc/source_library.js",
+      "before_sha256": "f60487b49712060773b045ab8733f6461320252b0d37de25921cbd37b3b2d6d2",
+      "sha256": "e1b7c997772d9669b2eaf86df9d8cb273f58d8fed3017e585ef4ba5842a869d3",
+      "bytes": 24632
+    },
+    {
+      "path": "html/cnc/source_shapes/patterns__capnhat_b-063.js",
+      "before_sha256": null,
+      "sha256": "b3d1e4137f913e2688786c3113eb015790e8e6e8879295108a971a2c6903ea51",
+      "bytes": 769437
+    }
+  ],
+  "preserved_native_files": [
+    {
+      "path": "Microsoft.Web.WebView2.Core.dll",
+      "sha256": "acdd517b951829f763d1255f32df1e6a936cb8623a7ebff6b8b24172dede6bd6"
+    },
+    {
+      "path": "corel_version.json",
+      "sha256": "11fd2689877abfe5060373fe2ff8308dff38062933d43ba78389c535f5091b65"
+    },
+    {
+      "path": "LOFIHOME.Corel.exe",
+      "sha256": "b51a71f7db2815106bf853c68ec9ee0898672d0c9dae202fbe62225c219084cc"
+    },
+    {
+      "path": "Microsoft.Web.WebView2.WinForms.dll",
+      "sha256": "c66437f80886aecf074804b61af4cc10ad90a95310c8e0a717f31ea377c26b03"
+    },
+    {
+      "path": "LOFIHOME.CaptureSupport.dll",
+      "sha256": "bb867ec973768fb311824ac2445c88de4496035e6992cb12727198d517123a4b"
+    },
+    {
+      "path": "CorelMapCover.dll",
+      "sha256": "d39721bc5cf9189dc49eea6095cd4f13cd2147e8812d373386b54ae1604a768b"
+    },
+    {
+      "path": "LOFIHOME.Corel.UpdateBridge.dll",
+      "sha256": "1e23c5450ed029b90411b9e56835e3261261c42bda9cb6209bc3a2e0ab4c74dd"
+    },
+    {
+      "path": "LOFIHOME.CurveBatch.dll",
+      "sha256": "4445bc37d858322fd6f163a8a7c7d46e50f21f2fb48cbb362cb6c3976e419663"
+    },
+    {
+      "path": "LOFIHOME.Corel.Update.exe",
+      "sha256": "e1e58e6ccea1d9577e4acd658c378b357fee8453c6e432d9373dd19d4992d5d9"
+    }
+  ],
+  "native_update_channel_changed": false,
+  "publication_status": "prepared_not_published",
+  "notes": "Chỉ áp dụng lên đúng bản nền; kiểm tra toàn bộ mã tệp trước khi ghi. Không thay khóa, bộ kết nối hay cơ chế xác minh cập nhật."
+}

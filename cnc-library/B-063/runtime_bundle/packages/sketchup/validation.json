@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "changed_files": 29,
+  "equivalent_target_files": 4526,
+  "equivalent_version": "317.198",
+  "native_windows_tested": false,
+  "existing_package_report": "/workspace/scratch/f896d15861b1/cnc_deliverables/LOFIHOME_317_198_B-063/KIEM_TRA_GOI_317_198.json",
+  "immutable_guard_files": 6,
+  "required_runtime_files": 143
+}

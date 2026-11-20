@@ -1,0 +1,41 @@
+{
+  "sample_id": "b-063",
+  "name": "B-063",
+  "revision": 2,
+  "units": "mm",
+  "width": 600,
+  "height": 1300,
+  "parts": 1,
+  "holes": 290,
+  "target_hosts": [
+    "SketchUp",
+    "CorelDRAW",
+    "Aspire",
+    "AutoCAD",
+    "JDPaint",
+    "Rhino"
+  ],
+  "source_files": {
+    "B-063.json": {
+      "bytes": 769050,
+      "sha256": "1e41c874e93b78f9a7669684d723dfdb7c2a0ae1478c026b1efbba9ca80c602a"
+    },
+    "B-063.dxf": {
+      "bytes": 2422422,
+      "sha256": "51f5271613861d0cd8248ac81db6f50acc49f1fd930166ee1dd779f5b45b7f1f"
+    },
+    "B-063.svg": {
+      "bytes": 392124,
+      "sha256": "37266a64d17ab9a57224d0c56d6b92ecc9973c08cfa7abf83a4ec0d831ef80c9"
+    },
+    "B-063.png": {
+      "bytes": 464048,
+      "sha256": "a3c714f71677aefd2683f94847607bad6edf4417ca56949cfea91fbc425c3422"
+    },
+    "B-063_chi_tiet.png": {
+      "bytes": 111007,
+      "sha256": "3920c49f134caeed46ad174c5283a81d3cdc4e23dddbcf26dc228d854f8e5ed9"
+    }
+  },
+  "publication_status": "prepared_not_published"
+}

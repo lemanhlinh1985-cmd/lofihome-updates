@@ -1,0 +1,154 @@
+{
+  "baseline_version": "1.1.3",
+  "root": "Official package extraction root (parent of Thu_vien_LOFIHOME)",
+  "official_zip_sha256": "ce8a3bbcade8943310b8b79a6dcadf4d4e319ec83b7a963cc88dedfd013e949b",
+  "files": [
+    {
+      "path": "CAI_LOFIHOME_RHINO5.exe",
+      "sha256": "4ac441a982cdc062abafc18714dc0f5a687a8e5ac24ec64f74a7c9fcf51e8b88",
+      "bytes": 16896
+    },
+    {
+      "path": "Rhino_5_NET48/LOFIHOME.Rhino.rhp",
+      "sha256": "8cd71da6d60f16689729f1e8aba801a7504aec859fff56cd4e6aaf9a98168771",
+      "bytes": 82432
+    },
+    {
+      "path": "Rhino_5_NET48/Microsoft.Web.WebView2.Core.dll",
+      "sha256": "acdd517b951829f763d1255f32df1e6a936cb8623a7ebff6b8b24172dede6bd6",
+      "bytes": 703328
+    },
+    {
+      "path": "Rhino_5_NET48/Microsoft.Web.WebView2.WinForms.dll",
+      "sha256": "c66437f80886aecf074804b61af4cc10ad90a95310c8e0a717f31ea377c26b03",
+      "bytes": 38792
+    },
+    {
+      "path": "Rhino_5_NET48/x64/WebView2Loader.dll",
+      "sha256": "d3fce90bdeecb08596e377dea6a316354dd8949e32ff09b89d51be00c14e21b6",
+      "bytes": 194912
+    },
+    {
+      "path": "Rhino_6_NET48/LOFIHOME.Rhino.rhp",
+      "sha256": "f2dc5943411a732838f2704d12a49402d3cb2b6e82bc4e70316eaa11c846672c",
+      "bytes": 82432
+    },
+    {
+      "path": "Rhino_6_NET48/Microsoft.Web.WebView2.Core.dll",
+      "sha256": "acdd517b951829f763d1255f32df1e6a936cb8623a7ebff6b8b24172dede6bd6",
+      "bytes": 703328
+    },
+    {
+      "path": "Rhino_6_NET48/Microsoft.Web.WebView2.WinForms.dll",
+      "sha256": "c66437f80886aecf074804b61af4cc10ad90a95310c8e0a717f31ea377c26b03",
+      "bytes": 38792
+    },
+    {
+      "path": "Rhino_6_NET48/x64/WebView2Loader.dll",
+      "sha256": "d3fce90bdeecb08596e377dea6a316354dd8949e32ff09b89d51be00c14e21b6",
+      "bytes": 194912
+    },
+    {
+      "path": "Rhino_7_NET48/LOFIHOME.Rhino.rhp",
+      "sha256": "98a17f5168cee92dadb419885f90f2928ec82bb41db8ab19755cc86fdab2ddc5",
+      "bytes": 82432
+    },
+    {
+      "path": "Rhino_7_NET48/Microsoft.Web.WebView2.Core.dll",
+      "sha256": "acdd517b951829f763d1255f32df1e6a936cb8623a7ebff6b8b24172dede6bd6",
+      "bytes": 703328
+    },
+    {
+      "path": "Rhino_7_NET48/Microsoft.Web.WebView2.WinForms.dll",
+      "sha256": "c66437f80886aecf074804b61af4cc10ad90a95310c8e0a717f31ea377c26b03",
+      "bytes": 38792
+    },
+    {
+      "path": "Rhino_7_NET48/x64/WebView2Loader.dll",
+      "sha256": "d3fce90bdeecb08596e377dea6a316354dd8949e32ff09b89d51be00c14e21b6",
+      "bytes": 194912
+    },
+    {
+      "path": "Rhino_8_NET48/LOFIHOME.Rhino.rhp",
+      "sha256": "b62644c2821df89c35eb6c661601147d02f153f9021345df7f28d229b727da2f",
+      "bytes": 82432
+    },
+    {
+      "path": "Rhino_8_NET48/Microsoft.Web.WebView2.Core.dll",
+      "sha256": "acdd517b951829f763d1255f32df1e6a936cb8623a7ebff6b8b24172dede6bd6",
+      "bytes": 703328
+    },
+    {
+      "path": "Rhino_8_NET48/Microsoft.Web.WebView2.WinForms.dll",
+      "sha256": "c66437f80886aecf074804b61af4cc10ad90a95310c8e0a717f31ea377c26b03",
+      "bytes": 38792
+    },
+    {
+      "path": "Rhino_8_NET48/x64/WebView2Loader.dll",
+      "sha256": "d3fce90bdeecb08596e377dea6a316354dd8949e32ff09b89d51be00c14e21b6",
+      "bytes": 194912
+    },
+    {
+      "path": "Rhino_8_NET7/LOFIHOME.Rhino.rhp",
+      "sha256": "008fa45b1bfc211d8c8687d69ea5cfe60542bc27b4a1b49573d96c81469f6561",
+      "bytes": 81920
+    },
+    {
+      "path": "Rhino_8_NET7/Microsoft.Web.WebView2.Core.dll",
+      "sha256": "acdd517b951829f763d1255f32df1e6a936cb8623a7ebff6b8b24172dede6bd6",
+      "bytes": 703328
+    },
+    {
+      "path": "Rhino_8_NET7/Microsoft.Web.WebView2.WinForms.dll",
+      "sha256": "35879378cb078733af0e13ce6db8f0675593e3c8a10bfb0a5cedb0766f875a59",
+      "bytes": 39264
+    },
+    {
+      "path": "Rhino_8_NET7/x64/WebView2Loader.dll",
+      "sha256": "d3fce90bdeecb08596e377dea6a316354dd8949e32ff09b89d51be00c14e21b6",
+      "bytes": 194912
+    },
+    {
+      "path": "Rhino_8_NET8/LOFIHOME.Rhino.rhp",
+      "sha256": "078200baf5090f10cdc12af63ca20fec3d41730674cc35d867f3978ccd139926",
+      "bytes": 80896
+    },
+    {
+      "path": "Rhino_8_NET8/Microsoft.Web.WebView2.Core.dll",
+      "sha256": "acdd517b951829f763d1255f32df1e6a936cb8623a7ebff6b8b24172dede6bd6",
+      "bytes": 703328
+    },
+    {
+      "path": "Rhino_8_NET8/Microsoft.Web.WebView2.WinForms.dll",
+      "sha256": "35879378cb078733af0e13ce6db8f0675593e3c8a10bfb0a5cedb0766f875a59",
+      "bytes": 39264
+    },
+    {
+      "path": "Rhino_8_NET8/x64/WebView2Loader.dll",
+      "sha256": "d3fce90bdeecb08596e377dea6a316354dd8949e32ff09b89d51be00c14e21b6",
+      "bytes": 194912
+    },
+    {
+      "path": "Rhino_9_NET10/LOFIHOME.Rhino.rhp",
+      "sha256": "20cd193365dc73249c5ebd0aafa94246e1cb0fd80a6f7b652f90642f6ff28b66",
+      "bytes": 81920
+    },
+    {
+      "path": "Rhino_9_NET10/Microsoft.Web.WebView2.Core.dll",
+      "sha256": "acdd517b951829f763d1255f32df1e6a936cb8623a7ebff6b8b24172dede6bd6",
+      "bytes": 703328
+    },
+    {
+      "path": "Rhino_9_NET10/Microsoft.Web.WebView2.WinForms.dll",
+      "sha256": "35879378cb078733af0e13ce6db8f0675593e3c8a10bfb0a5cedb0766f875a59",
+      "bytes": 39264
+    },
+    {
+      "path": "Rhino_9_NET10/x64/WebView2Loader.dll",
+      "sha256": "d3fce90bdeecb08596e377dea6a316354dd8949e32ff09b89d51be00c14e21b6",
+      "bytes": 194912
+    }
+  ],
+  "all_verified_against_authoritative_zip": true,
+  "native_files_replaced": false
+}

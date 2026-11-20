@@ -1,0 +1,15 @@
+{
+  "format": "LOFIHOME_UPDATE_1",
+  "product": "LOFIHOME",
+  "sketchup_min_major": 21,
+  "version": "317.198",
+  "notes": "Bổ sung mẫu vách B-063 đã duyệt vào thư viện, nâng tổng số lên 305 mẫu. B-063 khổ 600 × 1300 mm, 290 lỗ khoét; đã bỏ chi tiết được chọn và làm mịn đường cong. Giữ nguyên tên B-063, 304 mẫu hiện có, 24 mẫu thiết kế, các chức năng phào/lam/MAP và khóa theo máy. Sau cập nhật, lưu bản vẽ, đóng rồi mở lại SketchUp.",
+  "url": "https://github.com/lemanhlinh1985-cmd/lofihome-updates/releases/download/v317.198/LOFIHOME_V317_198_SU2021_PLUS_NHOM_ZALO.rbz",
+  "bytes": 1707978169,
+  "sha256": "93d652787565690bd41dfaa0835b0a3bc5c46549dd305f93386795cbcc82c0a2",
+  "quick": {
+    "url": "https://github.com/lemanhlinh1985-cmd/lofihome-updates/releases/download/v317.198/LOFIHOME_V317_198_CAP_NHAT_NHANH.rbz",
+    "bytes": 68809937,
+    "sha256": "18bc5f6b1d9b5392bac4e632542a05e20f01a7dabef6435945f734a28de9eab2"
+  }
+}

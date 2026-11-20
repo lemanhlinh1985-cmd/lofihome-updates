@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "existing_signed_model_contract": "{entry,shape}",
+  "model_file": "f9e1ebe4bb6a39822603eb1202e8fd1e2876ff52ed9dfb6d0c5baee953dec41e.json",
+  "model_bytes": 770486,
+  "model_sha256": "f9e1ebe4bb6a39822603eb1202e8fd1e2876ff52ed9dfb6d0c5baee953dec41e",
+  "old_signed_feed_item_preserved": true,
+  "proposed_feed_revision": 2,
+  "proposed_release": 2,
+  "existing_updater_unchanged": true,
+  "known_builtin_revision2_not_overwritten_by_cached_revision1": true,
+  "same_model_idempotent": true,
+  "missing_model_added_with_preview_and_ui_event": true,
+  "existing_native_additive_by_id_semantics_preserved": true,
+  "limitation": "Existing Rhino updater adds missing IDs and ignores all known IDs; a future replacement requires the established native release process or a separately reviewed updater change.",
+  "requires_owner_signature": true,
+  "runtime_overlay_required_for_full_b063_support": true,
+  "scope": "Production rhino_updates.js merge body, catalog and actual owner-model JSON in a Node VM. No native verifier or server publication executed."
+}

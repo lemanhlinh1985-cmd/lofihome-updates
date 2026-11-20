@@ -1,0 +1,19 @@
+﻿MÃ NGUỒN BỘ CẬP NHẬT THƯ VIỆN B-063
+
+Chạy CAP_NHAT_THU_VIEN_B063.exe cùng thư mục với bo_cai.json và đầy đủ các thư mục packages do bộ phát hành cung cấp. EXE chỉ cập nhật dữ liệu của những thư viện được chọn, không cài phần mềm CAD mới.
+
+Nguồn:
+- OverlayEngine.cs: kiểm tra bản kê, mã tệp, đường dẫn, tạo sao lưu, thay tệp nguyên tử và khôi phục khi lỗi.
+- UpdaterUI.cs: giao diện Windows; hỗ trợ nhiều phiên bản/đường dẫn, chọn thư mục, kiểm tra và cập nhật. Không tự đóng tiến trình, không nâng quyền.
+- EngineChecks.cs: kiểm tra chính động cơ giao dịch bằng .NET 8 trong môi trường tạm; có chế độ chỉ đọc --verify <thu-muc-goi> <danh-sach-goc.json>.
+- app.manifest: asInvoker.
+- InspectPe.cs: đọc metadata PE sau biên dịch.
+- build_updater.py: biên dịch Windows .NET Framework 4.6.2, xác nhận đầu ra lặp lại giống nhau, chạy kiểm tra động cơ và kiểm tra metadata.
+
+DỰNG LẠI
+1. Tải SDK .NET 8.0.428 Linux x64 và reference assemblies net462 từ các URL chính thức trong TOOLCHAIN_PROVENANCE.json. Kiểm tra đúng SHA512/SHA256 trước khi giải nén.
+2. Đặt SDK tại ../toolchain/dotnet và reference package tại ../toolchain/net462 so với thư mục mã nguồn này.
+3. Chạy python build_updater.py. Không cần cài .NET 8 trên máy Windows sử dụng EXE; EXE chỉ tham chiếu .NET Framework 4.x.
+4. Kết quả nằm ở built/: EXE, BUILD_VERIFICATION.json và ENGINE_CHECKS.txt.
+
+Phạm vi xác nhận: đã biên dịch chéo, kiểm tra PE và động cơ tệp trên Linux. Chưa chạy giao diện EXE hoặc các phần mềm CAD trên Windows.

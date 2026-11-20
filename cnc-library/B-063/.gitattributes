@@ -1,0 +1,3 @@
+# Every file here is byte-pinned by RELEASE_SPEC.json.
+# Keep DXF CRLF, native UI text and ZIP bytes unchanged when committing on Windows.
+* -text

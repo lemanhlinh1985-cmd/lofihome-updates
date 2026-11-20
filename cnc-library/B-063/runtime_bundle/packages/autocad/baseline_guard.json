@@ -1,0 +1,123 @@
+{
+  "format": "LOFIHOME_LIBRARY_OVERLAY_1",
+  "product": "LOFIHOME.AutoCAD",
+  "baseline_version": "1.0.0",
+  "version_file": "autocad_version.json",
+  "version_file_sha256": "2bbbb00a8cdf2ed35408be314a002ce7a5942e14bdf4ae2d1eeae96b5a9ef63b",
+  "installation_path": "%LOCALAPPDATA%\\LOFIHOME\\AutoCAD",
+  "sample": {
+    "id": "b-063",
+    "runtime_id": "patterns__capnhat_b-063",
+    "name": "B-063",
+    "revision": 2,
+    "width_mm": 600,
+    "height_mm": 1300,
+    "holes": 290,
+    "source_json_sha256": "1e41c874e93b78f9a7669684d723dfdb7c2a0ae1478c026b1efbba9ca80c602a"
+  },
+  "files": [
+    {
+      "path": "cnc_source_198/catalog.json",
+      "before_sha256": "46f3c00e35c65368ba4b368bf04bb9b1c4ba0539931949661c7f33870620afb9",
+      "sha256": "c4412699401e7246bb861bdf8683972e838a336680bf39de5f0628801f7e31e4",
+      "bytes": 131848
+    },
+    {
+      "path": "cnc_source_198/patterns/B-063.dxf",
+      "before_sha256": null,
+      "sha256": "51f5271613861d0cd8248ac81db6f50acc49f1fd930166ee1dd779f5b45b7f1f",
+      "bytes": 2422422
+    },
+    {
+      "path": "cnc_source_198/patterns/B-063.json",
+      "before_sha256": null,
+      "sha256": "ece9782c5a99f9571e7bf7dc54378668b390f9b7374b3bdd7002cbcf3ade1061",
+      "bytes": 769341
+    },
+    {
+      "path": "cnc_source_198/prepared/patterns__capnhat_b-063.json",
+      "before_sha256": null,
+      "sha256": "ece9782c5a99f9571e7bf7dc54378668b390f9b7374b3bdd7002cbcf3ade1061",
+      "bytes": 769341
+    },
+    {
+      "path": "cnc_source_198/prepared/patterns__capnhat_b-063.svg",
+      "before_sha256": null,
+      "sha256": "488d12b9ba2e7e186ee51d2d6fa851a779e4610351ab03dbee2d9fd461c51460",
+      "bytes": 392118
+    },
+    {
+      "path": "html/cnc/b063_sample_preset.js",
+      "before_sha256": null,
+      "sha256": "c0d3f9d1f8a5167a57f2c60117f4cd3412a650e016e8b3f143446ac5225b8f07",
+      "bytes": 6014
+    },
+    {
+      "path": "html/cnc/dxf_r12.js",
+      "before_sha256": null,
+      "sha256": "77df5d04792de511096ffd13e4e03253dbaab7ca42bc09e0391963f60db1c453",
+      "bytes": 34290
+    },
+    {
+      "path": "html/cnc/index.html",
+      "before_sha256": "03fad223c85fcd455238ad33002a1c9953ddd52c7f7a5bf90ae357735166e82a",
+      "sha256": "9fce745f1a61c5d76e5adc1c6e323d5e320400ba2414aade1c9f9d12a47c04a6",
+      "bytes": 7736
+    },
+    {
+      "path": "html/cnc/panel_geometry.js",
+      "before_sha256": "06fea13d042aeb59a2f114f0f90dff057ea1591cb23c7ad745833b27e0e74c70",
+      "sha256": "1889062cadca3aa1ddfc766a2b0eb7822b3d266f4f5b894df8df0c367b75d8bd",
+      "bytes": 74417
+    },
+    {
+      "path": "html/cnc/panel_ui.js",
+      "before_sha256": "ae52eaac5ca50c008f00fb3e9872f8596f22c96d0f47b2912ad01fdf49c348bc",
+      "sha256": "c299ad20354df4a86b6f85985ac1787ad8e39740eeca995ff282ee4b209ad9ca",
+      "bytes": 148751
+    },
+    {
+      "path": "html/cnc/source_catalog.js",
+      "before_sha256": "67aa44746aa8f181b5cf91c29c77c63cb2c5efa2b17a74a84eba2e5920266bf3",
+      "sha256": "bb2d30928e876ed187fa266f9894a1f236af61468e365687f002ec7f150cb45c",
+      "bytes": 131880
+    },
+    {
+      "path": "html/cnc/source_library.js",
+      "before_sha256": "74ce71cfbef8345f6bb22ea8054d2523ebdf2b0772714f8cb315e187ea5190df",
+      "sha256": "9fd0156772ffc312f49cdcbaa403992422a203a1b5de663c277467e85405db57",
+      "bytes": 25026
+    },
+    {
+      "path": "html/cnc/source_shapes/patterns__capnhat_b-063.js",
+      "before_sha256": null,
+      "sha256": "b3d1e4137f913e2688786c3113eb015790e8e6e8879295108a971a2c6903ea51",
+      "bytes": 769437
+    }
+  ],
+  "preserved_native_files": [
+    {
+      "path": "Microsoft.Web.WebView2.Core.dll",
+      "sha256": "acdd517b951829f763d1255f32df1e6a936cb8623a7ebff6b8b24172dede6bd6"
+    },
+    {
+      "path": "LOFIHOME.License.Runtime.dll",
+      "sha256": "b51a71f7db2815106bf853c68ec9ee0898672d0c9dae202fbe62225c219084cc"
+    },
+    {
+      "path": "Microsoft.Web.WebView2.WinForms.dll",
+      "sha256": "c66437f80886aecf074804b61af4cc10ad90a95310c8e0a717f31ea377c26b03"
+    },
+    {
+      "path": "autocad_version.json",
+      "sha256": "2bbbb00a8cdf2ed35408be314a002ce7a5942e14bdf4ae2d1eeae96b5a9ef63b"
+    },
+    {
+      "path": "LOFIHOME.AutoCAD.exe",
+      "sha256": "e503173ee195b8e06848410e55bc1b25666453b31d81029e9a901554ce0ceaa2"
+    }
+  ],
+  "native_update_channel_changed": false,
+  "publication_status": "prepared_not_published",
+  "notes": "Chỉ áp dụng lên đúng bản nền; kiểm tra toàn bộ mã tệp trước khi ghi. Không thay khóa, bộ kết nối hay cơ chế xác minh cập nhật."
+}

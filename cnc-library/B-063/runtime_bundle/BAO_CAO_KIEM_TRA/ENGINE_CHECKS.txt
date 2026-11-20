@@ -1,0 +1,14 @@
+PASS two-host atomic update, unchanged runtimes and idempotence
+PASS wrong second-host baseline rejects every target before writes
+PASS wrong source hash rejects all hosts
+PASS native and additional runtime hashes are mandatory
+PASS unsafe Windows and relative paths rejected
+PASS source and target symlinks rejected
+PASS rollback restores both hosts after four committed files
+PASS rollback refuses a substituted parent symlink without deleting outside data
+PASS stale verification rejected before backup or target writes
+PASS already-current rows can coexist with old rows
+PASS backup failure cannot modify targets
+PASS EXE DLL RHP mutation, duplicate paths and runtime overlap rejected
+PASS duplicate or nested selected roots rejected
+ALL PASSED 13 meaningful engine checks; no native Windows UI execution.

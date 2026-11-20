@@ -1,0 +1,2348 @@
+<!doctype html>
+<html><head><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta charset="utf-8">
+<style>
+body{font-family:Arial;margin:0;background:#f2f3f5;color:#222}
+header{background:#242a30;color:#fff;padding:14px 18px;font-size:18px}
+.controls{padding:10px;background:#fff;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+input,select,button{padding:7px;border:1px solid #bbb;border-radius:4px}
+button{background:#1976d2;color:#fff;cursor:pointer}
+#grid{display:grid;grid-template-columns:repeat(6,1fr);gap:9px;padding:12px}
+.card{background:#fff;border:2px solid transparent;padding:6px;cursor:pointer}
+.card.sel{border-color:#1976d2}.thumb{height:90px;border:1px solid #ddd}
+.name{font-size:12px;margin-top:4px}.cat{font-size:10px;color:#777}
+svg{width:100%;height:100%}
+
+*{box-sizing:border-box}html{height:100%}body{height:100%;display:flex;flex-direction:column;font-size:12px;overflow:hidden}
+header{padding:9px 12px;font-size:14px;display:flex;justify-content:space-between;align-items:center;flex-shrink:0}.build{font-size:11px;color:#cce9df}
+.controls{padding:7px 10px;gap:6px;flex-shrink:0}input,select,button{font-size:12px;padding:5px;border-radius:4px;max-width:100%}
+#search{flex:1;min-width:110px;width:140px}.main-controls label{white-space:nowrap}.actions{padding-top:0}.actions button{flex:1;min-width:170px}
+.sections{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px;padding:5px 10px 8px;background:#fff;max-height:46vh;overflow:auto;flex-shrink:0}
+.tool-group{border:1px solid #d5dce5;border-radius:5px;min-width:0;align-self:start;background:#f8fafc}.tool-group[open]{grid-column:1/-1}
+summary{padding:7px 9px;cursor:pointer;font-weight:bold;color:#334155;user-select:none}.tool-content{padding:7px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;border-top:1px solid #e2e8f0}
+.tool-content>span[style*="font-size"]{width:100%}.tool-content #editLamTools,.tool-content #postTools{width:100%;margin:0!important;padding:6px!important;border:0!important;background:transparent!important}
+#grid{flex:1;min-height:0;overflow:auto;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));align-content:start;padding:10px;gap:7px}.thumb{height:82px}.name{font-size:11px}.card{min-width:0}.name{overflow-wrap:anywhere}
+@media(max-width:500px){.sections{grid-template-columns:1fr}.main-controls{gap:5px}.main-controls label input{width:48px!important}.actions button{min-width:120px}}
+
+
+.transform-pane{width:100%}.transform-pane[hidden]{display:none!important}.transform-row{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:6px 0 12px}#unifiedTransform select{min-width:130px}
+
+.toolbar{display:flex;gap:7px;padding:10px;flex-wrap:wrap}#dynamicGallery button,input{font:inherit;padding:8px;border:1px solid #bdc8d5;border-radius:4px}#dynamicGallery button{cursor:pointer;background:#1976d2;color:white}#dynamicGallery #dynamicGallery button:disabled{opacity:.5;cursor:default}#gallerySearch{flex:1;min-width:160px}#galleryFolder{padding:0 12px;overflow-wrap:anywhere;color:#536174;font-size:12px}#galleryStatus{padding:10px 12px;min-height:38px}#galleryCards{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:9px;padding:10px}.card{display:flex;align-items:center;text-align:left;gap:10px;background:white;color:#243247;min-height:110px}.card:hover,.card.selected{border:2px solid #1976d2}.card img{width:80px;height:80px;object-fit:contain;border:1px solid #ddd;background:#fafafa}.label{min-width:0;overflow-wrap:anywhere}.label small{display:block;color:#667789;font-size:11px;margin-top:6px}.pager{display:flex;justify-content:center;gap:10px;align-items:center;padding:12px}.empty{padding:20px;color:#667789}
+
+#galleryCards{grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;padding:14px}.card{flex-direction:column;align-items:stretch;gap:10px;padding:12px;border:1px solid #c8d3df;border-radius:8px;position:relative}.card:hover,.card.selected{border:1px solid #1976d2;box-shadow:0 0 0 2px #1976d2}.card img{width:100%;height:190px;flex-shrink:0;background:white;border:1px solid #e2e8f0;border-radius:4px;padding:8px}.label strong{display:block;font-size:14px;line-height:1.45}.label small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:11px}.zoom{position:absolute;right:18px;top:18px;background:#eef5ff;color:#1565c0;padding:6px 9px;border-radius:4px;font-size:12px}#galleryPreviewOverlay{position:fixed;inset:0;background:#17202bcc;z-index:20;display:flex;align-items:center;justify-content:center;padding:20px}#galleryPreviewOverlay[hidden]{display:none}.preview-box{background:white;border-radius:9px;padding:16px;width:100%;max-width:780px}.preview-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}#galleryPreviewImage{width:100%;height:65vh;object-fit:contain;background:white}.preview-hint{font-size:12px;color:#64748b;margin-top:10px}
+
+#dynamicGallery{flex:1;min-height:0;overflow:auto;background:#f3f5f8}#dynamicGallery[hidden],#grid[hidden]{display:none!important}#dynamicGallery .toolbar{position:sticky;top:0;background:#f3f5f8;z-index:2}#dynamicGallery #galleryCards{grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+
+#dynamicGallery .card{background:white;color:#243247;border:1px solid #c8d3df}#dynamicGallery .card.gallerySelected{border-color:#1976d2;box-shadow:0 0 0 2px #1976d2}
+.sections{max-height:none;overflow:visible;flex-shrink:0}.sections .tool-group[open]{grid-column:auto}.sections .tool-group.active-menu summary{background:#e8f2ff;color:#1261af}.sections summary{border-radius:4px}#menuWorkspace{flex:1;min-height:0;display:flex;flex-direction:column;overflow:auto;background:#f2f3f5}#menuWorkspace>.menu-panel{padding:12px;background:#fff;flex-shrink:0}#menuWorkspace>.menu-panel[hidden]{display:none!important}.menu-panel-title{font-size:14px;color:#334155;font-weight:bold;padding:0 0 10px;width:100%}#menuWorkspace #dynamicGallery{overflow:auto;flex:1;min-height:0}#menuWorkspace #grid{flex:1;min-height:0}.menu-panel .tool-content{border:0;padding:0;align-items:flex-start}
+.sections #mapTools{grid-column:1/-1}.sections .map-tools-summary{display:flex;flex-wrap:wrap;align-items:center;gap:5px;padding:3px 6px;min-height:28px}
+.surface-quick-actions{display:flex;flex-wrap:wrap;gap:4px}.surface-quick-actions button{display:flex;align-items:center;gap:4px;height:25px;padding:2px 7px;background:#eef8f5;color:#07634f;border:1px solid #9dc8bb;font-weight:bold;white-space:nowrap}.surface-quick-actions button:hover{background:#d8f0e8}.surface-quick-actions button:focus-visible{outline:2px solid #1976d2;outline-offset:1px}
+.map-tools-summary::-webkit-details-marker{display:none}.map-tools-title{flex:1;white-space:nowrap}.map-tools-title::before{content:'▸';margin-right:6px}
+.map-quick-actions{display:flex;gap:3px;flex-shrink:0}.map-quick-actions button{display:flex;align-items:center;justify-content:center;width:25px;height:25px;padding:1px;background:#fff;border:1px solid #cbd5e1}
+.map-quick-actions button:hover{background:#e1efff;border-color:#1976d2}.map-quick-actions button:focus-visible{outline:2px solid #1976d2;outline-offset:1px}.map-quick-actions img{width:22px;height:22px;pointer-events:none}
+.surface-quick-actions img{width:18px;height:18px;pointer-events:none}
+@media(max-width:500px){.surface-quick-actions button{width:25px;padding:1px;justify-content:center}.surface-quick-actions img{width:22px;height:22px}.surface-quick-actions button span{display:none}}
+.sections #externalLibrary{grid-column:1/-1}.lam-edit-actions{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+#menuWorkspace.lam-library-open #grid{flex:0 0 auto;overflow:visible;min-height:180px}
+#lamTransformTools{margin-top:10px;padding-top:10px;border-top:1px solid #d5dce5}
+.lam-transform-heading{font-weight:bold;color:#334155;margin-bottom:8px}
+#lamTransformTools #postTools{padding:0!important}#lamTransformTools #postTools>div:first-child{display:none}
+
+
+#lamBeforeRun{padding:7px 10px;background:#f0faf6;border-bottom:1px solid #c6dfd3;flex-shrink:0}
+#lamBeforeRun[hidden],#lamRibWidthLabel[hidden],#lamBandWidthLabel[hidden],#lamSpacingLabel[hidden],#editSpacingLabel[hidden]{display:none!important}.lam-before-fields{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.lam-before-fields label{display:flex;align-items:center;gap:5px;font-weight:bold;color:#245444;white-space:nowrap}
+.lam-before-fields input{width:65px;background:#fff;font-weight:normal}.lam-before-fields input[aria-invalid="true"]{border-color:#b42318}
+#lamBeforeHint{font-size:11px;color:#536b61;margin-top:5px}#lamBeforeError{color:#b42318;margin-top:5px}#lamBeforeError:empty{display:none}
+.lam-choices{display:grid;grid-template-columns:repeat(2,minmax(0,185px));gap:10px;width:100%;margin-bottom:10px}.lam-choices .card{margin:0}.lam-choices .card.sel{box-shadow:0 0 0 2px #1976d2}#menuWorkspace.lam-library-open #grid:empty{min-height:0;padding:0}
+#generalRunHost{flex-shrink:0}#generalRunHost[hidden]{display:none!important}
+#lamRunHost{width:100%;background:#f0faf6;border:1px solid #c6dfd3;border-radius:5px;overflow:hidden}
+#lamRunHost .actions{background:transparent;padding:8px}#lamRunHost #lamBeforeRun{border:0}
+#runActions button:disabled{opacity:.55;cursor:default}
+</style><link rel="stylesheet" href="saved_library.css"><link rel="stylesheet" href="section_preview.css"><link rel="stylesheet" href="sample_preview.css"><link rel="stylesheet" href="runtime_compat.css"><script src="vendor/core-js.min.js"></script><script src="runtime_compat.js"></script></head>
+<body>
+<header><strong>LOFIHOME · PHÀO CHỈ</strong><span class="build">V317.198 · SKETCHUP 2021+</span></header>
+<div class="controls main-controls" hidden style="display:none">
+<input id="cat" type="hidden" value="Tất cả">
+<input id="search" type="hidden" value="">
+<input id="width" type="hidden" value="80">
+<input id="height" type="hidden" value="100">
+</div><div id="generalRunHost" hidden><div id="runActions" class="controls actions"><button onclick="runProfile()">Chạy theo Edge đã chọn</button><button onclick="runFaceProfile()" style="background:#0b7a45">Chạy theo Bề mặt đã chọn</button></div>
+</div>
+<div class="sections"><details hidden class="tool-group" id="unifiedTransform"><summary>Lật / Xoay / Chỉnh góc — tất cả</summary><div class="tool-content" id="transformControls">
+<label>Thao tác với <select id="transformTarget" onchange="switchTransformTarget(this.value)"><option value="phao">Phào đã vẽ</option><option value="lam">Lam</option><option value="map">MAP / Texture</option><option value="geometry">Component / Group đã chọn</option><option value="dynamic">Component Dynamic thư viện</option></select></label>
+<div id="transformShape" class="transform-pane"><div id="postTools" style="margin:0 10px 10px 10px;padding:10px;background:#fff;border:1px solid #d8dde3;border-radius:5px">
+  <div style="font-weight:bold;margin-bottom:8px">PHÀO / COMPONENT DYNAMIC / GROUP ĐANG CHỌN</div>
+  <div style="display:flex;gap:7px;flex-wrap:wrap;align-items:center">
+    <button onclick="changeFinished('left_right')" title="Chọn Group phào rồi bấm">↔ Trái / Phải</button>
+    <button onclick="changeFinished('up_down')" title="Chọn Group phào rồi bấm">↕ Lên / Xuống</button>
+    <label style="display:flex;align-items:center;gap:4px">Trục xoay
+      <select id="rotate_axis">
+        <option value="phao">📏 Trục thanh phào</option>
+        <option value="x">🔴 Trục X</option>
+        <option value="y">🟢 Trục Y</option>
+        <option value="z">🔵 Trục Z</option>
+      </select>
+    </label>
+    <button onclick="rotateAngle(-90)">↺ -90°</button>
+    <button onclick="rotateAngle(-15)">↺ -15°</button>
+    <button onclick="rotateAngle(-5)">↺ -5°</button>
+    <label style="display:flex;align-items:center;gap:4px">Góc <input id="custom_angle" type="number" value="45" step="1" style="width:58px">°</label>
+    <button onclick="rotateCustom()">⟳ Xoay góc</button>
+    <button onclick="rotateAngle(5)">↻ +5°</button>
+    <button onclick="rotateAngle(15)">↻ +15°</button>
+    <button onclick="rotateAngle(90)">↻ +90°</button>
+    <button onclick="rotateAngle(180)">⟳ 180°</button>
+    <button onclick="changeFinished('reverse_axis')">⇄ Đảo đầu phào</button>
+    <button onclick="changeFinished('reset_origin')" style="background:#198754" title="Khôi phục vị trí và góc trước lần xoay/đảo đầu tiên">⌂ Trở về gốc</button>
+    <span style="font-size:12px;color:#666">Chọn một Component Dynamic hoặc Group trong bản vẽ rồi bấm xoay / lật.</span>
+  </div>
+</div>
+
+</div>
+<div id="transformLam" class="transform-pane" hidden><b>Lam mẫu mới — chỉnh trước khi chạy</b><div class="transform-row"><label>Góc xoay <input id="lam_rotation" type="number" value="0" min="-360" max="360" step="1" style="width:55px" oninput="updateLamPreview()">°</label><button type="button" onclick="setLamRotation(0)" style="background:#495057">↔ Ngang 0°</button><button type="button" onclick="setLamRotation(90)" style="background:#495057">↕ Dọc 90°</button><button type="button" onclick="changeLamRotation(-15)" style="background:#6c757d">↺ -15°</button><button type="button" onclick="changeLamRotation(15)" style="background:#0d6efd">↻ +15°</button></div><b>Lam đã vẽ — lấy thông số trước khi chỉnh</b><div class="transform-row"><button onclick="loadFinishedLam()" style="background:#0b7a45">📥 Lấy thông số từ lam đang chọn</button><label>Góc <input id="edit_rotation" type="number" value="0" step="1" style="width:55px">°</label><button onclick="setEditRotation(0)" style="background:#495057">↔ Ngang</button><button onclick="setEditRotation(90)" style="background:#495057">↕ Dọc</button><button onclick="updateFinishedLam()" style="background:#d35400;font-weight:bold">🔄 CẬP NHẬT LAM ĐÃ VẼ</button></div></div>
+<div id="transformMap" class="transform-pane" hidden><span>Chỉ lật / xoay MAP trên Face hoặc Group đang chọn.</span><div class="transform-row"><button onclick="rotateMap('ccw90')" style="background:#6a1b9a;font-weight:bold">↺ MAP -90°</button><button onclick="rotateMap('cw90')" style="background:#6a1b9a;font-weight:bold">↻ MAP +90°</button><button onclick="rotateMap('rot180')" style="background:#6a1b9a;font-weight:bold">↻ MAP 180°</button><button onclick="rotateMap('flip_h')" style="background:#5e35b1;font-weight:bold">↔ LẬT MAP</button><button onclick="rotateMap('flip_v')" style="background:#5e35b1;font-weight:bold">↕ LẬT MAP</button></div></div>
+</div></details><details hidden class="tool-group" id="pathSettings"><summary>Thiết lập đường chạy</summary><div class="tool-content">
+<span>Hướng phào</span>
+<select id="orientation">
+<option value="right_up">→ ↑ Phải / Lên</option>
+<option value="left_up">← ↑ Trái / Lên</option>
+<option value="right_down">→ ↓ Phải / Xuống</option>
+<option value="left_down">← ↓ Trái / Xuống</option>
+<option value="up_right">↑ → Xoay 90° phải</option>
+<option value="up_left">↑ ← Xoay 90° trái</option>
+<option value="down_right">↓ → Xoay 90° phải + lật</option>
+<option value="down_left">↓ ← Xoay 90° trái + lật</option>
+</select>
+<label><input id="reverse_path" type="checkbox"> Đảo đầu đường chạy</label>
+<label>Dịch ngang <input id="offset_side" type="number" value="0" style="width:55px"> mm</label>
+<label>Dịch đứng <input id="offset_vertical" type="number" value="0" style="width:55px"> mm</label>
+
+<label>Viền bề mặt <select id="face_boundary"><option value="outer">Viền ngoài</option><option value="inner">Viền trong</option><option value="all">Tất cả viền</option></select></label>
+<label>Nối góc <select id="corner_mode"><option value="miter">Miter liên tục</option><option value="straight">Từng cạnh / nối thẳng</option></select></label>
+<b style="color:#0b7a45"> Lam viền TES3 chạy theo viền. Lam sóng 3 gờ phủ kín mặt theo cạnh chọn.</b>
+</div></details>
+<details hidden id="newLamDefaults"><summary>Thông số lam mới</summary><div class="tool-content"><span id="lam_controls" style="display:none;align-items:center;gap:6px;flex-wrap:wrap;background:#fff7e6;padding:5px 7px;border:1px solid #f0c36d;border-radius:4px">
+  <b>CHỈNH LAM</b>
+  
+  
+  
+  <button type="button" onclick="changeLamCount(-1)" style="background:#6c757d">− Bớt lam</button>
+  <button type="button" onclick="changeLamCount(1)" style="background:#0d6efd">＋ Thêm lam</button>
+  
+  
+  
+  
+  
+  <label style="font-weight:bold;color:#8a4b00"><input id="lam_auto_edge" type="checkbox" checked> 🔄 Tự xoay theo từng cạnh</label>
+  <label style="font-weight:bold;color:#0b7a45"><input id="lam_fit_face" type="checkbox" checked> ⛶ Lam khớp kín kích thước Face</label>
+</span></div></details>
+<details class="tool-group" id="mapTools"><summary class="map-tools-summary"><span class="map-tools-title">Bề mặt / MAP</span><span class="map-quick-actions" role="group" aria-label="Thao tác MAP nhanh">
+<button type="button" title="Xoay MAP -90°" aria-label="Xoay MAP -90°" onclick="quickMapAction(event,'ccw90')"><img src="../icons/rotl_24.png" alt=""></button>
+<button type="button" title="Xoay MAP +90°" aria-label="Xoay MAP +90°" onclick="quickMapAction(event,'cw90')"><img src="../icons/rotr_24.png" alt=""></button>
+<button type="button" title="Lật MAP ngang" aria-label="Lật MAP ngang" onclick="quickMapAction(event,'flip_h')"><img src="../icons/fliph_24.png" alt=""></button>
+<button type="button" title="Lật MAP dọc" aria-label="Lật MAP dọc" onclick="quickMapAction(event,'flip_v')"><img src="../icons/flipv_24.png" alt=""></button>
+<button type="button" title="MAP theo hướng lam" aria-label="MAP theo hướng lam" onclick="quickMapAction(event,'align_lam')"><img src="../icons/align_24.png" alt=""></button>
+</span><span class="surface-quick-actions" role="group" aria-label="Sửa đường nét mẫu đã chọn">
+<button id="quickSmoothFrame" type="button" aria-label="Làm mượt" title="Chọn khung phào cần sửa rồi làm mượt đồng đều các cạnh nối" onclick="quickSurfaceAction(event,'smooth')"><img src="../icons/apply_24.png" alt=""><span>Làm mượt</span></button>
+<button id="quickRemoveLines" type="button" aria-label="Bỏ line" title="Chọn mặt, cạnh hoặc Group/Component cần bỏ đường line đồng phẳng" onclick="quickSurfaceAction(event,'lines')"><img src="../icons/merge_24.png" alt=""><span>Bỏ line</span></button>
+</span></summary><div class="tool-content"><button onclick="sketchup.clean_selected_ornament()" style="background:#00897b">Bỏ nét đen thừa hoa văn</button><button onclick="sketchup.paint_uniform_selection()" style="background:#b7791f">Đổ màu đồng đều hai mặt</button><button onclick="mergeCoplanarSurfaces()" style="background:#00897b;font-weight:bold">🔗 NỐI BỀ MẶT — BỎ ĐƯỜNG LINE</button>
+<button onclick="explodeKeepMap()" style="background:#1565c0;font-weight:bold">💥 EXPLODE GIỮ MAP</button>
+<button onclick="setMapSource()" style="background:#8e44ad;font-weight:bold">🎯 ĐẶT FACE MẪU MAP</button>
+
+
+
+
+
+<button onclick="alignMapMiter45()" style="background:#00695c;font-weight:bold">🔗 MAP LIỀN GÓC 45°</button>
+</div></details>
+<details class="tool-group" id="externalLibrary"><summary>Thư viện mẫu</summary><div class="tool-content"><button onclick="importExternalModel()" style="background:#00695c;font-weight:bold">📥 LẤY 1 MẪU NGOÀI & LƯU</button>
+<button onclick="importExternalFolder()" style="background:#1565c0;font-weight:bold">📁 LẤY CẢ THƯ MỤC SKP & LƯU</button>
+<button onclick="insertExternalModel()" style="background:#2e7d32;font-weight:bold">📚 LẤY MẪU ĐÃ LƯU</button>
+<button onclick="importProfileFile()" style="background:#6f42c1">＋ ADD SKP lấy tiết diện / DXF / DWG / JSON / CSV</button>
+<button onclick="addExactLam()" style="background:#7b1fa2;font-weight:bold">🌊 ADD LAM SÓNG 1:1 từ Face/Group</button>
+<button onclick="addProfileFace()" style="background:#fd7e14">＋ ADD Face / Group làm biên dạng</button>
+<input id="external_name" placeholder="Tên mẫu ngoài" style="width:115px">
+<button onclick="deleteSelected()" style="background:#c0392b">🗑 Xóa mẫu chọn</button>
+<button onclick="clearExternal()" style="background:#8e44ad">🧹 Xóa toàn bộ Mẫu ngoài</button>
+<span style="font-size:12px;color:#666">Sau khi vẽ: chọn Group phào → Extensions → Phào Chỉ V5.8 để đảo/xoay.</span>
+</div></details>
+
+
+<details hidden class="tool-group" id="lamLibrary" ontoggle="if(this.open)showLamLibrary()"><summary>Lam sóng</summary><div class="tool-content"><div id="lamChoices" class="lam-choices" aria-label="Chọn mẫu lam"></div><div id="lamRunHost"><div id="lamBeforeRun" hidden role="group" aria-label="Thông số lam trước khi chạy">
+<div class="lam-before-fields">
+<label id="lamSpacingLabel" hidden>Cách rải nan <select id="lam_spacing_mode" onchange="syncLamBeforeRun()"><option value="uniform_miter">Rải đều + khớp góc</option><option value="uniform">Rải đều các cạnh</option><option value="corner_locked">Cùng số nan mỗi cạnh (cũ)</option></select></label>
+<label for="lam_count"><span id="lamCountLabel">Số lượng lam</span> <input id="lam_count" type="number" value="3" min="1" max="200" step="1" oninput="updateLamPreview()" aria-describedby="lamBeforeHint lamBeforeError"></label>
+<label id="lamRibWidthLabel" for="lam_rib_width">Rộng lam <input id="lam_rib_width" type="number" placeholder="Tự chia" min="0.1" max="100000" step="0.5" oninput="updateLamPreview()" aria-describedby="lamBeforeHint lamBeforeError"> mm</label>
+<label for="lam_height">Cao lam <input id="lam_height" type="number" value="6" min="0.5" max="10000" step="0.5" oninput="updateLamPreview()" aria-describedby="lamBeforeError"> mm</label>
+<label for="lam_depth">Sâu đế <input id="lam_depth" type="number" value="4" min="0.5" max="10000" step="0.5" oninput="updateLamPreview()" aria-describedby="lamBeforeError"> mm</label>
+<label id="lamBandWidthLabel" hidden>Rộng dải viền <input id="lam_band_width" type="number" value="80" min="0.1" max="100000" step="1" oninput="updateLamPreview()"> mm</label></div><div id="lamBeforeHint"></div><div id="lamBeforeError" role="status" aria-live="polite"></div></div></div><div id="lamFaceGuide" style="padding:8px;color:#0b7a45">Lam sóng 3 gờ: chọn mặt + một cạnh định hướng → Chạy theo Edge hoặc Bề mặt. Nan song song cạnh, chia đều toàn mặt. Chọn nhiều cạnh bao: tự lấy cạnh dài nhất. Số lam là tổng số nan trên mỗi mặt; Rộng lam là bề rộng từng nan. Khe chia đều, giữ nguyên mặt gốc.</div><div id="editLamTools" style="margin:0 10px 10px 10px;padding:10px;background:#f2fff8;border:2px solid #0b7a45;border-radius:5px">
+  <div id="lamMeasuredSize" hidden style="padding:7px 0;color:#095a42;font-weight:bold" aria-live="polite"></div>
+  <div class="lam-edit-actions"><button type="button" onclick="loadFinishedLam()" style="background:#0b7a45">📥 Lấy thông số từ lam đang chọn</button><button type="button" onclick="updateFinishedLam()" style="background:#d35400;font-weight:bold">🔄 CẬP NHẬT LAM ĐÃ VẼ</button></div>
+  <div style="display:flex;gap:7px;flex-wrap:wrap;align-items:center">
+    
+    <label><span id="editWidthLabel">Rộng mẫu</span> <input id="edit_width" type="number" value="80" step="1" style="width:62px"> mm</label>
+    <label>Sâu đế <input id="edit_depth" type="number" value="4" step="0.5" style="width:55px"> mm</label>
+    <label>Cao lam <input id="edit_lam_height" type="number" value="6" step="0.5" style="width:55px"> mm</label>
+    <label><span id="editCountLabel">Số lam</span> <input id="edit_count" type="number" value="3" min="1" max="500" style="width:50px"></label>
+    <label id="editSpacingLabel" hidden>Cách rải nan <select id="edit_spacing_mode" onchange="syncLamEditSpacing()"><option value="uniform_miter">Rải đều + khớp góc</option><option value="uniform">Rải đều các cạnh</option><option value="corner_locked">Cùng số nan mỗi cạnh (cũ)</option></select></label>
+    <button onclick="editCount(-1)" style="background:#6c757d">− Bớt</button><button onclick="editCount(1)" style="background:#0d6efd">＋ Thêm</button><span style="font-size:11px;color:#0b7a45;font-weight:bold">🔒 Sau Scale: giữ nguyên cạnh trong/ngoài, lam tự chia đều</span>
+    
+    
+    <label><input id="edit_auto_edge" type="checkbox" checked> Tự xoay theo cạnh</label>
+    <label><input id="edit_fit_face" type="checkbox" checked> Khớp Face</label>
+    
+    <span style="flex-basis:100%;height:0"></span>
+    <b style="color:#7a3e00">📐 SCALE GIỮ GÓC 45°</b>
+    <label>Rộng đích <input id="scale_target_w" type="number" value="1000" min="1" step="1" style="width:75px"> mm</label>
+    <label>Cao đích <input id="scale_target_h" type="number" value="1000" min="1" step="1" style="width:75px"> mm</label>
+    <button onclick="scaleFinishedLam('x')" style="background:#8e44ad">↔ Scale ngang</button>
+    <button onclick="scaleFinishedLam('y')" style="background:#8e44ad">↕ Scale dọc</button>
+    <button onclick="scaleFinishedLam('xy')" style="background:#6f42c1;font-weight:bold">↔↕ Scale cả hai</button>
+  </div>
+  <div style="font-size:12px;color:#555;margin-top:6px">Chức năng này áp dụng cho lam được tạo mới bằng V5.9.2 trở đi.</div>
+  <div id="lamTransformTools"><div class="lam-transform-heading">LẬT / XOAY / CHỈNH GÓC</div></div>
+</div>
+
+</div></details><details hidden style="display:none" id="componentParameters"><summary>Thông số Component / Group</summary><div class="tool-content">
+<button onclick="loadComponentParameters()">Lấy thông số đang chọn</button>
+<button onclick="sketchup.component_group_to_component()" style="background:#0b7a45">Group → Component</button>
+<span id="cpDefinition" style="width:100%;color:#64748b">Chọn một Component / Group rồi bấm Lấy thông số.</span>
+<label>Tên <input id="cpName" style="width:220px" placeholder="Tên component"></label>
+<div style="width:100%;display:flex;flex-wrap:wrap;gap:8px">
+<label>X · Ngang <input id="cpX" type="number" min="0" step="any" style="width:90px" oninput="componentDimensionChanged(0)"> mm</label>
+<label>Y · Sâu <input id="cpY" type="number" min="0" step="any" style="width:90px" oninput="componentDimensionChanged(1)"> mm</label>
+<label>Z · Cao <input id="cpZ" type="number" min="0" step="any" style="width:90px" oninput="componentDimensionChanged(2)"> mm</label>
+</div>
+<label><input id="cpRatio" type="checkbox" onchange="componentDimensionChanged(cpChangedAxis)"> Giữ tỷ lệ X/Y/Z</label>
+<label>Điểm giữ <select id="cpAnchor"><option value="center">Tâm component</option><option value="min">Góc nhỏ nhất theo trục</option></select></label>
+<label>Phím S <select id="cpScaleMode"><option value="free">Tự do · tất cả tay nắm</option><option value="uniform">Giữ tỷ lệ · tay nắm góc</option></select></label>
+<button id="cpApply" onclick="applyComponentParameters()" disabled style="background:#d35400">Áp dụng thông số</button>
+<span style="width:100%;color:#64748b">Kích thước theo trục của component. Scale tự do có thể làm giãn hoa văn.</span>
+<span id="cpStatus" style="width:100%" role="status" aria-live="polite"></span>
+</div></details>
+
+
+<details hidden class="tool-group" id="dynamicLibrary" ontoggle="if(this.open)showDynamicLibrary()"><summary>Component Dynamic</summary><div class="tool-content"><span id="dcFolder" style="width:100%;overflow-wrap:anywhere;color:#64748b"></span><span id="dcStatus" style="width:100%">Các mẫu Dynamic hiển thị trong cửa sổ bên dưới.</span></div></details>
+
+</div>
+<section id="savedLibrary" hidden aria-label="Mẫu phào">
+<div class="saved-library-heading"><strong>MẪU PHÀO</strong><button class="saved-library-secondary" onclick="setMenuWorkspace('tools',document.getElementById('externalLibrary'))">Thu gọn</button></div>
+<div class="saved-library-toolbar"><input id="savedLibrarySearch" type="search" placeholder="Tìm tên mẫu…" aria-label="Tìm trong mẫu đã lưu" oninput="renderSavedLibrary(true)"><button onclick="sketchup.change_external_folder('')">📁 Đổi thư mục</button><button class="saved-library-secondary" onclick="insertExternalModel()">Làm mới</button></div>
+<div id="savedLibraryFolder"></div><div id="savedLibraryStatus" role="status" aria-live="polite"></div>
+<div id="savedLibraryDock">
+<div id="savedLibraryImports"></div>
+<div class="saved-library-tilt">
+<label for="savedLibraryTilt">Ngửa / Úp (°)</label>
+<input id="savedLibraryTilt" type="number" min="-180" max="180" step="any" value="0" aria-describedby="savedLibraryTiltHint">
+<button type="button" class="saved-library-secondary" onclick="savedLibraryTiltStep(5)">Ngửa +5°</button>
+<button type="button" class="saved-library-secondary" onclick="savedLibraryTiltStep(-5)">Úp −5°</button>
+<button type="button" class="saved-library-secondary" onclick="savedLibraryTiltReset()">Về 0°</button>
+<label for="savedLibraryAnchor">Cạnh bám đường chạy</label>
+<select id="savedLibraryAnchor" title="Chọn một trong hai mép dọc theo bề rộng phào để bám đường chạy. Phào đã vẽ: chọn một Group rồi đổi cạnh bám để chỉnh ngay."><option value="bottom">Cạnh dưới</option><option value="top">Cạnh trên</option><option value="legacy" hidden>Theo vị trí bản cũ</option></select>
+<div class="frame-directions" role="group" aria-label="Hướng mặt phào"><button type="button" id="dockArrowLeft" data-frame-direction="left" aria-label="Hướng trái" title="Hướng trái" aria-pressed="false" onclick="frameControl.dockDirection('left',event)">←</button><button type="button" id="dockArrowRight" data-frame-direction="right" aria-label="Hướng phải" title="Hướng phải" aria-pressed="false" onclick="frameControl.dockDirection('right',event)">→</button><button type="button" id="dockArrowUp" data-frame-direction="up" aria-label="Mặt ngửa" title="Mặt ngửa" aria-pressed="false" onclick="frameControl.dockDirection('up',event)">↑</button><button type="button" id="dockArrowDown" data-frame-direction="down" aria-label="Mặt úp" title="Mặt úp" aria-pressed="false" onclick="frameControl.dockDirection('down',event)">↓</button></div>
+<button type="button" id="savedLibraryRead" class="saved-library-secondary" onclick="savedLibraryReadFrame(event)">Lấy thông số phào đang chọn</button>
+<button type="button" id="savedLibraryUpdate" onclick="savedLibraryUpdateFrame(event)" disabled>Cập nhật phào đã chọn</button>
+<small id="savedLibraryTiltHint">Góc 0° giữ hướng mẫu. Chạy mới: chọn Edge/bề mặt rồi chọn mẫu. Sửa phào: chọn một Group đã vẽ → bấm ← → ↑ ↓ hoặc đổi góc/cạnh bám để chỉnh ngay. Ctrl+Z để hoàn tác.</small>
+<small id="savedLibraryEditTarget" role="status"></small>
+</div>
+<details class="saved-library-options"><summary>Hướng hoa văn / Trục dài mẫu</summary><div><label>Mặt hoa văn <select id="savedLibraryRoll"><option value="auto">Theo mẫu (SU84-104: hướng lên)</option><option value="90">90°</option><option value="0">Gốc 0°</option><option value="180">180°</option><option value="270">270°</option></select></label><label>Trục dài <select id="savedLibraryAxis"><option value="auto">Tự nhận</option><option value="x">X</option><option value="y">Y</option><option value="z">Z</option></select></label></div></details>
+<div id="savedLibraryOrnamentProgress" hidden aria-live="polite"><span id="savedLibraryOrnamentText"></span><progress id="savedLibraryOrnamentMeter"></progress><button id="savedLibraryOrnamentCancel" onclick="savedLibraryCancelOrnament()">HỦY — GIỮ THÂN PHÀO</button></div><div class="saved-library-stages"><span>1. Chọn Edge hoặc bề mặt → chạy thân phào</span><button id="savedLibraryOrnament" onclick="savedLibraryAddOrnament(event)">2. THÊM HOA VĂN VÀO PHÀO ĐÃ CHỌN</button><small>Bề mặt: chạy theo viền ngoài từng Face, giữ nguyên mặt gốc. Chọn một Group thân phào để làm bước 2.</small></div>
+</div>
+<div id="savedLibraryCards"></div><div class="saved-library-count" id="savedLibraryCount"></div>
+</section>
+<div id="grid"></div><div id="dynamicGallery" hidden>
+
+<div class="toolbar"><button onclick="sketchup.dc_library_folder()">Nhập và lưu thư mục</button><button onclick="sketchup.dc_library_refresh()">Làm mới</button><input id="gallerySearch" placeholder="Tìm component…" oninput="renderCards(true)"><button onclick="sketchup.dc_library_options()">Chỉnh Dynamic đang chọn</button></div>
+<div id="galleryFolder"></div><div id="galleryStatus" role="status" aria-live="polite">Nhập thư mục chứa SKP Dynamic để lưu vào kho plugin.</div>
+<div id="galleryCards"></div><div class="library-count" id="galleryCount"></div>
+<div id="previewOverlay" hidden onclick="if(event.target===this)closePreview()"><div class="preview-box"><div class="preview-heading"><strong id="previewTitle"></strong><button onclick="closePreview()">Đóng ×</button></div><img id="previewImage" alt="Ảnh xem trước component"><div class="preview-hint">Đóng ảnh rồi bấm vào thẻ mẫu để đặt component.</div></div></div>
+</div>
+<script>var profiles = [{
+    "id": "M001",
+    "name": "PS trơn 53mm - M001",
+    "category": "Phào trần",
+    "nominal_width": 53,
+    "points": [[0, 0], [1, 0], [1.0, 0.16], [0.9545, 0.2675], [0.9091, 0.3377], [0.8636, 0.39], [0.8182, 0.4268], [0.7727, 0.452], [0.7273, 0.4719], [0.6818, 0.4931], [0.6364, 0.5212], [0.5909, 0.559], [0.5455, 0.6059], [0.5, 0.6578], [0.4545, 0.7089], [0.4091, 0.7533], [0.3636, 0.7869], [0.3182, 0.8088], [0.2727, 0.8218], [0.2273, 0.8312], [0.1818, 0.8432], [0.1364, 0.8632], [0.0909, 0.8938], [0.0455, 0.9341], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M002",
+    "name": "PS trơn 60mm - M002",
+    "category": "Phào trần",
+    "nominal_width": 60,
+    "points": [[0, 0], [1, 0], [1.0, 0.12], [0.9545, 0.1804], [0.9091, 0.249], [0.8636, 0.3128], [0.8182, 0.358], [0.7727, 0.3825], [0.7273, 0.3978], [0.6818, 0.4211], [0.6364, 0.4639], [0.5909, 0.5236], [0.5455, 0.586], [0.5, 0.6345], [0.4545, 0.662], [0.4091, 0.6758], [0.3636, 0.6922], [0.3182, 0.7258], [0.2727, 0.7791], [0.2273, 0.8409], [0.1818, 0.8938], [0.1364, 0.9267], [0.0909, 0.9421], [0.0455, 0.9543], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M003",
+    "name": "PS trơn 79mm - M003",
+    "category": "Phào trần",
+    "nominal_width": 79,
+    "points": [[0, 0], [1, 0], [1.0, 0.22], [0.9545, 0.3649], [0.9091, 0.4418], [0.8636, 0.4814], [0.8182, 0.4927], [0.7727, 0.4925], [0.7273, 0.5006], [0.6818, 0.5311], [0.6364, 0.5855], [0.5909, 0.653], [0.5455, 0.7154], [0.5, 0.7565], [0.4545, 0.7698], [0.4091, 0.7619], [0.3636, 0.7494], [0.3182, 0.7508], [0.2727, 0.7774], [0.2273, 0.8278], [0.1818, 0.8889], [0.1364, 0.942], [0.0909, 0.972], [0.0455, 0.975], [0.0, 0.96], [0, 1]]
+  }, {
+    "id": "M004",
+    "name": "PS trơn 80mm - M004",
+    "category": "Phào trần",
+    "nominal_width": 80,
+    "points": [[0, 0], [1, 0], [1.0, 0.1], [0.9545, 0.1486], [0.9091, 0.196], [0.8636, 0.197], [0.8182, 0.2213], [0.7727, 0.2904], [0.7273, 0.3272], [0.6818, 0.3314], [0.6364, 0.3799], [0.5909, 0.4506], [0.5455, 0.4728], [0.5, 0.4884], [0.4545, 0.5561], [0.4091, 0.6171], [0.3636, 0.6294], [0.3182, 0.6636], [0.2727, 0.7416], [0.2273, 0.7864], [0.1818, 0.798], [0.1364, 0.8534], [0.0909, 0.9305], [0.0455, 0.9587], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M005",
+    "name": "PS trơn 86mm - M005",
+    "category": "Phào trần",
+    "nominal_width": 86,
+    "points": [[0, 0], [1, 0], [1.0, 0.28], [0.9545, 0.3544], [0.9091, 0.4331], [0.8636, 0.4813], [0.8182, 0.488], [0.7727, 0.4873], [0.7273, 0.5199], [0.6818, 0.5859], [0.6364, 0.6452], [0.5909, 0.6647], [0.5455, 0.6567], [0.5, 0.6652], [0.4545, 0.7141], [0.4091, 0.7796], [0.3636, 0.818], [0.3182, 0.8167], [0.2727, 0.8093], [0.2273, 0.836], [0.1818, 0.8968], [0.1364, 0.9516], [0.0909, 0.9668], [0.0455, 0.955], [0.0, 0.96], [0, 1]]
+  }, {
+    "id": "M006",
+    "name": "PS trơn 90mm - M006",
+    "category": "Phào trần",
+    "nominal_width": 90,
+    "points": [[0, 0], [1, 0], [1.0, 0.151], [0.9545, 0.2427], [0.9091, 0.3088], [0.8636, 0.3759], [0.8182, 0.4446], [0.7727, 0.5045], [0.7273, 0.544], [0.6818, 0.5634], [0.6364, 0.5743], [0.5909, 0.5865], [0.5455, 0.6005], [0.5, 0.6135], [0.4545, 0.6296], [0.4091, 0.6569], [0.3636, 0.6981], [0.3182, 0.7456], [0.2727, 0.7898], [0.2273, 0.8269], [0.1818, 0.8586], [0.1364, 0.8877], [0.0909, 0.9156], [0.0455, 0.943], [0.0, 0.97], [0, 1]]
+  }, {
+    "id": "M007",
+    "name": "PS trơn 96mm - M007",
+    "category": "Phào trần",
+    "nominal_width": 96,
+    "points": [[0, 0], [1, 0], [1.0, 0.1827], [0.9545, 0.2339], [0.9091, 0.2936], [0.8636, 0.3584], [0.8182, 0.4084], [0.7727, 0.4319], [0.7273, 0.443], [0.6818, 0.462], [0.6364, 0.4948], [0.5909, 0.538], [0.5455, 0.5875], [0.5, 0.6372], [0.4545, 0.6797], [0.4091, 0.7106], [0.3636, 0.7329], [0.3182, 0.7539], [0.2727, 0.7789], [0.2273, 0.8089], [0.1818, 0.8419], [0.1364, 0.8761], [0.0909, 0.9108], [0.0455, 0.9454], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M008",
+    "name": "PS trơn 100mm - M008",
+    "category": "Phào trần",
+    "nominal_width": 100,
+    "points": [[0, 0], [1, 0], [1.0, 0.13], [0.9545, 0.2463], [0.9091, 0.2934], [0.8636, 0.2949], [0.8182, 0.3077], [0.7727, 0.3701], [0.7273, 0.4592], [0.6818, 0.5184], [0.6364, 0.5243], [0.5909, 0.5143], [0.5455, 0.5432], [0.5, 0.6192], [0.4545, 0.6945], [0.4091, 0.7213], [0.3636, 0.7078], [0.3182, 0.7085], [0.2727, 0.7609], [0.2273, 0.8413], [0.1818, 0.8928], [0.1364, 0.8919], [0.0909, 0.8758], [0.0455, 0.8991], [0.0, 0.97], [0, 1]]
+  }, {
+    "id": "M009",
+    "name": "PS trơn 110mm - M009",
+    "category": "Phào trần",
+    "nominal_width": 110,
+    "points": [[0, 0], [1, 0], [1.0, 0.24], [0.9545, 0.2938], [0.9091, 0.3568], [0.8636, 0.3713], [0.8182, 0.365], [0.7727, 0.4023], [0.7273, 0.4737], [0.6818, 0.5116], [0.6364, 0.5064], [0.5909, 0.5229], [0.5455, 0.5889], [0.5, 0.6477], [0.4545, 0.6553], [0.4091, 0.6556], [0.3636, 0.7055], [0.3182, 0.7768], [0.2727, 0.805], [0.2273, 0.7996], [0.1818, 0.828], [0.1364, 0.8997], [0.0909, 0.9502], [0.0455, 0.9514], [0.0, 0.96], [0, 1]]
+  }, {
+    "id": "M010",
+    "name": "PS trơn 116mm - M010",
+    "category": "Phào trần",
+    "nominal_width": 116,
+    "points": [[0, 0], [1, 0], [1.0, 0.11], [0.9545, 0.2526], [0.9091, 0.3206], [0.8636, 0.3486], [0.8182, 0.366], [0.7727, 0.4036], [0.7273, 0.4692], [0.6818, 0.5415], [0.6364, 0.5909], [0.5909, 0.6068], [0.5455, 0.6081], [0.5, 0.6256], [0.4545, 0.6742], [0.4091, 0.7393], [0.3636, 0.7902], [0.3182, 0.8086], [0.2727, 0.8052], [0.2273, 0.8103], [0.1818, 0.8456], [0.1364, 0.9047], [0.0909, 0.9588], [0.0455, 0.9831], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M011",
+    "name": "PS trơn 120mm - M011",
+    "category": "Phào trần",
+    "nominal_width": 120,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1786], [0.9545, 0.2895], [0.9091, 0.3604], [0.8636, 0.4127], [0.8182, 0.4492], [0.7727, 0.4741], [0.7273, 0.4936], [0.6818, 0.5145], [0.6364, 0.542], [0.5909, 0.5789], [0.5455, 0.6244], [0.5, 0.6745], [0.4545, 0.7237], [0.4091, 0.7662], [0.3636, 0.7983], [0.3182, 0.8192], [0.2727, 0.8315], [0.2273, 0.8405], [0.1818, 0.8519], [0.1364, 0.8709], [0.0909, 0.8998], [0.0455, 0.9379], [0.0, 0.9812], [0, 1]]
+  }, {
+    "id": "M012",
+    "name": "PS trơn 134mm - M012",
+    "category": "Phào trần",
+    "nominal_width": 134,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1363], [0.9545, 0.1999], [0.9091, 0.2707], [0.8636, 0.3354], [0.8182, 0.3808], [0.7727, 0.4052], [0.7273, 0.4204], [0.6818, 0.4435], [0.6364, 0.4858], [0.5909, 0.5443], [0.5455, 0.6051], [0.5, 0.6521], [0.4545, 0.6786], [0.4091, 0.6919], [0.3636, 0.7076], [0.3182, 0.7399], [0.2727, 0.7909], [0.2273, 0.8497], [0.1818, 0.8998], [0.1364, 0.9309], [0.0909, 0.9455], [0.0455, 0.957], [0.0, 0.9812], [0, 1]]
+  }, {
+    "id": "M013",
+    "name": "PS Hàn Quốc 53mm - M013",
+    "category": "Phào trần",
+    "nominal_width": 53,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.2409], [0.9545, 0.3877], [0.9091, 0.464], [0.8636, 0.503], [0.8182, 0.5141], [0.7727, 0.5139], [0.7273, 0.5218], [0.6818, 0.5517], [0.6364, 0.6046], [0.5909, 0.6699], [0.5455, 0.7299], [0.5, 0.7693], [0.4545, 0.782], [0.4091, 0.7744], [0.3636, 0.7625], [0.3182, 0.7638], [0.2727, 0.7892], [0.2273, 0.8372], [0.1818, 0.8952], [0.1364, 0.9454], [0.0909, 0.9737], [0.0455, 0.9765], [0.0, 0.9624], [0, 1]]
+  }, {
+    "id": "M014",
+    "name": "PS Hàn Quốc 60mm - M014",
+    "category": "Phào trần",
+    "nominal_width": 60,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1148], [0.9545, 0.1666], [0.9091, 0.2161], [0.8636, 0.2172], [0.8182, 0.2423], [0.7727, 0.3128], [0.7273, 0.3499], [0.6818, 0.3541], [0.6364, 0.4026], [0.5909, 0.4727], [0.5455, 0.4945], [0.5, 0.5099], [0.4545, 0.576], [0.4091, 0.6352], [0.3636, 0.6471], [0.3182, 0.6801], [0.2727, 0.755], [0.2273, 0.7978], [0.1818, 0.8089], [0.1364, 0.8616], [0.0909, 0.9345], [0.0455, 0.9611], [0.0, 0.9812], [0, 1]]
+  }, {
+    "id": "M015",
+    "name": "PS Hàn Quốc 79mm - M015",
+    "category": "Phào trần",
+    "nominal_width": 79,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.3022], [0.9545, 0.3772], [0.9091, 0.4554], [0.8636, 0.5029], [0.8182, 0.5095], [0.7727, 0.5088], [0.7273, 0.5407], [0.6818, 0.605], [0.6364, 0.6624], [0.5909, 0.6812], [0.5455, 0.6735], [0.5, 0.6817], [0.4545, 0.7287], [0.4091, 0.7913], [0.3636, 0.8279], [0.3182, 0.8267], [0.2727, 0.8196], [0.2273, 0.845], [0.1818, 0.9027], [0.1364, 0.9544], [0.0909, 0.9688], [0.0455, 0.9576], [0.0, 0.9624], [0, 1]]
+  }, {
+    "id": "M016",
+    "name": "PS Hàn Quốc 80mm - M016",
+    "category": "Phào trần",
+    "nominal_width": 80,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1691], [0.9545, 0.2642], [0.9091, 0.3314], [0.8636, 0.3986], [0.8182, 0.4668], [0.7727, 0.5256], [0.7273, 0.5642], [0.6818, 0.5831], [0.6364, 0.5937], [0.5909, 0.6056], [0.5455, 0.6192], [0.5, 0.6318], [0.4545, 0.6473], [0.4091, 0.6737], [0.3636, 0.7133], [0.3182, 0.7588], [0.2727, 0.8011], [0.2273, 0.8364], [0.1818, 0.8665], [0.1364, 0.8941], [0.0909, 0.9205], [0.0455, 0.9463], [0.0, 0.9718], [0, 1]]
+  }, {
+    "id": "M017",
+    "name": "PS Hàn Quốc 86mm - M017",
+    "category": "Phào trần",
+    "nominal_width": 86,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.2023], [0.9545, 0.2552], [0.9091, 0.316], [0.8636, 0.3812], [0.8182, 0.4309], [0.7727, 0.4542], [0.7273, 0.4652], [0.6818, 0.4839], [0.6364, 0.5161], [0.5909, 0.5584], [0.5455, 0.6066], [0.5, 0.6547], [0.4545, 0.6956], [0.4091, 0.7253], [0.3636, 0.7467], [0.3182, 0.7668], [0.2727, 0.7907], [0.2273, 0.8193], [0.1818, 0.8506], [0.1364, 0.8831], [0.0909, 0.9159], [0.0455, 0.9486], [0.0, 0.9812], [0, 1]]
+  }, {
+    "id": "M018",
+    "name": "PS Hàn Quốc 90mm - M018",
+    "category": "Phào trần",
+    "nominal_width": 90,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1469], [0.9545, 0.2679], [0.9091, 0.3158], [0.8636, 0.3173], [0.8182, 0.3302], [0.7727, 0.3928], [0.7273, 0.4812], [0.6818, 0.5392], [0.6364, 0.545], [0.5909, 0.5352], [0.5455, 0.5635], [0.5, 0.6373], [0.4545, 0.7099], [0.4091, 0.7356], [0.3636, 0.7226], [0.3182, 0.7233], [0.2727, 0.7735], [0.2273, 0.8501], [0.1818, 0.8989], [0.1364, 0.898], [0.0909, 0.8828], [0.0455, 0.9049], [0.0, 0.9718], [0, 1]]
+  }, {
+    "id": "M019",
+    "name": "PS Hàn Quốc 96mm - M019",
+    "category": "Phào trần",
+    "nominal_width": 96,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.2615], [0.9545, 0.3162], [0.9091, 0.3796], [0.8636, 0.394], [0.8182, 0.3878], [0.7727, 0.4249], [0.7273, 0.4954], [0.6818, 0.5326], [0.6364, 0.5275], [0.5909, 0.5436], [0.5455, 0.6079], [0.5, 0.6648], [0.4545, 0.6721], [0.4091, 0.6724], [0.3636, 0.7204], [0.3182, 0.7887], [0.2727, 0.8155], [0.2273, 0.8104], [0.1818, 0.8374], [0.1364, 0.9054], [0.0909, 0.9531], [0.0455, 0.9542], [0.0, 0.9624], [0, 1]]
+  }, {
+    "id": "M020",
+    "name": "PS Hàn Quốc 100mm - M020",
+    "category": "Phào trần",
+    "nominal_width": 100,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1256], [0.9545, 0.2743], [0.9091, 0.3432], [0.8636, 0.3714], [0.8182, 0.3888], [0.7727, 0.4262], [0.7273, 0.491], [0.6818, 0.5618], [0.6364, 0.6099], [0.5909, 0.6253], [0.5455, 0.6265], [0.5, 0.6435], [0.4545, 0.6903], [0.4091, 0.7528], [0.3636, 0.8014], [0.3182, 0.819], [0.2727, 0.8157], [0.2273, 0.8206], [0.1818, 0.8542], [0.1364, 0.9102], [0.0909, 0.9612], [0.0455, 0.9841], [0.0, 0.9812], [0, 1]]
+  }, {
+    "id": "M021",
+    "name": "PS Hàn Quốc 110mm - M021",
+    "category": "Phào trần",
+    "nominal_width": 110,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.16], [0.9518, 0.2675], [0.9039, 0.3377], [0.856, 0.39], [0.8084, 0.4268], [0.7608, 0.452], [0.7135, 0.4719], [0.6663, 0.4931], [0.6194, 0.5212], [0.5725, 0.559], [0.526, 0.6059], [0.4796, 0.6578], [0.4335, 0.7089], [0.3877, 0.7533], [0.3422, 0.7869], [0.2971, 0.8088], [0.2522, 0.8218], [0.208, 0.8312], [0.1641, 0.8432], [0.121, 0.8632], [0.0787, 0.8938], [0.0378, 0.9341], [0.0, 0.98], [0.0, 1]]
+  }, {
+    "id": "M022",
+    "name": "PS Hàn Quốc 116mm - M022",
+    "category": "Phào trần",
+    "nominal_width": 116,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.12], [0.9518, 0.1804], [0.9039, 0.249], [0.856, 0.3128], [0.8084, 0.358], [0.7608, 0.3825], [0.7135, 0.3978], [0.6663, 0.4211], [0.6194, 0.4639], [0.5725, 0.5236], [0.526, 0.586], [0.4796, 0.6345], [0.4335, 0.662], [0.3877, 0.6758], [0.3422, 0.6922], [0.2971, 0.7258], [0.2522, 0.7791], [0.208, 0.8409], [0.1641, 0.8938], [0.121, 0.9267], [0.0787, 0.9421], [0.0378, 0.9543], [0.0, 0.98], [0.0, 1]]
+  }, {
+    "id": "M023",
+    "name": "PS Hàn Quốc 120mm - M023",
+    "category": "Phào trần",
+    "nominal_width": 120,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.22], [0.9518, 0.3649], [0.9039, 0.4418], [0.856, 0.4814], [0.8084, 0.4927], [0.7608, 0.4925], [0.7135, 0.5006], [0.6663, 0.5311], [0.6194, 0.5855], [0.5725, 0.653], [0.526, 0.7154], [0.4796, 0.7565], [0.4335, 0.7698], [0.3877, 0.7619], [0.3422, 0.7494], [0.2971, 0.7508], [0.2522, 0.7774], [0.208, 0.8278], [0.1641, 0.8889], [0.121, 0.942], [0.0787, 0.972], [0.0378, 0.975], [0.0, 0.96], [0.0, 1]]
+  }, {
+    "id": "M024",
+    "name": "PS Hàn Quốc 134mm - M024",
+    "category": "Phào trần",
+    "nominal_width": 134,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.1], [0.9518, 0.1486], [0.9039, 0.196], [0.856, 0.197], [0.8084, 0.2213], [0.7608, 0.2904], [0.7135, 0.3272], [0.6663, 0.3314], [0.6194, 0.3799], [0.5725, 0.4506], [0.526, 0.4728], [0.4796, 0.4884], [0.4335, 0.5561], [0.3877, 0.6171], [0.3422, 0.6294], [0.2971, 0.6636], [0.2522, 0.7416], [0.208, 0.7864], [0.1641, 0.798], [0.121, 0.8534], [0.0787, 0.9305], [0.0378, 0.9587], [0.0, 0.98], [0.0, 1]]
+  }, {
+    "id": "M025",
+    "name": "PU trơn 53mm - M025",
+    "category": "Phào trần",
+    "nominal_width": 53,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.28], [0.9518, 0.3544], [0.9039, 0.4331], [0.856, 0.4813], [0.8084, 0.488], [0.7608, 0.4873], [0.7135, 0.5199], [0.6663, 0.5859], [0.6194, 0.6452], [0.5725, 0.6647], [0.526, 0.6567], [0.4796, 0.6652], [0.4335, 0.7141], [0.3877, 0.7796], [0.3422, 0.818], [0.2971, 0.8167], [0.2522, 0.8093], [0.208, 0.836], [0.1641, 0.8968], [0.121, 0.9516], [0.0787, 0.9668], [0.0378, 0.955], [0.0, 0.96], [0.0, 1]]
+  }, {
+    "id": "M026",
+    "name": "PU trơn 60mm - M026",
+    "category": "Phào trần",
+    "nominal_width": 60,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.151], [0.9518, 0.2427], [0.9039, 0.3088], [0.856, 0.3759], [0.8084, 0.4446], [0.7608, 0.5045], [0.7135, 0.544], [0.6663, 0.5634], [0.6194, 0.5743], [0.5725, 0.5865], [0.526, 0.6005], [0.4796, 0.6135], [0.4335, 0.6296], [0.3877, 0.6569], [0.3422, 0.6981], [0.2971, 0.7456], [0.2522, 0.7898], [0.208, 0.8269], [0.1641, 0.8586], [0.121, 0.8877], [0.0787, 0.9156], [0.0378, 0.943], [0.0, 0.97], [0.0, 1]]
+  }, {
+    "id": "M027",
+    "name": "PU trơn 79mm - M027",
+    "category": "Phào trần",
+    "nominal_width": 79,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.1827], [0.9518, 0.2339], [0.9039, 0.2936], [0.856, 0.3584], [0.8084, 0.4084], [0.7608, 0.4319], [0.7135, 0.443], [0.6663, 0.462], [0.6194, 0.4948], [0.5725, 0.538], [0.526, 0.5875], [0.4796, 0.6372], [0.4335, 0.6797], [0.3877, 0.7106], [0.3422, 0.7329], [0.2971, 0.7539], [0.2522, 0.7789], [0.208, 0.8089], [0.1641, 0.8419], [0.121, 0.8761], [0.0787, 0.9108], [0.0378, 0.9454], [0.0, 0.98], [0.0, 1]]
+  }, {
+    "id": "M028",
+    "name": "PU trơn 80mm - M028",
+    "category": "Phào trần",
+    "nominal_width": 80,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.13], [0.9518, 0.2463], [0.9039, 0.2934], [0.856, 0.2949], [0.8084, 0.3077], [0.7608, 0.3701], [0.7135, 0.4592], [0.6663, 0.5184], [0.6194, 0.5243], [0.5725, 0.5143], [0.526, 0.5432], [0.4796, 0.6192], [0.4335, 0.6945], [0.3877, 0.7213], [0.3422, 0.7078], [0.2971, 0.7085], [0.2522, 0.7609], [0.208, 0.8413], [0.1641, 0.8928], [0.121, 0.8919], [0.0787, 0.8758], [0.0378, 0.8991], [0.0, 0.97], [0.0, 1]]
+  }, {
+    "id": "M029",
+    "name": "PU trơn 86mm - M029",
+    "category": "Phào trần",
+    "nominal_width": 86,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.24], [0.9518, 0.2938], [0.9039, 0.3568], [0.856, 0.3713], [0.8084, 0.365], [0.7608, 0.4023], [0.7135, 0.4737], [0.6663, 0.5116], [0.6194, 0.5064], [0.5725, 0.5229], [0.526, 0.5889], [0.4796, 0.6477], [0.4335, 0.6553], [0.3877, 0.6556], [0.3422, 0.7055], [0.2971, 0.7768], [0.2522, 0.805], [0.208, 0.7996], [0.1641, 0.828], [0.121, 0.8997], [0.0787, 0.9502], [0.0378, 0.9514], [0.0, 0.96], [0.0, 1]]
+  }, {
+    "id": "M030",
+    "name": "PU trơn 90mm - M030",
+    "category": "Phào trần",
+    "nominal_width": 90,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.11], [0.9518, 0.2526], [0.9039, 0.3206], [0.856, 0.3486], [0.8084, 0.366], [0.7608, 0.4036], [0.7135, 0.4692], [0.6663, 0.5415], [0.6194, 0.5909], [0.5725, 0.6068], [0.526, 0.6081], [0.4796, 0.6256], [0.4335, 0.6742], [0.3877, 0.7393], [0.3422, 0.7902], [0.2971, 0.8086], [0.2522, 0.8052], [0.208, 0.8103], [0.1641, 0.8456], [0.121, 0.9047], [0.0787, 0.9588], [0.0378, 0.9831], [0.0, 0.98], [0.0, 1]]
+  }, {
+    "id": "M031",
+    "name": "PU trơn 96mm - M031",
+    "category": "Phào trần",
+    "nominal_width": 96,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1433], [0.9545, 0.2472], [0.9091, 0.3164], [0.8636, 0.3686], [0.8182, 0.4055], [0.7727, 0.431], [0.7273, 0.4511], [0.6818, 0.4726], [0.6364, 0.5012], [0.5909, 0.5398], [0.5455, 0.588], [0.5, 0.6415], [0.4545, 0.6944], [0.4091, 0.7406], [0.3636, 0.7757], [0.3182, 0.7986], [0.2727, 0.8122], [0.2273, 0.822], [0.1818, 0.8346], [0.1364, 0.8556], [0.0909, 0.8878], [0.0455, 0.9303], [0.0, 0.9788], [0, 1.0]]
+  }, {
+    "id": "M032",
+    "name": "PU trơn 100mm - M032",
+    "category": "Phào trần",
+    "nominal_width": 100,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1057], [0.9545, 0.1628], [0.9091, 0.2291], [0.8636, 0.2917], [0.8182, 0.3366], [0.7727, 0.3611], [0.7273, 0.3764], [0.6818, 0.3998], [0.6364, 0.443], [0.5909, 0.5037], [0.5455, 0.5675], [0.5, 0.6174], [0.4545, 0.6458], [0.4091, 0.6601], [0.3636, 0.6771], [0.3182, 0.712], [0.2727, 0.7675], [0.2273, 0.8322], [0.1818, 0.8878], [0.1364, 0.9225], [0.0909, 0.9387], [0.0455, 0.9516], [0.0, 0.9788], [0, 1.0]]
+  }, {
+    "id": "M033",
+    "name": "PU trơn 110mm - M033",
+    "category": "Phào trần",
+    "nominal_width": 110,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.2009], [0.9545, 0.3435], [0.9091, 0.4207], [0.8636, 0.4607], [0.8182, 0.4722], [0.7727, 0.472], [0.7273, 0.4802], [0.6818, 0.5113], [0.6364, 0.567], [0.5909, 0.6365], [0.5455, 0.7012], [0.5, 0.7439], [0.4545, 0.7578], [0.4091, 0.7496], [0.3636, 0.7365], [0.3182, 0.738], [0.2727, 0.7657], [0.2273, 0.8185], [0.1818, 0.8826], [0.1364, 0.9386], [0.0909, 0.9703], [0.0455, 0.9735], [0.0, 0.9577], [0, 1.0]]
+  }, {
+    "id": "M034",
+    "name": "PU trơn 116mm - M034",
+    "category": "Phào trần",
+    "nominal_width": 116,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.0871], [0.9545, 0.1325], [0.9091, 0.1777], [0.8636, 0.1787], [0.8182, 0.2022], [0.7727, 0.2696], [0.7273, 0.306], [0.6818, 0.3102], [0.6364, 0.3585], [0.5909, 0.4296], [0.5455, 0.452], [0.5, 0.4678], [0.4545, 0.5369], [0.4091, 0.5995], [0.3636, 0.6122], [0.3182, 0.6475], [0.2727, 0.7284], [0.2273, 0.7751], [0.1818, 0.7873], [0.1364, 0.8453], [0.0909, 0.9265], [0.0455, 0.9563], [0.0, 0.9788], [0, 1.0]]
+  }, {
+    "id": "M035",
+    "name": "PU trơn 120mm - M035",
+    "category": "Phào trần",
+    "nominal_width": 120,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.2594], [0.9545, 0.333], [0.9091, 0.4119], [0.8636, 0.4606], [0.8182, 0.4674], [0.7727, 0.4667], [0.7273, 0.4999], [0.6818, 0.5674], [0.6364, 0.6285], [0.5909, 0.6486], [0.5455, 0.6403], [0.5, 0.6491], [0.4545, 0.6998], [0.4091, 0.768], [0.3636, 0.8082], [0.3182, 0.8068], [0.2727, 0.7991], [0.2273, 0.8271], [0.1818, 0.891], [0.1364, 0.9488], [0.0909, 0.9648], [0.0455, 0.9524], [0.0, 0.9577], [0, 1.0]]
+  }, {
+    "id": "M036",
+    "name": "PU trơn 134mm - M036",
+    "category": "Phào trần",
+    "nominal_width": 134,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1348], [0.9545, 0.2229], [0.9091, 0.2878], [0.8636, 0.3545], [0.8182, 0.4235], [0.7727, 0.4842], [0.7273, 0.5245], [0.6818, 0.5443], [0.6364, 0.5555], [0.5909, 0.568], [0.5455, 0.5824], [0.5, 0.5958], [0.4545, 0.6124], [0.4091, 0.6405], [0.3636, 0.6832], [0.3182, 0.7326], [0.2727, 0.7787], [0.2273, 0.8175], [0.1818, 0.8508], [0.1364, 0.8814], [0.0909, 0.9108], [0.0455, 0.9397], [0.0, 0.9682], [0, 1.0]]
+  }, {
+    "id": "M037",
+    "name": "PU hoa văn 53mm - M037",
+    "category": "Phào trần",
+    "nominal_width": 53,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.165], [0.9545, 0.2144], [0.9091, 0.2728], [0.8636, 0.337], [0.8182, 0.387], [0.7727, 0.4107], [0.7273, 0.4219], [0.6818, 0.4411], [0.6364, 0.4743], [0.5909, 0.5184], [0.5455, 0.569], [0.5, 0.6202], [0.4545, 0.6641], [0.4091, 0.6962], [0.3636, 0.7194], [0.3182, 0.7412], [0.2727, 0.7673], [0.2273, 0.7987], [0.1818, 0.8333], [0.1364, 0.8692], [0.0909, 0.9057], [0.0455, 0.9422], [0.0, 0.9788], [0, 1.0]]
+  }, {
+    "id": "M038",
+    "name": "PU hoa văn 60mm - M038",
+    "category": "Phào trần",
+    "nominal_width": 60,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.115], [0.9545, 0.2264], [0.9091, 0.2726], [0.8636, 0.2741], [0.8182, 0.2867], [0.7727, 0.3487], [0.7273, 0.4383], [0.6818, 0.4984], [0.6364, 0.5044], [0.5909, 0.4942], [0.5455, 0.5237], [0.5, 0.6016], [0.4545, 0.6795], [0.4091, 0.7073], [0.3636, 0.6933], [0.3182, 0.694], [0.2727, 0.7485], [0.2273, 0.8326], [0.1818, 0.8867], [0.1364, 0.8858], [0.0909, 0.8689], [0.0455, 0.8934], [0.0, 0.9682], [0, 1.0]]
+  }, {
+    "id": "M039",
+    "name": "PU hoa văn 79mm - M039",
+    "category": "Phào trần",
+    "nominal_width": 79,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.2203], [0.9545, 0.273], [0.9091, 0.3354], [0.8636, 0.3499], [0.8182, 0.3436], [0.7727, 0.3809], [0.7273, 0.4529], [0.6818, 0.4914], [0.6364, 0.4861], [0.5909, 0.5029], [0.5455, 0.5705], [0.5, 0.631], [0.4545, 0.6389], [0.4091, 0.6392], [0.3636, 0.6909], [0.3182, 0.7651], [0.2727, 0.7946], [0.2273, 0.7889], [0.1818, 0.8187], [0.1364, 0.894], [0.0909, 0.9473], [0.0455, 0.9486], [0.0, 0.9577], [0, 1.0]]
+  }, {
+    "id": "M040",
+    "name": "PU hoa văn 80mm - M040",
+    "category": "Phào trần",
+    "nominal_width": 80,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.0964], [0.9545, 0.2326], [0.9091, 0.2994], [0.8636, 0.3272], [0.8182, 0.3446], [0.7727, 0.3822], [0.7273, 0.4484], [0.6818, 0.5219], [0.6364, 0.5725], [0.5909, 0.5889], [0.5455, 0.5902], [0.5, 0.6082], [0.4545, 0.6584], [0.4091, 0.726], [0.3636, 0.7791], [0.3182, 0.7984], [0.2727, 0.7948], [0.2273, 0.8001], [0.1818, 0.8371], [0.1364, 0.8993], [0.0909, 0.9564], [0.0455, 0.9821], [0.0, 0.9788], [0, 1.0]]
+  }, {
+    "id": "M041",
+    "name": "PU hoa văn 86mm - M041",
+    "category": "Phào trần",
+    "nominal_width": 86,
+    "points": [[0, 0], [1, 0], [1.0, 0.16], [0.9545, 0.2675], [0.9091, 0.3377], [0.8636, 0.39], [0.8182, 0.4268], [0.7727, 0.452], [0.7273, 0.4719], [0.6818, 0.4931], [0.6364, 0.5212], [0.5909, 0.559], [0.5455, 0.6059], [0.5, 0.6578], [0.4545, 0.7089], [0.4091, 0.7533], [0.3636, 0.7869], [0.3182, 0.8088], [0.2727, 0.8218], [0.2273, 0.8312], [0.1818, 0.8432], [0.1364, 0.8632], [0.0909, 0.8938], [0.0455, 0.9341], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M042",
+    "name": "PU hoa văn 90mm - M042",
+    "category": "Phào trần",
+    "nominal_width": 90,
+    "points": [[0, 0], [1, 0], [1.0, 0.12], [0.9545, 0.1804], [0.9091, 0.249], [0.8636, 0.3128], [0.8182, 0.358], [0.7727, 0.3825], [0.7273, 0.3978], [0.6818, 0.4211], [0.6364, 0.4639], [0.5909, 0.5236], [0.5455, 0.586], [0.5, 0.6345], [0.4545, 0.662], [0.4091, 0.6758], [0.3636, 0.6922], [0.3182, 0.7258], [0.2727, 0.7791], [0.2273, 0.8409], [0.1818, 0.8938], [0.1364, 0.9267], [0.0909, 0.9421], [0.0455, 0.9543], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M043",
+    "name": "PU hoa văn 96mm - M043",
+    "category": "Phào trần",
+    "nominal_width": 96,
+    "points": [[0, 0], [1, 0], [1.0, 0.22], [0.9545, 0.3649], [0.9091, 0.4418], [0.8636, 0.4814], [0.8182, 0.4927], [0.7727, 0.4925], [0.7273, 0.5006], [0.6818, 0.5311], [0.6364, 0.5855], [0.5909, 0.653], [0.5455, 0.7154], [0.5, 0.7565], [0.4545, 0.7698], [0.4091, 0.7619], [0.3636, 0.7494], [0.3182, 0.7508], [0.2727, 0.7774], [0.2273, 0.8278], [0.1818, 0.8889], [0.1364, 0.942], [0.0909, 0.972], [0.0455, 0.975], [0.0, 0.96], [0, 1]]
+  }, {
+    "id": "M044",
+    "name": "PU hoa văn 100mm - M044",
+    "category": "Phào trần",
+    "nominal_width": 100,
+    "points": [[0, 0], [1, 0], [1.0, 0.1], [0.9545, 0.1486], [0.9091, 0.196], [0.8636, 0.197], [0.8182, 0.2213], [0.7727, 0.2904], [0.7273, 0.3272], [0.6818, 0.3314], [0.6364, 0.3799], [0.5909, 0.4506], [0.5455, 0.4728], [0.5, 0.4884], [0.4545, 0.5561], [0.4091, 0.6171], [0.3636, 0.6294], [0.3182, 0.6636], [0.2727, 0.7416], [0.2273, 0.7864], [0.1818, 0.798], [0.1364, 0.8534], [0.0909, 0.9305], [0.0455, 0.9587], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M045",
+    "name": "PU hoa văn 110mm - M045",
+    "category": "Phào trần",
+    "nominal_width": 110,
+    "points": [[0, 0], [1, 0], [1.0, 0.28], [0.9545, 0.3544], [0.9091, 0.4331], [0.8636, 0.4813], [0.8182, 0.488], [0.7727, 0.4873], [0.7273, 0.5199], [0.6818, 0.5859], [0.6364, 0.6452], [0.5909, 0.6647], [0.5455, 0.6567], [0.5, 0.6652], [0.4545, 0.7141], [0.4091, 0.7796], [0.3636, 0.818], [0.3182, 0.8167], [0.2727, 0.8093], [0.2273, 0.836], [0.1818, 0.8968], [0.1364, 0.9516], [0.0909, 0.9668], [0.0455, 0.955], [0.0, 0.96], [0, 1]]
+  }, {
+    "id": "M046",
+    "name": "PU hoa văn 116mm - M046",
+    "category": "Phào trần",
+    "nominal_width": 116,
+    "points": [[0, 0], [1, 0], [1.0, 0.151], [0.9545, 0.2427], [0.9091, 0.3088], [0.8636, 0.3759], [0.8182, 0.4446], [0.7727, 0.5045], [0.7273, 0.544], [0.6818, 0.5634], [0.6364, 0.5743], [0.5909, 0.5865], [0.5455, 0.6005], [0.5, 0.6135], [0.4545, 0.6296], [0.4091, 0.6569], [0.3636, 0.6981], [0.3182, 0.7456], [0.2727, 0.7898], [0.2273, 0.8269], [0.1818, 0.8586], [0.1364, 0.8877], [0.0909, 0.9156], [0.0455, 0.943], [0.0, 0.97], [0, 1]]
+  }, {
+    "id": "M047",
+    "name": "PU hoa văn 120mm - M047",
+    "category": "Phào trần",
+    "nominal_width": 120,
+    "points": [[0, 0], [1, 0], [1.0, 0.1827], [0.9545, 0.2339], [0.9091, 0.2936], [0.8636, 0.3584], [0.8182, 0.4084], [0.7727, 0.4319], [0.7273, 0.443], [0.6818, 0.462], [0.6364, 0.4948], [0.5909, 0.538], [0.5455, 0.5875], [0.5, 0.6372], [0.4545, 0.6797], [0.4091, 0.7106], [0.3636, 0.7329], [0.3182, 0.7539], [0.2727, 0.7789], [0.2273, 0.8089], [0.1818, 0.8419], [0.1364, 0.8761], [0.0909, 0.9108], [0.0455, 0.9454], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M048",
+    "name": "PU hoa văn 134mm - M048",
+    "category": "Phào trần",
+    "nominal_width": 134,
+    "points": [[0, 0], [1, 0], [1.0, 0.13], [0.9545, 0.2463], [0.9091, 0.2934], [0.8636, 0.2949], [0.8182, 0.3077], [0.7727, 0.3701], [0.7273, 0.4592], [0.6818, 0.5184], [0.6364, 0.5243], [0.5909, 0.5143], [0.5455, 0.5432], [0.5, 0.6192], [0.4545, 0.6945], [0.4091, 0.7213], [0.3636, 0.7078], [0.3182, 0.7085], [0.2727, 0.7609], [0.2273, 0.8413], [0.1818, 0.8928], [0.1364, 0.8919], [0.0909, 0.8758], [0.0455, 0.8991], [0.0, 0.97], [0, 1]]
+  }, {
+    "id": "M049",
+    "name": "PS trơn 53mm - M049",
+    "category": "Phào trần",
+    "nominal_width": 53,
+    "points": [[0, 0], [1, 0], [1.0, 0.24], [0.9545, 0.2938], [0.9091, 0.3568], [0.8636, 0.3713], [0.8182, 0.365], [0.7727, 0.4023], [0.7273, 0.4737], [0.6818, 0.5116], [0.6364, 0.5064], [0.5909, 0.5229], [0.5455, 0.5889], [0.5, 0.6477], [0.4545, 0.6553], [0.4091, 0.6556], [0.3636, 0.7055], [0.3182, 0.7768], [0.2727, 0.805], [0.2273, 0.7996], [0.1818, 0.828], [0.1364, 0.8997], [0.0909, 0.9502], [0.0455, 0.9514], [0.0, 0.96], [0, 1]]
+  }, {
+    "id": "M050",
+    "name": "PS trơn 60mm - M050",
+    "category": "Phào trần",
+    "nominal_width": 60,
+    "points": [[0, 0], [1, 0], [1.0, 0.11], [0.9545, 0.2526], [0.9091, 0.3206], [0.8636, 0.3486], [0.8182, 0.366], [0.7727, 0.4036], [0.7273, 0.4692], [0.6818, 0.5415], [0.6364, 0.5909], [0.5909, 0.6068], [0.5455, 0.6081], [0.5, 0.6256], [0.4545, 0.6742], [0.4091, 0.7393], [0.3636, 0.7902], [0.3182, 0.8086], [0.2727, 0.8052], [0.2273, 0.8103], [0.1818, 0.8456], [0.1364, 0.9047], [0.0909, 0.9588], [0.0455, 0.9831], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M051",
+    "name": "Chỉ lưng PS 40mm - M051",
+    "category": "Phào tường",
+    "nominal_width": 40,
+    "points": [[0, 0], [1, 0], [1.0, 0.22], [0.9545, 0.3649], [0.9091, 0.4418], [0.8636, 0.4814], [0.8182, 0.4927], [0.7727, 0.4925], [0.7273, 0.5006], [0.6818, 0.5311], [0.6364, 0.5855], [0.5909, 0.653], [0.5455, 0.7154], [0.5, 0.7565], [0.4545, 0.7698], [0.4091, 0.7619], [0.3636, 0.7494], [0.3182, 0.7508], [0.2727, 0.7774], [0.2273, 0.8278], [0.1818, 0.8889], [0.1364, 0.942], [0.0909, 0.972], [0.0455, 0.975], [0.0, 0.96], [0, 1]]
+  }, {
+    "id": "M052",
+    "name": "Chỉ lưng PS 50mm - M052",
+    "category": "Phào tường",
+    "nominal_width": 50,
+    "points": [[0, 0], [1, 0], [1.0, 0.1], [0.9545, 0.1486], [0.9091, 0.196], [0.8636, 0.197], [0.8182, 0.2213], [0.7727, 0.2904], [0.7273, 0.3272], [0.6818, 0.3314], [0.6364, 0.3799], [0.5909, 0.4506], [0.5455, 0.4728], [0.5, 0.4884], [0.4545, 0.5561], [0.4091, 0.6171], [0.3636, 0.6294], [0.3182, 0.6636], [0.2727, 0.7416], [0.2273, 0.7864], [0.1818, 0.798], [0.1364, 0.8534], [0.0909, 0.9305], [0.0455, 0.9587], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M053",
+    "name": "Chỉ lưng PS 60mm - M053",
+    "category": "Phào tường",
+    "nominal_width": 60,
+    "points": [[0, 0], [1, 0], [1.0, 0.28], [0.9545, 0.3544], [0.9091, 0.4331], [0.8636, 0.4813], [0.8182, 0.488], [0.7727, 0.4873], [0.7273, 0.5199], [0.6818, 0.5859], [0.6364, 0.6452], [0.5909, 0.6647], [0.5455, 0.6567], [0.5, 0.6652], [0.4545, 0.7141], [0.4091, 0.7796], [0.3636, 0.818], [0.3182, 0.8167], [0.2727, 0.8093], [0.2273, 0.836], [0.1818, 0.8968], [0.1364, 0.9516], [0.0909, 0.9668], [0.0455, 0.955], [0.0, 0.96], [0, 1]]
+  }, {
+    "id": "M054",
+    "name": "Chỉ lưng PS 62mm - M054",
+    "category": "Phào tường",
+    "nominal_width": 62,
+    "points": [[0, 0], [1, 0], [1.0, 0.151], [0.9545, 0.2427], [0.9091, 0.3088], [0.8636, 0.3759], [0.8182, 0.4446], [0.7727, 0.5045], [0.7273, 0.544], [0.6818, 0.5634], [0.6364, 0.5743], [0.5909, 0.5865], [0.5455, 0.6005], [0.5, 0.6135], [0.4545, 0.6296], [0.4091, 0.6569], [0.3636, 0.6981], [0.3182, 0.7456], [0.2727, 0.7898], [0.2273, 0.8269], [0.1818, 0.8586], [0.1364, 0.8877], [0.0909, 0.9156], [0.0455, 0.943], [0.0, 0.97], [0, 1]]
+  }, {
+    "id": "M055",
+    "name": "Chỉ lưng PS 65mm - M055",
+    "category": "Phào tường",
+    "nominal_width": 65,
+    "points": [[0, 0], [1, 0], [1.0, 0.1827], [0.9545, 0.2339], [0.9091, 0.2936], [0.8636, 0.3584], [0.8182, 0.4084], [0.7727, 0.4319], [0.7273, 0.443], [0.6818, 0.462], [0.6364, 0.4948], [0.5909, 0.538], [0.5455, 0.5875], [0.5, 0.6372], [0.4545, 0.6797], [0.4091, 0.7106], [0.3636, 0.7329], [0.3182, 0.7539], [0.2727, 0.7789], [0.2273, 0.8089], [0.1818, 0.8419], [0.1364, 0.8761], [0.0909, 0.9108], [0.0455, 0.9454], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M056",
+    "name": "Chỉ lưng PS 70mm - M056",
+    "category": "Phào tường",
+    "nominal_width": 70,
+    "points": [[0, 0], [1, 0], [1.0, 0.13], [0.9545, 0.2463], [0.9091, 0.2934], [0.8636, 0.2949], [0.8182, 0.3077], [0.7727, 0.3701], [0.7273, 0.4592], [0.6818, 0.5184], [0.6364, 0.5243], [0.5909, 0.5143], [0.5455, 0.5432], [0.5, 0.6192], [0.4545, 0.6945], [0.4091, 0.7213], [0.3636, 0.7078], [0.3182, 0.7085], [0.2727, 0.7609], [0.2273, 0.8413], [0.1818, 0.8928], [0.1364, 0.8919], [0.0909, 0.8758], [0.0455, 0.8991], [0.0, 0.97], [0, 1]]
+  }, {
+    "id": "M057",
+    "name": "Chỉ lưng PS 80mm - M057",
+    "category": "Phào tường",
+    "nominal_width": 80,
+    "points": [[0, 0], [1, 0], [1.0, 0.24], [0.9545, 0.2938], [0.9091, 0.3568], [0.8636, 0.3713], [0.8182, 0.365], [0.7727, 0.4023], [0.7273, 0.4737], [0.6818, 0.5116], [0.6364, 0.5064], [0.5909, 0.5229], [0.5455, 0.5889], [0.5, 0.6477], [0.4545, 0.6553], [0.4091, 0.6556], [0.3636, 0.7055], [0.3182, 0.7768], [0.2727, 0.805], [0.2273, 0.7996], [0.1818, 0.828], [0.1364, 0.8997], [0.0909, 0.9502], [0.0455, 0.9514], [0.0, 0.96], [0, 1]]
+  }, {
+    "id": "M058",
+    "name": "Chỉ lưng PS 84mm - M058",
+    "category": "Phào tường",
+    "nominal_width": 84,
+    "points": [[0, 0], [1, 0], [1.0, 0.11], [0.9545, 0.2526], [0.9091, 0.3206], [0.8636, 0.3486], [0.8182, 0.366], [0.7727, 0.4036], [0.7273, 0.4692], [0.6818, 0.5415], [0.6364, 0.5909], [0.5909, 0.6068], [0.5455, 0.6081], [0.5, 0.6256], [0.4545, 0.6742], [0.4091, 0.7393], [0.3636, 0.7902], [0.3182, 0.8086], [0.2727, 0.8052], [0.2273, 0.8103], [0.1818, 0.8456], [0.1364, 0.9047], [0.0909, 0.9588], [0.0455, 0.9831], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M059",
+    "name": "Chỉ lưng PS 85mm - M059",
+    "category": "Phào tường",
+    "nominal_width": 85,
+    "points": [[0, 0], [1, 0], [1.0, 0.16], [0.9545, 0.2675], [0.9091, 0.3377], [0.8636, 0.39], [0.8182, 0.4268], [0.7727, 0.452], [0.7273, 0.4719], [0.6818, 0.4931], [0.6364, 0.5212], [0.5909, 0.559], [0.5455, 0.6059], [0.5, 0.6578], [0.4545, 0.7089], [0.4091, 0.7533], [0.3636, 0.7869], [0.3182, 0.8088], [0.2727, 0.8218], [0.2273, 0.8312], [0.1818, 0.8432], [0.1364, 0.8632], [0.0909, 0.8938], [0.0455, 0.9341], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M060",
+    "name": "Chỉ lưng PS 100mm - M060",
+    "category": "Phào tường",
+    "nominal_width": 100,
+    "points": [[0, 0], [1, 0], [1.0, 0.12], [0.9545, 0.1804], [0.9091, 0.249], [0.8636, 0.3128], [0.8182, 0.358], [0.7727, 0.3825], [0.7273, 0.3978], [0.6818, 0.4211], [0.6364, 0.4639], [0.5909, 0.5236], [0.5455, 0.586], [0.5, 0.6345], [0.4545, 0.662], [0.4091, 0.6758], [0.3636, 0.6922], [0.3182, 0.7258], [0.2727, 0.7791], [0.2273, 0.8409], [0.1818, 0.8938], [0.1364, 0.9267], [0.0909, 0.9421], [0.0455, 0.9543], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M061",
+    "name": "Chỉ viền PS 40mm - M061",
+    "category": "Phào tường",
+    "nominal_width": 40,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.2409], [0.9545, 0.3877], [0.9091, 0.464], [0.8636, 0.503], [0.8182, 0.5141], [0.7727, 0.5139], [0.7273, 0.5218], [0.6818, 0.5517], [0.6364, 0.6046], [0.5909, 0.6699], [0.5455, 0.7299], [0.5, 0.7693], [0.4545, 0.782], [0.4091, 0.7744], [0.3636, 0.7625], [0.3182, 0.7638], [0.2727, 0.7892], [0.2273, 0.8372], [0.1818, 0.8952], [0.1364, 0.9454], [0.0909, 0.9737], [0.0455, 0.9765], [0.0, 0.9624], [0, 1]]
+  }, {
+    "id": "M062",
+    "name": "Chỉ viền PS 50mm - M062",
+    "category": "Phào tường",
+    "nominal_width": 50,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1148], [0.9545, 0.1666], [0.9091, 0.2161], [0.8636, 0.2172], [0.8182, 0.2423], [0.7727, 0.3128], [0.7273, 0.3499], [0.6818, 0.3541], [0.6364, 0.4026], [0.5909, 0.4727], [0.5455, 0.4945], [0.5, 0.5099], [0.4545, 0.576], [0.4091, 0.6352], [0.3636, 0.6471], [0.3182, 0.6801], [0.2727, 0.755], [0.2273, 0.7978], [0.1818, 0.8089], [0.1364, 0.8616], [0.0909, 0.9345], [0.0455, 0.9611], [0.0, 0.9812], [0, 1]]
+  }, {
+    "id": "M063",
+    "name": "Chỉ viền PS 60mm - M063",
+    "category": "Phào tường",
+    "nominal_width": 60,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.3022], [0.9545, 0.3772], [0.9091, 0.4554], [0.8636, 0.5029], [0.8182, 0.5095], [0.7727, 0.5088], [0.7273, 0.5407], [0.6818, 0.605], [0.6364, 0.6624], [0.5909, 0.6812], [0.5455, 0.6735], [0.5, 0.6817], [0.4545, 0.7287], [0.4091, 0.7913], [0.3636, 0.8279], [0.3182, 0.8267], [0.2727, 0.8196], [0.2273, 0.845], [0.1818, 0.9027], [0.1364, 0.9544], [0.0909, 0.9688], [0.0455, 0.9576], [0.0, 0.9624], [0, 1]]
+  }, {
+    "id": "M064",
+    "name": "Chỉ viền PS 62mm - M064",
+    "category": "Phào tường",
+    "nominal_width": 62,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1691], [0.9545, 0.2642], [0.9091, 0.3314], [0.8636, 0.3986], [0.8182, 0.4668], [0.7727, 0.5256], [0.7273, 0.5642], [0.6818, 0.5831], [0.6364, 0.5937], [0.5909, 0.6056], [0.5455, 0.6192], [0.5, 0.6318], [0.4545, 0.6473], [0.4091, 0.6737], [0.3636, 0.7133], [0.3182, 0.7588], [0.2727, 0.8011], [0.2273, 0.8364], [0.1818, 0.8665], [0.1364, 0.8941], [0.0909, 0.9205], [0.0455, 0.9463], [0.0, 0.9718], [0, 1]]
+  }, {
+    "id": "M065",
+    "name": "Chỉ viền PS 65mm - M065",
+    "category": "Phào tường",
+    "nominal_width": 65,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.2023], [0.9545, 0.2552], [0.9091, 0.316], [0.8636, 0.3812], [0.8182, 0.4309], [0.7727, 0.4542], [0.7273, 0.4652], [0.6818, 0.4839], [0.6364, 0.5161], [0.5909, 0.5584], [0.5455, 0.6066], [0.5, 0.6547], [0.4545, 0.6956], [0.4091, 0.7253], [0.3636, 0.7467], [0.3182, 0.7668], [0.2727, 0.7907], [0.2273, 0.8193], [0.1818, 0.8506], [0.1364, 0.8831], [0.0909, 0.9159], [0.0455, 0.9486], [0.0, 0.9812], [0, 1]]
+  }, {
+    "id": "M066",
+    "name": "Chỉ viền PS 70mm - M066",
+    "category": "Phào tường",
+    "nominal_width": 70,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1469], [0.9545, 0.2679], [0.9091, 0.3158], [0.8636, 0.3173], [0.8182, 0.3302], [0.7727, 0.3928], [0.7273, 0.4812], [0.6818, 0.5392], [0.6364, 0.545], [0.5909, 0.5352], [0.5455, 0.5635], [0.5, 0.6373], [0.4545, 0.7099], [0.4091, 0.7356], [0.3636, 0.7226], [0.3182, 0.7233], [0.2727, 0.7735], [0.2273, 0.8501], [0.1818, 0.8989], [0.1364, 0.898], [0.0909, 0.8828], [0.0455, 0.9049], [0.0, 0.9718], [0, 1]]
+  }, {
+    "id": "M067",
+    "name": "Chỉ viền PS 80mm - M067",
+    "category": "Phào tường",
+    "nominal_width": 80,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.2615], [0.9545, 0.3162], [0.9091, 0.3796], [0.8636, 0.394], [0.8182, 0.3878], [0.7727, 0.4249], [0.7273, 0.4954], [0.6818, 0.5326], [0.6364, 0.5275], [0.5909, 0.5436], [0.5455, 0.6079], [0.5, 0.6648], [0.4545, 0.6721], [0.4091, 0.6724], [0.3636, 0.7204], [0.3182, 0.7887], [0.2727, 0.8155], [0.2273, 0.8104], [0.1818, 0.8374], [0.1364, 0.9054], [0.0909, 0.9531], [0.0455, 0.9542], [0.0, 0.9624], [0, 1]]
+  }, {
+    "id": "M068",
+    "name": "Chỉ viền PS 84mm - M068",
+    "category": "Phào tường",
+    "nominal_width": 84,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1256], [0.9545, 0.2743], [0.9091, 0.3432], [0.8636, 0.3714], [0.8182, 0.3888], [0.7727, 0.4262], [0.7273, 0.491], [0.6818, 0.5618], [0.6364, 0.6099], [0.5909, 0.6253], [0.5455, 0.6265], [0.5, 0.6435], [0.4545, 0.6903], [0.4091, 0.7528], [0.3636, 0.8014], [0.3182, 0.819], [0.2727, 0.8157], [0.2273, 0.8206], [0.1818, 0.8542], [0.1364, 0.9102], [0.0909, 0.9612], [0.0455, 0.9841], [0.0, 0.9812], [0, 1]]
+  }, {
+    "id": "M069",
+    "name": "Chỉ viền PS 85mm - M069",
+    "category": "Phào tường",
+    "nominal_width": 85,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1786], [0.9545, 0.2895], [0.9091, 0.3604], [0.8636, 0.4127], [0.8182, 0.4492], [0.7727, 0.4741], [0.7273, 0.4936], [0.6818, 0.5145], [0.6364, 0.542], [0.5909, 0.5789], [0.5455, 0.6244], [0.5, 0.6745], [0.4545, 0.7237], [0.4091, 0.7662], [0.3636, 0.7983], [0.3182, 0.8192], [0.2727, 0.8315], [0.2273, 0.8405], [0.1818, 0.8519], [0.1364, 0.8709], [0.0909, 0.8998], [0.0455, 0.9379], [0.0, 0.9812], [0, 1]]
+  }, {
+    "id": "M070",
+    "name": "Chỉ viền PS 100mm - M070",
+    "category": "Phào tường",
+    "nominal_width": 100,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1363], [0.9545, 0.1999], [0.9091, 0.2707], [0.8636, 0.3354], [0.8182, 0.3808], [0.7727, 0.4052], [0.7273, 0.4204], [0.6818, 0.4435], [0.6364, 0.4858], [0.5909, 0.5443], [0.5455, 0.6051], [0.5, 0.6521], [0.4545, 0.6786], [0.4091, 0.6919], [0.3636, 0.7076], [0.3182, 0.7399], [0.2727, 0.7909], [0.2273, 0.8497], [0.1818, 0.8998], [0.1364, 0.9309], [0.0909, 0.9455], [0.0455, 0.957], [0.0, 0.9812], [0, 1]]
+  }, {
+    "id": "M071",
+    "name": "PU tường 40mm - M071",
+    "category": "Phào tường",
+    "nominal_width": 40,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.22], [0.9518, 0.3649], [0.9039, 0.4418], [0.856, 0.4814], [0.8084, 0.4927], [0.7608, 0.4925], [0.7135, 0.5006], [0.6663, 0.5311], [0.6194, 0.5855], [0.5725, 0.653], [0.526, 0.7154], [0.4796, 0.7565], [0.4335, 0.7698], [0.3877, 0.7619], [0.3422, 0.7494], [0.2971, 0.7508], [0.2522, 0.7774], [0.208, 0.8278], [0.1641, 0.8889], [0.121, 0.942], [0.0787, 0.972], [0.0378, 0.975], [0.0, 0.96], [0.0, 1]]
+  }, {
+    "id": "M072",
+    "name": "PU tường 50mm - M072",
+    "category": "Phào tường",
+    "nominal_width": 50,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.1], [0.9518, 0.1486], [0.9039, 0.196], [0.856, 0.197], [0.8084, 0.2213], [0.7608, 0.2904], [0.7135, 0.3272], [0.6663, 0.3314], [0.6194, 0.3799], [0.5725, 0.4506], [0.526, 0.4728], [0.4796, 0.4884], [0.4335, 0.5561], [0.3877, 0.6171], [0.3422, 0.6294], [0.2971, 0.6636], [0.2522, 0.7416], [0.208, 0.7864], [0.1641, 0.798], [0.121, 0.8534], [0.0787, 0.9305], [0.0378, 0.9587], [0.0, 0.98], [0.0, 1]]
+  }, {
+    "id": "M073",
+    "name": "PU tường 60mm - M073",
+    "category": "Phào tường",
+    "nominal_width": 60,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.28], [0.9518, 0.3544], [0.9039, 0.4331], [0.856, 0.4813], [0.8084, 0.488], [0.7608, 0.4873], [0.7135, 0.5199], [0.6663, 0.5859], [0.6194, 0.6452], [0.5725, 0.6647], [0.526, 0.6567], [0.4796, 0.6652], [0.4335, 0.7141], [0.3877, 0.7796], [0.3422, 0.818], [0.2971, 0.8167], [0.2522, 0.8093], [0.208, 0.836], [0.1641, 0.8968], [0.121, 0.9516], [0.0787, 0.9668], [0.0378, 0.955], [0.0, 0.96], [0.0, 1]]
+  }, {
+    "id": "M074",
+    "name": "PU tường 62mm - M074",
+    "category": "Phào tường",
+    "nominal_width": 62,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.151], [0.9518, 0.2427], [0.9039, 0.3088], [0.856, 0.3759], [0.8084, 0.4446], [0.7608, 0.5045], [0.7135, 0.544], [0.6663, 0.5634], [0.6194, 0.5743], [0.5725, 0.5865], [0.526, 0.6005], [0.4796, 0.6135], [0.4335, 0.6296], [0.3877, 0.6569], [0.3422, 0.6981], [0.2971, 0.7456], [0.2522, 0.7898], [0.208, 0.8269], [0.1641, 0.8586], [0.121, 0.8877], [0.0787, 0.9156], [0.0378, 0.943], [0.0, 0.97], [0.0, 1]]
+  }, {
+    "id": "M075",
+    "name": "PU tường 65mm - M075",
+    "category": "Phào tường",
+    "nominal_width": 65,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.1827], [0.9518, 0.2339], [0.9039, 0.2936], [0.856, 0.3584], [0.8084, 0.4084], [0.7608, 0.4319], [0.7135, 0.443], [0.6663, 0.462], [0.6194, 0.4948], [0.5725, 0.538], [0.526, 0.5875], [0.4796, 0.6372], [0.4335, 0.6797], [0.3877, 0.7106], [0.3422, 0.7329], [0.2971, 0.7539], [0.2522, 0.7789], [0.208, 0.8089], [0.1641, 0.8419], [0.121, 0.8761], [0.0787, 0.9108], [0.0378, 0.9454], [0.0, 0.98], [0.0, 1]]
+  }, {
+    "id": "M076",
+    "name": "PU tường 70mm - M076",
+    "category": "Phào tường",
+    "nominal_width": 70,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.13], [0.9518, 0.2463], [0.9039, 0.2934], [0.856, 0.2949], [0.8084, 0.3077], [0.7608, 0.3701], [0.7135, 0.4592], [0.6663, 0.5184], [0.6194, 0.5243], [0.5725, 0.5143], [0.526, 0.5432], [0.4796, 0.6192], [0.4335, 0.6945], [0.3877, 0.7213], [0.3422, 0.7078], [0.2971, 0.7085], [0.2522, 0.7609], [0.208, 0.8413], [0.1641, 0.8928], [0.121, 0.8919], [0.0787, 0.8758], [0.0378, 0.8991], [0.0, 0.97], [0.0, 1]]
+  }, {
+    "id": "M077",
+    "name": "PU tường 80mm - M077",
+    "category": "Phào tường",
+    "nominal_width": 80,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.24], [0.9518, 0.2938], [0.9039, 0.3568], [0.856, 0.3713], [0.8084, 0.365], [0.7608, 0.4023], [0.7135, 0.4737], [0.6663, 0.5116], [0.6194, 0.5064], [0.5725, 0.5229], [0.526, 0.5889], [0.4796, 0.6477], [0.4335, 0.6553], [0.3877, 0.6556], [0.3422, 0.7055], [0.2971, 0.7768], [0.2522, 0.805], [0.208, 0.7996], [0.1641, 0.828], [0.121, 0.8997], [0.0787, 0.9502], [0.0378, 0.9514], [0.0, 0.96], [0.0, 1]]
+  }, {
+    "id": "M078",
+    "name": "PU tường 84mm - M078",
+    "category": "Phào tường",
+    "nominal_width": 84,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.11], [0.9518, 0.2526], [0.9039, 0.3206], [0.856, 0.3486], [0.8084, 0.366], [0.7608, 0.4036], [0.7135, 0.4692], [0.6663, 0.5415], [0.6194, 0.5909], [0.5725, 0.6068], [0.526, 0.6081], [0.4796, 0.6256], [0.4335, 0.6742], [0.3877, 0.7393], [0.3422, 0.7902], [0.2971, 0.8086], [0.2522, 0.8052], [0.208, 0.8103], [0.1641, 0.8456], [0.121, 0.9047], [0.0787, 0.9588], [0.0378, 0.9831], [0.0, 0.98], [0.0, 1]]
+  }, {
+    "id": "M079",
+    "name": "PU tường 85mm - M079",
+    "category": "Phào tường",
+    "nominal_width": 85,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.16], [0.9518, 0.2675], [0.9039, 0.3377], [0.856, 0.39], [0.8084, 0.4268], [0.7608, 0.452], [0.7135, 0.4719], [0.6663, 0.4931], [0.6194, 0.5212], [0.5725, 0.559], [0.526, 0.6059], [0.4796, 0.6578], [0.4335, 0.7089], [0.3877, 0.7533], [0.3422, 0.7869], [0.2971, 0.8088], [0.2522, 0.8218], [0.208, 0.8312], [0.1641, 0.8432], [0.121, 0.8632], [0.0787, 0.8938], [0.0378, 0.9341], [0.0, 0.98], [0.0, 1]]
+  }, {
+    "id": "M080",
+    "name": "PU tường 100mm - M080",
+    "category": "Phào tường",
+    "nominal_width": 100,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.12], [0.9518, 0.1804], [0.9039, 0.249], [0.856, 0.3128], [0.8084, 0.358], [0.7608, 0.3825], [0.7135, 0.3978], [0.6663, 0.4211], [0.6194, 0.4639], [0.5725, 0.5236], [0.526, 0.586], [0.4796, 0.6345], [0.4335, 0.662], [0.3877, 0.6758], [0.3422, 0.6922], [0.2971, 0.7258], [0.2522, 0.7791], [0.208, 0.8409], [0.1641, 0.8938], [0.121, 0.9267], [0.0787, 0.9421], [0.0378, 0.9543], [0.0, 0.98], [0.0, 1]]
+  }, {
+    "id": "M081",
+    "name": "Tân cổ điển 40mm - M081",
+    "category": "Phào tường",
+    "nominal_width": 40,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.2009], [0.9545, 0.3435], [0.9091, 0.4207], [0.8636, 0.4607], [0.8182, 0.4722], [0.7727, 0.472], [0.7273, 0.4802], [0.6818, 0.5113], [0.6364, 0.567], [0.5909, 0.6365], [0.5455, 0.7012], [0.5, 0.7439], [0.4545, 0.7578], [0.4091, 0.7496], [0.3636, 0.7365], [0.3182, 0.738], [0.2727, 0.7657], [0.2273, 0.8185], [0.1818, 0.8826], [0.1364, 0.9386], [0.0909, 0.9703], [0.0455, 0.9735], [0.0, 0.9577], [0, 1.0]]
+  }, {
+    "id": "M082",
+    "name": "Tân cổ điển 50mm - M082",
+    "category": "Phào tường",
+    "nominal_width": 50,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.0871], [0.9545, 0.1325], [0.9091, 0.1777], [0.8636, 0.1787], [0.8182, 0.2022], [0.7727, 0.2696], [0.7273, 0.306], [0.6818, 0.3102], [0.6364, 0.3585], [0.5909, 0.4296], [0.5455, 0.452], [0.5, 0.4678], [0.4545, 0.5369], [0.4091, 0.5995], [0.3636, 0.6122], [0.3182, 0.6475], [0.2727, 0.7284], [0.2273, 0.7751], [0.1818, 0.7873], [0.1364, 0.8453], [0.0909, 0.9265], [0.0455, 0.9563], [0.0, 0.9788], [0, 1.0]]
+  }, {
+    "id": "M083",
+    "name": "Tân cổ điển 60mm - M083",
+    "category": "Phào tường",
+    "nominal_width": 60,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.2594], [0.9545, 0.333], [0.9091, 0.4119], [0.8636, 0.4606], [0.8182, 0.4674], [0.7727, 0.4667], [0.7273, 0.4999], [0.6818, 0.5674], [0.6364, 0.6285], [0.5909, 0.6486], [0.5455, 0.6403], [0.5, 0.6491], [0.4545, 0.6998], [0.4091, 0.768], [0.3636, 0.8082], [0.3182, 0.8068], [0.2727, 0.7991], [0.2273, 0.8271], [0.1818, 0.891], [0.1364, 0.9488], [0.0909, 0.9648], [0.0455, 0.9524], [0.0, 0.9577], [0, 1.0]]
+  }, {
+    "id": "M084",
+    "name": "Tân cổ điển 62mm - M084",
+    "category": "Phào tường",
+    "nominal_width": 62,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1348], [0.9545, 0.2229], [0.9091, 0.2878], [0.8636, 0.3545], [0.8182, 0.4235], [0.7727, 0.4842], [0.7273, 0.5245], [0.6818, 0.5443], [0.6364, 0.5555], [0.5909, 0.568], [0.5455, 0.5824], [0.5, 0.5958], [0.4545, 0.6124], [0.4091, 0.6405], [0.3636, 0.6832], [0.3182, 0.7326], [0.2727, 0.7787], [0.2273, 0.8175], [0.1818, 0.8508], [0.1364, 0.8814], [0.0909, 0.9108], [0.0455, 0.9397], [0.0, 0.9682], [0, 1.0]]
+  }, {
+    "id": "M085",
+    "name": "Tân cổ điển 65mm - M085",
+    "category": "Phào tường",
+    "nominal_width": 65,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.165], [0.9545, 0.2144], [0.9091, 0.2728], [0.8636, 0.337], [0.8182, 0.387], [0.7727, 0.4107], [0.7273, 0.4219], [0.6818, 0.4411], [0.6364, 0.4743], [0.5909, 0.5184], [0.5455, 0.569], [0.5, 0.6202], [0.4545, 0.6641], [0.4091, 0.6962], [0.3636, 0.7194], [0.3182, 0.7412], [0.2727, 0.7673], [0.2273, 0.7987], [0.1818, 0.8333], [0.1364, 0.8692], [0.0909, 0.9057], [0.0455, 0.9422], [0.0, 0.9788], [0, 1.0]]
+  }, {
+    "id": "M086",
+    "name": "Tân cổ điển 70mm - M086",
+    "category": "Phào tường",
+    "nominal_width": 70,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.115], [0.9545, 0.2264], [0.9091, 0.2726], [0.8636, 0.2741], [0.8182, 0.2867], [0.7727, 0.3487], [0.7273, 0.4383], [0.6818, 0.4984], [0.6364, 0.5044], [0.5909, 0.4942], [0.5455, 0.5237], [0.5, 0.6016], [0.4545, 0.6795], [0.4091, 0.7073], [0.3636, 0.6933], [0.3182, 0.694], [0.2727, 0.7485], [0.2273, 0.8326], [0.1818, 0.8867], [0.1364, 0.8858], [0.0909, 0.8689], [0.0455, 0.8934], [0.0, 0.9682], [0, 1.0]]
+  }, {
+    "id": "M087",
+    "name": "Tân cổ điển 80mm - M087",
+    "category": "Phào tường",
+    "nominal_width": 80,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.2203], [0.9545, 0.273], [0.9091, 0.3354], [0.8636, 0.3499], [0.8182, 0.3436], [0.7727, 0.3809], [0.7273, 0.4529], [0.6818, 0.4914], [0.6364, 0.4861], [0.5909, 0.5029], [0.5455, 0.5705], [0.5, 0.631], [0.4545, 0.6389], [0.4091, 0.6392], [0.3636, 0.6909], [0.3182, 0.7651], [0.2727, 0.7946], [0.2273, 0.7889], [0.1818, 0.8187], [0.1364, 0.894], [0.0909, 0.9473], [0.0455, 0.9486], [0.0, 0.9577], [0, 1.0]]
+  }, {
+    "id": "M088",
+    "name": "Tân cổ điển 84mm - M088",
+    "category": "Phào tường",
+    "nominal_width": 84,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.0964], [0.9545, 0.2326], [0.9091, 0.2994], [0.8636, 0.3272], [0.8182, 0.3446], [0.7727, 0.3822], [0.7273, 0.4484], [0.6818, 0.5219], [0.6364, 0.5725], [0.5909, 0.5889], [0.5455, 0.5902], [0.5, 0.6082], [0.4545, 0.6584], [0.4091, 0.726], [0.3636, 0.7791], [0.3182, 0.7984], [0.2727, 0.7948], [0.2273, 0.8001], [0.1818, 0.8371], [0.1364, 0.8993], [0.0909, 0.9564], [0.0455, 0.9821], [0.0, 0.9788], [0, 1.0]]
+  }, {
+    "id": "M089",
+    "name": "Tân cổ điển 85mm - M089",
+    "category": "Phào tường",
+    "nominal_width": 85,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1433], [0.9545, 0.2472], [0.9091, 0.3164], [0.8636, 0.3686], [0.8182, 0.4055], [0.7727, 0.431], [0.7273, 0.4511], [0.6818, 0.4726], [0.6364, 0.5012], [0.5909, 0.5398], [0.5455, 0.588], [0.5, 0.6415], [0.4545, 0.6944], [0.4091, 0.7406], [0.3636, 0.7757], [0.3182, 0.7986], [0.2727, 0.8122], [0.2273, 0.822], [0.1818, 0.8346], [0.1364, 0.8556], [0.0909, 0.8878], [0.0455, 0.9303], [0.0, 0.9788], [0, 1.0]]
+  }, {
+    "id": "M090",
+    "name": "Tân cổ điển 100mm - M090",
+    "category": "Phào tường",
+    "nominal_width": 100,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1057], [0.9545, 0.1628], [0.9091, 0.2291], [0.8636, 0.2917], [0.8182, 0.3366], [0.7727, 0.3611], [0.7273, 0.3764], [0.6818, 0.3998], [0.6364, 0.443], [0.5909, 0.5037], [0.5455, 0.5675], [0.5, 0.6174], [0.4545, 0.6458], [0.4091, 0.6601], [0.3636, 0.6771], [0.3182, 0.712], [0.2727, 0.7675], [0.2273, 0.8322], [0.1818, 0.8878], [0.1364, 0.9225], [0.0909, 0.9387], [0.0455, 0.9516], [0.0, 0.9788], [0, 1.0]]
+  }, {
+    "id": "M091",
+    "name": "Len PS 65mm - M091",
+    "category": "Chân tường",
+    "nominal_width": 65,
+    "points": [[0, 0], [1, 0], [1.0, 0.28], [0.9545, 0.3544], [0.9091, 0.4331], [0.8636, 0.4813], [0.8182, 0.488], [0.7727, 0.4873], [0.7273, 0.5199], [0.6818, 0.5859], [0.6364, 0.6452], [0.5909, 0.6647], [0.5455, 0.6567], [0.5, 0.6652], [0.4545, 0.7141], [0.4091, 0.7796], [0.3636, 0.818], [0.3182, 0.8167], [0.2727, 0.8093], [0.2273, 0.836], [0.1818, 0.8968], [0.1364, 0.9516], [0.0909, 0.9668], [0.0455, 0.955], [0.0, 0.96], [0, 1]]
+  }, {
+    "id": "M092",
+    "name": "Len PS 80mm - M092",
+    "category": "Chân tường",
+    "nominal_width": 80,
+    "points": [[0, 0], [1, 0], [1.0, 0.151], [0.9545, 0.2427], [0.9091, 0.3088], [0.8636, 0.3759], [0.8182, 0.4446], [0.7727, 0.5045], [0.7273, 0.544], [0.6818, 0.5634], [0.6364, 0.5743], [0.5909, 0.5865], [0.5455, 0.6005], [0.5, 0.6135], [0.4545, 0.6296], [0.4091, 0.6569], [0.3636, 0.6981], [0.3182, 0.7456], [0.2727, 0.7898], [0.2273, 0.8269], [0.1818, 0.8586], [0.1364, 0.8877], [0.0909, 0.9156], [0.0455, 0.943], [0.0, 0.97], [0, 1]]
+  }, {
+    "id": "M093",
+    "name": "Len PS 90mm - M093",
+    "category": "Chân tường",
+    "nominal_width": 90,
+    "points": [[0, 0], [1, 0], [1.0, 0.1827], [0.9545, 0.2339], [0.9091, 0.2936], [0.8636, 0.3584], [0.8182, 0.4084], [0.7727, 0.4319], [0.7273, 0.443], [0.6818, 0.462], [0.6364, 0.4948], [0.5909, 0.538], [0.5455, 0.5875], [0.5, 0.6372], [0.4545, 0.6797], [0.4091, 0.7106], [0.3636, 0.7329], [0.3182, 0.7539], [0.2727, 0.7789], [0.2273, 0.8089], [0.1818, 0.8419], [0.1364, 0.8761], [0.0909, 0.9108], [0.0455, 0.9454], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M094",
+    "name": "Len PS 94mm - M094",
+    "category": "Chân tường",
+    "nominal_width": 94,
+    "points": [[0, 0], [1, 0], [1.0, 0.13], [0.9545, 0.2463], [0.9091, 0.2934], [0.8636, 0.2949], [0.8182, 0.3077], [0.7727, 0.3701], [0.7273, 0.4592], [0.6818, 0.5184], [0.6364, 0.5243], [0.5909, 0.5143], [0.5455, 0.5432], [0.5, 0.6192], [0.4545, 0.6945], [0.4091, 0.7213], [0.3636, 0.7078], [0.3182, 0.7085], [0.2727, 0.7609], [0.2273, 0.8413], [0.1818, 0.8928], [0.1364, 0.8919], [0.0909, 0.8758], [0.0455, 0.8991], [0.0, 0.97], [0, 1]]
+  }, {
+    "id": "M095",
+    "name": "Len PS 96mm - M095",
+    "category": "Chân tường",
+    "nominal_width": 96,
+    "points": [[0, 0], [1, 0], [1.0, 0.24], [0.9545, 0.2938], [0.9091, 0.3568], [0.8636, 0.3713], [0.8182, 0.365], [0.7727, 0.4023], [0.7273, 0.4737], [0.6818, 0.5116], [0.6364, 0.5064], [0.5909, 0.5229], [0.5455, 0.5889], [0.5, 0.6477], [0.4545, 0.6553], [0.4091, 0.6556], [0.3636, 0.7055], [0.3182, 0.7768], [0.2727, 0.805], [0.2273, 0.7996], [0.1818, 0.828], [0.1364, 0.8997], [0.0909, 0.9502], [0.0455, 0.9514], [0.0, 0.96], [0, 1]]
+  }, {
+    "id": "M096",
+    "name": "Len PS 98mm - M096",
+    "category": "Chân tường",
+    "nominal_width": 98,
+    "points": [[0, 0], [1, 0], [1.0, 0.11], [0.9545, 0.2526], [0.9091, 0.3206], [0.8636, 0.3486], [0.8182, 0.366], [0.7727, 0.4036], [0.7273, 0.4692], [0.6818, 0.5415], [0.6364, 0.5909], [0.5909, 0.6068], [0.5455, 0.6081], [0.5, 0.6256], [0.4545, 0.6742], [0.4091, 0.7393], [0.3636, 0.7902], [0.3182, 0.8086], [0.2727, 0.8052], [0.2273, 0.8103], [0.1818, 0.8456], [0.1364, 0.9047], [0.0909, 0.9588], [0.0455, 0.9831], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M097",
+    "name": "Len PS 100mm - M097",
+    "category": "Chân tường",
+    "nominal_width": 100,
+    "points": [[0, 0], [1, 0], [1.0, 0.16], [0.9545, 0.2675], [0.9091, 0.3377], [0.8636, 0.39], [0.8182, 0.4268], [0.7727, 0.452], [0.7273, 0.4719], [0.6818, 0.4931], [0.6364, 0.5212], [0.5909, 0.559], [0.5455, 0.6059], [0.5, 0.6578], [0.4545, 0.7089], [0.4091, 0.7533], [0.3636, 0.7869], [0.3182, 0.8088], [0.2727, 0.8218], [0.2273, 0.8312], [0.1818, 0.8432], [0.1364, 0.8632], [0.0909, 0.8938], [0.0455, 0.9341], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M098",
+    "name": "Len PS 120mm - M098",
+    "category": "Chân tường",
+    "nominal_width": 120,
+    "points": [[0, 0], [1, 0], [1.0, 0.12], [0.9545, 0.1804], [0.9091, 0.249], [0.8636, 0.3128], [0.8182, 0.358], [0.7727, 0.3825], [0.7273, 0.3978], [0.6818, 0.4211], [0.6364, 0.4639], [0.5909, 0.5236], [0.5455, 0.586], [0.5, 0.6345], [0.4545, 0.662], [0.4091, 0.6758], [0.3636, 0.6922], [0.3182, 0.7258], [0.2727, 0.7791], [0.2273, 0.8409], [0.1818, 0.8938], [0.1364, 0.9267], [0.0909, 0.9421], [0.0455, 0.9543], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M099",
+    "name": "Chân tường Hàn Quốc 65mm - M099",
+    "category": "Chân tường",
+    "nominal_width": 65,
+    "points": [[0, 0], [1, 0], [1.0, 0.22], [0.9545, 0.3649], [0.9091, 0.4418], [0.8636, 0.4814], [0.8182, 0.4927], [0.7727, 0.4925], [0.7273, 0.5006], [0.6818, 0.5311], [0.6364, 0.5855], [0.5909, 0.653], [0.5455, 0.7154], [0.5, 0.7565], [0.4545, 0.7698], [0.4091, 0.7619], [0.3636, 0.7494], [0.3182, 0.7508], [0.2727, 0.7774], [0.2273, 0.8278], [0.1818, 0.8889], [0.1364, 0.942], [0.0909, 0.972], [0.0455, 0.975], [0.0, 0.96], [0, 1]]
+  }, {
+    "id": "M100",
+    "name": "Chân tường Hàn Quốc 80mm - M100",
+    "category": "Chân tường",
+    "nominal_width": 80,
+    "points": [[0, 0], [1, 0], [1.0, 0.1], [0.9545, 0.1486], [0.9091, 0.196], [0.8636, 0.197], [0.8182, 0.2213], [0.7727, 0.2904], [0.7273, 0.3272], [0.6818, 0.3314], [0.6364, 0.3799], [0.5909, 0.4506], [0.5455, 0.4728], [0.5, 0.4884], [0.4545, 0.5561], [0.4091, 0.6171], [0.3636, 0.6294], [0.3182, 0.6636], [0.2727, 0.7416], [0.2273, 0.7864], [0.1818, 0.798], [0.1364, 0.8534], [0.0909, 0.9305], [0.0455, 0.9587], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M101",
+    "name": "Chân tường Hàn Quốc 90mm - M101",
+    "category": "Chân tường",
+    "nominal_width": 90,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.3022], [0.9545, 0.3772], [0.9091, 0.4554], [0.8636, 0.5029], [0.8182, 0.5095], [0.7727, 0.5088], [0.7273, 0.5407], [0.6818, 0.605], [0.6364, 0.6624], [0.5909, 0.6812], [0.5455, 0.6735], [0.5, 0.6817], [0.4545, 0.7287], [0.4091, 0.7913], [0.3636, 0.8279], [0.3182, 0.8267], [0.2727, 0.8196], [0.2273, 0.845], [0.1818, 0.9027], [0.1364, 0.9544], [0.0909, 0.9688], [0.0455, 0.9576], [0.0, 0.9624], [0, 1]]
+  }, {
+    "id": "M102",
+    "name": "Chân tường Hàn Quốc 94mm - M102",
+    "category": "Chân tường",
+    "nominal_width": 94,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1691], [0.9545, 0.2642], [0.9091, 0.3314], [0.8636, 0.3986], [0.8182, 0.4668], [0.7727, 0.5256], [0.7273, 0.5642], [0.6818, 0.5831], [0.6364, 0.5937], [0.5909, 0.6056], [0.5455, 0.6192], [0.5, 0.6318], [0.4545, 0.6473], [0.4091, 0.6737], [0.3636, 0.7133], [0.3182, 0.7588], [0.2727, 0.8011], [0.2273, 0.8364], [0.1818, 0.8665], [0.1364, 0.8941], [0.0909, 0.9205], [0.0455, 0.9463], [0.0, 0.9718], [0, 1]]
+  }, {
+    "id": "M103",
+    "name": "Chân tường Hàn Quốc 96mm - M103",
+    "category": "Chân tường",
+    "nominal_width": 96,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.2023], [0.9545, 0.2552], [0.9091, 0.316], [0.8636, 0.3812], [0.8182, 0.4309], [0.7727, 0.4542], [0.7273, 0.4652], [0.6818, 0.4839], [0.6364, 0.5161], [0.5909, 0.5584], [0.5455, 0.6066], [0.5, 0.6547], [0.4545, 0.6956], [0.4091, 0.7253], [0.3636, 0.7467], [0.3182, 0.7668], [0.2727, 0.7907], [0.2273, 0.8193], [0.1818, 0.8506], [0.1364, 0.8831], [0.0909, 0.9159], [0.0455, 0.9486], [0.0, 0.9812], [0, 1]]
+  }, {
+    "id": "M104",
+    "name": "Chân tường Hàn Quốc 98mm - M104",
+    "category": "Chân tường",
+    "nominal_width": 98,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1469], [0.9545, 0.2679], [0.9091, 0.3158], [0.8636, 0.3173], [0.8182, 0.3302], [0.7727, 0.3928], [0.7273, 0.4812], [0.6818, 0.5392], [0.6364, 0.545], [0.5909, 0.5352], [0.5455, 0.5635], [0.5, 0.6373], [0.4545, 0.7099], [0.4091, 0.7356], [0.3636, 0.7226], [0.3182, 0.7233], [0.2727, 0.7735], [0.2273, 0.8501], [0.1818, 0.8989], [0.1364, 0.898], [0.0909, 0.8828], [0.0455, 0.9049], [0.0, 0.9718], [0, 1]]
+  }, {
+    "id": "M105",
+    "name": "Chân tường Hàn Quốc 100mm - M105",
+    "category": "Chân tường",
+    "nominal_width": 100,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.2615], [0.9545, 0.3162], [0.9091, 0.3796], [0.8636, 0.394], [0.8182, 0.3878], [0.7727, 0.4249], [0.7273, 0.4954], [0.6818, 0.5326], [0.6364, 0.5275], [0.5909, 0.5436], [0.5455, 0.6079], [0.5, 0.6648], [0.4545, 0.6721], [0.4091, 0.6724], [0.3636, 0.7204], [0.3182, 0.7887], [0.2727, 0.8155], [0.2273, 0.8104], [0.1818, 0.8374], [0.1364, 0.9054], [0.0909, 0.9531], [0.0455, 0.9542], [0.0, 0.9624], [0, 1]]
+  }, {
+    "id": "M106",
+    "name": "Chân tường Hàn Quốc 120mm - M106",
+    "category": "Chân tường",
+    "nominal_width": 120,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1256], [0.9545, 0.2743], [0.9091, 0.3432], [0.8636, 0.3714], [0.8182, 0.3888], [0.7727, 0.4262], [0.7273, 0.491], [0.6818, 0.5618], [0.6364, 0.6099], [0.5909, 0.6253], [0.5455, 0.6265], [0.5, 0.6435], [0.4545, 0.6903], [0.4091, 0.7528], [0.3636, 0.8014], [0.3182, 0.819], [0.2727, 0.8157], [0.2273, 0.8206], [0.1818, 0.8542], [0.1364, 0.9102], [0.0909, 0.9612], [0.0455, 0.9841], [0.0, 0.9812], [0, 1]]
+  }, {
+    "id": "M107",
+    "name": "PU chân tường 65mm - M107",
+    "category": "Chân tường",
+    "nominal_width": 65,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1786], [0.9545, 0.2895], [0.9091, 0.3604], [0.8636, 0.4127], [0.8182, 0.4492], [0.7727, 0.4741], [0.7273, 0.4936], [0.6818, 0.5145], [0.6364, 0.542], [0.5909, 0.5789], [0.5455, 0.6244], [0.5, 0.6745], [0.4545, 0.7237], [0.4091, 0.7662], [0.3636, 0.7983], [0.3182, 0.8192], [0.2727, 0.8315], [0.2273, 0.8405], [0.1818, 0.8519], [0.1364, 0.8709], [0.0909, 0.8998], [0.0455, 0.9379], [0.0, 0.9812], [0, 1]]
+  }, {
+    "id": "M108",
+    "name": "PU chân tường 80mm - M108",
+    "category": "Chân tường",
+    "nominal_width": 80,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1363], [0.9545, 0.1999], [0.9091, 0.2707], [0.8636, 0.3354], [0.8182, 0.3808], [0.7727, 0.4052], [0.7273, 0.4204], [0.6818, 0.4435], [0.6364, 0.4858], [0.5909, 0.5443], [0.5455, 0.6051], [0.5, 0.6521], [0.4545, 0.6786], [0.4091, 0.6919], [0.3636, 0.7076], [0.3182, 0.7399], [0.2727, 0.7909], [0.2273, 0.8497], [0.1818, 0.8998], [0.1364, 0.9309], [0.0909, 0.9455], [0.0455, 0.957], [0.0, 0.9812], [0, 1]]
+  }, {
+    "id": "M109",
+    "name": "PU chân tường 90mm - M109",
+    "category": "Chân tường",
+    "nominal_width": 90,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.2409], [0.9545, 0.3877], [0.9091, 0.464], [0.8636, 0.503], [0.8182, 0.5141], [0.7727, 0.5139], [0.7273, 0.5218], [0.6818, 0.5517], [0.6364, 0.6046], [0.5909, 0.6699], [0.5455, 0.7299], [0.5, 0.7693], [0.4545, 0.782], [0.4091, 0.7744], [0.3636, 0.7625], [0.3182, 0.7638], [0.2727, 0.7892], [0.2273, 0.8372], [0.1818, 0.8952], [0.1364, 0.9454], [0.0909, 0.9737], [0.0455, 0.9765], [0.0, 0.9624], [0, 1]]
+  }, {
+    "id": "M110",
+    "name": "PU chân tường 94mm - M110",
+    "category": "Chân tường",
+    "nominal_width": 94,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1148], [0.9545, 0.1666], [0.9091, 0.2161], [0.8636, 0.2172], [0.8182, 0.2423], [0.7727, 0.3128], [0.7273, 0.3499], [0.6818, 0.3541], [0.6364, 0.4026], [0.5909, 0.4727], [0.5455, 0.4945], [0.5, 0.5099], [0.4545, 0.576], [0.4091, 0.6352], [0.3636, 0.6471], [0.3182, 0.6801], [0.2727, 0.755], [0.2273, 0.7978], [0.1818, 0.8089], [0.1364, 0.8616], [0.0909, 0.9345], [0.0455, 0.9611], [0.0, 0.9812], [0, 1]]
+  }, {
+    "id": "M111",
+    "name": "PU chân tường 96mm - M111",
+    "category": "Chân tường",
+    "nominal_width": 96,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.28], [0.9518, 0.3544], [0.9039, 0.4331], [0.856, 0.4813], [0.8084, 0.488], [0.7608, 0.4873], [0.7135, 0.5199], [0.6663, 0.5859], [0.6194, 0.6452], [0.5725, 0.6647], [0.526, 0.6567], [0.4796, 0.6652], [0.4335, 0.7141], [0.3877, 0.7796], [0.3422, 0.818], [0.2971, 0.8167], [0.2522, 0.8093], [0.208, 0.836], [0.1641, 0.8968], [0.121, 0.9516], [0.0787, 0.9668], [0.0378, 0.955], [0.0, 0.96], [0.0, 1]]
+  }, {
+    "id": "M112",
+    "name": "PU chân tường 98mm - M112",
+    "category": "Chân tường",
+    "nominal_width": 98,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.151], [0.9518, 0.2427], [0.9039, 0.3088], [0.856, 0.3759], [0.8084, 0.4446], [0.7608, 0.5045], [0.7135, 0.544], [0.6663, 0.5634], [0.6194, 0.5743], [0.5725, 0.5865], [0.526, 0.6005], [0.4796, 0.6135], [0.4335, 0.6296], [0.3877, 0.6569], [0.3422, 0.6981], [0.2971, 0.7456], [0.2522, 0.7898], [0.208, 0.8269], [0.1641, 0.8586], [0.121, 0.8877], [0.0787, 0.9156], [0.0378, 0.943], [0.0, 0.97], [0.0, 1]]
+  }, {
+    "id": "M113",
+    "name": "PU chân tường 100mm - M113",
+    "category": "Chân tường",
+    "nominal_width": 100,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.1827], [0.9518, 0.2339], [0.9039, 0.2936], [0.856, 0.3584], [0.8084, 0.4084], [0.7608, 0.4319], [0.7135, 0.443], [0.6663, 0.462], [0.6194, 0.4948], [0.5725, 0.538], [0.526, 0.5875], [0.4796, 0.6372], [0.4335, 0.6797], [0.3877, 0.7106], [0.3422, 0.7329], [0.2971, 0.7539], [0.2522, 0.7789], [0.208, 0.8089], [0.1641, 0.8419], [0.121, 0.8761], [0.0787, 0.9108], [0.0378, 0.9454], [0.0, 0.98], [0.0, 1]]
+  }, {
+    "id": "M114",
+    "name": "PU chân tường 120mm - M114",
+    "category": "Chân tường",
+    "nominal_width": 120,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.13], [0.9518, 0.2463], [0.9039, 0.2934], [0.856, 0.2949], [0.8084, 0.3077], [0.7608, 0.3701], [0.7135, 0.4592], [0.6663, 0.5184], [0.6194, 0.5243], [0.5725, 0.5143], [0.526, 0.5432], [0.4796, 0.6192], [0.4335, 0.6945], [0.3877, 0.7213], [0.3422, 0.7078], [0.2971, 0.7085], [0.2522, 0.7609], [0.208, 0.8413], [0.1641, 0.8928], [0.121, 0.8919], [0.0787, 0.8758], [0.0378, 0.8991], [0.0, 0.97], [0.0, 1]]
+  }, {
+    "id": "M115",
+    "name": "Len PS 65mm - M115",
+    "category": "Chân tường",
+    "nominal_width": 65,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.24], [0.9518, 0.2938], [0.9039, 0.3568], [0.856, 0.3713], [0.8084, 0.365], [0.7608, 0.4023], [0.7135, 0.4737], [0.6663, 0.5116], [0.6194, 0.5064], [0.5725, 0.5229], [0.526, 0.5889], [0.4796, 0.6477], [0.4335, 0.6553], [0.3877, 0.6556], [0.3422, 0.7055], [0.2971, 0.7768], [0.2522, 0.805], [0.208, 0.7996], [0.1641, 0.828], [0.121, 0.8997], [0.0787, 0.9502], [0.0378, 0.9514], [0.0, 0.96], [0.0, 1]]
+  }, {
+    "id": "M116",
+    "name": "Len PS 80mm - M116",
+    "category": "Chân tường",
+    "nominal_width": 80,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.11], [0.9518, 0.2526], [0.9039, 0.3206], [0.856, 0.3486], [0.8084, 0.366], [0.7608, 0.4036], [0.7135, 0.4692], [0.6663, 0.5415], [0.6194, 0.5909], [0.5725, 0.6068], [0.526, 0.6081], [0.4796, 0.6256], [0.4335, 0.6742], [0.3877, 0.7393], [0.3422, 0.7902], [0.2971, 0.8086], [0.2522, 0.8052], [0.208, 0.8103], [0.1641, 0.8456], [0.121, 0.9047], [0.0787, 0.9588], [0.0378, 0.9831], [0.0, 0.98], [0.0, 1]]
+  }, {
+    "id": "M117",
+    "name": "Len PS 90mm - M117",
+    "category": "Chân tường",
+    "nominal_width": 90,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.16], [0.9518, 0.2675], [0.9039, 0.3377], [0.856, 0.39], [0.8084, 0.4268], [0.7608, 0.452], [0.7135, 0.4719], [0.6663, 0.4931], [0.6194, 0.5212], [0.5725, 0.559], [0.526, 0.6059], [0.4796, 0.6578], [0.4335, 0.7089], [0.3877, 0.7533], [0.3422, 0.7869], [0.2971, 0.8088], [0.2522, 0.8218], [0.208, 0.8312], [0.1641, 0.8432], [0.121, 0.8632], [0.0787, 0.8938], [0.0378, 0.9341], [0.0, 0.98], [0.0, 1]]
+  }, {
+    "id": "M118",
+    "name": "Len PS 94mm - M118",
+    "category": "Chân tường",
+    "nominal_width": 94,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.12], [0.9518, 0.1804], [0.9039, 0.249], [0.856, 0.3128], [0.8084, 0.358], [0.7608, 0.3825], [0.7135, 0.3978], [0.6663, 0.4211], [0.6194, 0.4639], [0.5725, 0.5236], [0.526, 0.586], [0.4796, 0.6345], [0.4335, 0.662], [0.3877, 0.6758], [0.3422, 0.6922], [0.2971, 0.7258], [0.2522, 0.7791], [0.208, 0.8409], [0.1641, 0.8938], [0.121, 0.9267], [0.0787, 0.9421], [0.0378, 0.9543], [0.0, 0.98], [0.0, 1]]
+  }, {
+    "id": "M119",
+    "name": "Len PS 96mm - M119",
+    "category": "Chân tường",
+    "nominal_width": 96,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.22], [0.9518, 0.3649], [0.9039, 0.4418], [0.856, 0.4814], [0.8084, 0.4927], [0.7608, 0.4925], [0.7135, 0.5006], [0.6663, 0.5311], [0.6194, 0.5855], [0.5725, 0.653], [0.526, 0.7154], [0.4796, 0.7565], [0.4335, 0.7698], [0.3877, 0.7619], [0.3422, 0.7494], [0.2971, 0.7508], [0.2522, 0.7774], [0.208, 0.8278], [0.1641, 0.8889], [0.121, 0.942], [0.0787, 0.972], [0.0378, 0.975], [0.0, 0.96], [0.0, 1]]
+  }, {
+    "id": "M120",
+    "name": "Len PS 98mm - M120",
+    "category": "Chân tường",
+    "nominal_width": 98,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.1], [0.9518, 0.1486], [0.9039, 0.196], [0.856, 0.197], [0.8084, 0.2213], [0.7608, 0.2904], [0.7135, 0.3272], [0.6663, 0.3314], [0.6194, 0.3799], [0.5725, 0.4506], [0.526, 0.4728], [0.4796, 0.4884], [0.4335, 0.5561], [0.3877, 0.6171], [0.3422, 0.6294], [0.2971, 0.6636], [0.2522, 0.7416], [0.208, 0.7864], [0.1641, 0.798], [0.121, 0.8534], [0.0787, 0.9305], [0.0378, 0.9587], [0.0, 0.98], [0.0, 1]]
+  }, {
+    "id": "M121",
+    "name": "Khung đồng tâm 15mm - M121",
+    "category": "Nẹp chỉ",
+    "nominal_width": 15,
+    "points": [[0, 0], [1, 0], [1.0, 0.1827], [0.9545, 0.2339], [0.9091, 0.2936], [0.8636, 0.3584], [0.8182, 0.4084], [0.7727, 0.4319], [0.7273, 0.443], [0.6818, 0.462], [0.6364, 0.4948], [0.5909, 0.538], [0.5455, 0.5875], [0.5, 0.6372], [0.4545, 0.6797], [0.4091, 0.7106], [0.3636, 0.7329], [0.3182, 0.7539], [0.2727, 0.7789], [0.2273, 0.8089], [0.1818, 0.8419], [0.1364, 0.8761], [0.0909, 0.9108], [0.0455, 0.9454], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M122",
+    "name": "Khung đồng tâm 16mm - M122",
+    "category": "Nẹp chỉ",
+    "nominal_width": 16,
+    "points": [[0, 0], [1, 0], [1.0, 0.13], [0.9545, 0.2463], [0.9091, 0.2934], [0.8636, 0.2949], [0.8182, 0.3077], [0.7727, 0.3701], [0.7273, 0.4592], [0.6818, 0.5184], [0.6364, 0.5243], [0.5909, 0.5143], [0.5455, 0.5432], [0.5, 0.6192], [0.4545, 0.6945], [0.4091, 0.7213], [0.3636, 0.7078], [0.3182, 0.7085], [0.2727, 0.7609], [0.2273, 0.8413], [0.1818, 0.8928], [0.1364, 0.8919], [0.0909, 0.8758], [0.0455, 0.8991], [0.0, 0.97], [0, 1]]
+  }, {
+    "id": "M123",
+    "name": "Khung đồng tâm 20mm - M123",
+    "category": "Nẹp chỉ",
+    "nominal_width": 20,
+    "points": [[0, 0], [1, 0], [1.0, 0.24], [0.9545, 0.2938], [0.9091, 0.3568], [0.8636, 0.3713], [0.8182, 0.365], [0.7727, 0.4023], [0.7273, 0.4737], [0.6818, 0.5116], [0.6364, 0.5064], [0.5909, 0.5229], [0.5455, 0.5889], [0.5, 0.6477], [0.4545, 0.6553], [0.4091, 0.6556], [0.3636, 0.7055], [0.3182, 0.7768], [0.2727, 0.805], [0.2273, 0.7996], [0.1818, 0.828], [0.1364, 0.8997], [0.0909, 0.9502], [0.0455, 0.9514], [0.0, 0.96], [0, 1]]
+  }, {
+    "id": "M124",
+    "name": "Khung đồng tâm 22mm - M124",
+    "category": "Nẹp chỉ",
+    "nominal_width": 22,
+    "points": [[0, 0], [1, 0], [1.0, 0.11], [0.9545, 0.2526], [0.9091, 0.3206], [0.8636, 0.3486], [0.8182, 0.366], [0.7727, 0.4036], [0.7273, 0.4692], [0.6818, 0.5415], [0.6364, 0.5909], [0.5909, 0.6068], [0.5455, 0.6081], [0.5, 0.6256], [0.4545, 0.6742], [0.4091, 0.7393], [0.3636, 0.7902], [0.3182, 0.8086], [0.2727, 0.8052], [0.2273, 0.8103], [0.1818, 0.8456], [0.1364, 0.9047], [0.0909, 0.9588], [0.0455, 0.9831], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M125",
+    "name": "Khung đồng tâm 23mm - M125",
+    "category": "Nẹp chỉ",
+    "nominal_width": 23,
+    "points": [[0, 0], [1, 0], [1.0, 0.16], [0.9545, 0.2675], [0.9091, 0.3377], [0.8636, 0.39], [0.8182, 0.4268], [0.7727, 0.452], [0.7273, 0.4719], [0.6818, 0.4931], [0.6364, 0.5212], [0.5909, 0.559], [0.5455, 0.6059], [0.5, 0.6578], [0.4545, 0.7089], [0.4091, 0.7533], [0.3636, 0.7869], [0.3182, 0.8088], [0.2727, 0.8218], [0.2273, 0.8312], [0.1818, 0.8432], [0.1364, 0.8632], [0.0909, 0.8938], [0.0455, 0.9341], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M126",
+    "name": "Khung đồng tâm 30mm - M126",
+    "category": "Nẹp chỉ",
+    "nominal_width": 30,
+    "points": [[0, 0], [1, 0], [1.0, 0.12], [0.9545, 0.1804], [0.9091, 0.249], [0.8636, 0.3128], [0.8182, 0.358], [0.7727, 0.3825], [0.7273, 0.3978], [0.6818, 0.4211], [0.6364, 0.4639], [0.5909, 0.5236], [0.5455, 0.586], [0.5, 0.6345], [0.4545, 0.662], [0.4091, 0.6758], [0.3636, 0.6922], [0.3182, 0.7258], [0.2727, 0.7791], [0.2273, 0.8409], [0.1818, 0.8938], [0.1364, 0.9267], [0.0909, 0.9421], [0.0455, 0.9543], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M127",
+    "name": "Khung đồng tâm 38mm - M127",
+    "category": "Nẹp chỉ",
+    "nominal_width": 38,
+    "points": [[0, 0], [1, 0], [1.0, 0.22], [0.9545, 0.3649], [0.9091, 0.4418], [0.8636, 0.4814], [0.8182, 0.4927], [0.7727, 0.4925], [0.7273, 0.5006], [0.6818, 0.5311], [0.6364, 0.5855], [0.5909, 0.653], [0.5455, 0.7154], [0.5, 0.7565], [0.4545, 0.7698], [0.4091, 0.7619], [0.3636, 0.7494], [0.3182, 0.7508], [0.2727, 0.7774], [0.2273, 0.8278], [0.1818, 0.8889], [0.1364, 0.942], [0.0909, 0.972], [0.0455, 0.975], [0.0, 0.96], [0, 1]]
+  }, {
+    "id": "M128",
+    "name": "Khung đồng tâm 40mm - M128",
+    "category": "Nẹp chỉ",
+    "nominal_width": 40,
+    "points": [[0, 0], [1, 0], [1.0, 0.1], [0.9545, 0.1486], [0.9091, 0.196], [0.8636, 0.197], [0.8182, 0.2213], [0.7727, 0.2904], [0.7273, 0.3272], [0.6818, 0.3314], [0.6364, 0.3799], [0.5909, 0.4506], [0.5455, 0.4728], [0.5, 0.4884], [0.4545, 0.5561], [0.4091, 0.6171], [0.3636, 0.6294], [0.3182, 0.6636], [0.2727, 0.7416], [0.2273, 0.7864], [0.1818, 0.798], [0.1364, 0.8534], [0.0909, 0.9305], [0.0455, 0.9587], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M129",
+    "name": "Khung đồng tâm 41mm - M129",
+    "category": "Nẹp chỉ",
+    "nominal_width": 41,
+    "points": [[0, 0], [1, 0], [1.0, 0.28], [0.9545, 0.3544], [0.9091, 0.4331], [0.8636, 0.4813], [0.8182, 0.488], [0.7727, 0.4873], [0.7273, 0.5199], [0.6818, 0.5859], [0.6364, 0.6452], [0.5909, 0.6647], [0.5455, 0.6567], [0.5, 0.6652], [0.4545, 0.7141], [0.4091, 0.7796], [0.3636, 0.818], [0.3182, 0.8167], [0.2727, 0.8093], [0.2273, 0.836], [0.1818, 0.8968], [0.1364, 0.9516], [0.0909, 0.9668], [0.0455, 0.955], [0.0, 0.96], [0, 1]]
+  }, {
+    "id": "M130",
+    "name": "Khung lệch tâm 15mm - M130",
+    "category": "Nẹp chỉ",
+    "nominal_width": 15,
+    "points": [[0, 0], [1, 0], [1.0, 0.151], [0.9545, 0.2427], [0.9091, 0.3088], [0.8636, 0.3759], [0.8182, 0.4446], [0.7727, 0.5045], [0.7273, 0.544], [0.6818, 0.5634], [0.6364, 0.5743], [0.5909, 0.5865], [0.5455, 0.6005], [0.5, 0.6135], [0.4545, 0.6296], [0.4091, 0.6569], [0.3636, 0.6981], [0.3182, 0.7456], [0.2727, 0.7898], [0.2273, 0.8269], [0.1818, 0.8586], [0.1364, 0.8877], [0.0909, 0.9156], [0.0455, 0.943], [0.0, 0.97], [0, 1]]
+  }, {
+    "id": "M131",
+    "name": "Khung lệch tâm 16mm - M131",
+    "category": "Nẹp chỉ",
+    "nominal_width": 16,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.2023], [0.9545, 0.2552], [0.9091, 0.316], [0.8636, 0.3812], [0.8182, 0.4309], [0.7727, 0.4542], [0.7273, 0.4652], [0.6818, 0.4839], [0.6364, 0.5161], [0.5909, 0.5584], [0.5455, 0.6066], [0.5, 0.6547], [0.4545, 0.6956], [0.4091, 0.7253], [0.3636, 0.7467], [0.3182, 0.7668], [0.2727, 0.7907], [0.2273, 0.8193], [0.1818, 0.8506], [0.1364, 0.8831], [0.0909, 0.9159], [0.0455, 0.9486], [0.0, 0.9812], [0, 1]]
+  }, {
+    "id": "M132",
+    "name": "Khung lệch tâm 20mm - M132",
+    "category": "Nẹp chỉ",
+    "nominal_width": 20,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1469], [0.9545, 0.2679], [0.9091, 0.3158], [0.8636, 0.3173], [0.8182, 0.3302], [0.7727, 0.3928], [0.7273, 0.4812], [0.6818, 0.5392], [0.6364, 0.545], [0.5909, 0.5352], [0.5455, 0.5635], [0.5, 0.6373], [0.4545, 0.7099], [0.4091, 0.7356], [0.3636, 0.7226], [0.3182, 0.7233], [0.2727, 0.7735], [0.2273, 0.8501], [0.1818, 0.8989], [0.1364, 0.898], [0.0909, 0.8828], [0.0455, 0.9049], [0.0, 0.9718], [0, 1]]
+  }, {
+    "id": "M133",
+    "name": "Khung lệch tâm 22mm - M133",
+    "category": "Nẹp chỉ",
+    "nominal_width": 22,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.2615], [0.9545, 0.3162], [0.9091, 0.3796], [0.8636, 0.394], [0.8182, 0.3878], [0.7727, 0.4249], [0.7273, 0.4954], [0.6818, 0.5326], [0.6364, 0.5275], [0.5909, 0.5436], [0.5455, 0.6079], [0.5, 0.6648], [0.4545, 0.6721], [0.4091, 0.6724], [0.3636, 0.7204], [0.3182, 0.7887], [0.2727, 0.8155], [0.2273, 0.8104], [0.1818, 0.8374], [0.1364, 0.9054], [0.0909, 0.9531], [0.0455, 0.9542], [0.0, 0.9624], [0, 1]]
+  }, {
+    "id": "M134",
+    "name": "Khung lệch tâm 23mm - M134",
+    "category": "Nẹp chỉ",
+    "nominal_width": 23,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1256], [0.9545, 0.2743], [0.9091, 0.3432], [0.8636, 0.3714], [0.8182, 0.3888], [0.7727, 0.4262], [0.7273, 0.491], [0.6818, 0.5618], [0.6364, 0.6099], [0.5909, 0.6253], [0.5455, 0.6265], [0.5, 0.6435], [0.4545, 0.6903], [0.4091, 0.7528], [0.3636, 0.8014], [0.3182, 0.819], [0.2727, 0.8157], [0.2273, 0.8206], [0.1818, 0.8542], [0.1364, 0.9102], [0.0909, 0.9612], [0.0455, 0.9841], [0.0, 0.9812], [0, 1]]
+  }, {
+    "id": "M135",
+    "name": "Khung lệch tâm 30mm - M135",
+    "category": "Nẹp chỉ",
+    "nominal_width": 30,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1786], [0.9545, 0.2895], [0.9091, 0.3604], [0.8636, 0.4127], [0.8182, 0.4492], [0.7727, 0.4741], [0.7273, 0.4936], [0.6818, 0.5145], [0.6364, 0.542], [0.5909, 0.5789], [0.5455, 0.6244], [0.5, 0.6745], [0.4545, 0.7237], [0.4091, 0.7662], [0.3636, 0.7983], [0.3182, 0.8192], [0.2727, 0.8315], [0.2273, 0.8405], [0.1818, 0.8519], [0.1364, 0.8709], [0.0909, 0.8998], [0.0455, 0.9379], [0.0, 0.9812], [0, 1]]
+  }, {
+    "id": "M136",
+    "name": "Khung lệch tâm 38mm - M136",
+    "category": "Nẹp chỉ",
+    "nominal_width": 38,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1363], [0.9545, 0.1999], [0.9091, 0.2707], [0.8636, 0.3354], [0.8182, 0.3808], [0.7727, 0.4052], [0.7273, 0.4204], [0.6818, 0.4435], [0.6364, 0.4858], [0.5909, 0.5443], [0.5455, 0.6051], [0.5, 0.6521], [0.4545, 0.6786], [0.4091, 0.6919], [0.3636, 0.7076], [0.3182, 0.7399], [0.2727, 0.7909], [0.2273, 0.8497], [0.1818, 0.8998], [0.1364, 0.9309], [0.0909, 0.9455], [0.0455, 0.957], [0.0, 0.9812], [0, 1]]
+  }, {
+    "id": "M137",
+    "name": "Khung lệch tâm 40mm - M137",
+    "category": "Nẹp chỉ",
+    "nominal_width": 40,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.2409], [0.9545, 0.3877], [0.9091, 0.464], [0.8636, 0.503], [0.8182, 0.5141], [0.7727, 0.5139], [0.7273, 0.5218], [0.6818, 0.5517], [0.6364, 0.6046], [0.5909, 0.6699], [0.5455, 0.7299], [0.5, 0.7693], [0.4545, 0.782], [0.4091, 0.7744], [0.3636, 0.7625], [0.3182, 0.7638], [0.2727, 0.7892], [0.2273, 0.8372], [0.1818, 0.8952], [0.1364, 0.9454], [0.0909, 0.9737], [0.0455, 0.9765], [0.0, 0.9624], [0, 1]]
+  }, {
+    "id": "M138",
+    "name": "Khung lệch tâm 41mm - M138",
+    "category": "Nẹp chỉ",
+    "nominal_width": 41,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1148], [0.9545, 0.1666], [0.9091, 0.2161], [0.8636, 0.2172], [0.8182, 0.2423], [0.7727, 0.3128], [0.7273, 0.3499], [0.6818, 0.3541], [0.6364, 0.4026], [0.5909, 0.4727], [0.5455, 0.4945], [0.5, 0.5099], [0.4545, 0.576], [0.4091, 0.6352], [0.3636, 0.6471], [0.3182, 0.6801], [0.2727, 0.755], [0.2273, 0.7978], [0.1818, 0.8089], [0.1364, 0.8616], [0.0909, 0.9345], [0.0455, 0.9611], [0.0, 0.9812], [0, 1]]
+  }, {
+    "id": "M139",
+    "name": "Nẹp PU 15mm - M139",
+    "category": "Nẹp chỉ",
+    "nominal_width": 15,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.3022], [0.9545, 0.3772], [0.9091, 0.4554], [0.8636, 0.5029], [0.8182, 0.5095], [0.7727, 0.5088], [0.7273, 0.5407], [0.6818, 0.605], [0.6364, 0.6624], [0.5909, 0.6812], [0.5455, 0.6735], [0.5, 0.6817], [0.4545, 0.7287], [0.4091, 0.7913], [0.3636, 0.8279], [0.3182, 0.8267], [0.2727, 0.8196], [0.2273, 0.845], [0.1818, 0.9027], [0.1364, 0.9544], [0.0909, 0.9688], [0.0455, 0.9576], [0.0, 0.9624], [0, 1]]
+  }, {
+    "id": "M140",
+    "name": "Nẹp PU 16mm - M140",
+    "category": "Nẹp chỉ",
+    "nominal_width": 16,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1691], [0.9545, 0.2642], [0.9091, 0.3314], [0.8636, 0.3986], [0.8182, 0.4668], [0.7727, 0.5256], [0.7273, 0.5642], [0.6818, 0.5831], [0.6364, 0.5937], [0.5909, 0.6056], [0.5455, 0.6192], [0.5, 0.6318], [0.4545, 0.6473], [0.4091, 0.6737], [0.3636, 0.7133], [0.3182, 0.7588], [0.2727, 0.8011], [0.2273, 0.8364], [0.1818, 0.8665], [0.1364, 0.8941], [0.0909, 0.9205], [0.0455, 0.9463], [0.0, 0.9718], [0, 1]]
+  }, {
+    "id": "M141",
+    "name": "Nẹp PU 20mm - M141",
+    "category": "Nẹp chỉ",
+    "nominal_width": 20,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.1827], [0.9518, 0.2339], [0.9039, 0.2936], [0.856, 0.3584], [0.8084, 0.4084], [0.7608, 0.4319], [0.7135, 0.443], [0.6663, 0.462], [0.6194, 0.4948], [0.5725, 0.538], [0.526, 0.5875], [0.4796, 0.6372], [0.4335, 0.6797], [0.3877, 0.7106], [0.3422, 0.7329], [0.2971, 0.7539], [0.2522, 0.7789], [0.208, 0.8089], [0.1641, 0.8419], [0.121, 0.8761], [0.0787, 0.9108], [0.0378, 0.9454], [0.0, 0.98], [0.0, 1]]
+  }, {
+    "id": "M142",
+    "name": "Nẹp PU 22mm - M142",
+    "category": "Nẹp chỉ",
+    "nominal_width": 22,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.13], [0.9518, 0.2463], [0.9039, 0.2934], [0.856, 0.2949], [0.8084, 0.3077], [0.7608, 0.3701], [0.7135, 0.4592], [0.6663, 0.5184], [0.6194, 0.5243], [0.5725, 0.5143], [0.526, 0.5432], [0.4796, 0.6192], [0.4335, 0.6945], [0.3877, 0.7213], [0.3422, 0.7078], [0.2971, 0.7085], [0.2522, 0.7609], [0.208, 0.8413], [0.1641, 0.8928], [0.121, 0.8919], [0.0787, 0.8758], [0.0378, 0.8991], [0.0, 0.97], [0.0, 1]]
+  }, {
+    "id": "M143",
+    "name": "Nẹp PU 23mm - M143",
+    "category": "Nẹp chỉ",
+    "nominal_width": 23,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.24], [0.9518, 0.2938], [0.9039, 0.3568], [0.856, 0.3713], [0.8084, 0.365], [0.7608, 0.4023], [0.7135, 0.4737], [0.6663, 0.5116], [0.6194, 0.5064], [0.5725, 0.5229], [0.526, 0.5889], [0.4796, 0.6477], [0.4335, 0.6553], [0.3877, 0.6556], [0.3422, 0.7055], [0.2971, 0.7768], [0.2522, 0.805], [0.208, 0.7996], [0.1641, 0.828], [0.121, 0.8997], [0.0787, 0.9502], [0.0378, 0.9514], [0.0, 0.96], [0.0, 1]]
+  }, {
+    "id": "M144",
+    "name": "Nẹp PU 30mm - M144",
+    "category": "Nẹp chỉ",
+    "nominal_width": 30,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.11], [0.9518, 0.2526], [0.9039, 0.3206], [0.856, 0.3486], [0.8084, 0.366], [0.7608, 0.4036], [0.7135, 0.4692], [0.6663, 0.5415], [0.6194, 0.5909], [0.5725, 0.6068], [0.526, 0.6081], [0.4796, 0.6256], [0.4335, 0.6742], [0.3877, 0.7393], [0.3422, 0.7902], [0.2971, 0.8086], [0.2522, 0.8052], [0.208, 0.8103], [0.1641, 0.8456], [0.121, 0.9047], [0.0787, 0.9588], [0.0378, 0.9831], [0.0, 0.98], [0.0, 1]]
+  }, {
+    "id": "M145",
+    "name": "Nẹp PU 38mm - M145",
+    "category": "Nẹp chỉ",
+    "nominal_width": 38,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.16], [0.9518, 0.2675], [0.9039, 0.3377], [0.856, 0.39], [0.8084, 0.4268], [0.7608, 0.452], [0.7135, 0.4719], [0.6663, 0.4931], [0.6194, 0.5212], [0.5725, 0.559], [0.526, 0.6059], [0.4796, 0.6578], [0.4335, 0.7089], [0.3877, 0.7533], [0.3422, 0.7869], [0.2971, 0.8088], [0.2522, 0.8218], [0.208, 0.8312], [0.1641, 0.8432], [0.121, 0.8632], [0.0787, 0.8938], [0.0378, 0.9341], [0.0, 0.98], [0.0, 1]]
+  }, {
+    "id": "M146",
+    "name": "Nẹp PU 40mm - M146",
+    "category": "Nẹp chỉ",
+    "nominal_width": 40,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.12], [0.9518, 0.1804], [0.9039, 0.249], [0.856, 0.3128], [0.8084, 0.358], [0.7608, 0.3825], [0.7135, 0.3978], [0.6663, 0.4211], [0.6194, 0.4639], [0.5725, 0.5236], [0.526, 0.586], [0.4796, 0.6345], [0.4335, 0.662], [0.3877, 0.6758], [0.3422, 0.6922], [0.2971, 0.7258], [0.2522, 0.7791], [0.208, 0.8409], [0.1641, 0.8938], [0.121, 0.9267], [0.0787, 0.9421], [0.0378, 0.9543], [0.0, 0.98], [0.0, 1]]
+  }, {
+    "id": "M147",
+    "name": "Nẹp PU 41mm - M147",
+    "category": "Nẹp chỉ",
+    "nominal_width": 41,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.22], [0.9518, 0.3649], [0.9039, 0.4418], [0.856, 0.4814], [0.8084, 0.4927], [0.7608, 0.4925], [0.7135, 0.5006], [0.6663, 0.5311], [0.6194, 0.5855], [0.5725, 0.653], [0.526, 0.7154], [0.4796, 0.7565], [0.4335, 0.7698], [0.3877, 0.7619], [0.3422, 0.7494], [0.2971, 0.7508], [0.2522, 0.7774], [0.208, 0.8278], [0.1641, 0.8889], [0.121, 0.942], [0.0787, 0.972], [0.0378, 0.975], [0.0, 0.96], [0.0, 1]]
+  }, {
+    "id": "M148",
+    "name": "Nẹp PS 15mm - M148",
+    "category": "Nẹp chỉ",
+    "nominal_width": 15,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.1], [0.9518, 0.1486], [0.9039, 0.196], [0.856, 0.197], [0.8084, 0.2213], [0.7608, 0.2904], [0.7135, 0.3272], [0.6663, 0.3314], [0.6194, 0.3799], [0.5725, 0.4506], [0.526, 0.4728], [0.4796, 0.4884], [0.4335, 0.5561], [0.3877, 0.6171], [0.3422, 0.6294], [0.2971, 0.6636], [0.2522, 0.7416], [0.208, 0.7864], [0.1641, 0.798], [0.121, 0.8534], [0.0787, 0.9305], [0.0378, 0.9587], [0.0, 0.98], [0.0, 1]]
+  }, {
+    "id": "M149",
+    "name": "Nẹp PS 16mm - M149",
+    "category": "Nẹp chỉ",
+    "nominal_width": 16,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.28], [0.9518, 0.3544], [0.9039, 0.4331], [0.856, 0.4813], [0.8084, 0.488], [0.7608, 0.4873], [0.7135, 0.5199], [0.6663, 0.5859], [0.6194, 0.6452], [0.5725, 0.6647], [0.526, 0.6567], [0.4796, 0.6652], [0.4335, 0.7141], [0.3877, 0.7796], [0.3422, 0.818], [0.2971, 0.8167], [0.2522, 0.8093], [0.208, 0.836], [0.1641, 0.8968], [0.121, 0.9516], [0.0787, 0.9668], [0.0378, 0.955], [0.0, 0.96], [0.0, 1]]
+  }, {
+    "id": "M150",
+    "name": "Nẹp PS 20mm - M150",
+    "category": "Nẹp chỉ",
+    "nominal_width": 20,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.151], [0.9518, 0.2427], [0.9039, 0.3088], [0.856, 0.3759], [0.8084, 0.4446], [0.7608, 0.5045], [0.7135, 0.544], [0.6663, 0.5634], [0.6194, 0.5743], [0.5725, 0.5865], [0.526, 0.6005], [0.4796, 0.6135], [0.4335, 0.6296], [0.3877, 0.6569], [0.3422, 0.6981], [0.2971, 0.7456], [0.2522, 0.7898], [0.208, 0.8269], [0.1641, 0.8586], [0.121, 0.8877], [0.0787, 0.9156], [0.0378, 0.943], [0.0, 0.97], [0.0, 1]]
+  }, {
+    "id": "M151",
+    "name": "Viền cửa PS 30mm - M151",
+    "category": "Phào cửa",
+    "nominal_width": 30,
+    "points": [[0, 0], [1, 0], [1.0, 0.24], [0.9545, 0.2938], [0.9091, 0.3568], [0.8636, 0.3713], [0.8182, 0.365], [0.7727, 0.4023], [0.7273, 0.4737], [0.6818, 0.5116], [0.6364, 0.5064], [0.5909, 0.5229], [0.5455, 0.5889], [0.5, 0.6477], [0.4545, 0.6553], [0.4091, 0.6556], [0.3636, 0.7055], [0.3182, 0.7768], [0.2727, 0.805], [0.2273, 0.7996], [0.1818, 0.828], [0.1364, 0.8997], [0.0909, 0.9502], [0.0455, 0.9514], [0.0, 0.96], [0, 1]]
+  }, {
+    "id": "M152",
+    "name": "Viền cửa PS 38mm - M152",
+    "category": "Phào cửa",
+    "nominal_width": 38,
+    "points": [[0, 0], [1, 0], [1.0, 0.11], [0.9545, 0.2526], [0.9091, 0.3206], [0.8636, 0.3486], [0.8182, 0.366], [0.7727, 0.4036], [0.7273, 0.4692], [0.6818, 0.5415], [0.6364, 0.5909], [0.5909, 0.6068], [0.5455, 0.6081], [0.5, 0.6256], [0.4545, 0.6742], [0.4091, 0.7393], [0.3636, 0.7902], [0.3182, 0.8086], [0.2727, 0.8052], [0.2273, 0.8103], [0.1818, 0.8456], [0.1364, 0.9047], [0.0909, 0.9588], [0.0455, 0.9831], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M153",
+    "name": "Viền cửa PS 40mm - M153",
+    "category": "Phào cửa",
+    "nominal_width": 40,
+    "points": [[0, 0], [1, 0], [1.0, 0.16], [0.9545, 0.2675], [0.9091, 0.3377], [0.8636, 0.39], [0.8182, 0.4268], [0.7727, 0.452], [0.7273, 0.4719], [0.6818, 0.4931], [0.6364, 0.5212], [0.5909, 0.559], [0.5455, 0.6059], [0.5, 0.6578], [0.4545, 0.7089], [0.4091, 0.7533], [0.3636, 0.7869], [0.3182, 0.8088], [0.2727, 0.8218], [0.2273, 0.8312], [0.1818, 0.8432], [0.1364, 0.8632], [0.0909, 0.8938], [0.0455, 0.9341], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M154",
+    "name": "Viền cửa PS 50mm - M154",
+    "category": "Phào cửa",
+    "nominal_width": 50,
+    "points": [[0, 0], [1, 0], [1.0, 0.12], [0.9545, 0.1804], [0.9091, 0.249], [0.8636, 0.3128], [0.8182, 0.358], [0.7727, 0.3825], [0.7273, 0.3978], [0.6818, 0.4211], [0.6364, 0.4639], [0.5909, 0.5236], [0.5455, 0.586], [0.5, 0.6345], [0.4545, 0.662], [0.4091, 0.6758], [0.3636, 0.6922], [0.3182, 0.7258], [0.2727, 0.7791], [0.2273, 0.8409], [0.1818, 0.8938], [0.1364, 0.9267], [0.0909, 0.9421], [0.0455, 0.9543], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M155",
+    "name": "Viền cửa PS 60mm - M155",
+    "category": "Phào cửa",
+    "nominal_width": 60,
+    "points": [[0, 0], [1, 0], [1.0, 0.22], [0.9545, 0.3649], [0.9091, 0.4418], [0.8636, 0.4814], [0.8182, 0.4927], [0.7727, 0.4925], [0.7273, 0.5006], [0.6818, 0.5311], [0.6364, 0.5855], [0.5909, 0.653], [0.5455, 0.7154], [0.5, 0.7565], [0.4545, 0.7698], [0.4091, 0.7619], [0.3636, 0.7494], [0.3182, 0.7508], [0.2727, 0.7774], [0.2273, 0.8278], [0.1818, 0.8889], [0.1364, 0.942], [0.0909, 0.972], [0.0455, 0.975], [0.0, 0.96], [0, 1]]
+  }, {
+    "id": "M156",
+    "name": "Viền cửa PS 65mm - M156",
+    "category": "Phào cửa",
+    "nominal_width": 65,
+    "points": [[0, 0], [1, 0], [1.0, 0.1], [0.9545, 0.1486], [0.9091, 0.196], [0.8636, 0.197], [0.8182, 0.2213], [0.7727, 0.2904], [0.7273, 0.3272], [0.6818, 0.3314], [0.6364, 0.3799], [0.5909, 0.4506], [0.5455, 0.4728], [0.5, 0.4884], [0.4545, 0.5561], [0.4091, 0.6171], [0.3636, 0.6294], [0.3182, 0.6636], [0.2727, 0.7416], [0.2273, 0.7864], [0.1818, 0.798], [0.1364, 0.8534], [0.0909, 0.9305], [0.0455, 0.9587], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M157",
+    "name": "Viền cửa PS 80mm - M157",
+    "category": "Phào cửa",
+    "nominal_width": 80,
+    "points": [[0, 0], [1, 0], [1.0, 0.28], [0.9545, 0.3544], [0.9091, 0.4331], [0.8636, 0.4813], [0.8182, 0.488], [0.7727, 0.4873], [0.7273, 0.5199], [0.6818, 0.5859], [0.6364, 0.6452], [0.5909, 0.6647], [0.5455, 0.6567], [0.5, 0.6652], [0.4545, 0.7141], [0.4091, 0.7796], [0.3636, 0.818], [0.3182, 0.8167], [0.2727, 0.8093], [0.2273, 0.836], [0.1818, 0.8968], [0.1364, 0.9516], [0.0909, 0.9668], [0.0455, 0.955], [0.0, 0.96], [0, 1]]
+  }, {
+    "id": "M158",
+    "name": "Viền cửa PS 90mm - M158",
+    "category": "Phào cửa",
+    "nominal_width": 90,
+    "points": [[0, 0], [1, 0], [1.0, 0.151], [0.9545, 0.2427], [0.9091, 0.3088], [0.8636, 0.3759], [0.8182, 0.4446], [0.7727, 0.5045], [0.7273, 0.544], [0.6818, 0.5634], [0.6364, 0.5743], [0.5909, 0.5865], [0.5455, 0.6005], [0.5, 0.6135], [0.4545, 0.6296], [0.4091, 0.6569], [0.3636, 0.6981], [0.3182, 0.7456], [0.2727, 0.7898], [0.2273, 0.8269], [0.1818, 0.8586], [0.1364, 0.8877], [0.0909, 0.9156], [0.0455, 0.943], [0.0, 0.97], [0, 1]]
+  }, {
+    "id": "M159",
+    "name": "Viền cửa PS 100mm - M159",
+    "category": "Phào cửa",
+    "nominal_width": 100,
+    "points": [[0, 0], [1, 0], [1.0, 0.1827], [0.9545, 0.2339], [0.9091, 0.2936], [0.8636, 0.3584], [0.8182, 0.4084], [0.7727, 0.4319], [0.7273, 0.443], [0.6818, 0.462], [0.6364, 0.4948], [0.5909, 0.538], [0.5455, 0.5875], [0.5, 0.6372], [0.4545, 0.6797], [0.4091, 0.7106], [0.3636, 0.7329], [0.3182, 0.7539], [0.2727, 0.7789], [0.2273, 0.8089], [0.1818, 0.8419], [0.1364, 0.8761], [0.0909, 0.9108], [0.0455, 0.9454], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M160",
+    "name": "Khung cửa PU 30mm - M160",
+    "category": "Phào cửa",
+    "nominal_width": 30,
+    "points": [[0, 0], [1, 0], [1.0, 0.13], [0.9545, 0.2463], [0.9091, 0.2934], [0.8636, 0.2949], [0.8182, 0.3077], [0.7727, 0.3701], [0.7273, 0.4592], [0.6818, 0.5184], [0.6364, 0.5243], [0.5909, 0.5143], [0.5455, 0.5432], [0.5, 0.6192], [0.4545, 0.6945], [0.4091, 0.7213], [0.3636, 0.7078], [0.3182, 0.7085], [0.2727, 0.7609], [0.2273, 0.8413], [0.1818, 0.8928], [0.1364, 0.8919], [0.0909, 0.8758], [0.0455, 0.8991], [0.0, 0.97], [0, 1]]
+  }, {
+    "id": "M161",
+    "name": "Khung cửa PU 38mm - M161",
+    "category": "Phào cửa",
+    "nominal_width": 38,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.2615], [0.9545, 0.3162], [0.9091, 0.3796], [0.8636, 0.394], [0.8182, 0.3878], [0.7727, 0.4249], [0.7273, 0.4954], [0.6818, 0.5326], [0.6364, 0.5275], [0.5909, 0.5436], [0.5455, 0.6079], [0.5, 0.6648], [0.4545, 0.6721], [0.4091, 0.6724], [0.3636, 0.7204], [0.3182, 0.7887], [0.2727, 0.8155], [0.2273, 0.8104], [0.1818, 0.8374], [0.1364, 0.9054], [0.0909, 0.9531], [0.0455, 0.9542], [0.0, 0.9624], [0, 1]]
+  }, {
+    "id": "M162",
+    "name": "Khung cửa PU 40mm - M162",
+    "category": "Phào cửa",
+    "nominal_width": 40,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1256], [0.9545, 0.2743], [0.9091, 0.3432], [0.8636, 0.3714], [0.8182, 0.3888], [0.7727, 0.4262], [0.7273, 0.491], [0.6818, 0.5618], [0.6364, 0.6099], [0.5909, 0.6253], [0.5455, 0.6265], [0.5, 0.6435], [0.4545, 0.6903], [0.4091, 0.7528], [0.3636, 0.8014], [0.3182, 0.819], [0.2727, 0.8157], [0.2273, 0.8206], [0.1818, 0.8542], [0.1364, 0.9102], [0.0909, 0.9612], [0.0455, 0.9841], [0.0, 0.9812], [0, 1]]
+  }, {
+    "id": "M163",
+    "name": "Khung cửa PU 50mm - M163",
+    "category": "Phào cửa",
+    "nominal_width": 50,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1786], [0.9545, 0.2895], [0.9091, 0.3604], [0.8636, 0.4127], [0.8182, 0.4492], [0.7727, 0.4741], [0.7273, 0.4936], [0.6818, 0.5145], [0.6364, 0.542], [0.5909, 0.5789], [0.5455, 0.6244], [0.5, 0.6745], [0.4545, 0.7237], [0.4091, 0.7662], [0.3636, 0.7983], [0.3182, 0.8192], [0.2727, 0.8315], [0.2273, 0.8405], [0.1818, 0.8519], [0.1364, 0.8709], [0.0909, 0.8998], [0.0455, 0.9379], [0.0, 0.9812], [0, 1]]
+  }, {
+    "id": "M164",
+    "name": "Khung cửa PU 60mm - M164",
+    "category": "Phào cửa",
+    "nominal_width": 60,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1363], [0.9545, 0.1999], [0.9091, 0.2707], [0.8636, 0.3354], [0.8182, 0.3808], [0.7727, 0.4052], [0.7273, 0.4204], [0.6818, 0.4435], [0.6364, 0.4858], [0.5909, 0.5443], [0.5455, 0.6051], [0.5, 0.6521], [0.4545, 0.6786], [0.4091, 0.6919], [0.3636, 0.7076], [0.3182, 0.7399], [0.2727, 0.7909], [0.2273, 0.8497], [0.1818, 0.8998], [0.1364, 0.9309], [0.0909, 0.9455], [0.0455, 0.957], [0.0, 0.9812], [0, 1]]
+  }, {
+    "id": "M165",
+    "name": "Khung cửa PU 65mm - M165",
+    "category": "Phào cửa",
+    "nominal_width": 65,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.2409], [0.9545, 0.3877], [0.9091, 0.464], [0.8636, 0.503], [0.8182, 0.5141], [0.7727, 0.5139], [0.7273, 0.5218], [0.6818, 0.5517], [0.6364, 0.6046], [0.5909, 0.6699], [0.5455, 0.7299], [0.5, 0.7693], [0.4545, 0.782], [0.4091, 0.7744], [0.3636, 0.7625], [0.3182, 0.7638], [0.2727, 0.7892], [0.2273, 0.8372], [0.1818, 0.8952], [0.1364, 0.9454], [0.0909, 0.9737], [0.0455, 0.9765], [0.0, 0.9624], [0, 1]]
+  }, {
+    "id": "M166",
+    "name": "Khung cửa PU 80mm - M166",
+    "category": "Phào cửa",
+    "nominal_width": 80,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1148], [0.9545, 0.1666], [0.9091, 0.2161], [0.8636, 0.2172], [0.8182, 0.2423], [0.7727, 0.3128], [0.7273, 0.3499], [0.6818, 0.3541], [0.6364, 0.4026], [0.5909, 0.4727], [0.5455, 0.4945], [0.5, 0.5099], [0.4545, 0.576], [0.4091, 0.6352], [0.3636, 0.6471], [0.3182, 0.6801], [0.2727, 0.755], [0.2273, 0.7978], [0.1818, 0.8089], [0.1364, 0.8616], [0.0909, 0.9345], [0.0455, 0.9611], [0.0, 0.9812], [0, 1]]
+  }, {
+    "id": "M167",
+    "name": "Khung cửa PU 90mm - M167",
+    "category": "Phào cửa",
+    "nominal_width": 90,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.3022], [0.9545, 0.3772], [0.9091, 0.4554], [0.8636, 0.5029], [0.8182, 0.5095], [0.7727, 0.5088], [0.7273, 0.5407], [0.6818, 0.605], [0.6364, 0.6624], [0.5909, 0.6812], [0.5455, 0.6735], [0.5, 0.6817], [0.4545, 0.7287], [0.4091, 0.7913], [0.3636, 0.8279], [0.3182, 0.8267], [0.2727, 0.8196], [0.2273, 0.845], [0.1818, 0.9027], [0.1364, 0.9544], [0.0909, 0.9688], [0.0455, 0.9576], [0.0, 0.9624], [0, 1]]
+  }, {
+    "id": "M168",
+    "name": "Khung cửa PU 100mm - M168",
+    "category": "Phào cửa",
+    "nominal_width": 100,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1691], [0.9545, 0.2642], [0.9091, 0.3314], [0.8636, 0.3986], [0.8182, 0.4668], [0.7727, 0.5256], [0.7273, 0.5642], [0.6818, 0.5831], [0.6364, 0.5937], [0.5909, 0.6056], [0.5455, 0.6192], [0.5, 0.6318], [0.4545, 0.6473], [0.4091, 0.6737], [0.3636, 0.7133], [0.3182, 0.7588], [0.2727, 0.8011], [0.2273, 0.8364], [0.1818, 0.8665], [0.1364, 0.8941], [0.0909, 0.9205], [0.0455, 0.9463], [0.0, 0.9718], [0, 1]]
+  }, {
+    "id": "M169",
+    "name": "Khung tranh 30mm - M169",
+    "category": "Phào cửa",
+    "nominal_width": 30,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.2023], [0.9545, 0.2552], [0.9091, 0.316], [0.8636, 0.3812], [0.8182, 0.4309], [0.7727, 0.4542], [0.7273, 0.4652], [0.6818, 0.4839], [0.6364, 0.5161], [0.5909, 0.5584], [0.5455, 0.6066], [0.5, 0.6547], [0.4545, 0.6956], [0.4091, 0.7253], [0.3636, 0.7467], [0.3182, 0.7668], [0.2727, 0.7907], [0.2273, 0.8193], [0.1818, 0.8506], [0.1364, 0.8831], [0.0909, 0.9159], [0.0455, 0.9486], [0.0, 0.9812], [0, 1]]
+  }, {
+    "id": "M170",
+    "name": "Khung tranh 38mm - M170",
+    "category": "Phào cửa",
+    "nominal_width": 38,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1469], [0.9545, 0.2679], [0.9091, 0.3158], [0.8636, 0.3173], [0.8182, 0.3302], [0.7727, 0.3928], [0.7273, 0.4812], [0.6818, 0.5392], [0.6364, 0.545], [0.5909, 0.5352], [0.5455, 0.5635], [0.5, 0.6373], [0.4545, 0.7099], [0.4091, 0.7356], [0.3636, 0.7226], [0.3182, 0.7233], [0.2727, 0.7735], [0.2273, 0.8501], [0.1818, 0.8989], [0.1364, 0.898], [0.0909, 0.8828], [0.0455, 0.9049], [0.0, 0.9718], [0, 1]]
+  }, {
+    "id": "M171",
+    "name": "Khung tranh 40mm - M171",
+    "category": "Phào cửa",
+    "nominal_width": 40,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.24], [0.9518, 0.2938], [0.9039, 0.3568], [0.856, 0.3713], [0.8084, 0.365], [0.7608, 0.4023], [0.7135, 0.4737], [0.6663, 0.5116], [0.6194, 0.5064], [0.5725, 0.5229], [0.526, 0.5889], [0.4796, 0.6477], [0.4335, 0.6553], [0.3877, 0.6556], [0.3422, 0.7055], [0.2971, 0.7768], [0.2522, 0.805], [0.208, 0.7996], [0.1641, 0.828], [0.121, 0.8997], [0.0787, 0.9502], [0.0378, 0.9514], [0.0, 0.96], [0.0, 1]]
+  }, {
+    "id": "M172",
+    "name": "Khung tranh 50mm - M172",
+    "category": "Phào cửa",
+    "nominal_width": 50,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.11], [0.9518, 0.2526], [0.9039, 0.3206], [0.856, 0.3486], [0.8084, 0.366], [0.7608, 0.4036], [0.7135, 0.4692], [0.6663, 0.5415], [0.6194, 0.5909], [0.5725, 0.6068], [0.526, 0.6081], [0.4796, 0.6256], [0.4335, 0.6742], [0.3877, 0.7393], [0.3422, 0.7902], [0.2971, 0.8086], [0.2522, 0.8052], [0.208, 0.8103], [0.1641, 0.8456], [0.121, 0.9047], [0.0787, 0.9588], [0.0378, 0.9831], [0.0, 0.98], [0.0, 1]]
+  }, {
+    "id": "M173",
+    "name": "Khung tranh 60mm - M173",
+    "category": "Phào cửa",
+    "nominal_width": 60,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.16], [0.9518, 0.2675], [0.9039, 0.3377], [0.856, 0.39], [0.8084, 0.4268], [0.7608, 0.452], [0.7135, 0.4719], [0.6663, 0.4931], [0.6194, 0.5212], [0.5725, 0.559], [0.526, 0.6059], [0.4796, 0.6578], [0.4335, 0.7089], [0.3877, 0.7533], [0.3422, 0.7869], [0.2971, 0.8088], [0.2522, 0.8218], [0.208, 0.8312], [0.1641, 0.8432], [0.121, 0.8632], [0.0787, 0.8938], [0.0378, 0.9341], [0.0, 0.98], [0.0, 1]]
+  }, {
+    "id": "M174",
+    "name": "Khung tranh 65mm - M174",
+    "category": "Phào cửa",
+    "nominal_width": 65,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.12], [0.9518, 0.1804], [0.9039, 0.249], [0.856, 0.3128], [0.8084, 0.358], [0.7608, 0.3825], [0.7135, 0.3978], [0.6663, 0.4211], [0.6194, 0.4639], [0.5725, 0.5236], [0.526, 0.586], [0.4796, 0.6345], [0.4335, 0.662], [0.3877, 0.6758], [0.3422, 0.6922], [0.2971, 0.7258], [0.2522, 0.7791], [0.208, 0.8409], [0.1641, 0.8938], [0.121, 0.9267], [0.0787, 0.9421], [0.0378, 0.9543], [0.0, 0.98], [0.0, 1]]
+  }, {
+    "id": "M175",
+    "name": "Khung tranh 80mm - M175",
+    "category": "Phào cửa",
+    "nominal_width": 80,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.22], [0.9518, 0.3649], [0.9039, 0.4418], [0.856, 0.4814], [0.8084, 0.4927], [0.7608, 0.4925], [0.7135, 0.5006], [0.6663, 0.5311], [0.6194, 0.5855], [0.5725, 0.653], [0.526, 0.7154], [0.4796, 0.7565], [0.4335, 0.7698], [0.3877, 0.7619], [0.3422, 0.7494], [0.2971, 0.7508], [0.2522, 0.7774], [0.208, 0.8278], [0.1641, 0.8889], [0.121, 0.942], [0.0787, 0.972], [0.0378, 0.975], [0.0, 0.96], [0.0, 1]]
+  }, {
+    "id": "M176",
+    "name": "PU cổ trần 60mm - M176",
+    "category": "Phào tân cổ điển",
+    "nominal_width": 60,
+    "points": [[0, 0], [1, 0], [1.0, 0.16], [0.9545, 0.2675], [0.9091, 0.3377], [0.8636, 0.39], [0.8182, 0.4268], [0.7727, 0.452], [0.7273, 0.4719], [0.6818, 0.4931], [0.6364, 0.5212], [0.5909, 0.559], [0.5455, 0.6059], [0.5, 0.6578], [0.4545, 0.7089], [0.4091, 0.7533], [0.3636, 0.7869], [0.3182, 0.8088], [0.2727, 0.8218], [0.2273, 0.8312], [0.1818, 0.8432], [0.1364, 0.8632], [0.0909, 0.8938], [0.0455, 0.9341], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M177",
+    "name": "PU cổ trần 75mm - M177",
+    "category": "Phào tân cổ điển",
+    "nominal_width": 75,
+    "points": [[0, 0], [1, 0], [1.0, 0.12], [0.9545, 0.1804], [0.9091, 0.249], [0.8636, 0.3128], [0.8182, 0.358], [0.7727, 0.3825], [0.7273, 0.3978], [0.6818, 0.4211], [0.6364, 0.4639], [0.5909, 0.5236], [0.5455, 0.586], [0.5, 0.6345], [0.4545, 0.662], [0.4091, 0.6758], [0.3636, 0.6922], [0.3182, 0.7258], [0.2727, 0.7791], [0.2273, 0.8409], [0.1818, 0.8938], [0.1364, 0.9267], [0.0909, 0.9421], [0.0455, 0.9543], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M178",
+    "name": "PU cổ trần 80mm - M178",
+    "category": "Phào tân cổ điển",
+    "nominal_width": 80,
+    "points": [[0, 0], [1, 0], [1.0, 0.22], [0.9545, 0.3649], [0.9091, 0.4418], [0.8636, 0.4814], [0.8182, 0.4927], [0.7727, 0.4925], [0.7273, 0.5006], [0.6818, 0.5311], [0.6364, 0.5855], [0.5909, 0.653], [0.5455, 0.7154], [0.5, 0.7565], [0.4545, 0.7698], [0.4091, 0.7619], [0.3636, 0.7494], [0.3182, 0.7508], [0.2727, 0.7774], [0.2273, 0.8278], [0.1818, 0.8889], [0.1364, 0.942], [0.0909, 0.972], [0.0455, 0.975], [0.0, 0.96], [0, 1]]
+  }, {
+    "id": "M179",
+    "name": "PU cổ trần 85mm - M179",
+    "category": "Phào tân cổ điển",
+    "nominal_width": 85,
+    "points": [[0, 0], [1, 0], [1.0, 0.1], [0.9545, 0.1486], [0.9091, 0.196], [0.8636, 0.197], [0.8182, 0.2213], [0.7727, 0.2904], [0.7273, 0.3272], [0.6818, 0.3314], [0.6364, 0.3799], [0.5909, 0.4506], [0.5455, 0.4728], [0.5, 0.4884], [0.4545, 0.5561], [0.4091, 0.6171], [0.3636, 0.6294], [0.3182, 0.6636], [0.2727, 0.7416], [0.2273, 0.7864], [0.1818, 0.798], [0.1364, 0.8534], [0.0909, 0.9305], [0.0455, 0.9587], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M180",
+    "name": "PU cổ trần 90mm - M180",
+    "category": "Phào tân cổ điển",
+    "nominal_width": 90,
+    "points": [[0, 0], [1, 0], [1.0, 0.28], [0.9545, 0.3544], [0.9091, 0.4331], [0.8636, 0.4813], [0.8182, 0.488], [0.7727, 0.4873], [0.7273, 0.5199], [0.6818, 0.5859], [0.6364, 0.6452], [0.5909, 0.6647], [0.5455, 0.6567], [0.5, 0.6652], [0.4545, 0.7141], [0.4091, 0.7796], [0.3636, 0.818], [0.3182, 0.8167], [0.2727, 0.8093], [0.2273, 0.836], [0.1818, 0.8968], [0.1364, 0.9516], [0.0909, 0.9668], [0.0455, 0.955], [0.0, 0.96], [0, 1]]
+  }, {
+    "id": "M181",
+    "name": "PU cổ trần 100mm - M181",
+    "category": "Phào tân cổ điển",
+    "nominal_width": 100,
+    "points": [[0, 0], [1, 0], [1.0, 0.151], [0.9545, 0.2427], [0.9091, 0.3088], [0.8636, 0.3759], [0.8182, 0.4446], [0.7727, 0.5045], [0.7273, 0.544], [0.6818, 0.5634], [0.6364, 0.5743], [0.5909, 0.5865], [0.5455, 0.6005], [0.5, 0.6135], [0.4545, 0.6296], [0.4091, 0.6569], [0.3636, 0.6981], [0.3182, 0.7456], [0.2727, 0.7898], [0.2273, 0.8269], [0.1818, 0.8586], [0.1364, 0.8877], [0.0909, 0.9156], [0.0455, 0.943], [0.0, 0.97], [0, 1]]
+  }, {
+    "id": "M182",
+    "name": "PU cổ trần 110mm - M182",
+    "category": "Phào tân cổ điển",
+    "nominal_width": 110,
+    "points": [[0, 0], [1, 0], [1.0, 0.1827], [0.9545, 0.2339], [0.9091, 0.2936], [0.8636, 0.3584], [0.8182, 0.4084], [0.7727, 0.4319], [0.7273, 0.443], [0.6818, 0.462], [0.6364, 0.4948], [0.5909, 0.538], [0.5455, 0.5875], [0.5, 0.6372], [0.4545, 0.6797], [0.4091, 0.7106], [0.3636, 0.7329], [0.3182, 0.7539], [0.2727, 0.7789], [0.2273, 0.8089], [0.1818, 0.8419], [0.1364, 0.8761], [0.0909, 0.9108], [0.0455, 0.9454], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M183",
+    "name": "PU cổ trần 120mm - M183",
+    "category": "Phào tân cổ điển",
+    "nominal_width": 120,
+    "points": [[0, 0], [1, 0], [1.0, 0.13], [0.9545, 0.2463], [0.9091, 0.2934], [0.8636, 0.2949], [0.8182, 0.3077], [0.7727, 0.3701], [0.7273, 0.4592], [0.6818, 0.5184], [0.6364, 0.5243], [0.5909, 0.5143], [0.5455, 0.5432], [0.5, 0.6192], [0.4545, 0.6945], [0.4091, 0.7213], [0.3636, 0.7078], [0.3182, 0.7085], [0.2727, 0.7609], [0.2273, 0.8413], [0.1818, 0.8928], [0.1364, 0.8919], [0.0909, 0.8758], [0.0455, 0.8991], [0.0, 0.97], [0, 1]]
+  }, {
+    "id": "M184",
+    "name": "PU cổ trần 134mm - M184",
+    "category": "Phào tân cổ điển",
+    "nominal_width": 134,
+    "points": [[0, 0], [1, 0], [1.0, 0.24], [0.9545, 0.2938], [0.9091, 0.3568], [0.8636, 0.3713], [0.8182, 0.365], [0.7727, 0.4023], [0.7273, 0.4737], [0.6818, 0.5116], [0.6364, 0.5064], [0.5909, 0.5229], [0.5455, 0.5889], [0.5, 0.6477], [0.4545, 0.6553], [0.4091, 0.6556], [0.3636, 0.7055], [0.3182, 0.7768], [0.2727, 0.805], [0.2273, 0.7996], [0.1818, 0.828], [0.1364, 0.8997], [0.0909, 0.9502], [0.0455, 0.9514], [0.0, 0.96], [0, 1]]
+  }, {
+    "id": "M185",
+    "name": "Hoa văn cổ điển 60mm - M185",
+    "category": "Phào tân cổ điển",
+    "nominal_width": 60,
+    "points": [[0, 0], [1, 0], [1.0, 0.11], [0.9545, 0.2526], [0.9091, 0.3206], [0.8636, 0.3486], [0.8182, 0.366], [0.7727, 0.4036], [0.7273, 0.4692], [0.6818, 0.5415], [0.6364, 0.5909], [0.5909, 0.6068], [0.5455, 0.6081], [0.5, 0.6256], [0.4545, 0.6742], [0.4091, 0.7393], [0.3636, 0.7902], [0.3182, 0.8086], [0.2727, 0.8052], [0.2273, 0.8103], [0.1818, 0.8456], [0.1364, 0.9047], [0.0909, 0.9588], [0.0455, 0.9831], [0.0, 0.98], [0, 1]]
+  }, {
+    "id": "M186",
+    "name": "Hoa văn cổ điển 75mm - M186",
+    "category": "Phào tân cổ điển",
+    "nominal_width": 75,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1786], [0.9545, 0.2895], [0.9091, 0.3604], [0.8636, 0.4127], [0.8182, 0.4492], [0.7727, 0.4741], [0.7273, 0.4936], [0.6818, 0.5145], [0.6364, 0.542], [0.5909, 0.5789], [0.5455, 0.6244], [0.5, 0.6745], [0.4545, 0.7237], [0.4091, 0.7662], [0.3636, 0.7983], [0.3182, 0.8192], [0.2727, 0.8315], [0.2273, 0.8405], [0.1818, 0.8519], [0.1364, 0.8709], [0.0909, 0.8998], [0.0455, 0.9379], [0.0, 0.9812], [0, 1]]
+  }, {
+    "id": "M187",
+    "name": "Hoa văn cổ điển 80mm - M187",
+    "category": "Phào tân cổ điển",
+    "nominal_width": 80,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1363], [0.9545, 0.1999], [0.9091, 0.2707], [0.8636, 0.3354], [0.8182, 0.3808], [0.7727, 0.4052], [0.7273, 0.4204], [0.6818, 0.4435], [0.6364, 0.4858], [0.5909, 0.5443], [0.5455, 0.6051], [0.5, 0.6521], [0.4545, 0.6786], [0.4091, 0.6919], [0.3636, 0.7076], [0.3182, 0.7399], [0.2727, 0.7909], [0.2273, 0.8497], [0.1818, 0.8998], [0.1364, 0.9309], [0.0909, 0.9455], [0.0455, 0.957], [0.0, 0.9812], [0, 1]]
+  }, {
+    "id": "M188",
+    "name": "Hoa văn cổ điển 85mm - M188",
+    "category": "Phào tân cổ điển",
+    "nominal_width": 85,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.2409], [0.9545, 0.3877], [0.9091, 0.464], [0.8636, 0.503], [0.8182, 0.5141], [0.7727, 0.5139], [0.7273, 0.5218], [0.6818, 0.5517], [0.6364, 0.6046], [0.5909, 0.6699], [0.5455, 0.7299], [0.5, 0.7693], [0.4545, 0.782], [0.4091, 0.7744], [0.3636, 0.7625], [0.3182, 0.7638], [0.2727, 0.7892], [0.2273, 0.8372], [0.1818, 0.8952], [0.1364, 0.9454], [0.0909, 0.9737], [0.0455, 0.9765], [0.0, 0.9624], [0, 1]]
+  }, {
+    "id": "M189",
+    "name": "Hoa văn cổ điển 90mm - M189",
+    "category": "Phào tân cổ điển",
+    "nominal_width": 90,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1148], [0.9545, 0.1666], [0.9091, 0.2161], [0.8636, 0.2172], [0.8182, 0.2423], [0.7727, 0.3128], [0.7273, 0.3499], [0.6818, 0.3541], [0.6364, 0.4026], [0.5909, 0.4727], [0.5455, 0.4945], [0.5, 0.5099], [0.4545, 0.576], [0.4091, 0.6352], [0.3636, 0.6471], [0.3182, 0.6801], [0.2727, 0.755], [0.2273, 0.7978], [0.1818, 0.8089], [0.1364, 0.8616], [0.0909, 0.9345], [0.0455, 0.9611], [0.0, 0.9812], [0, 1]]
+  }, {
+    "id": "M190",
+    "name": "Hoa văn cổ điển 100mm - M190",
+    "category": "Phào tân cổ điển",
+    "nominal_width": 100,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.3022], [0.9545, 0.3772], [0.9091, 0.4554], [0.8636, 0.5029], [0.8182, 0.5095], [0.7727, 0.5088], [0.7273, 0.5407], [0.6818, 0.605], [0.6364, 0.6624], [0.5909, 0.6812], [0.5455, 0.6735], [0.5, 0.6817], [0.4545, 0.7287], [0.4091, 0.7913], [0.3636, 0.8279], [0.3182, 0.8267], [0.2727, 0.8196], [0.2273, 0.845], [0.1818, 0.9027], [0.1364, 0.9544], [0.0909, 0.9688], [0.0455, 0.9576], [0.0, 0.9624], [0, 1]]
+  }, {
+    "id": "M191",
+    "name": "Hoa văn cổ điển 110mm - M191",
+    "category": "Phào tân cổ điển",
+    "nominal_width": 110,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1691], [0.9545, 0.2642], [0.9091, 0.3314], [0.8636, 0.3986], [0.8182, 0.4668], [0.7727, 0.5256], [0.7273, 0.5642], [0.6818, 0.5831], [0.6364, 0.5937], [0.5909, 0.6056], [0.5455, 0.6192], [0.5, 0.6318], [0.4545, 0.6473], [0.4091, 0.6737], [0.3636, 0.7133], [0.3182, 0.7588], [0.2727, 0.8011], [0.2273, 0.8364], [0.1818, 0.8665], [0.1364, 0.8941], [0.0909, 0.9205], [0.0455, 0.9463], [0.0, 0.9718], [0, 1]]
+  }, {
+    "id": "M192",
+    "name": "Hoa văn cổ điển 120mm - M192",
+    "category": "Phào tân cổ điển",
+    "nominal_width": 120,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.2023], [0.9545, 0.2552], [0.9091, 0.316], [0.8636, 0.3812], [0.8182, 0.4309], [0.7727, 0.4542], [0.7273, 0.4652], [0.6818, 0.4839], [0.6364, 0.5161], [0.5909, 0.5584], [0.5455, 0.6066], [0.5, 0.6547], [0.4545, 0.6956], [0.4091, 0.7253], [0.3636, 0.7467], [0.3182, 0.7668], [0.2727, 0.7907], [0.2273, 0.8193], [0.1818, 0.8506], [0.1364, 0.8831], [0.0909, 0.9159], [0.0455, 0.9486], [0.0, 0.9812], [0, 1]]
+  }, {
+    "id": "M193",
+    "name": "Hoa văn cổ điển 134mm - M193",
+    "category": "Phào tân cổ điển",
+    "nominal_width": 134,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1469], [0.9545, 0.2679], [0.9091, 0.3158], [0.8636, 0.3173], [0.8182, 0.3302], [0.7727, 0.3928], [0.7273, 0.4812], [0.6818, 0.5392], [0.6364, 0.545], [0.5909, 0.5352], [0.5455, 0.5635], [0.5, 0.6373], [0.4545, 0.7099], [0.4091, 0.7356], [0.3636, 0.7226], [0.3182, 0.7233], [0.2727, 0.7735], [0.2273, 0.8501], [0.1818, 0.8989], [0.1364, 0.898], [0.0909, 0.8828], [0.0455, 0.9049], [0.0, 0.9718], [0, 1]]
+  }, {
+    "id": "M194",
+    "name": "PS dát vàng 60mm - M194",
+    "category": "Phào tân cổ điển",
+    "nominal_width": 60,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.2615], [0.9545, 0.3162], [0.9091, 0.3796], [0.8636, 0.394], [0.8182, 0.3878], [0.7727, 0.4249], [0.7273, 0.4954], [0.6818, 0.5326], [0.6364, 0.5275], [0.5909, 0.5436], [0.5455, 0.6079], [0.5, 0.6648], [0.4545, 0.6721], [0.4091, 0.6724], [0.3636, 0.7204], [0.3182, 0.7887], [0.2727, 0.8155], [0.2273, 0.8104], [0.1818, 0.8374], [0.1364, 0.9054], [0.0909, 0.9531], [0.0455, 0.9542], [0.0, 0.9624], [0, 1]]
+  }, {
+    "id": "M195",
+    "name": "PS dát vàng 75mm - M195",
+    "category": "Phào tân cổ điển",
+    "nominal_width": 75,
+    "points": [[0, 0.0], [1, 0.0], [1.0, 0.1256], [0.9545, 0.2743], [0.9091, 0.3432], [0.8636, 0.3714], [0.8182, 0.3888], [0.7727, 0.4262], [0.7273, 0.491], [0.6818, 0.5618], [0.6364, 0.6099], [0.5909, 0.6253], [0.5455, 0.6265], [0.5, 0.6435], [0.4545, 0.6903], [0.4091, 0.7528], [0.3636, 0.8014], [0.3182, 0.819], [0.2727, 0.8157], [0.2273, 0.8206], [0.1818, 0.8542], [0.1364, 0.9102], [0.0909, 0.9612], [0.0455, 0.9841], [0.0, 0.9812], [0, 1]]
+  }, {
+    "id": "M196",
+    "name": "PS dát vàng 80mm - M196",
+    "category": "Phào tân cổ điển",
+    "nominal_width": 80,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.16], [0.9518, 0.2675], [0.9039, 0.3377], [0.856, 0.39], [0.8084, 0.4268], [0.7608, 0.452], [0.7135, 0.4719], [0.6663, 0.4931], [0.6194, 0.5212], [0.5725, 0.559], [0.526, 0.6059], [0.4796, 0.6578], [0.4335, 0.7089], [0.3877, 0.7533], [0.3422, 0.7869], [0.2971, 0.8088], [0.2522, 0.8218], [0.208, 0.8312], [0.1641, 0.8432], [0.121, 0.8632], [0.0787, 0.8938], [0.0378, 0.9341], [0.0, 0.98], [0.0, 1]]
+  }, {
+    "id": "M197",
+    "name": "PS dát vàng 85mm - M197",
+    "category": "Phào tân cổ điển",
+    "nominal_width": 85,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.12], [0.9518, 0.1804], [0.9039, 0.249], [0.856, 0.3128], [0.8084, 0.358], [0.7608, 0.3825], [0.7135, 0.3978], [0.6663, 0.4211], [0.6194, 0.4639], [0.5725, 0.5236], [0.526, 0.586], [0.4796, 0.6345], [0.4335, 0.662], [0.3877, 0.6758], [0.3422, 0.6922], [0.2971, 0.7258], [0.2522, 0.7791], [0.208, 0.8409], [0.1641, 0.8938], [0.121, 0.9267], [0.0787, 0.9421], [0.0378, 0.9543], [0.0, 0.98], [0.0, 1]]
+  }, {
+    "id": "M198",
+    "name": "PS dát vàng 90mm - M198",
+    "category": "Phào tân cổ điển",
+    "nominal_width": 90,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.22], [0.9518, 0.3649], [0.9039, 0.4418], [0.856, 0.4814], [0.8084, 0.4927], [0.7608, 0.4925], [0.7135, 0.5006], [0.6663, 0.5311], [0.6194, 0.5855], [0.5725, 0.653], [0.526, 0.7154], [0.4796, 0.7565], [0.4335, 0.7698], [0.3877, 0.7619], [0.3422, 0.7494], [0.2971, 0.7508], [0.2522, 0.7774], [0.208, 0.8278], [0.1641, 0.8889], [0.121, 0.942], [0.0787, 0.972], [0.0378, 0.975], [0.0, 0.96], [0.0, 1]]
+  }, {
+    "id": "M199",
+    "name": "PS dát vàng 100mm - M199",
+    "category": "Phào tân cổ điển",
+    "nominal_width": 100,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.1], [0.9518, 0.1486], [0.9039, 0.196], [0.856, 0.197], [0.8084, 0.2213], [0.7608, 0.2904], [0.7135, 0.3272], [0.6663, 0.3314], [0.6194, 0.3799], [0.5725, 0.4506], [0.526, 0.4728], [0.4796, 0.4884], [0.4335, 0.5561], [0.3877, 0.6171], [0.3422, 0.6294], [0.2971, 0.6636], [0.2522, 0.7416], [0.208, 0.7864], [0.1641, 0.798], [0.121, 0.8534], [0.0787, 0.9305], [0.0378, 0.9587], [0.0, 0.98], [0.0, 1]]
+  }, {
+    "id": "M200",
+    "name": "PS dát vàng 110mm - M200",
+    "category": "Phào tân cổ điển",
+    "nominal_width": 110,
+    "points": [[0.0, 0], [1.0, 0], [1.0, 0.28], [0.9518, 0.3544], [0.9039, 0.4331], [0.856, 0.4813], [0.8084, 0.488], [0.7608, 0.4873], [0.7135, 0.5199], [0.6663, 0.5859], [0.6194, 0.6452], [0.5725, 0.6647], [0.526, 0.6567], [0.4796, 0.6652], [0.4335, 0.7141], [0.3877, 0.7796], [0.3422, 0.818], [0.2971, 0.8167], [0.2522, 0.8093], [0.208, 0.836], [0.1641, 0.8968], [0.121, 0.9516], [0.0787, 0.9668], [0.0378, 0.955], [0.0, 0.96], [0.0, 1]]
+  }],
+  selected = null;
+function loadProfiles(data) {
+  profiles = data;
+  render();
+}
+function syncLamBeforeRun() {
+  var p = profiles.find(function(x) { return x.id === selected; });
+  var isLam = p && p.category === 'Lam sóng';
+  var workspace = document.getElementById('menuWorkspace');
+  var lamOpen = workspace && workspace.classList.contains('lam-library-open');
+  var actions = document.getElementById('runActions');
+  var host = document.getElementById(lamOpen || isLam ? 'lamRunHost' : 'generalRunHost');
+  if (actions.parentNode !== host) host.appendChild(actions);
+  document.getElementById('generalRunHost').hidden = !p || isLam || lamOpen;
+  actions.querySelectorAll('button').forEach(function(button) { button.disabled = !p || lamOpen && !isLam; });
+  var show = p && p.category === 'Lam sóng' && (!p.fixed_lam_profile || p.id === 'LAM_VIEN_TES3') && !document.getElementById('grid').hidden;
+  document.getElementById('lamBeforeRun').hidden = !show;
+  document.getElementById('lamRibWidthLabel').hidden = !p || !['LAM001','LAM_VIEN_TES3'].includes(p.id);
+  var border = p && p.id === 'LAM_VIEN_TES3';
+  document.getElementById('lamBandWidthLabel').hidden = !border;
+  document.getElementById('lamSpacingLabel').hidden = !border;
+  var spacingMode = document.getElementById('lam_spacing_mode').value;
+  var uniform = spacingMode !== 'corner_locked';
+  document.getElementById('lamCountLabel').textContent = border ? (uniform ? 'Số nan cạnh ngắn' : 'Số nan/cạnh') : 'Số lượng lam';
+  document.getElementById('lamFaceGuide').textContent = border ?
+    'Lam viền TES3: chọn mặt hoặc vòng Edge khép kín. Rải đều + khớp góc: nan nối cùng nhịp qua góc, cạnh dài tự thêm nan; phần chênh nhỏ chia vào các khe đoạn thẳng. Mặt vành giữ nguyên đường bao và lỗ; mặt đặc dùng Rộng dải viền.' :
+    'Lam sóng 3 gờ: chọn mặt + một cạnh định hướng → Chạy theo Edge hoặc Bề mặt. Nan song song cạnh, chia đều toàn mặt. Số lam là tổng số nan trên mỗi mặt; Rộng lam là bề rộng từng nan. Khe chia đều, giữ nguyên mặt gốc.';
+  document.getElementById('lamBeforeHint').textContent = p && p.id === 'LAM001' ?
+    'Số lượng là tổng số nan trên mỗi mặt. Rộng lam tính cho từng nan; để trống để tự chia. Khe chia đều phần còn lại.' :
+    border ? (spacingMode === 'uniform_miter' ? 'Số nan đặt cho cạnh ngắn nhất; cạnh dài tự thêm nan. Khóa chung nhịp góc, chia phần chênh nhỏ vào các khe ở đoạn thẳng. Dùng cùng rộng nan trên viền lồi.' : uniform ? 'Số nan đặt cho cạnh ngắn nhất; các cạnh dài tự tăng số nan với cùng khoảng hở. Phần dư chia đều hai đầu, nan cắt theo mặt đã chọn.' : 'Giữ cùng số nan mỗi cạnh và nhịp đấu góc; khoảng hở ở giữa cạnh có thể khác nhau.') + ' Rộng lam tính cho từng nan; để trống để tự chia. Rộng dải viền chỉ dùng với mặt đặc. Viền cong kín tính là một cạnh liên tục.' :
+    'Chỉnh thông số mẫu trước khi chạy. Cao lam tính từ mặt đế; tổng chiều cao = Cao lam + Sâu đế.';
+}
+function readLamBeforeRun(showError) {
+  var p = profiles.find(function(x) { return x.id === selected; });
+  if (!p || p.category !== 'Lam sóng' || p.fixed_lam_profile && p.id !== 'LAM_VIEN_TES3') return true;
+  var fields = [ ['lam_count', 'Số lượng lam', 1, 200], ['lam_height', 'Cao lam', 0.5, 10000], ['lam_depth', 'Sâu đế', 0.5, 10000] ];
+  var first = null, message = '';
+  fields.forEach(function(row) {
+    var input = document.getElementById(row[0]), value = Number(input.value);
+    var invalid = input.value.trim() === '' || !Number.isFinite(value) || value < row[2] || value > row[3] || row[0] === 'lam_count' && Math.floor(value) !== value;
+    input.setAttribute('aria-invalid', invalid ? 'true' : 'false');
+    if (invalid && !first) { first = input; message = row[0] === 'lam_count' ? 'Số lượng lam phải là số nguyên từ 1 đến 200.' : row[1] + ' phải từ 0,5 đến 10.000 mm.'; }
+  });
+  if (p.id === 'LAM001' || p.id === 'LAM_VIEN_TES3') {
+    var rib = document.getElementById('lam_rib_width'), width = Number(rib.value);
+    var bad = rib.validity.badInput || rib.value.trim() !== '' && (!Number.isFinite(width) || width < 0.1 || width > 100000);
+    rib.setAttribute('aria-invalid', bad ? 'true' : 'false');
+    if (bad && !first) { first = rib; message = 'Rộng lam phải từ 0,1 đến 100.000 mm, hoặc để trống để tự chia.'; }
+  }
+  if (p.id === 'LAM_VIEN_TES3') {
+    var band = document.getElementById('lam_band_width'), size = Number(band.value);
+    if (band.value.trim()==='' || !Number.isFinite(size) || size<0.1 || size>100000) { if(!first) { first=band; message='Rộng dải viền phải từ 0,1 đến 100.000 mm.'; } }
+  }
+  document.getElementById('lamBeforeError').textContent = first && showError ? message : '';
+  if (first && showError) first.focus();
+  return !first;
+}
+function selectProfile(id) {
+  selected = id;
+  var p = profiles.find(function (x) {
+    return x.id === id;
+  });
+  if (p) {
+    var w = parseFloat(p.actual_width || p.nominal_width || 0);
+    var hh = parseFloat(p.actual_height || 0);
+    if (w > 0) document.getElementById('width').value = Math.round(w * 100) / 100;
+    if (hh > 0) document.getElementById('height').value = Math.round(hh * 100) / 100;
+    var isLam = p.category === 'Lam sóng';
+    document.getElementById('lam_controls').style.display = isLam ? 'inline-flex' : 'none';
+    syncLamBeforeRun();
+    document.getElementById('lamBeforeError').textContent = '';
+    if (isLam) {
+      if (p.id === 'LAM_VIEN_TES3_R1') {
+        p.actual_width = 80;
+        p.actual_height = 10;
+        p.lam_depth = 3;
+        p.lam_height = 3;
+        p.lam_count = 6;
+        p.lam_rotation = 0;
+        document.getElementById('width').value = 80;
+        document.getElementById('height').value = 10;
+        document.getElementById('lam_auto_edge').checked = true;
+        document.getElementById('lam_fit_face').checked = true;
+      } else if (p.tes3_frame) {
+        document.getElementById('lam_auto_edge').checked = true;
+        document.getElementById('lam_fit_face').checked = true;
+      }
+      document.getElementById('lam_band_width').value = p.actual_width || 80;
+      document.getElementById('lam_rib_width').value = p.lam_rib_width == null ? '' : p.lam_rib_width;
+      document.getElementById('lam_depth').value = p.lam_depth || 4;
+      document.getElementById('lam_height').value = p.lam_height || Math.max(0.5, (p.actual_height || 10) - (p.lam_depth || 4));
+      document.getElementById('lam_count').value = p.lam_count || 3;
+      document.getElementById('lam_rotation').value = p.lam_rotation || 0;
+      updateLamPreview();
+      return;
+    }
+  }
+  render();
+}
+function makeLamPoints(count, depth, lamHeight, limit) {
+  count = Math.max(1, Math.min(limit || 20, parseInt(count) || 3));
+  depth = Math.max(0.1, parseFloat(depth) || 4);
+  lamHeight = Math.max(0.1, parseFloat(lamHeight) || 6);
+  var height = depth + lamHeight;
+  var y = depth / height,
+    gap = 0.40 / (count + 1),
+    rib = 0.60 / count,
+    pts = [[0, 0], [1, 0], [1, y]],
+    x = 1 - gap;
+  pts.push([x, y]);
+  for (var i = 0; i < count; i++) {
+    pts.push([x, 1]);
+    x -= rib;
+    pts.push([x, 1]);
+    pts.push([x, y]);
+    if (i < count - 1) {
+      x -= gap;
+      pts.push([x, y]);
+    }
+  }
+  pts.push([0, y]);
+  return pts;
+}
+function updateLamPreview() {
+  var p = profiles.find(function (x) {
+    return x.id === selected;
+  });
+  if (!p || p.category !== 'Lam sóng') {
+    render();
+    return;
+  }
+  if (!readLamBeforeRun(false)) return;
+  if (p.id === 'LAM_VIEN_TES3') {
+    p.actual_width=Number(document.getElementById('lam_band_width').value);
+    p.lam_depth=Number(document.getElementById('lam_depth').value);p.lam_height=Number(document.getElementById('lam_height').value);
+    p.lam_count=Number(document.getElementById('lam_count').value);
+    p.lam_rib_width=document.getElementById('lam_rib_width').value.trim()==='' ? null : Number(document.getElementById('lam_rib_width').value);
+    p.actual_height=p.lam_depth+p.lam_height;
+    document.getElementById('width').value=p.actual_width;document.getElementById('height').value=p.actual_height;
+    render();return;
+  }
+  if (p.fixed_lam_profile) {
+    p.actual_width = parseFloat(document.getElementById('width').value) || p.actual_width;
+    p.actual_height = parseFloat(document.getElementById('height').value) || p.actual_height;
+    render();
+    return;
+  }
+  var depth = parseFloat(document.getElementById('lam_depth').value) || 4;
+  var lh = parseFloat(document.getElementById('lam_height').value) || 6;
+  var total = depth + lh;
+  document.getElementById('height').value = Math.round(total * 100) / 100;
+  p.points = makeLamPoints(document.getElementById('lam_count').value, depth, lh, 200);
+  p.actual_width = parseFloat(document.getElementById('width').value) || 80;
+  p.actual_height = total;
+  p.lam_rib_width = document.getElementById('lam_rib_width').value.trim() === '' ? null : Number(document.getElementById('lam_rib_width').value);
+  p.lam_depth = depth;
+  p.lam_height = lh;
+  p.lam_count = parseInt(document.getElementById('lam_count').value) || 3;
+  p.lam_rotation = parseFloat(document.getElementById('lam_rotation').value) || 0;
+  render();
+}
+function changeLamCount(d) {
+  var e = document.getElementById('lam_count');
+  e.value = Math.max(1, Math.min(500, (parseInt(e.value) || 3) + d));
+  updateLamPreview();
+}
+function setLamRotation(a) {
+  document.getElementById('lam_rotation').value = a;
+  updateLamPreview();
+}
+function changeLamRotation(d) {
+  var e = document.getElementById('lam_rotation');
+  e.value = (parseFloat(e.value) || 0) + d;
+  updateLamPreview();
+}
+document.addEventListener('input', function (e) {
+  if ((e.target.id === 'width' || e.target.id === 'height') && selected) {
+    var p = profiles.find(function (x) {
+      return x.id === selected;
+    });
+    if (p && p.category === 'Lam sóng') updateLamPreview();
+  }
+});
+function lamRoundSection(points, width, height) {
+  var poly=points.map(function(p){return [p[0]*width,p[1]*height];});
+  var top=Math.max.apply(null,poly.map(function(p){return p[1];})),out=[];
+  poly.forEach(function(p,i){var q=poly[(i+1)%poly.length],a=Math.abs(p[1]-top)<1e-7,b=Math.abs(q[1]-top)<1e-7;
+    if((a?1:0)+(b?1:0)>Math.hypot(p[0]-q[0],p[1]-q[1])+1e-7)throw Error('Nan quá nhỏ để bo R1 mm');});
+  poly.forEach(function(p,i){
+    var a=poly[(i+poly.length-1)%poly.length],b=poly[(i+1)%poly.length];
+    var ax=a[0]-p[0],ay=a[1]-p[1],bx=b[0]-p[0],by=b[1]-p[1];
+    var al=Math.hypot(ax,ay),bl=Math.hypot(bx,by);ax/=al;ay/=al;bx/=bl;by/=bl;
+    if(Math.abs(p[1]-top)<1e-7 && ax*by-ay*bx < -0.99 && Math.abs(ax*bx+ay*by)<1e-7){
+      if(al<1-1e-7||bl<1-1e-7)throw Error('Nan quá nhỏ để bo R1 mm');
+      var cx=p[0]+ax+bx,cy=p[1]+ay+by,angle=Math.atan2(-by,-bx);
+      for(var j=0;j<=8;j++)out.push([(cx+Math.cos(angle+Math.PI*j/16))/width,(cy+Math.sin(angle+Math.PI*j/16))/height]);
+    }else out.push([p[0]/width,p[1]/height]);
+  });
+  return out;
+}
+function lamRoundThumb(profile){
+  // TES3 section shows one transverse rib above its flat base.
+  var points=profile.tes3_frame ? [[0,0],[1,0],[1,0.5],[0.71,0.5],[0.71,1],[0.29,1],[0.29,0.5],[0,0.5]] : profile.points;
+  var w=profile.tes3_frame ? 80/6 : profile.actual_width||80,h=profile.tes3_frame ? 6 : profile.actual_height||10;
+  try{
+    var rounded=lamRoundSection(points,w,h);
+    var text=rounded.map(function(p){return (10+p[0]*100)+','+(100-p[1]*75);}).join(' ');
+    return '<svg viewBox="0 0 120 115"><polygon points="'+text+'" fill="#f0dcc2" stroke="#9e602e" stroke-width="1.3"/><text x="60" y="113" text-anchor="middle" fill="#9e602e" font-size="10">Tiết diện bo R1 mm</text></svg>';
+  }catch(e){return '<div style="padding:12px;color:#b42318">Nan quá nhỏ để bo R1 mm</div>';}
+}
+function thumb(points, profile) {
+  if (profile && profile.lam_round_radius) return lamRoundThumb(profile);
+
+  if (profile && profile.tes3_frame) {
+    var lines = '';
+    for (var x = 20; x <= 100; x += 6) {
+      lines += '<line x1="' + x + '" y1="25" x2="' + x + '" y2="39" stroke="#222" stroke-width="1.15"/>';
+      lines += '<line x1="' + x + '" y1="76" x2="' + x + '" y2="90" stroke="#222" stroke-width="1.15"/>';
+    }
+    for (var y = 43; y <= 72; y += 5) {
+      lines += '<line x1="10" y1="' + y + '" x2="24" y2="' + y + '" stroke="#222" stroke-width="1.15"/>';
+      lines += '<line x1="96" y1="' + y + '" x2="110" y2="' + y + '" stroke="#222" stroke-width="1.15"/>';
+    }
+    return '<svg viewBox="0 0 120 115">' + '<path d="M10 25H110V90H10Z M24 39H96V76H24Z" fill="#f3f4f5" fill-rule="evenodd" stroke="#222" stroke-width="2"/>' + lines + '<line x1="10" y1="25" x2="24" y2="39" stroke="#222" stroke-width="1.6"/>' + '<line x1="110" y1="25" x2="96" y2="39" stroke="#222" stroke-width="1.6"/>' + '<line x1="110" y1="90" x2="96" y2="76" stroke="#222" stroke-width="1.6"/>' + '<line x1="10" y1="90" x2="24" y2="76" stroke="#222" stroke-width="1.6"/>' + '</svg>';
+  }
+  var p = points.map(function (x) {
+    return 10 + x[0] * 100 + ',' + (105 - x[1] * 90);
+  }).join(' ');
+  return '<svg viewBox="0 0 120 115"><polygon points="' + p + '" fill="#e8eaed" stroke="#333" stroke-width="2"/></svg>';
+}
+function render() {
+  syncLamBeforeRun();
+  var cat = document.getElementById('cat').value;
+  var q = document.getElementById('search').value.toLowerCase();
+  var html = '', lamHtml = '';
+  profiles.forEach(function (x) {
+    // Retain these IDs for existing drawings, but remove their gallery choices.
+    if (x.id === 'LAM_VIEN_TES3_R1' || x.id === 'LAM001_R1') return;
+    var builtInLam = x.id === 'LAM001' || x.id === 'LAM_VIEN_TES3';
+    if (builtInLam || (cat === 'Tất cả' || x.category === cat) && x.name.toLowerCase().indexOf(q) >= 0) {
+      var card = '<div class="card ' + (selected === x.id ? 'sel' : '') + '" onclick="selectProfile(\'' + x.id + '\')"><div class="thumb">' + thumb(x.points, x) + '</div><div class="name">' + x.name + '</div><div class="cat">' + x.category + ' • cỡ ' + (x.actual_width || x.nominal_width || '') + 'mm</div>' + (x.lam_round_radius ? '<div class="lam-round-note" style="font-size:11px;color:#a55420;margin-top:5px">Bo đỉnh nan R1 mm · hình học thật</div>' : '') + (x.soft_lam_edges ? '<div class="lam-soft-note" style="font-size:11px;color:#078466;margin-top:5px">Cạnh mềm sẵn · giữ tiết diện</div>' : '') + '</div>';
+      if (builtInLam) lamHtml += card; else html += card;
+    }
+  });
+  document.getElementById('grid').innerHTML = html;
+  document.getElementById('lamChoices').innerHTML = lamHtml;
+}
+function deleteSelected() {
+  if (!selected) {
+    alert('Chọn một mẫu ngoài cần xóa.');
+    return;
+  }
+  var p = profiles.find(function (x) {
+    return x.id === selected;
+  });
+  if (!p || !p.user_added) {
+    alert('Chỉ xóa được Mẫu ngoài do anh thêm.');
+    return;
+  }
+  if (confirm('Xóa mẫu: ' + p.name + ' ?')) sketchup.delete_user_profile(selected);
+}
+function clearExternal() {
+  if (window.sketchup && sketchup.clear_user_profiles) sketchup.clear_user_profiles('');
+}
+function importExternalModel() {
+  if (window.sketchup && sketchup.import_external_model) sketchup.import_external_model('');else alert('Không kết nối được với SketchUp.');
+}
+function importExternalFolder() {
+  if (window.sketchup && sketchup.import_external_folder) sketchup.import_external_folder('');else alert('Không kết nối được với SketchUp.');
+}
+function insertExternalModel() {
+  if (window.modelLibrary) modelLibrary.requestSaved();
+  if (window.sketchup && sketchup.insert_external_model) sketchup.insert_external_model('');else alert('Không kết nối được với SketchUp.');
+}
+function importProfileFile() {
+  if (window.sketchup && sketchup.import_profile_file) {
+    sketchup.import_profile_file('');
+  } else alert('Không kết nối được với SketchUp.');
+}
+function addProfileFace() {
+  if (!(window.sketchup && sketchup.add_profile_face)) {
+    alert('Không kết nối được với SketchUp.');
+    return;
+  }
+  var name = document.getElementById('external_name').value || 'Biên dạng ngoài';
+  sketchup.add_profile_face(JSON.stringify({
+    name: name,
+    category: 'Mẫu ngoài',
+    nominal_width: parseFloat(document.getElementById('width').value) || 0
+  }));
+}
+function runProfile() {
+  if (!selected) {
+    alert('Chọn một mẫu phào trước.');
+    return;
+  }
+  if (!(window.sketchup && sketchup.run_profile)) {
+    alert('Không kết nối được với SketchUp.');
+    return;
+  }
+  if (!readLamBeforeRun(true)) return;
+  updateLamPreview();
+  sketchup.run_profile(JSON.stringify({
+    id: selected,
+    lam_count_mode: selected === 'LAM001' ? 'surface_total' : selected === 'LAM_VIEN_TES3' ? 'edge_total' : undefined,
+    tes3_spacing_mode: selected === 'LAM_VIEN_TES3' ? document.getElementById('lam_spacing_mode').value : undefined,
+    lam_rib_width: ['LAM001','LAM_VIEN_TES3'].includes(selected) ? (document.getElementById('lam_rib_width').value.trim() === '' ? null : Number(document.getElementById('lam_rib_width').value)) : undefined,
+    width: parseFloat(document.getElementById('width').value),
+    height: parseFloat(document.getElementById('height').value),
+    lam_depth: parseFloat(document.getElementById('lam_depth').value) || 4,
+    lam_height: parseFloat(document.getElementById('lam_height').value) || 6,
+    lam_count: parseInt(document.getElementById('lam_count').value) || 3,
+    lam_rotation: parseFloat(document.getElementById('lam_rotation').value) || 0,
+    orientation: document.getElementById('orientation').value,
+    reverse_path: document.getElementById('reverse_path').checked,
+    offset_side: parseFloat(document.getElementById('offset_side').value) || 0,
+    offset_vertical: parseFloat(document.getElementById('offset_vertical').value) || 0
+  }));
+}
+function cut4Corners() {
+  try {
+    if (!(window.sketchup && sketchup.cut_4_corners)) {
+      alert('Không kết nối được lệnh CẮT 4 GÓC.');
+      return;
+    }
+    sketchup.cut_4_corners('');
+  } catch (e) {
+    alert('Lỗi gọi CẮT 4 GÓC: ' + e);
+  }
+}
+function runFaceProfile() {
+  if (!selected) {
+    alert('Chọn một mẫu phào trước.');
+    return;
+  }
+  if (!(window.sketchup && sketchup.run_face_profile)) {
+    alert('Không kết nối được với SketchUp.');
+    return;
+  }
+  if (!readLamBeforeRun(true)) return;
+  updateLamPreview();
+  sketchup.run_face_profile(JSON.stringify({
+    id: selected,
+    lam_count_mode: selected === 'LAM001' ? 'surface_total' : selected === 'LAM_VIEN_TES3' ? 'edge_total' : undefined,
+    tes3_spacing_mode: selected === 'LAM_VIEN_TES3' ? document.getElementById('lam_spacing_mode').value : undefined,
+    lam_rib_width: ['LAM001','LAM_VIEN_TES3'].includes(selected) ? (document.getElementById('lam_rib_width').value.trim() === '' ? null : Number(document.getElementById('lam_rib_width').value)) : undefined,
+    width: parseFloat(document.getElementById('width').value),
+    height: parseFloat(document.getElementById('height').value),
+    lam_depth: parseFloat(document.getElementById('lam_depth').value) || 4,
+    lam_height: parseFloat(document.getElementById('lam_height').value) || 6,
+    lam_count: parseInt(document.getElementById('lam_count').value) || 3,
+    lam_rotation: parseFloat(document.getElementById('lam_rotation').value) || 0,
+    lam_auto_edge: document.getElementById('lam_auto_edge').checked,
+    lam_fit_face: document.getElementById('lam_fit_face').checked,
+    orientation: document.getElementById('orientation').value,
+    reverse_path: document.getElementById('reverse_path').checked,
+    offset_side: parseFloat(document.getElementById('offset_side').value) || 0,
+    offset_vertical: parseFloat(document.getElementById('offset_vertical').value) || 0,
+    face_boundary: document.getElementById('face_boundary').value,
+    corner_mode: document.getElementById('corner_mode').value
+  }));
+}
+function loadFinishedLam() {
+  if (window.sketchup && sketchup.load_finished_lam) sketchup.load_finished_lam('');else alert('Không kết nối được với SketchUp.');
+}
+var finishedLamState = null;
+function lamDisplayNumber(value) { return Number(Number(value).toFixed(6)); }
+function lamEditNumber(id, key, fallback) {
+  var value = document.getElementById(id).value;
+  if (finishedLamState && Number(value) === lamDisplayNumber(finishedLamState[key])) return finishedLamState[key];
+  return Number(value) || fallback;
+}
+function applyFinishedLam(o) {
+  if (!o) return;
+  finishedLamState = o.lam_face_controls ? o : null;
+  document.getElementById('editWidthLabel').textContent = finishedLamState ? 'Rộng lam' : 'Rộng mẫu';
+  document.getElementById('edit_width').value = finishedLamState ? (o.lam_rib_width == null ? '' : lamDisplayNumber(o.lam_rib_width)) : (parseFloat(o.width) || 80);
+  document.getElementById('edit_width').placeholder = o.lam_border_controls && o.lam_rib_width == null ? 'Theo cạnh' : '';
+  document.getElementById('editSpacingLabel').hidden = !o.lam_border_controls;
+  document.getElementById('edit_spacing_mode').value = o.tes3_spacing_mode || 'corner_locked';
+  syncLamEditSpacing();
+  var measured = document.getElementById('lamMeasuredSize'); measured.hidden = !finishedLamState;
+  if (finishedLamState) {
+    var mm = function(n) { return Number(n).toLocaleString('vi-VN', {maximumFractionDigits:3}); };
+    measured.textContent = 'Kích thước tấm: Rộng ' + mm(o.panel_width) + ' × Dài ' + mm(o.panel_length) + ' × Dày tổng ' + mm(o.panel_thickness) + ' mm';
+    if (o.lam_border_controls && o.lam_rib_width == null) measured.textContent += ' · Rộng nan theo cạnh: ' + o.tes3_side_widths.map(mm).join(' / ') + ' mm';
+    if (o.lam_border_controls && o.tes3_side_counts) measured.textContent += ' · Số nan từng cạnh: ' + o.tes3_side_counts.join(' / ');
+    if (o.lam_border_controls && o.tes3_gap_range) measured.textContent += ' · Khe nan thực: ' + o.tes3_gap_range.map(mm).join(' – ') + ' mm';
+    document.getElementById('scale_target_w').value = lamDisplayNumber(o.panel_width);
+    document.getElementById('scale_target_h').value = lamDisplayNumber(o.panel_length);
+  } else measured.textContent = '';
+  document.getElementById('edit_depth').value = finishedLamState ? lamDisplayNumber(o.lam_depth) : (parseFloat(o.lam_depth) || 4);
+  document.getElementById('edit_lam_height').value = finishedLamState ? lamDisplayNumber(o.lam_height) : (parseFloat(o.lam_height) || 6);
+  document.getElementById('edit_count').value = parseInt(o.lam_count) || 3;
+  document.getElementById('edit_count').max = o.lam_border_controls ? '200' : '500';
+  document.getElementById('edit_rotation').value = parseFloat(o.lam_rotation) || 0;
+  document.getElementById('edit_auto_edge').checked = o.lam_auto_edge !== false;
+  document.getElementById('edit_fit_face').checked = o.lam_fit_face !== false;
+}
+function syncLamEditSpacing() {
+  var border = finishedLamState && finishedLamState.lam_border_controls;
+  document.getElementById('editCountLabel').textContent = border ? (document.getElementById('edit_spacing_mode').value !== 'corner_locked' ? 'Số nan cạnh ngắn' : 'Số nan/cạnh') : 'Số lam';
+}
+function editCount(d) {
+  var e = document.getElementById('edit_count');
+  e.value = Math.max(1, Math.min(Number(e.max), (parseInt(e.value) || 3) + d));
+  updateFinishedLam();
+}
+function setEditRotation(a) {
+  document.getElementById('edit_rotation').value = a;
+}
+function updateFinishedLam() {
+  if (!(window.sketchup && sketchup.update_finished_lam)) {
+    alert('Không kết nối được với SketchUp.');
+    return;
+  }
+  if (finishedLamState) {
+    var countMax = finishedLamState.lam_border_controls ? 200 : 500;
+    var limits = [['edit_width',0.1,100000],['edit_depth',0.5,10000],['edit_lam_height',0.5,10000],['edit_count',1,countMax]];
+    if (limits.some(function(r) { var e=document.getElementById(r[0]), n=Number(e.value); if(r[0]==='edit_width' && finishedLamState.lam_border_controls && e.value.trim()==='' && !e.validity.badInput) return false; return e.value.trim()==='' || !Number.isFinite(n) || n<r[1] || n>r[2] || r[0]==='edit_count' && n!==Math.floor(n); })) { alert('Nhập kích thước dương và số lam nguyên từ 1 đến ' + countMax + '.'); return; }
+  }
+  sketchup.update_finished_lam(JSON.stringify({
+    _lam_read_token: finishedLamState ? finishedLamState._lam_read_token : undefined,
+    _lam_world_dimensions: finishedLamState ? true : undefined,
+    lam_count_mode: finishedLamState ? (finishedLamState.lam_border_controls ? 'edge_total' : 'surface_total') : undefined,
+    tes3_spacing_mode: finishedLamState && finishedLamState.lam_border_controls ? document.getElementById('edit_spacing_mode').value : undefined,
+    lam_rib_width: finishedLamState ? (finishedLamState.lam_border_controls && document.getElementById('edit_width').value.trim()==='' ? null : lamEditNumber('edit_width','lam_rib_width',0)) : undefined,
+    width: finishedLamState ? finishedLamState.width : (parseFloat(document.getElementById('edit_width').value) || 80),
+    height: lamEditNumber('edit_depth','lam_depth',4) + lamEditNumber('edit_lam_height','lam_height',6),
+    lam_depth: lamEditNumber('edit_depth','lam_depth',4),
+    lam_height: lamEditNumber('edit_lam_height','lam_height',6),
+    lam_count: parseInt(document.getElementById('edit_count').value) || 3,
+    lam_rotation: parseFloat(document.getElementById('edit_rotation').value) || 0,
+    lam_auto_edge: document.getElementById('edit_auto_edge').checked,
+    lam_fit_face: document.getElementById('edit_fit_face').checked
+  }));
+}
+function scaleFinishedLam(mode) {
+  if (!(window.sketchup && sketchup.scale_finished_lam_45)) {
+    alert('Không kết nối được với SketchUp.');
+    return;
+  }
+  var w = lamEditNumber('scale_target_w','panel_width',0),
+    h = lamEditNumber('scale_target_h','panel_length',0);
+  sketchup.scale_finished_lam_45(JSON.stringify({
+    _lam_read_token: finishedLamState ? finishedLamState._lam_read_token : undefined,
+    _lam_world_dimensions: finishedLamState ? true : undefined,
+    mode: mode,
+    target_w: w,
+    target_h: h
+  }));
+}
+function loadTes3Lam() {
+  if (window.sketchup && sketchup.load_bundled_tes3_lam) {
+    sketchup.load_bundled_tes3_lam('');
+  } else alert('Không kết nối được với SketchUp.');
+}
+function addExactLam() {
+  if (!(window.sketchup && sketchup.add_exact_lam)) {
+    alert('Không kết nối được với SketchUp.');
+    return;
+  }
+  var name = prompt('Tên mẫu lam sóng:', 'Lam sóng TES 3 - biên dạng gốc');
+  if (name === null) return;
+  sketchup.add_exact_lam(JSON.stringify({
+    name: name,
+    lam_count: 1
+  }));
+}
+function rotateAngle(angle) {
+  if (window.sketchup && sketchup.rotate_finished_angle) {
+    var axisEl = document.getElementById('rotate_axis');
+    var axis = axisEl ? axisEl.value : 'phao';
+    sketchup.rotate_finished_angle(JSON.stringify({
+      angle: Number(angle),
+      axis: axis
+    }));
+  } else {
+    alert('Không kết nối được với SketchUp.');
+  }
+}
+function rotateCustom() {
+  var a = parseFloat(document.getElementById('custom_angle').value);
+  if (isNaN(a)) {
+    alert('Nhập góc xoay hợp lệ.');
+    return;
+  }
+  rotateAngle(a);
+}
+function changeFinished(kind) {
+  if (window.sketchup && sketchup.transform_finished) {
+    sketchup.transform_finished(kind);
+  } else {
+    alert('Không kết nối được với SketchUp.');
+  }
+}
+document.addEventListener('DOMContentLoaded', function () {
+  render();
+});
+function mergeCoplanarSurfaces() {
+  if (window.sketchup && sketchup.merge_coplanar_surfaces) {
+    sketchup.merge_coplanar_surfaces('');
+  }
+}
+function explodeKeepMap() {
+  if (window.sketchup && sketchup.explode_keep_map) {
+    sketchup.explode_keep_map('');
+  }
+}
+function setMapSource() {
+  if (window.sketchup && sketchup.set_map_source) {
+    sketchup.set_map_source('');
+  } else alert('Không kết nối được chức năng ĐẶT FACE MẪU MAP.');
+}
+function saveMapSample() {
+  if (window.sketchup) {
+    try {
+      sketchup.save_map_sample('');
+    } catch (e) {
+      alert('Không kết nối được chức năng LƯU MẪU MAP.\n' + e);
+    }
+  }
+}
+function measureMap2Pt() {
+  try {
+    if (!window.sketchup) throw new Error('window.sketchup chưa sẵn sàng');
+    sketchup.measure_map_2pt('');
+  } catch (e) {
+    try {
+      sketchup.measure_map_two_points('');
+    } catch (e2) {
+      alert('Không kết nối được chức năng ĐO 2 ĐIỂM MAP MẪU.\n' + e2);
+    }
+  }
+}
+function applyMapKeepScale() {
+  if (window.sketchup && sketchup.apply_map_keep_scale) {
+    sketchup.apply_map_keep_scale('');
+  } else alert('Không kết nối được chức năng ĐỔ MAP GIỮ TỶ LỆ.');
+}
+function rotateMap(mode) {
+  if (window.sketchup && sketchup.rotate_map) {
+    sketchup.rotate_map(mode);
+  } else alert('Không kết nối được chức năng XOAY MAP.');
+}
+function quickSurfaceAction(event, mode) {
+  event.preventDefault();
+  event.stopPropagation();
+  if (mode === 'lines') {
+    mergeCoplanarSurfaces();
+  } else if (mode === 'smooth') {
+    if (window.sketchup && sketchup.smooth_selected_frame) {
+      sketchup.smooth_selected_frame('');
+    } else alert('Không kết nối được chức năng LÀM MƯỢT ĐỒNG ĐỀU.');
+  }
+}
+function quickMapAction(event, mode) {
+  event.preventDefault();
+  event.stopPropagation();
+  if (mode === 'align_lam') {
+    if (window.sketchup && sketchup.align_map_to_lam_direction) {
+      sketchup.align_map_to_lam_direction('');
+    } else alert('Không kết nối được chức năng MAP THEO HƯỚNG LAM.');
+  } else {
+    rotateMap(mode);
+  }
+}
+function alignMapMiter45() {
+  if (window.sketchup && sketchup.align_map_miter_45) {
+    sketchup.align_map_miter_45('');
+  } else alert('Không kết nối được chức năng MAP LIỀN GÓC 45°.');
+}
+function diagnoseMap() {
+  if (window.sketchup && sketchup.diagnose_map_scale) {
+    sketchup.diagnose_map_scale('');
+  } else alert('Không kết nối được chức năng CHẨN ĐOÁN MAP.');
+}
+var cpLoaded = null,
+  cpChangedAxis = 0,
+  cpFields = ['cpX', 'cpY', 'cpZ'];
+function componentParameterStatus(message, error) {
+  var e = document.getElementById('cpStatus');
+  e.textContent = message;
+  e.style.color = error ? '#b91c1c' : '#0b7a45';
+}
+function loadComponentParameters() {
+  sketchup.load_component_parameters();
+}
+function componentParametersLoaded(data) {
+  if (!data.ok) {
+    cpLoaded = null;
+    document.getElementById('cpApply').disabled = true;
+    componentParameterStatus(data.message, true);
+    return;
+  }
+  cpLoaded = data;
+  cpChangedAxis = data.dimensions.findIndex(function (v) {
+    return v > 0.000001;
+  });
+  if (cpChangedAxis < 0) cpChangedAxis = 0;
+  document.getElementById('cpName').value = data.name;
+  document.getElementById('cpDefinition').textContent = 'Mẫu: ' + data.definition;
+  cpFields.forEach(function (id, i) {
+    var e = document.getElementById(id);
+    e.value = Number(data.dimensions[i].toFixed(6));
+    e.disabled = data.dimensions[i] < 0.000001;
+  });
+  document.getElementById('cpScaleMode').value = data.scale_mode;
+  document.getElementById('cpApply').disabled = false;
+  componentParameterStatus('Đã lấy kích thước theo mm.', false);
+}
+function componentDimensionChanged(axis) {
+  cpChangedAxis = axis;
+  if (!cpLoaded || !document.getElementById('cpRatio').checked) return;
+  var v = Number(document.getElementById(cpFields[axis]).value),
+    base = cpLoaded.dimensions[axis];
+  if (!(v > 0) || !(base > 0)) return;
+  cpFields.forEach(function (id, i) {
+    if (i !== axis) document.getElementById(id).value = Number((cpLoaded.dimensions[i] * v / base).toFixed(6));
+  });
+}
+function applyComponentParameters() {
+  if (!cpLoaded) {
+    componentParameterStatus('Bấm Lấy thông số đang chọn trước.', true);
+    return;
+  }
+  var dims = cpFields.map(function (id) {
+    return Number(document.getElementById(id).value);
+  });
+  if (dims.some(function (v, i) {
+    return !Number.isFinite(v) || v < 0 || v > 10000000 || cpLoaded.dimensions[i] > 0.000001 && v <= 0;
+  })) {
+    componentParameterStatus('Nhập kích thước hợp lệ lớn hơn 0 cho các trục có hình học.', true);
+    return;
+  }
+  sketchup.apply_component_parameters(JSON.stringify({
+    id: cpLoaded.id,
+    name: document.getElementById('cpName').value,
+    dimensions: dims,
+    keep_ratio: document.getElementById('cpRatio').checked,
+    changed_axis: cpChangedAxis,
+    anchor: document.getElementById('cpAnchor').value,
+    scale_mode: document.getElementById('cpScaleMode').value
+  }));
+}
+function dynamicLibraryLoaded(data) {
+  galleryLibraryLoaded(data);
+  document.getElementById('dcFolder').textContent = 'Thư mục: ' + (data.folder || '') + ' · ' + (data.items || []).length + ' mẫu';
+  var status = document.getElementById('dcStatus');
+  status.textContent = data.message || 'Kho đã lưu gồm cả thư mục con. Có thể nhập thêm nhiều thư mục; mẫu cũ vẫn được giữ.';
+  status.style.color = data.error ? '#b91c1c' : '#166534';
+}
+function showDynamicLibrary() {
+  setMenuWorkspace('dynamic', null);
+  document.getElementById('dynamicLibrary').classList.add('active-menu');
+  sketchup.dc_library_refresh();
+}
+function showLamLibrary() {
+  document.getElementById('cat').value = 'Lam sóng';
+  setMenuWorkspace('profiles', document.getElementById('lamLibrary'));
+  render();
+}
+var galleryItems = [],
+  gallerySelected = '',
+  thumbs = {},
+  requested = {};
+var placeholder = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="300" height="190"><rect width="300" height="190" fill="#f8fafc"/><text x="150" y="100" text-anchor="middle" font-family="Arial" font-size="15" fill="#64748b">Đang tải ảnh xem trước…</text></svg>');
+function galleryLibraryLoaded(data) {
+  galleryItems = data.items || [];
+  galleryItems.forEach(function (item) {
+    if (item.thumbnail) thumbs[item.id] = item.thumbnail;
+  });
+  document.getElementById('galleryFolder').textContent = 'Kho đã lưu: ' + (data.folder || '');
+  var status = document.getElementById('galleryStatus');
+  status.textContent = data.message || 'Bấm mẫu → bấm vị trí đặt trong bản vẽ → chỉnh bảng Dynamic → Apply.';
+  status.style.color = data.error ? '#b91c1c' : '#166534';
+  renderCards();
+}
+function renderCards(resetScroll) {
+  var scroller = document.getElementById("dynamicGallery");
+  var scrollTop = resetScroll ? 0 : scroller.hidden && window.modelLibrary ? modelLibrary.scrollFor('dynamic') : scroller.scrollTop;
+  if (window.modelLibrary) modelLibrary.remember('dynamic', scrollTop);
+  var q = document.getElementById('gallerySearch').value.trim().toLocaleLowerCase(),
+    found = galleryItems.filter(function (i) {
+      return (i.name + ' ' + i.relative).toLocaleLowerCase().indexOf(q) >= 0;
+    });
+  var shown = found,
+    cards = document.getElementById('galleryCards');
+  cards.textContent = '';
+  shown.forEach(function (item) {
+    var card = document.createElement('button');
+    card.className = 'card' + (item.id === gallerySelected ? ' gallerySelected' : '');
+    card.title = item.relative;
+    card.onclick = function () {
+      gallerySelected = item.id;
+      cards.querySelectorAll('.gallerySelected').forEach(function (previous) { previous.classList.remove('gallerySelected'); });
+      card.classList.add('gallerySelected');
+      sketchup.dc_library_insert(item.id);
+    };
+    var img = document.createElement('img');
+    img.id = 'thumb_' + item.id;
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    img.dataset.libraryId = item.id;
+    img.alt = 'Ảnh ' + item.name;
+    img.src = thumbs[item.id] || placeholder;
+    img.onerror = function () {
+      this.onerror = null;
+      this.src = placeholder;
+    };
+    card.appendChild(img);
+    var zoom = document.createElement('span');
+    zoom.className = 'zoom';
+    zoom.textContent = 'Phóng to';
+    zoom.onclick = function (event) {
+      event.stopPropagation();
+      openPreview(item);
+    };
+    card.appendChild(zoom);
+    var label = document.createElement('span');
+    label.className = 'label';
+    var name = document.createElement('strong');
+    name.textContent = item.name.replace(/_/g, ' ');
+    label.appendChild(name);
+    var path = document.createElement('small');
+    path.textContent = item.relative;
+    label.appendChild(path);
+    card.appendChild(label);
+    cards.appendChild(card);
+  });
+  if (!shown.length) {
+    var empty = document.createElement('div');
+    empty.className = 'empty';
+    empty.textContent = galleryItems.length ? 'Không có mẫu phù hợp.' : 'Chưa có mẫu đã lưu. Bấm Nhập và lưu thư mục để đưa toàn bộ thư viện vào kho plugin.';
+    cards.appendChild(empty);
+  }
+  document.getElementById('galleryCount').textContent = found.length + ' mẫu · Cuộn để chọn tiếp';
+  scroller.scrollTop = scrollTop;
+  observeLibraryThumbnails(cards, scroller, thumbs, requested);
+}
+function dynamicThumbnailsLoaded(data) {
+  Object.keys(data).forEach(function (id) {
+    thumbs[id] = data[id] || placeholder.replace(encodeURIComponent('Đang tải ảnh xem trước…'), encodeURIComponent('Không có ảnh xem trước'));
+    var img = document.getElementById('thumb_' + id);
+    if (img) img.src = thumbs[id];
+  });
+}
+function openPreview(item) {
+  document.getElementById('previewTitle').textContent = item.name.replace(/_/g, ' ');
+  document.getElementById('previewImage').src = thumbs[item.id] || placeholder;
+  document.getElementById('previewOverlay').hidden = false;
+}
+function closePreview() {
+  document.getElementById('previewOverlay').hidden = true;
+}
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape') closePreview();
+});</script><script>var transformMode = 'phao',
+  transformAxes = {
+    phao: 'phao',
+    geometry: 'x',
+    dynamic: 'z'
+  };
+function switchTransformTarget(mode) {
+  var axis = document.getElementById('rotate_axis');
+  if (transformMode === 'phao' || transformMode === 'geometry' || transformMode === 'dynamic') transformAxes[transformMode] = axis.value;
+  transformMode = mode;
+  document.getElementById('transformShape').hidden = !(mode === 'phao' || mode === 'geometry' || mode === 'dynamic');
+  document.getElementById('transformLam').hidden = mode !== 'lam';
+  document.getElementById('transformMap').hidden = mode !== 'map';
+  if (mode === 'phao' || mode === 'geometry' || mode === 'dynamic') {
+    axis.querySelector('option[value="phao"]').disabled = mode === 'geometry';
+    axis.value = transformAxes[mode];
+  }
+}</script>
+<script src="saved_library.js"></script><script src="section_preview.js"></script><script src="sample_preview.js"></script><script src="frame_control.js"></script><script src="continuous_library.js"></script>
+<script>var menuPanels = [];
+function setMenuWorkspace(kind, source) {
+  if (window.modelLibrary) modelLibrary.before();
+  document.getElementById('grid').hidden = kind !== 'profiles';
+  document.getElementById('dynamicGallery').hidden = kind !== 'dynamic';
+  document.getElementById('savedLibrary').hidden = kind !== 'saved';
+  menuPanels.forEach(function (item) {
+    item.panel.hidden = item.group !== source;
+    item.group.classList.toggle('active-menu', item.group === source);
+  });
+  var workspace = document.getElementById('menuWorkspace');
+  var lamOpen = kind === 'profiles' && source === document.getElementById('lamLibrary');
+  var transformPanel = menuPanels.find(function (item) {
+    return item.group.id === 'unifiedTransform';
+  });
+  if (transformPanel) {
+    var controls = document.getElementById('transformControls');
+    var destination = lamOpen ? document.getElementById('lamTransformTools') : transformPanel.panel;
+    if (controls.parentNode !== destination) destination.appendChild(controls);
+    if (lamOpen && !workspace.classList.contains('lam-library-open')) {
+      document.getElementById('transformTarget').value = 'geometry';
+      switchTransformTarget('geometry');
+    }
+  }
+  workspace.classList.toggle('lam-library-open', lamOpen);
+  savedLibrarySyncDock(kind);
+  syncLamBeforeRun();
+  workspace.scrollTop = 0;
+  if (window.modelLibrary) modelLibrary.changed(kind, source);
+}
+function showProfileLibrary() {
+  var lam = document.getElementById('cat').value === 'Lam sóng';
+  setMenuWorkspace('profiles', lam ? document.getElementById('lamLibrary') : null);
+}
+document.addEventListener('DOMContentLoaded', function () {
+  var workspace = document.createElement('div');
+  workspace.id = 'menuWorkspace';
+  document.body.appendChild(workspace);
+  workspace.appendChild(document.getElementById('grid'));
+  workspace.appendChild(document.getElementById('dynamicGallery'));
+  document.querySelectorAll('.sections > .tool-group').forEach(function (group) {
+    group.removeAttribute('ontoggle');
+    group.open = false;
+    var summary = group.querySelector('summary'),
+      content = group.querySelector('.tool-content');
+    var panel = document.createElement('div');
+    panel.className = 'menu-panel';
+    panel.hidden = true;
+    var title = document.createElement('div');
+    title.className = 'menu-panel-title';
+    title.textContent = summary.textContent;
+    panel.appendChild(title);
+    if (content) panel.appendChild(content);
+    workspace.insertBefore(panel, document.getElementById('grid'));
+    menuPanels.push({
+      group: group,
+      panel: panel
+    });
+    summary.addEventListener('click', function (event) {
+      event.preventDefault();
+      if (group.id === 'dynamicLibrary') {
+        showDynamicLibrary();
+        return;
+      }
+      if (group.id === 'lamLibrary') {
+        showLamLibrary();
+        return;
+      }
+      if (group.id === 'externalLibrary') {
+        modelLibrary.open();
+        return;
+      }
+      setMenuWorkspace('tools', group);
+    });
+  });
+  workspace.appendChild(document.getElementById('savedLibrary'));
+  if (window.sketchup && sketchup.library_ready) sketchup.library_ready('');
+});</script>
+<link rel="stylesheet" href="model_library.css"><script src="model_library.js"></script>
+
+<aside id="sectionPreview" hidden aria-label="Xem trước tiết diện phào đang chọn">
+<header class="section-preview-heading"><span>Tiết diện phào</span><button type="button" data-view-only="1" onclick="sectionPreview.expand()" title="Phóng to / thu nhỏ" aria-label="Phóng to tiết diện">↗</button><button type="button" data-view-only="1" onclick="sectionPreview.toggle()" title="Ẩn / hiện nội dung" aria-label="Ẩn hiện tiết diện">−</button></header>
+<div class="section-preview-body">
+<div id="sectionTarget"></div>
+<svg id="sectionSvg" role="img" aria-label="Tiết diện nhìn từ đầu thanh phào"><path id="sectionOriginal" fill-rule="evenodd"/><path id="sectionCandidate" fill-rule="evenodd"/><path id="sectionPathOrigin"/></svg>
+<div id="sectionDimensions"></div><div class="section-preview-legend">Nhìn dọc đường chạy<br>Xanh: xem trước · Xám: hiện tại<br>Dấu cam: đường chạy</div>
+<div class="frame-directions" role="group" aria-label="Hướng mặt phào"><button type="button" id="sectionArrowLeft" data-frame-direction="left" aria-label="Hướng trái" title="Hướng trái" aria-pressed="false" onclick="frameControl.direction('left',event)">←</button><button type="button" id="sectionArrowRight" data-frame-direction="right" aria-label="Hướng phải" title="Hướng phải" aria-pressed="false" onclick="frameControl.direction('right',event)">→</button><button type="button" id="sectionArrowUp" data-frame-direction="up" aria-label="Mặt ngửa" title="Mặt ngửa" aria-pressed="false" onclick="frameControl.direction('up',event)">↑</button><button type="button" id="sectionArrowDown" data-frame-direction="down" aria-label="Mặt úp" title="Mặt úp" aria-pressed="false" onclick="frameControl.direction('down',event)">↓</button></div>
+<div class="section-preview-controls section-preview-angle"><button type="button" onclick="sectionPreview.step(-5)" aria-label="Úp 5 độ">−5°</button><input id="sectionTilt" type="number" min="-180" max="180" step="any" aria-label="Góc ngửa úp xem trước" oninput="sectionPreview.setTilt(this.value)"><button type="button" onclick="sectionPreview.step(5)" aria-label="Ngửa 5 độ">+5°</button></div>
+<div id="sectionPreviewError" role="status"></div>
+<div class="section-preview-controls"><button type="button" onclick="sectionPreview.restore()">Hoàn tác nháp</button><button type="button" id="sectionApply" onclick="savedLibraryUpdateFrame(event)">Cập nhật phào</button></div>
+</div></aside>
+
+<aside id="samplePreview" hidden aria-label="Xem mẫu trước khi chạy phào">
+<header class="sample-heading"><strong id="sampleHeadingTitle">Xem mẫu · Mặt cắt phào</strong><button type="button" data-view-only="1" onclick="samplePreview.toggle()" aria-label="Thu gọn bảng xem mẫu">−</button><button type="button" data-view-only="1" onclick="samplePreview.close()" aria-label="Đóng bảng xem mẫu">×</button></header>
+<div class="sample-body"><div id="sampleTitle"></div>
+<div class="sample-section-label">TIẾT DIỆN PHÀO</div>
+
+<svg id="sampleSectionSvg" role="img" aria-label="Mặt cắt nhìn thẳng theo hướng phào đã chỉnh"><path id="sampleSectionFill" fill-rule="evenodd"/><path id="sampleSectionShape"/><path id="sampleSectionOrigin"/></svg>
+<div id="sampleDimensions"></div><div id="sampleHint" class="sample-hint">Nhìn thẳng vào đầu phào · Cam: điểm bám đường chạy</div>
+<div class="sample-fields">
+<label>Cạnh bám đường chạy<select id="sampleAnchor" onchange="samplePreview.field('Anchor',this.value)"><option value="bottom">Cạnh dưới</option><option value="top">Cạnh trên</option><option value="legacy">Theo vị trí bản cũ</option></select></label>
+<label>Ngửa / Úp (°)<input id="sampleTilt" type="number" min="-180" max="180" step="any" value="0" oninput="samplePreview.field('Tilt',this.value)" onchange="samplePreview.commit('roll_adjust',this.value,event)"></label>
+<label>Hướng xoay<select id="sampleRoll" onchange="samplePreview.field('Roll',this.value)"><option value="auto">Theo mẫu</option><option value="0">Gốc 0°</option><option value="90">90°</option><option value="180">180°</option><option value="270">270°</option></select></label>
+<label class="sample-source-only">Phần mẫu sẽ chạy<select id="sampleStage" onchange="samplePreview.stage(this.value)"><option value="body">Thân phào</option><option value="complete">Cả mẫu + hoa văn</option></select></label>
+<label class="sample-source-only">Trục dài mẫu<select id="sampleAxis" onchange="samplePreview.field('Axis',this.value)"><option value="auto">Tự nhận</option><option value="x">X</option><option value="y">Y</option><option value="z">Z</option></select></label>
+</div>
+<div class="frame-directions" role="group" aria-label="Hướng mặt phào"><button type="button" id="sampleArrowLeft" data-frame-direction="left" aria-label="Hướng trái" title="Hướng trái" aria-pressed="false" onclick="frameControl.direction('left',event)">←</button><button type="button" id="sampleArrowRight" data-frame-direction="right" aria-label="Hướng phải" title="Hướng phải" aria-pressed="false" onclick="frameControl.direction('right',event)">→</button><button type="button" id="sampleArrowUp" data-frame-direction="up" aria-label="Mặt ngửa" title="Mặt ngửa" aria-pressed="false" onclick="frameControl.direction('up',event)">↑</button><button type="button" id="sampleArrowDown" data-frame-direction="down" aria-label="Mặt úp" title="Mặt úp" aria-pressed="false" onclick="frameControl.direction('down',event)">↓</button></div><div class="sample-actions sample-source-only"><button type="button" onclick="samplePreview.restore()">Về lúc mở mẫu</button></div>
+<div id="sampleStatus" role="status"></div><div id="sampleError" role="status"></div>
+<div class="sample-actions sample-source-only"><button type="button" id="sampleRunEdge" onclick="samplePreview.run('edge',event)">Chọn &amp; chạy theo Edge</button><button type="button" id="sampleRunFace" onclick="samplePreview.run('face',event)">Chọn &amp; chạy theo bề mặt</button></div>
+</div></aside>
+</body></html>
+

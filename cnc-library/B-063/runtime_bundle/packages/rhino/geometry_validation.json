@@ -1,0 +1,143 @@
+{
+  "status": "passed",
+  "product": "LOFIHOME.Rhino.CNC",
+  "baseline": "1.1.3",
+  "catalog_count": 305,
+  "original_304_catalog_entries_and_shape_files_preserved": true,
+  "name": "B-063",
+  "revision": 2,
+  "source_json_sha256": "1e41c874e93b78f9a7669684d723dfdb7c2a0ae1478c026b1efbba9ca80c602a",
+  "canonical_parts_preserved_in_host_shape_schema": true,
+  "canonical_dxf_bytes_preserved": true,
+  "source_lazy_load_once": true,
+  "source_native_vector_packet": {
+    "parts": 1,
+    "closed_loops": 291,
+    "bounds": [
+      0,
+      0,
+      600,
+      1300
+    ],
+    "native_action": "corel_create",
+    "name": "B-063"
+  },
+  "panel_native_vector_packet": {
+    "native_action": "corel_create",
+    "name": "B-063",
+    "exact_contours": true
+  },
+  "geometry_cases": [
+    {
+      "case": "canonical",
+      "dxf_format": "R12/AC1009",
+      "dxf_closed_loops": 291,
+      "width": 600,
+      "height": 1300,
+      "tiles": 1,
+      "parts": 1,
+      "holes": 290,
+      "points": 38840,
+      "bounds": [
+        0,
+        0,
+        600,
+        1300
+      ],
+      "warnings": []
+    },
+    {
+      "case": "ratio_2x",
+      "dxf_format": "R12/AC1009",
+      "dxf_closed_loops": 291,
+      "width": 1200,
+      "height": 2600,
+      "tiles": 1,
+      "parts": 1,
+      "holes": 290,
+      "points": 38840,
+      "bounds": [
+        0,
+        0,
+        1200,
+        2600
+      ],
+      "warnings": []
+    },
+    {
+      "case": "independent_size",
+      "dxf_format": "R12/AC1009",
+      "dxf_closed_loops": 291,
+      "width": 1400,
+      "height": 2800,
+      "tiles": 1,
+      "parts": 1,
+      "holes": 290,
+      "points": 38840,
+      "bounds": [
+        0,
+        0,
+        1400,
+        2800
+      ],
+      "warnings": []
+    }
+  ],
+  "preview_3d": {
+    "vertices": 38840,
+    "triangles": 39418,
+    "holes": 290,
+    "verified_sample_point_limit": 40000,
+    "other_sample_limit": 35000,
+    "rejected_metadata_cases": [
+      "missing metadata",
+      "wrong revision",
+      "wrong source hash",
+      "different sample ID"
+    ]
+  },
+  "regressions": [
+    {
+      "id": "patterns__vach_001",
+      "geometry_unchanged": true,
+      "dxf_bytes_unchanged": true
+    },
+    {
+      "id": "patterns__vach_002",
+      "geometry_unchanged": true,
+      "dxf_bytes_unchanged": true
+    },
+    {
+      "id": "patterns__vach_125",
+      "geometry_unchanged": true,
+      "dxf_bytes_unchanged": true
+    },
+    {
+      "id": "patterns__vach_anh_033",
+      "geometry_unchanged": true,
+      "dxf_bytes_unchanged": true
+    },
+    {
+      "id": "patterns__vach_anh_kk",
+      "geometry_unchanged": true,
+      "dxf_bytes_unchanged": true
+    },
+    {
+      "id": "patterns__dvd24_b091",
+      "geometry_unchanged": true,
+      "dxf_bytes_unchanged": true
+    }
+  ],
+  "overlay": {
+    "files": 13,
+    "payload_and_baseline_hashes_checked": true,
+    "immutable_native_files_checked": 1,
+    "versions_and_update_routes_unchanged": true
+  },
+  "scope": "Actual production JavaScript catalog, geometry, lazy loader, R12 writer/parser and dispatch-to-native vectors in Node VM; native postMessage acknowledgement is stubbed.",
+  "not_exercised": [
+    "Native Rhino on Windows",
+    "Rendering in WebView2",
+    "Native signature verification and owner-signed automatic Rhino update"
+  ]
+}

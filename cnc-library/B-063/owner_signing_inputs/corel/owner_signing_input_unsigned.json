@@ -1,0 +1,110 @@
+{
+  "format": "LOFIHOME_OWNER_SIGNING_INPUT_1",
+  "status": "unsigned_input_not_an_update_manifest",
+  "product": "LOFIHOME.Corel",
+  "baseline_version": "1.0.26",
+  "native_signed_channel": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/corel/latest.json",
+  "version_for_next_release": null,
+  "baseline_signed_release": "https://github.com/lemanhlinh1985-cmd/lofihome-updates/releases/tag/corel-v1.0.26",
+  "baseline_payload_metadata": {
+    "protocol": 1,
+    "product": "LOFIHOME.Corel",
+    "version": "1.0.26",
+    "minimum": "1.0.15",
+    "notes": "Bỏ tiêu đề Thông số vách và các đoạn chú thích thừa; giữ cảnh báo cần thiết. Chuyển 7 mục chức năng lên thanh ngang cố định. Thông số mở bên dưới và cuộn riêng, không che các mục khác. Giữ 304 mẫu, Corel X5–2026, MAP, key và dùng thử 15 ngày; hình học và bộ kết nối giữ nguyên bản 1.0.25.",
+    "url": "https://github.com/lemanhlinh1985-cmd/lofihome-updates/releases/download/corel-v1.0.26/patch.zip",
+    "bytes": 1295892,
+    "sha256": "1854b2941b4144841d11f16836953ccf0f746916ed159eb7848da4a27ca81b5f"
+  },
+  "library_overlay_guard": "baseline_guard.json",
+  "library_overlay_payload": "payload",
+  "files": [
+    {
+      "path": "cnc_source_198/catalog.json",
+      "before_sha256": "46f3c00e35c65368ba4b368bf04bb9b1c4ba0539931949661c7f33870620afb9",
+      "sha256": "c4412699401e7246bb861bdf8683972e838a336680bf39de5f0628801f7e31e4",
+      "bytes": 131848
+    },
+    {
+      "path": "cnc_source_198/patterns/B-063.dxf",
+      "before_sha256": null,
+      "sha256": "51f5271613861d0cd8248ac81db6f50acc49f1fd930166ee1dd779f5b45b7f1f",
+      "bytes": 2422422
+    },
+    {
+      "path": "cnc_source_198/patterns/B-063.json",
+      "before_sha256": null,
+      "sha256": "ece9782c5a99f9571e7bf7dc54378668b390f9b7374b3bdd7002cbcf3ade1061",
+      "bytes": 769341
+    },
+    {
+      "path": "cnc_source_198/prepared/patterns__capnhat_b-063.json",
+      "before_sha256": null,
+      "sha256": "ece9782c5a99f9571e7bf7dc54378668b390f9b7374b3bdd7002cbcf3ade1061",
+      "bytes": 769341
+    },
+    {
+      "path": "cnc_source_198/prepared/patterns__capnhat_b-063.svg",
+      "before_sha256": null,
+      "sha256": "488d12b9ba2e7e186ee51d2d6fa851a779e4610351ab03dbee2d9fd461c51460",
+      "bytes": 392118
+    },
+    {
+      "path": "html/cnc/b063_sample_preset.js",
+      "before_sha256": null,
+      "sha256": "c0d3f9d1f8a5167a57f2c60117f4cd3412a650e016e8b3f143446ac5225b8f07",
+      "bytes": 6014
+    },
+    {
+      "path": "html/cnc/dxf_r12.js",
+      "before_sha256": null,
+      "sha256": "77df5d04792de511096ffd13e4e03253dbaab7ca42bc09e0391963f60db1c453",
+      "bytes": 34290
+    },
+    {
+      "path": "html/cnc/index.html",
+      "before_sha256": "b0a39926473fafddaf9e375f9593cb869e112a07e28a9587ad06e1e401705198",
+      "sha256": "327aaa9112e9d7a0f3482862b7c84a279f2abc83040695fead348effedbc9bca",
+      "bytes": 7747
+    },
+    {
+      "path": "html/cnc/panel_geometry.js",
+      "before_sha256": "06fea13d042aeb59a2f114f0f90dff057ea1591cb23c7ad745833b27e0e74c70",
+      "sha256": "1889062cadca3aa1ddfc766a2b0eb7822b3d266f4f5b894df8df0c367b75d8bd",
+      "bytes": 74417
+    },
+    {
+      "path": "html/cnc/panel_ui.js",
+      "before_sha256": "78ef78758c67411846285957299bf1fcc511652cccd124149e12e87327030b43",
+      "sha256": "7d256650d0c38307e474369c97db3e06d947e36b17c039b12af6bea7aec1d0e6",
+      "bytes": 148726
+    },
+    {
+      "path": "html/cnc/source_catalog.js",
+      "before_sha256": "beae7d746713d4a2c7216fcd3ad309726c06c8021731d48979a10b94ec4668f3",
+      "sha256": "bb2d30928e876ed187fa266f9894a1f236af61468e365687f002ec7f150cb45c",
+      "bytes": 131880
+    },
+    {
+      "path": "html/cnc/source_library.js",
+      "before_sha256": "f60487b49712060773b045ab8733f6461320252b0d37de25921cbd37b3b2d6d2",
+      "sha256": "e1b7c997772d9669b2eaf86df9d8cb273f58d8fed3017e585ef4ba5842a869d3",
+      "bytes": 24632
+    },
+    {
+      "path": "html/cnc/source_shapes/patterns__capnhat_b-063.js",
+      "before_sha256": null,
+      "sha256": "b3d1e4137f913e2688786c3113eb015790e8e6e8879295108a971a2c6903ea51",
+      "bytes": 769437
+    }
+  ],
+  "requires_owner_signing": true,
+  "instructions": [
+    "Choose the next product version under the existing release process.",
+    "Merge this reviewed overlay with the authoritative cumulative update payload; retain existing licensing and executable files unless an independent release requires them.",
+    "Regenerate the normal exact file bytes/SHA-256 and patch archive metadata.",
+    "Sign the resulting Corel payload using the owner release signing process.",
+    "Keep the existing verifier and signed envelope format unchanged; publish only the valid signed envelope to the native update channel."
+  ],
+  "not_publishable_as_latest_json": true
+}

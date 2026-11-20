@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "host": "rhino",
+  "accepted_source_packet_equals_canonical": true,
+  "exact_sample_name": "B-063",
+  "revision": 2,
+  "cases": [
+    {
+      "case": "canonical",
+      "width_mm": 600,
+      "height_mm": 1300,
+      "parts": 1,
+      "holes": 290,
+      "polygon_valid": true,
+      "boundary_discrete_hausdorff_mm": 0.0,
+      "symmetric_difference_mm2": 0.0,
+      "rounding_area_tolerance_mm2": 6.711153788409267,
+      "symmetric_difference_parts_per_million": 0.0,
+      "dxf_polygon_equals_runtime": true
+    },
+    {
+      "case": "ratio_2x",
+      "width_mm": 1200,
+      "height_mm": 2600,
+      "parts": 1,
+      "holes": 290,
+      "polygon_valid": true,
+      "boundary_discrete_hausdorff_mm": 0.0,
+      "symmetric_difference_mm2": 0.0,
+      "rounding_area_tolerance_mm2": 13.422307576818534,
+      "symmetric_difference_parts_per_million": 0.0,
+      "dxf_polygon_equals_runtime": true
+    },
+    {
+      "case": "independent_size",
+      "width_mm": 1400,
+      "height_mm": 2800,
+      "parts": 1,
+      "holes": 290,
+      "polygon_valid": true,
+      "boundary_discrete_hausdorff_mm": 5.693231662561191e-05,
+      "symmetric_difference_mm2": 1.7385266127270453,
+      "rounding_area_tolerance_mm2": 14.99185713632758,
+      "symmetric_difference_parts_per_million": 0.727465672851152,
+      "dxf_polygon_equals_runtime": true
+    }
+  ],
+  "scope": "Independent Shapely polygon validity and source/scaled/DXF material comparison. No native Windows execution."
+}

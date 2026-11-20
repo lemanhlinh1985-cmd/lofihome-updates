@@ -1,0 +1,41 @@
+{
+  "product": "LOFIHOME.Corel",
+  "baseline_version": "1.0.26",
+  "installation_path": "%LOCALAPPDATA%\\LOFIHOME\\Corel",
+  "source_urls": {
+    "repository": "https://github.com/lemanhlinh1985-cmd/lofihome-updates",
+    "release": "https://github.com/lemanhlinh1985-cmd/lofihome-updates/releases/tag/corel-v1.0.26",
+    "full_package": "https://github.com/lemanhlinh1985-cmd/lofihome-updates/releases/download/corel-v1.0.26/LOFIHOME_COREL_X5_2026_V1_0_26_DAY_DU.zip",
+    "native_update_manifest": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/corel/latest.json"
+  },
+  "overlay_guard": "baseline_guard.json",
+  "payload_directory": "payload",
+  "sample": {
+    "id": "b-063",
+    "runtime_id": "patterns__capnhat_b-063",
+    "name": "B-063",
+    "revision": 2,
+    "width_mm": 600,
+    "height_mm": 1300,
+    "holes": 290,
+    "source_json_sha256": "1e41c874e93b78f9a7669684d723dfdb7c2a0ae1478c026b1efbba9ca80c602a"
+  },
+  "original_catalog_count": 304,
+  "new_catalog_count": 305,
+  "native_action_source_insert": "corel_create",
+  "native_action_panel_create": "corel_create",
+  "native_libraries_or_executables_modified": false,
+  "native_version_changed": false,
+  "update_channel_changed": false,
+  "native_update_protocol": {
+    "signed_envelope": true,
+    "envelope_keys": [
+      "payload",
+      "signature"
+    ],
+    "decoded_protocol": 1,
+    "product": "LOFIHOME.Corel"
+  },
+  "deployment": "User-triggered local overlay, only after verifying every baseline file and payload SHA-256. Root prepares shared installer.",
+  "native_validation_limit": "Native Windows/CorelDRAW/AutoCAD and WebView2 are unavailable in this execution environment. Production JavaScript geometry, UI event logic and outgoing native vectors are tested; native drawing insertion is not claimed."
+}

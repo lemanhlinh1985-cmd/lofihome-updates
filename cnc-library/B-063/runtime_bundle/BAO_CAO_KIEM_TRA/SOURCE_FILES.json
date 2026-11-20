@@ -1,0 +1,44 @@
+{
+  "files": [
+    {
+      "path": "OverlayEngine.cs",
+      "sha256": "0780434e912ba09e432b12f5b8f6fc2327ba18139cecfdb4dec2a54506233c44",
+      "bytes": 20114
+    },
+    {
+      "path": "UpdaterUI.cs",
+      "sha256": "50c0e8ecdc1d1110b40c3a63deeb99e36cb4d89ab1ad2b8984beda29b59985ac",
+      "bytes": 9264
+    },
+    {
+      "path": "EngineChecks.cs",
+      "sha256": "c75992b02bf349f8594d339515be3740f077096919333cb35d974b334bcee18c",
+      "bytes": 10852
+    },
+    {
+      "path": "InspectPe.cs",
+      "sha256": "a949856955f04f0f0d08c213e09138cc756a71dbcd8e9bab70c3befbaed999ac",
+      "bytes": 3087
+    },
+    {
+      "path": "app.manifest",
+      "sha256": "754182a4de07060c751d9f6667fb3b41b3a6257f3cc8bd1edd0b7b9709c0c1f5",
+      "bytes": 558
+    },
+    {
+      "path": "build_updater.py",
+      "sha256": "8268761761b222f880635958474c208059654f0547fe61ff3359056aeae30c44",
+      "bytes": 3991
+    },
+    {
+      "path": "TOOLCHAIN_PROVENANCE.json",
+      "sha256": "f86f5c550f200b65f0b47314b9f7327ffb8934988f7ac42272f46bb9d8ff383a",
+      "bytes": 1832
+    },
+    {
+      "path": "DOC_MA_NGUON.txt",
+      "sha256": "6100f27a08f9c3a58f29dee9ac1087b861233f8b6272c9862a939f2d6c9c5708",
+      "bytes": 1792
+    }
+  ]
+}

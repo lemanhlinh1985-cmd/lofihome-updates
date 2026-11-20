@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LOFIHOME · Làm sạch đường nét</title><link rel="stylesheet" href="line_cleanup.css"></head>
+<body>
+<header><strong>LOFIHOME CNC</strong><span>V317.198 · SketchUp 2021+</span></header>
+<main>
+<div class="intro"><h1>Công cụ làm sạch đường nét</h1><p>Chọn một hoặc nhiều Group/Component trong SketchUp rồi bấm Thực hiện.</p></div>
+<label class="caption" id="actionLabel">Hành động</label>
+<div class="modes" role="group" aria-labelledby="actionLabel"><button data-mode="hide" aria-pressed="false">Ẩn line</button><button data-mode="smooth" aria-pressed="true">Làm mịn an toàn</button><button data-mode="show" aria-pressed="false">Hiện lại line</button></div>
+<p id="modeHelp">Tạo mặt phẳng mới từ mặt lớn nhất, gồm cả các lỗ. Giữ nguyên đối tượng gốc.</p>
+<fieldset id="smoothOptions"><label for="angle">Góc ngưỡng</label><div class="input-unit"><input id="angle" type="number" min="0" max="90" step="any" value="10"><span>độ</span></div>
+<small>Góc đổi hướng lớn hơn ngưỡng vẫn giữ sắc. 0 giữ đường bao gốc.</small>
+<label for="segments">Độ mịn</label><div class="input-unit"><input id="segments" type="number" min="2" max="12" step="1" value="4"><span>đoạn / góc</span></div>
+<small>Nên dùng 4–6. Số cao cho đường cong mịn hơn và tăng dung lượng hình.</small>
+<label class="check"><input id="beside" type="checkbox" checked>Đặt bản mới bên cạnh bản gốc, theo trục Group (cách 50 mm)</label>
+<small>Kết quả là một mặt phẳng có lỗ trong Group mới. Mỗi đối tượng chọn tạo một Group.</small>
+</fieldset>
+<div class="actions"><button id="execute" class="primary">Thực hiện</button><button id="cancel" hidden>Hủy làm mịn</button><button id="close">Đóng</button></div>
+<div id="status" role="status" aria-live="polite">Sẵn sàng. Chọn đối tượng trong SketchUp.</div>
+<footer>Ẩn/hiện chỉ đổi cạnh chung giữa hai mặt; giữ cạnh biên và cạnh rời.</footer>
+</main>
+<script src="cnc/vendor/earcut.min.js"></script><script src="cnc/geometry.js"></script><script src="line_cleanup_geometry.js"></script><script src="geometry_jobs.js"></script><script src="line_cleanup.js"></script>
+</body></html>

@@ -1,0 +1,798 @@
+{
+  "format": "LOFIHOME_LIBRARY_OVERLAY_1",
+  "product": "LOFIHOME.SketchUp",
+  "baseline_version": "317.197",
+  "target_version": "317.198",
+  "version_file": "phao_chi_v305_corner_component.rb",
+  "version_file_sha256": "7fad48c00a7cb4100fa9508881cbefdca29b8cccb8e1da215ee17986661d4354",
+  "installation_path": "",
+  "sample": {
+    "id": "b-063",
+    "runtime_id": "patterns__capnhat_b-063",
+    "name": "B-063",
+    "revision": 2,
+    "width_mm": 600,
+    "height_mm": 1300,
+    "holes": 290,
+    "source_json_sha256": "1e41c874e93b78f9a7669684d723dfdb7c2a0ae1478c026b1efbba9ca80c602a"
+  },
+  "files": [
+    {
+      "path": "phao_chi_v305_corner_component.rb",
+      "before_sha256": "7fad48c00a7cb4100fa9508881cbefdca29b8cccb8e1da215ee17986661d4354",
+      "sha256": "dde72e778db91d1af4748c3d3a64213839bd74bf4d409dd2022e4519ede6a069",
+      "bytes": 905
+    },
+    {
+      "path": "phao_chi_v305_corner_component/HUONG_DAN_SU2023.txt",
+      "before_sha256": "673fb037a9dfdc993a302a8455b6286a70b1aef6b9138c8ebf2146ab9cbd841f",
+      "sha256": "3bb7b4fcf4fd54b10b4501ece89f4c4b03f543cb77174b204ecbeeb3018ad8c4",
+      "bytes": 5509
+    },
+    {
+      "path": "phao_chi_v305_corner_component/THU_VIEN_DI_DONG.txt",
+      "before_sha256": "44350e648aeeea98b45552fca2985f78edd3ede72b2e009649e517d6345582f9",
+      "sha256": "85e48be9f2236c98f15ef294f9e797f69a547e333629529d655677b10bfeecee",
+      "bytes": 3066
+    },
+    {
+      "path": "phao_chi_v305_corner_component/cnc_panel.rb",
+      "before_sha256": "91529210fc9134339201c5400fad7aeba40d482d7b89328aa115c5342137d92b",
+      "sha256": "4b00178bc23637fa61e453fcda33c73d05f8bd5776aa7f99eff77bcf6101a9cd",
+      "bytes": 22981
+    },
+    {
+      "path": "phao_chi_v305_corner_component/cnc_source_198/catalog.json",
+      "before_sha256": "46f3c00e35c65368ba4b368bf04bb9b1c4ba0539931949661c7f33870620afb9",
+      "sha256": "b3cf4e02c0cee7eff4feaf4fe5796b1d9eac6f5f2d2090ce098647db6fbc967a",
+      "bytes": 131851
+    },
+    {
+      "path": "phao_chi_v305_corner_component/cnc_source_198/patterns/B-063.dxf",
+      "before_sha256": null,
+      "sha256": "51f5271613861d0cd8248ac81db6f50acc49f1fd930166ee1dd779f5b45b7f1f",
+      "bytes": 2422422
+    },
+    {
+      "path": "phao_chi_v305_corner_component/cnc_source_198/patterns/B-063.json",
+      "before_sha256": null,
+      "sha256": "ece9782c5a99f9571e7bf7dc54378668b390f9b7374b3bdd7002cbcf3ade1061",
+      "bytes": 769341
+    },
+    {
+      "path": "phao_chi_v305_corner_component/cnc_source_198/prepared/patterns__capnhat_b-063.json",
+      "before_sha256": null,
+      "sha256": "ece9782c5a99f9571e7bf7dc54378668b390f9b7374b3bdd7002cbcf3ade1061",
+      "bytes": 769341
+    },
+    {
+      "path": "phao_chi_v305_corner_component/cnc_source_198/prepared/patterns__capnhat_b-063.svg",
+      "before_sha256": null,
+      "sha256": "488d12b9ba2e7e186ee51d2d6fa851a779e4610351ab03dbee2d9fd461c51460",
+      "bytes": 392118
+    },
+    {
+      "path": "phao_chi_v305_corner_component/cnc_source_198/prepared/patterns__capnhat_b-063_mesh.json",
+      "before_sha256": null,
+      "sha256": "1cbbf757ccaab4f9d41aa6e8f9b2ee3c78c732a0d135eed5a9c48d392604816b",
+      "bytes": 2211528
+    },
+    {
+      "path": "phao_chi_v305_corner_component/cnc_source_contours_model.rb",
+      "before_sha256": null,
+      "sha256": "8ee66a83b91a0b137436517fc532795dd478a02fbc865fd43d24de5f5371ff15",
+      "bytes": 5463
+    },
+    {
+      "path": "phao_chi_v305_corner_component/cnc_source_library.rb",
+      "before_sha256": "4c29e0c08ea847dd48a28c497b8ed87e63a5c46734387a6ca81075e90c75c1b5",
+      "sha256": "4aabd7da295fea22918da93035edd25bb355505ea5e6425d3ea77e1f3863cea2",
+      "bytes": 11303
+    },
+    {
+      "path": "phao_chi_v305_corner_component/cnc_tools.rb",
+      "before_sha256": "07e7295ce4b0188d09b500290be39703b7b740373f32de4ea3d9e4c15dcad30c",
+      "sha256": "ca928713a81325aad42f22f22b80117fff65d76c8a89aef5c5ae225994a93f33",
+      "bytes": 13547
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/b063_sample_preset.js",
+      "before_sha256": null,
+      "sha256": "c0d3f9d1f8a5167a57f2c60117f4cd3412a650e016e8b3f143446ac5225b8f07",
+      "bytes": 6014
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/dxf_r12.js",
+      "before_sha256": null,
+      "sha256": "77df5d04792de511096ffd13e4e03253dbaab7ca42bc09e0391963f60db1c453",
+      "bytes": 34290
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/index.html",
+      "before_sha256": "56d5a306d7bd5f7e84f218582582b33bc15f645772e2ab8edef2cb80b76b95a3",
+      "sha256": "27ee17efda1abb80ae709af1a8ffebc77fe5ba9806658ab7f92eb2133ecfd29b",
+      "bytes": 7401
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/panel_geometry.js",
+      "before_sha256": "4ccbb028eddc7ba945688e1a3bf15a84daccfc65136d350248e345189c850afb",
+      "sha256": "97379f7317567c21471651a6e240c627c9f272d8b007a0c5618236d2e09bdf4d",
+      "bytes": 67624
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/panel_ui.js",
+      "before_sha256": "db8f538f178d51219dd6e97b74a214840e55484d892b99c4a43bf49e4f29a636",
+      "sha256": "84748cccc2cabc17f6a257624122abd30dcb679d9d483a9761f8c42a8b91bfbb",
+      "bytes": 142807
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/source_catalog.js",
+      "before_sha256": "beae7d746713d4a2c7216fcd3ad309726c06c8021731d48979a10b94ec4668f3",
+      "sha256": "0379efae8695b199e6d50d1c869be0f9048156c48afcfa399ba9263c13a1cd3d",
+      "bytes": 131883
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/source_library.js",
+      "before_sha256": "2d40efb1df7a95a7ccc2702924d634e1f24eee84e535d0e9d91e572343aa88bb",
+      "sha256": "4713c875bc0901719bba5e1ec88e5e8edc8d707932f8cdd739c4d868ef680b7f",
+      "bytes": 24344
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/source_shapes/patterns__capnhat_b-063.js",
+      "before_sha256": null,
+      "sha256": "b3d1e4137f913e2688786c3113eb015790e8e6e8879295108a971a2c6903ea51",
+      "bytes": 769437
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/index.html",
+      "before_sha256": "186982e6433be4c71dabca722c4339e205c362b72b900ce66abdbba2a64c88e9",
+      "sha256": "6b80758c70834c7ac267f2ee2fa97068f4ca60ec2408bfc27cd4632d2696f583",
+      "bytes": 198663
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/line_cleanup.html",
+      "before_sha256": "830c19709d5fc406a4c150bb07af1228962263d47ecba9d45ecef3411de27cea",
+      "sha256": "28036211bd2c667c5b49bbe19c0312a5ad0c2b09c142a1324cfb2a9c3f945f58",
+      "bytes": 2478
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/split_plate.html",
+      "before_sha256": "7d27a690452d3a49a081ec3e1cdb34b113d45ef208233d6948ee571d01dda363",
+      "sha256": "057c36b36c6cf8d1ce63f3eb28853758e6c17c14092aac56e1e2dd3fff9b31dd",
+      "bytes": 2705
+    },
+    {
+      "path": "phao_chi_v305_corner_component/internet_update.rb",
+      "before_sha256": "0df91814195896abe0f46064aa93942740f7535f4f6c91bad5e43d25d13bdb7c",
+      "sha256": "042545ecab8858dd83f70cac503694eec2f2e74c319432ef2f48f645ea3f5432",
+      "bytes": 20043
+    },
+    {
+      "path": "phao_chi_v305_corner_component/main.rb",
+      "before_sha256": "2b4e3cd2f5686b9ffa2bf74d5d02daa61c4bc4949eff4aeb7723d2f9d126ec17",
+      "sha256": "f8276e5daae8909f290cd091f5f0b076614b0350639fd65da51165f69c7212db",
+      "bytes": 325532
+    },
+    {
+      "path": "phao_chi_v305_corner_component/ornament_job.rb",
+      "before_sha256": "75560e44c2ec4760517d33b56ed58df37ae1c420795dcb29ed198a0254ada351",
+      "sha256": "e09d126d79b17454bf2a2a1f4b9f2397fe4192b704f7e071fdda4cdce7603717",
+      "bytes": 26909
+    },
+    {
+      "path": "phao_chi_v305_corner_component/portable_library.rb",
+      "before_sha256": "29d43182459acf0ebf9a7e864b9e1f2a5c4709bbd191bcc96f68465ba73a58ea",
+      "sha256": "1d214571eab6750e22a2dbbf96be1206c5be8ac9a37b303823d469600ef00c93",
+      "bytes": 16375
+    },
+    {
+      "path": "phao_chi_v305_corner_component/portable_library/manifest.json",
+      "before_sha256": "d8b449840a0ce4a7b884e41a0a2cbbe1a26aa8e33c6fa7a99244a385d45b6e77",
+      "sha256": "8cf0cde3f655437d9f038591ccea39706cbbda1036491daa453db89d3170928f",
+      "bytes": 464766
+    }
+  ],
+  "preserved_native_files": [
+    {
+      "path": "phao_chi_v305_corner_component/license_public.pem",
+      "sha256": "2c7ca65676cbedd2c6de67d7aa325f4f581d0ca961bae3280742598741e73d28"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/licensing.rb",
+      "sha256": "ef029db3afb7b03784e6441887b4222c38cba4dc2d11a68924ffd18ab6799eb1"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/license_store.rb",
+      "sha256": "c39c2482f7ceb11b0051c8f37cde320429c334b1d18df45830d3d0eef22eae51"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/runtime_compat.rb",
+      "sha256": "00a60f573af108eee1aba9a2188a1c9b460a36a672b50495ad0df5247444b3bd"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/version_guard.rb",
+      "sha256": "df23f76ab28a02c26705254d11562c1c824ba0022894328939bd891e2efd1fb7"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/update_archive.rb",
+      "sha256": "888fcf89374be54af1b457a0827d856277f68438d747b8415dd26c0627b6cd2c"
+    }
+  ],
+  "required_runtime_files": [
+    {
+      "path": "phao_chi_v305_corner_component/cnc_custom_outline.rb",
+      "sha256": "234c6795c418f4b758eb5023d2edd8eb4729fb92d5bae75f71a60d25a089d605"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/cnc_insert_edges.rb",
+      "sha256": "dcfdde01a9ee91fe8a240a2ddca8dd660bbdc7c39ec22a94ffaec66e7bbf3b8a"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/cnc_insert_tool.rb",
+      "sha256": "16247cffeeb64c172d04fa4edd925a70a60397d6e512f0d9c3fc2aec6b97129c"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/cnc_library_layout.rb",
+      "sha256": "a5d97c224d972f3c97e1de785ab5955f2960a8a0849c9566f4751fe7a6ad148e"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/cnc_panel_submission.rb",
+      "sha256": "84d75e32e9a7a32cc55592d242f8c26b60d5dcfaaf2aeb2612b3bef4866ca15b"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/cnc_prepare.rb",
+      "sha256": "ab9603418d28441ecdc21db16ab23b273965d9d5f023b4bf51c70fa18259767e"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/cnc_region_capture.rb",
+      "sha256": "059f1d5d313bf9348facf40400201464662fdb6669b9441ade5ef9f39c683537"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/cnc_window.rb",
+      "sha256": "0d85c6ef0f478c85179c7d584df5cf1befef0aacfa6ae072a292c3ab4ef7957f"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/app.js",
+      "sha256": "b4f95ac7edf0eab27aa2832fc4835bf258a9b3cb0213bf03d3b1b54fcaf361ce"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/b91_sample_preset.js",
+      "sha256": "9e5adaac42c6df702e191f61fb084f33653ddf8b54b6f9ebb5645fd032dc2f4e"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/geometry.js",
+      "sha256": "358ac72099eae59687e9d31a001f0b6c0c033d2322cdfcf70b16a3374ed57c23"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/insert_ring.js",
+      "sha256": "624fc1dd829751a407d6a10a43143049599aa761589ec2a8b167bcddaceebf44"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/item_clearance.js",
+      "sha256": "b81228314692fad9e99a9cf6f4bee42714c5fc5e08fdabb79b73f3b56ff9c7e7"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/kk_sample_preset.js",
+      "sha256": "ff08e7e46235a2a558ba95a353d222ab850651d567d2a2297c86603ceff3a1f5"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/panel_border.js",
+      "sha256": "2427ea0b52ba7ac3069e1d094c7e62c9c867c03b9745a7c7b643f3570babb959"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/panel_dimensions.js",
+      "sha256": "d7b69d43345b50925497cb9faae227300e05da02fe4bf85959f7fa9711d9d3f8"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/panel_region_batch.js",
+      "sha256": "1e7988ffa79ffdf6e18625cc081b484756de55e6d9a6b96a0d4ffca7a099f32b"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/panel_regions.js",
+      "sha256": "5cea0900bb562def57e1f8023c91cb7d028358f82daf1fb183ec4c84216c951b"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/panel_smoothing.js",
+      "sha256": "8229f0e9a676fd8ef6df295531b4e978bc0b8fa10b5ce92d843bd43a1d9ed0b9"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/panel_spacing.js",
+      "sha256": "7c4fa816e2ce801da9a79ea8a4b98a5b5eb05375f50445f341fdaa3900dd06a2"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/panel_viewport.js",
+      "sha256": "a183a50f9150e5202bdd35f33a9179fb40e7bd3b0534e6943ad9686be4e385a7"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/source_menu_defaults.js",
+      "sha256": "cff6d1b124629c8f002d6c9fda9dde5da03c6a7407d7bc867ba7f1f5da2f3365"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/source_presets.js",
+      "sha256": "5bf6c88f437dd146ffc4a4ca4589ebd576172d6b8dd669988c37a41a1b6a37a5"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__diem_001.js",
+      "sha256": "0b12569a9196f31233ef822ddc1993209c8ede827c6896921345fc2d18c527ff"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__diem_003.js",
+      "sha256": "2f4c243c8b65ae6dced79294541b60cbb4ed8bff046cb5b5260fc208246cd5ce"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__diem_004.js",
+      "sha256": "753d1361d13e100afbe9340f53f3d59dad5161522bd9ffc30f9c33b6b5e02aeb"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__diem_006.js",
+      "sha256": "79f3867e5f99fb55bc05416c1997c751a2be18c1fb220d3ca2caef2887d6d2ff"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__diem_008.js",
+      "sha256": "ec4d5e0375b1b5f5b43473fbadce93c68158125170bf70891e9753ff989370fd"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__diem_010.js",
+      "sha256": "de998fcbc8c7b8aea5444449a6a2d2b64d130cedba04b6daa453dd5a5a4412cf"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__diem_011.js",
+      "sha256": "634ec3031e16f4d648defeda409ee0a0b080211c33c03f8400cfb2d1853b2a11"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__diem_012.js",
+      "sha256": "105f4ff377a4197a70170cb143709dd08e76c0dcbaffeebd81024fd1b599f749"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__diem_014.js",
+      "sha256": "ed9f98275fc13c8f6d30eb500da3a512d0514e4c786f27015257f0c8c20e9df7"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__diem_016.js",
+      "sha256": "56d528db061c981be833a3b7b98d798c282a20eb5baeb4576edb418d5419d454"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__diem_022.js",
+      "sha256": "f70c4ff4f625461b5b3a8bd5536b1eed24df5a2b9a7591d5c6af950ef261b0f9"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__diem_023.js",
+      "sha256": "55b430e86332a84ddd70a6eb0acde8d5d0ab5dfec8dab724eb8e924d21697113"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__duc_008.js",
+      "sha256": "0c2c9a73817a1a403def50fd3da94ede6b7d5024f75c321b109b633b687c47fc"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_005.js",
+      "sha256": "61441d6c0b1c147fc335c1652184d5584c5cfdcd94a73ee6269bc95ddcfb04ea"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_an_023.js",
+      "sha256": "59597d1b1ad23d0d4652443a88d8289c16bdf2bc05bcfdd874bbffefc32927f0"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_duc_022.js",
+      "sha256": "e9a7b88bce14907562592be5bc21b937dd20371e4e6441b324dcf99b0836bc02"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_gia_012.js",
+      "sha256": "42b51630c52513c6c0a32d1acc70164ce6cf26443091a1e179818c82dc61dae1"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_hoa_015.js",
+      "sha256": "01738c511dbddda14407e8cbb46333839f511fe9091f5732197bb0f4db568304"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_hoa_sen_021.js",
+      "sha256": "a1681a9ae642a205c75e75df58c0e1c82ffd99e41e0561a418818c729ebc52fb"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_hoa_sen_025.js",
+      "sha256": "d908261462c97fd4eeca8fb8dd8270c82afa1f5a43d397cb1ea808a812467544"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_hoa_sen_033.js",
+      "sha256": "425e30d2de63b1dad0e34eccfe62ebf28b1bce2e3f955f5d800cca9c3a81a78a"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_loc_011.js",
+      "sha256": "1582f5045d6556c49ee1cf6b713e6590272a95f695c32b78c91d575137f684ed"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_luu_017.js",
+      "sha256": "f2d6fa4cbd15ac38c6803b756b44f938a8ef3ed898802c51e21be1f1a1b889cc"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_phat_018.js",
+      "sha256": "8b1ff44918fd392701b0ec7141842f28e1b12c8ab92048708b0d7debfdff6158"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_thinh_016.js",
+      "sha256": "93b6da4bf106aa9d6a8633f398ad937d6c0396cbdd9d3d7d69df5a2cd692eb05"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_009.js",
+      "sha256": "89044430a0cb1efbd692ee5d88b66419a653cad71c7361db1bd91b0ca7a38578"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_020.js",
+      "sha256": "67acf204d8d73a05d37ac79665d70b25610ecd98e00d3e24126c575138afef49"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_024.js",
+      "sha256": "8180dde4b69d3c3bd1db96562fcf7f5a8512628f3e26dea827c94cf104426d4b"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_026.js",
+      "sha256": "fc84695bb89e3e30971df04f99ef50b3d254d4bcdfb9905ab15dff6654248da5"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_027.js",
+      "sha256": "2323925ef2ea1016f11133692ddd6fcf7205a7517b4ee6d9b0a54f3e9e3a1e49"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_028.js",
+      "sha256": "9bd6f32f65a8c460d95961d23f08a8a8a5c388c67a9b347700297ca485145aff"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_029.js",
+      "sha256": "07c7aadbc4fc5458d8473989306cd04eb40d91a3eb32cfd568b299a649d73d90"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_030.js",
+      "sha256": "13762e2d84afeaf1e9c42f6d944c88e4ece3c14c584ae07bf8db6b4be3496ad9"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_031.js",
+      "sha256": "9cdc8ec5cffa25a8c90e9487f67cf2193cc3991a1ba562cd34461571c1c45c47"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_032.js",
+      "sha256": "33911cce1aa98dd0e4672766d8a5e8ce7f0c71a75d8fc9189acb27a5005d5047"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_034.js",
+      "sha256": "a2d26584700fb623c1da107cfe8c4a959f19707dd6048c2928e3360e1f6a7db3"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_035.js",
+      "sha256": "f65db7ec49fb421d358d824d863bff68cc4f8b12e70e288982b9924ede5c74d4"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_036.js",
+      "sha256": "effcdb3a3d19a8865a72554cca195cae9ad1318a55139a8f8dca29496a32c14c"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_038.js",
+      "sha256": "55c3fc1d8542980df0ef29180f5d313da283712fcf6d840fe577738ab110488e"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_039.js",
+      "sha256": "414051778a6d6783d3e052e6d19540dd9c9e4eaf8da2a0f0ba8a6b6728a22355"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_040.js",
+      "sha256": "2b85052fb79148284f4b0dd31aa7423e36a35724fd279d2b1929e533acd047fe"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_041.js",
+      "sha256": "6384b1b38e6fa6e98ed31fa731d745b491c083eac0519807ac31e06948fefcff"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_042.js",
+      "sha256": "b557c9b29c8fb54f4d46e34f635bbe2dc1a4467912dc7708cad7d45aa471a6c8"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_043.js",
+      "sha256": "87ae1f6ba2dddf253382a17e7bf1254e53c74765aa7ea8aba1f50b2fa575c750"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_044.js",
+      "sha256": "c6d3641948c5cfa0cc3d1bcb853cde5a85fda51b8d353aae7fbcf10ced899e1a"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_045.js",
+      "sha256": "83431d7377982099e76653fc7f7e2a7f6fef8307de0653826fb7a380586663a4"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_046.js",
+      "sha256": "21cf906ca5fbecf8b945382b1f9465ba37133450b7a0f01d31c996e1c9b1954c"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_047.js",
+      "sha256": "f2bbdf814290785c7ff43af5adf00428efb7ce8cdba4d78cfae22470098f398e"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_048.js",
+      "sha256": "93750818f5f7a0bd64701455361568e2ecbab220f9601917e0527e9b4332bb28"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_049.js",
+      "sha256": "a2efbfc4f765a4f98f535ac659a701671b172f8afed53400ddb78a927ea55812"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_050.js",
+      "sha256": "cd7f55c6dd0b046baedc7db4afdeca7d0a721061d48ed976918157fd8fc3b82c"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_051.js",
+      "sha256": "ce22486a35d35a55371a2047e42f1331fb9b035711122cc150259ff0cd017b2f"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_052.js",
+      "sha256": "98706554ddae58fe6970a87744b098e23a9fdbd2077d4a36ddf6c2e749c2b162"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_053.js",
+      "sha256": "6aaea40439f753c3b463c89db6f52a269dec51fad5a1c64bc762ff05ad38a91f"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_054.js",
+      "sha256": "b54c19634f03dca6db0f54853728458d95e6370472a2ea3b4c3e1ca2936f7b2a"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_055.js",
+      "sha256": "6f623813fafb7b3b35b02a6ac6ecc928eec6f69ded2fc86e3964377c10447714"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_056.js",
+      "sha256": "1a05c833eacdb6fe2f1108cc4e5d34ff488967e90e59e03327912d3159cbb7c1"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_057.js",
+      "sha256": "9433ea435af008303b60db1e103069617f002d18a4ab69accd8dc33e7beaa425"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_058.js",
+      "sha256": "bc6eb34a58261f5412f500b5c243f2fe18fee29af728a5395031e4db38197ef2"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_059.js",
+      "sha256": "90b365803ad6101171dc9fd801f9e2637884a082c9adba8fbc95176c4b513f07"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_060.js",
+      "sha256": "00c88a6abb7a7922337c1abd5e9d1746b5b3ae83f3016707a6f1bac8fea6a477"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_061.js",
+      "sha256": "9e0a18fcd79e5fc73c760138f3e949b8e8c5ebd2a5b148ed473fbe269e754975"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_062.js",
+      "sha256": "bdbc089b113e75aa546d5eb2ab6f58d1c084979a35ffba75d157092688aa7252"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_063.js",
+      "sha256": "5de59b385f33ee6f9c73ce902f337092daf947a5333bf8dc54800bdd9f3c4fc7"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_064.js",
+      "sha256": "a8a0860bb46cc3c7c7a8ac7390ec02b7ddfc94c83095ecdfbfed4f4e234e8c44"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_065.js",
+      "sha256": "dd73d816da76dc390fb2d4f3738c220a3be8622ac1214cc78568ae9112773b67"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_066.js",
+      "sha256": "2dc86f99017d79e713a30c962fa98dab2e90f5a1bc5fca1d10bf57a1725b6206"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_067.js",
+      "sha256": "e249b4aac64521687c9ba5945e1f4c93d47e95eebfa2d7c67abd05f3a107261a"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_068.js",
+      "sha256": "9804e3e7fa3fcbb5be8d308a3a743364b417fc51f8dcb4f7943ef60233957535"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_069.js",
+      "sha256": "c0a939721dc85a835ef30ce82d1c559b8e9cef6f29f29003ff984f841065ec6c"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_070.js",
+      "sha256": "1e682b94c025a0a27a4b4e1fb30aa7f64f07ab26a496a8d3d0693b1aef7f6696"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_071.js",
+      "sha256": "b5087565387a308558639cc92677af39b9e79ac33fe9c96389737b1f110f3e50"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_072.js",
+      "sha256": "828adc9a70c97f025ce056473688c746ae684fe2ea7c36c3fc7c58a276afaf4d"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_073.js",
+      "sha256": "c9b10965e68881df77f0e8aa79818108cfaa16aa67c7e7aaabf88b04d72b284d"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_074.js",
+      "sha256": "1b8056ffb42aab872828d4befaf33608e113503cb8735ef626c8fa4675c77b47"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_075.js",
+      "sha256": "ccfcacc6036cd9c0eb90113b2de556ae9c0bc9e64e579562c3454d195c6f5b66"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_076.js",
+      "sha256": "f9f0153c54a8a0a0f32a311434dd57cea7884341f3fc7f325eb4ef04d3206b3a"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_077.js",
+      "sha256": "84451dce9ffc6247e9a5a76288a2e76d971550df697738cd9f8f3864ef703ade"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_078.js",
+      "sha256": "6c3c31689dc0098b3a154657c35d4f03e048e1a752f47b2965590cb0d10d73e2"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_079.js",
+      "sha256": "14819bedddda5691f07cf9c7cbff4c585cc2ffcd135784c5b36a8c888d738a47"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_080.js",
+      "sha256": "ab8102cb794c38c621abc60daa61046129e582375d31057acfc60b6542c036e3"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_081.js",
+      "sha256": "435eeeb3f59f6c56851987bb6e5f3de64997b23efa51cc453a94aff836fb499c"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_082.js",
+      "sha256": "0e6488bbe8be2d344f1f67f93c3dd44e4d21b9658e921b65d604a559be58af65"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_083.js",
+      "sha256": "6d2307035abb32a244f42f8250effb4cc53464b8192820f767a1c5477aaa4c10"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_084.js",
+      "sha256": "e644f48b6c4cf5882e133725074f3d940abb3227ae09743cce3bda96bd1b422f"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_085.js",
+      "sha256": "403ebefbfd29f6269e2f3c83c7eb8c7cc3023ed2dec4f356822270b16c06d024"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_086.js",
+      "sha256": "8af031ab2d47fbee07b32bdfaeba52f13fdbaab9213bbe3b8fcfec701bff4530"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_087.js",
+      "sha256": "79f673287447b827896010409bfe004f73c129875105c5bcfdcdc5c5d3ac3eb6"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_088.js",
+      "sha256": "ed689754c2b9c85aa2bfe871a1cac85e02afed18eb5000798a57b86fda20d4e5"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_089.js",
+      "sha256": "c876968a766b0530573f315251a904336b5298c6eab51eaa79cd7e0d861a82fb"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_090.js",
+      "sha256": "bf7ae41d508ac56d4e914701c30d3e57cf31a712ee1dc1e617ec4f693dc0274b"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_091.js",
+      "sha256": "f57a91e289d0eaeefb4f0e4f58bd7e02713c710cc3b6e3a60acdb496d419df0c"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_092.js",
+      "sha256": "02e40a2967e7c0bf043b57f7fce89b30191a75dfc080767fd05607ac30905d9f"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_093.js",
+      "sha256": "cdd6ea564f04c24297f813a252dcfdcf1a75fe98a2797a0a650508bd7b9753b4"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_094.js",
+      "sha256": "17292048f2610a791f7cf330e9b36591f612999b906320ffa78ecb7fcebf90b9"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_095.js",
+      "sha256": "a0045cd8983185e2b22320a302e74f1a4c2b578754c6c942b44be58f3a2b4af3"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_096.js",
+      "sha256": "5fd3b5c142713149c48c919bae60026a8041779690b7a61119efabe91f1ea405"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_097.js",
+      "sha256": "da9eba608134008ff59583261f88b024ed03b588b9827fbc7f4d4f554383211d"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_098.js",
+      "sha256": "a55d46a6cdae5c76a97283dbc715c713be0fade67b2d70b5b7706fcc5bdfc17a"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_099.js",
+      "sha256": "9d786b7d7b8a8b56d16996688ad76c9f6ccf22b336fb599df99a8b34cc10dc46"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_100.js",
+      "sha256": "ba926b550d1e0369c76b1ed93cfa01859dc10786301ea6fdbeafc0f79e048a6a"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_101.js",
+      "sha256": "ad1c9b1895f64af3870750ad301548946729a7eeae9458ec0b192683b41e01b0"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_102.js",
+      "sha256": "08ac09f47e46eb720444cc5b606094f9e940a359f9cb951fcaad934f32cb331d"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_103.js",
+      "sha256": "06b54279e101e3ac07f0204fd4bde7e3735afb4daf56ebff33c93e2431261bd5"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_104.js",
+      "sha256": "ae0ee8aa90d0b12bfd04151deccc69f11c5a8e20b23db49598dee34ecd278bbf"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_tron_105.js",
+      "sha256": "f3f85edf9d66f7ac7a67031176e3ff598a9256c9e6f7c14f353053e4a823ddcf"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_trong_013.js",
+      "sha256": "b769b14edcf875091af62ca2b103ae7e667c6a0f43e7ff7922deca8c7d711768"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_truyen_014.js",
+      "sha256": "483e1b99dd3bf121e0ea9f77b1d709b7e994b11b95de8093db31fb79f9a3175b"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hinh_vuong_019.js",
+      "sha256": "ddec7b423f32bada8cc7f603c07b0fd4214b4dbd8e2ff1929d533404282f544b"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__hoa_van_002.js",
+      "sha256": "1e6aa49f54091708a9985892dd5dda918a65873def23718045c95c713c7a8a1d"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__loc_001.js",
+      "sha256": "b18220db3b2a59ce8116d653afcd69bbba22d49757ed1a7fd1be7ae55d4651c1"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__phuc_003.js",
+      "sha256": "dcda2e9f857e260526a61f7e915236eabfcaf1134dc21ddf4d325bed05dafb97"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__phuc_006.js",
+      "sha256": "3e1349a169c77d61a3dffa1f62b55dd6dade88c2b4fef3d2413d1f9ea678a95d"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__phuc_037.js",
+      "sha256": "f18a15a09cdb85525bb9cdbc7958bbcf9989294107c20658c9692783e83a36c8"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__quang_007.js",
+      "sha256": "149ee2214c254a672ceb432efbf4ff04c0e41fdca4858a9968900d571ade42e5"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform/inserts__tho_004.js",
+      "sha256": "613edb6b821e4851b24f104bebf566aace7954be9af05c1166d9fc04618a376a"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/uniform_index.js",
+      "sha256": "c97893876855469880e0025a863d893e14e066e7b6599135553140f57d25da24"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/vendor/clipper.js",
+      "sha256": "c0e224a7e6e2c1e7d534491090ba04425b04b7a80733e1ea915b7a7d24ed3002"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/vendor/earcut.min.js",
+      "sha256": "fd606b4ed5a2db3b1f7c3a994377cae9be011b298b36f87f2a8bd872f8153c4d"
+    },
+    {
+      "path": "phao_chi_v305_corner_component/html/cnc/window_fit.js",
+      "sha256": "e77140dcb6264b254c2f54bbea57e5048d7474196ce49ddfc636adf90b795bbb"
+    }
+  ],
+  "native_update_channel_changed": false,
+  "publication_status": "prepared_not_published",
+  "notes": "Chọn thư mục Plugins của SketchUp đang có LOFIHOME V317.197. Gói nâng lên bản 317.198 đã kiểm tra."
+}

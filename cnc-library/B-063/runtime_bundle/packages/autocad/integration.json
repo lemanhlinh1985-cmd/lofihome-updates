@@ -1,0 +1,44 @@
+{
+  "product": "LOFIHOME.AutoCAD",
+  "baseline_version": "1.0.0",
+  "installation_path": "%LOCALAPPDATA%\\LOFIHOME\\AutoCAD",
+  "source_urls": {
+    "repository": "https://github.com/lemanhlinh1985-cmd/lofihome-updates",
+    "release": "https://github.com/lemanhlinh1985-cmd/lofihome-updates/releases/tag/autocad-v1.0.0",
+    "full_package": "https://github.com/lemanhlinh1985-cmd/lofihome-updates/releases/download/autocad-v1.0.0/LOFIHOME_AUTOCAD_2007_2027_V1_0_0_DAY_DU.zip",
+    "native_update_manifest": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/latest.json"
+  },
+  "overlay_guard": "baseline_guard.json",
+  "payload_directory": "payload",
+  "sample": {
+    "id": "b-063",
+    "runtime_id": "patterns__capnhat_b-063",
+    "name": "B-063",
+    "revision": 2,
+    "width_mm": 600,
+    "height_mm": 1300,
+    "holes": 290,
+    "source_json_sha256": "1e41c874e93b78f9a7669684d723dfdb7c2a0ae1478c026b1efbba9ca80c602a"
+  },
+  "original_catalog_count": 304,
+  "new_catalog_count": 305,
+  "native_action_source_insert": "corel_create",
+  "native_action_panel_create": "corel_create",
+  "native_libraries_or_executables_modified": false,
+  "native_version_changed": false,
+  "update_channel_changed": false,
+  "native_update_protocol": {
+    "signed_envelope": false,
+    "schema": 1,
+    "product": "LOFIHOME.AutoCAD",
+    "keys": [
+      "schema",
+      "product",
+      "version",
+      "files",
+      "payload"
+    ]
+  },
+  "deployment": "User-triggered local overlay, only after verifying every baseline file and payload SHA-256. Root prepares shared installer.",
+  "native_validation_limit": "Native Windows/CorelDRAW/AutoCAD and WebView2 are unavailable in this execution environment. Production JavaScript geometry, UI event logic and outgoing native vectors are tested; native drawing insertion is not claimed."
+}

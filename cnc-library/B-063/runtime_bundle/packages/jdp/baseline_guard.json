@@ -1,0 +1,165 @@
+{
+  "format": "LOFIHOME_LIBRARY_OVERLAY_1",
+  "product": "LOFIHOME.JDP",
+  "baseline_version": "0.3.4",
+  "version_file": "LOFIHOME.JDP.exe",
+  "version_file_sha256": "f8c4c8a8a0c95769e62d478bfb0c10ba01961b8bb4d0c8f83e04fef299639371",
+  "version_file_type": "windows_pe",
+  "version_file_version": "0.3.4.0",
+  "installation_path": "%LOCALAPPDATA%\\LOFIHOME_JDP\\0.3.4\\app",
+  "sample": {
+    "id": "b-063",
+    "runtime_id": "patterns__capnhat_b-063",
+    "name": "B-063",
+    "revision": 2,
+    "width_mm": 600,
+    "height_mm": 1300,
+    "holes": 290,
+    "source_json_sha256": "1e41c874e93b78f9a7669684d723dfdb7c2a0ae1478c026b1efbba9ca80c602a"
+  },
+  "files": [
+    {
+      "path": "cnc_source_198/catalog.json",
+      "before_sha256": "3397f5ea525691657e6d0e392c7f3365ba7fa608f84d30f84808093a640b36cc",
+      "sha256": "07fac30aedc72619fb723eb355b0f1486250d8d4561c25212ec1be84cea962bb",
+      "bytes": 165875
+    },
+    {
+      "path": "cnc_source_198/patterns/B-063.json",
+      "before_sha256": "4f36daca8173b65871f50f15447eb496101069a4093d50d48bf9f5d0eef34215",
+      "sha256": "1e41c874e93b78f9a7669684d723dfdb7c2a0ae1478c026b1efbba9ca80c602a",
+      "bytes": 769050
+    },
+    {
+      "path": "cnc_source_198/prepared/B-063.json",
+      "before_sha256": "78ec5bb713cb28120b1009c6c71e353fa3f9d33c3062d566cb05cac6f098d619",
+      "sha256": "2afd49cfcbdd2f27d79bd4527dbe08cb8d02bb6e6334aba5c5cfcd06935090f5",
+      "bytes": 769273
+    },
+    {
+      "path": "cnc_source_198/prepared/B-063.svg",
+      "before_sha256": "c301dcd9832afd7a965e264a807a5278aa9d34d950c161494f24871e485a7285",
+      "sha256": "37266a64d17ab9a57224d0c56d6b92ecc9973c08cfa7abf83a4ec0d831ef80c9",
+      "bytes": 392124
+    },
+    {
+      "path": "html/cnc/panel_geometry.js",
+      "before_sha256": "8daa0f4b9a2c70c471c1565671eb3ae8cfc8e6b594921fe9c3c114c6e067d3ca",
+      "sha256": "16da25ea8a6510a54e711e7cf7f11070809736c412a672d9b2cee9823d33ad07",
+      "bytes": 74145
+    },
+    {
+      "path": "html/cnc/sample_library.js",
+      "before_sha256": "e6a30e4c41837575dfb399ba6e096590edf8226ff8cb4168a51fb03528001a33",
+      "sha256": "0fce2fcd4173717f27e02ba9ec6f143c1317f9a0116ee0cff32778a76ec21f7c",
+      "bytes": 5518
+    },
+    {
+      "path": "html/cnc/source_catalog.js",
+      "before_sha256": "68428e148692abb52fb247ab682613f9fe4be1a2069ff8ee3c7893faaafde7c9",
+      "sha256": "d8e3263fb3b54f031e57627fbfc1112432bffe4e974dffff3a77d0dbd1a3a16b",
+      "bytes": 131721
+    },
+    {
+      "path": "html/cnc/source_shapes/patterns__capnhat_b-063.js",
+      "before_sha256": "171a58d3c297620cfcf999286b4456a48c5c1082c8dc3c4df5dd033ecb2b7190",
+      "sha256": "c0d29ec64b8cff453859602e992c91c0c7c6547a37a5ccb510cbf20592fed5f9",
+      "bytes": 769369
+    }
+  ],
+  "preserved_native_files": [
+    {
+      "path": "CorelMapCover.dll",
+      "sha256": "d39721bc5cf9189dc49eea6095cd4f13cd2147e8812d373386b54ae1604a768b"
+    },
+    {
+      "path": "LOFIHOME.CaptureSupport.dll",
+      "sha256": "bb867ec973768fb311824ac2445c88de4496035e6992cb12727198d517123a4b"
+    },
+    {
+      "path": "LOFIHOME.Corel.Update.exe",
+      "sha256": "e1e58e6ccea1d9577e4acd658c378b357fee8453c6e432d9373dd19d4992d5d9"
+    },
+    {
+      "path": "LOFIHOME.Corel.UpdateBridge.dll",
+      "sha256": "1e23c5450ed029b90411b9e56835e3261261c42bda9cb6209bc3a2e0ab4c74dd"
+    },
+    {
+      "path": "LOFIHOME.Corel.exe",
+      "sha256": "b51a71f7db2815106bf853c68ec9ee0898672d0c9dae202fbe62225c219084cc"
+    },
+    {
+      "path": "LOFIHOME.CurveBatch.dll",
+      "sha256": "4445bc37d858322fd6f163a8a7c7d46e50f21f2fb48cbb362cb6c3976e419663"
+    },
+    {
+      "path": "LOFIHOME.JDP.exe",
+      "sha256": "f8c4c8a8a0c95769e62d478bfb0c10ba01961b8bb4d0c8f83e04fef299639371"
+    },
+    {
+      "path": "Microsoft.Web.WebView2.Core.dll",
+      "sha256": "acdd517b951829f763d1255f32df1e6a936cb8623a7ebff6b8b24172dede6bd6"
+    },
+    {
+      "path": "Microsoft.Web.WebView2.WinForms.dll",
+      "sha256": "c66437f80886aecf074804b61af4cc10ad90a95310c8e0a717f31ea377c26b03"
+    },
+    {
+      "path": "x64/WebView2Loader.dll",
+      "sha256": "d3fce90bdeecb08596e377dea6a316354dd8949e32ff09b89d51be00c14e21b6"
+    },
+    {
+      "path": "x86/WebView2Loader.dll",
+      "sha256": "1d348d3c0a5cb0d985389b68a0fd9bf966c2aed65f5e44bbc0233739b7a57f9e"
+    }
+  ],
+  "required_runtime_files": [
+    {
+      "path": "html/cnc/index.html",
+      "sha256": "3117cda568917b1f9189f76a080d7450e5095788a0547cef30b8b0437081b96f"
+    },
+    {
+      "path": "html/cnc/b063_sample_preset.js",
+      "sha256": "c0d3f9d1f8a5167a57f2c60117f4cd3412a650e016e8b3f143446ac5225b8f07"
+    },
+    {
+      "path": "html/cnc/panel_ui.js",
+      "sha256": "64d5e9307d2bccd52862bac05fea521ca301b75cc13e7d7a70e8876bde0b7803"
+    },
+    {
+      "path": "html/cnc/source_library.js",
+      "sha256": "fcf739b5b0e71db05149f5603d3915f95c8edf405f45ecbef0e75706b01cfbf7"
+    },
+    {
+      "path": "html/cnc/corel_adapter.js",
+      "sha256": "2e421b60df62677cf078b9b40b88a5b35c2cb7469440588dc7b164341d021c05"
+    },
+    {
+      "path": "html/cnc/jdp_adapter.js",
+      "sha256": "729743d2cbc46c4fdbe14ddc282425a85ee14735b9a10ec34850ba8e923f6eae"
+    },
+    {
+      "path": "html/cnc/jdp_dxf.js",
+      "sha256": "77df5d04792de511096ffd13e4e03253dbaab7ca42bc09e0391963f60db1c453"
+    },
+    {
+      "path": "html/cnc/source_presets.js",
+      "sha256": "5bf6c88f437dd146ffc4a4ca4589ebd576172d6b8dd669988c37a41a1b6a37a5"
+    },
+    {
+      "path": "html/cnc/geometry.js",
+      "sha256": "6e569240d6ede9d7548e897197b487ffa2dae35a471adc34242891496ff13a7d"
+    },
+    {
+      "path": "html/cnc/vendor/clipper.js",
+      "sha256": "c0e224a7e6e2c1e7d534491090ba04425b04b7a80733e1ea915b7a7d24ed3002"
+    },
+    {
+      "path": "html/cnc/vendor/earcut.min.js",
+      "sha256": "fd606b4ed5a2db3b1f7c3a994377cae9be011b298b36f87f2a8bd872f8153c4d"
+    }
+  ],
+  "native_update_channel_changed": false,
+  "publication_status": "prepared_not_published",
+  "notes": "Apply only to the exact JDP 0.3.4 app baseline. Verify required_runtime_files and every before/after hash before writing; preserve the separate ThuVien user store. version_file is a PE executable, not JSON."
+}

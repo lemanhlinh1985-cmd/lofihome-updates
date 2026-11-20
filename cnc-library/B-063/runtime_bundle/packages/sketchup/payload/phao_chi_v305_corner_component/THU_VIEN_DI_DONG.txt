@@ -1,0 +1,47 @@
+LOFIHOME V317.198 — SKETCHUP 2021 TRỞ LÊN (WINDOWS)
+
+CÀI ĐẶT
+1. Trong từng phiên bản SketchUp 2021 trở lên cần dùng, mở Extension Manager > Install Extension.
+2. Chọn LOFIHOME_V317_198_SU2021_PLUS_NHOM_ZALO.rbz.
+3. Lưu bản vẽ, thoát SketchUp rồi mở lại.
+4. Kiểm tra góc trên của bảng LOFIHOME: V317.198 · SKETCHUP 2021+.
+
+Plugin kiểm tra phiên bản trước khi nạp chức năng hoặc thư viện.
+Trên SketchUp 2020 trở xuống, plugin thông báo và không đăng ký công cụ.
+
+CHỨC NĂNG VÀ THƯ VIỆN
+Giữ các chức năng phào chỉ, lam sóng, Dynamic, MAP và CNC của V317.70,
+bao gồm 305 mẫu CNC nguồn, 24 mẫu CNC thiết kế, lệnh lưu và xuất dữ liệu.
+Kèm 842 mẫu SKP, 6 Dynamic Component, 11 biên dạng đã lưu, 3 cấu hình CNC,
+các ảnh xem trước, tên mẫu và thông số đã gán. Máy mới có sẵn thư viện
+khi mở LOFIHOME, không cần đường dẫn ổ đĩa của máy cũ.
+Giữ bản sửa nhận diện thân phào và xử lý mẫu không tách riêng hoa văn.
+
+MẪU LƯU THÊM VÀ CÁC BẢN SAU
+Sau khi lưu thêm mẫu, chọn:
+Extensions > LOFIHOME ĐT 0398 228 229 > ĐÓNG GÓI RBZ KÈM TOÀN BỘ THƯ VIỆN.
+Cài RBZ vừa xuất trên máy khác có SketchUp 2021 trở lên. Gói đã xuất trước đó
+không tự cập nhật theo các mẫu mới lưu. Giữ lệnh này trong các bản tiếp theo.
+Không cần xóa thư viện đã lưu khi cập nhật plugin.
+
+PHẠM VI KIỂM TRA
+Kiểm tra mã bằng Ruby 2.7, kiểm tra chặn phiên bản, thư viện trong APPDATA
+trống, xuất lại dữ liệu và tính toàn vẹn gói. Đây không phải xác nhận đã
+thử toàn bộ thao tác dựng hình trực tiếp trong giao diện SketchUp 2023.
+
+SỬA THƯ VIỆN TRONG V317.75
+Dữ liệu mẫu được đóng trong một tệp thư viện có chỉ mục, thay cho hàng trăm
+tệp có tên mã dài trong thư mục plugin. Mỗi mẫu được kiểm tra SHA256 khi nạp.
+Một mẫu thiếu hoặc hỏng không ngăn các mẫu khác và Dynamic xuất hiện.
+LẤY MẪU ĐÃ LƯU mở thư viện đi kèm; chỉ nút nhập thư mục mới yêu cầu chọn thư mục.
+Cài RBZ đầy đủ, khởi động lại SketchUp rồi mở thư viện để nạp mẫu tự động.
+Không cần chọn thư mục Desktop, không cần tự nhập lại kho mẫu đã đóng gói.
+
+GIAO DIỆN V317.75
+Bỏ ô Thông số lam mới và hàng tìm mẫu/kích thước ở đầu bảng.
+Giữ ô chọn loại. Kho mẫu và Dynamic cuộn liên tục, không có nút Trước/Sau.
+Chọn hoặc chạy mẫu tiếp theo giữ vị trí đang xem.
+
+DÙNG THỬ: 3 tháng theo lịch, tính từ lần đầu dùng công cụ LOFIHOME.
+Nếu tháng hết hạn không có ngày tương ứng, hạn là ngày cuối tháng đó.
+Nâng cấp không đặt lại ngày bắt đầu; khóa vĩnh viễn đã cấp vẫn có hiệu lực.

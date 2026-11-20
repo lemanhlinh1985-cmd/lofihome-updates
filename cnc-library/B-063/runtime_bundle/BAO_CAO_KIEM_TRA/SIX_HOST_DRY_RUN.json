@@ -1,0 +1,88 @@
+{
+  "status": "passed",
+  "bundle": "B-063_CAP_NHAT_6_PHAN_MEM",
+  "index_sha256": "1235bf134a3afcf0506ca1b219e813bf6049931b003d996feea74691770fd73e",
+  "engine_source_sha256": "0780434e912ba09e432b12f5b8f6fc2327ba18139cecfdb4dec2a54506233c44",
+  "exe_sha256": "052c8488e343e965e581ee142aaf0b24286643e9acf33fb74fa8952f3b04385a",
+  "baseline_preflight": {
+    "selected_roots": 6,
+    "changes": 89,
+    "already_current": 0,
+    "all_source_and_target_hashes_checked_before_writes": true,
+    "writes_performed": false
+  },
+  "real_patched_root_idempotence": {
+    "hosts": [
+      "aspire",
+      "jdp"
+    ],
+    "selected_roots": 2,
+    "changes": 0,
+    "already_current": 21,
+    "writes_performed": false
+  },
+  "hosts": [
+    {
+      "id": "sketchup",
+      "product": "LOFIHOME.SketchUp",
+      "baseline_version": "317.197",
+      "manifest_sha256": "fcfdfebabfc6355ae89f5054218fc891c7bc3c0b5da80605608b770411ea679e",
+      "changed_files": 29,
+      "payload_bytes": 9000646,
+      "preserved_files": 6,
+      "required_runtime_files": 143
+    },
+    {
+      "id": "corel",
+      "product": "LOFIHOME.Corel",
+      "baseline_version": "1.0.26",
+      "manifest_sha256": "1b2fcf6df03ee9b0c4753f871a035824f28bc4e702580481d0d2481f7402ee71",
+      "changed_files": 13,
+      "payload_bytes": 5682213,
+      "preserved_files": 9,
+      "required_runtime_files": 0
+    },
+    {
+      "id": "aspire",
+      "product": "LOFIHOME.Aspire",
+      "baseline_version": "0.3.2",
+      "manifest_sha256": "96ce7d3218ffa4ade28eabbeab6f8cdee37b433fc4eab1f9f95e50f3ff0cab30",
+      "changed_files": 13,
+      "payload_bytes": 5651006,
+      "preserved_files": 12,
+      "required_runtime_files": 0
+    },
+    {
+      "id": "autocad",
+      "product": "LOFIHOME.AutoCAD",
+      "baseline_version": "1.0.0",
+      "manifest_sha256": "825154309841553211da00cba6526e3d7af51ffc3e47ecf21e8be274e8104543",
+      "changed_files": 13,
+      "payload_bytes": 5682621,
+      "preserved_files": 5,
+      "required_runtime_files": 0
+    },
+    {
+      "id": "jdp",
+      "product": "LOFIHOME.JDP",
+      "baseline_version": "0.3.4",
+      "manifest_sha256": "bff70088395afa47ae12927e1c9cb86e1b59e2e41a7894f088c28ec5d2b918fc",
+      "changed_files": 8,
+      "payload_bytes": 3077075,
+      "preserved_files": 11,
+      "required_runtime_files": 11
+    },
+    {
+      "id": "rhino",
+      "product": "LOFIHOME.Rhino.CNC",
+      "baseline_version": "1.1.3",
+      "manifest_sha256": "c9cdb0c0e4334b060565651c22404cad4f11dbb03e41f16bd6764298420402b0",
+      "changed_files": 13,
+      "payload_bytes": 5683231,
+      "preserved_files": 1,
+      "required_runtime_files": 8
+    }
+  ],
+  "transaction_tests_passed": 13,
+  "scope": "Read-only preflight against actual six-host packages/baselines, plus actual Aspire/JDP patched roots. Cross-platform file transaction tests ran on Linux net8; Windows GUI and native CAD apps were not executed."
+}

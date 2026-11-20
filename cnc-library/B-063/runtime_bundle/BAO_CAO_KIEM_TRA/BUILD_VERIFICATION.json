@@ -1,0 +1,81 @@
+{
+  "status": "passed",
+  "target": ".NET Framework 4.6.2",
+  "compiler_sdk": "8.0.428",
+  "compiler_sha256": "1b1253cf4fb6ba61db478c9aee3711d8941daec264e57243fae76f5e0465f293",
+  "exe": "CAP_NHAT_THU_VIEN_B063.exe",
+  "exe_sha256": "052c8488e343e965e581ee142aaf0b24286643e9acf33fb74fa8952f3b04385a",
+  "exe_bytes": 30208,
+  "deterministic_repeat_equal": true,
+  "compiler_errors": 0,
+  "compiler_warnings": 0,
+  "source_sha256": {
+    "OverlayEngine.cs": "0780434e912ba09e432b12f5b8f6fc2327ba18139cecfdb4dec2a54506233c44",
+    "UpdaterUI.cs": "50c0e8ecdc1d1110b40c3a63deeb99e36cb4d89ab1ad2b8984beda29b59985ac",
+    "EngineChecks.cs": "c75992b02bf349f8594d339515be3740f077096919333cb35d974b334bcee18c",
+    "app.manifest": "754182a4de07060c751d9f6667fb3b41b3a6257f3cc8bd1edd0b7b9709c0c1f5"
+  },
+  "reference_sha256": {
+    "mscorlib.dll": "f8b1e8838944f96ea36b670b32a54c0eb0eca3743946363acc676d1d7ef893b0",
+    "System.dll": "19359fe1fdef82d265afdd0f1ba15e978795ea483a63e6f2881f993bd20bbd65",
+    "System.Core.dll": "8debc6f7136250f07a8cb8a576de71bdbe7e9618b6c70abc8a5f7a98222671a3",
+    "System.Drawing.dll": "e8c12ab4e4c86197b012d094307ee43e9a14bd9bc20a49b4349d439e7d5002d3",
+    "System.Windows.Forms.dll": "e06679baad09262f37499a042b2e3265e0412052e10877bb01a7fbb4f6a6f3a4",
+    "System.Runtime.Serialization.dll": "fdc19c1388e847b10a56954b506196c932d0486ab0eda18f997427936c917d45",
+    "System.Xml.dll": "6c4eb8a1075180637a1569c187599251217f295cd4a874ad5177ae01f9523787"
+  },
+  "pe_metadata": {
+    "assembly_name": "CAP_NHAT_THU_VIEN_B063",
+    "assembly_version": "1.0.0.0",
+    "file_version": "1.0.0.0",
+    "runtime": "v4.0.30319",
+    "subsystem": "WindowsGui",
+    "machine": "I386",
+    "il_only": true,
+    "requires_32_bit": false,
+    "prefers_32_bit": false,
+    "references": [
+      {
+        "name": "mscorlib",
+        "version": "4.0.0.0"
+      },
+      {
+        "name": "System.Windows.Forms",
+        "version": "4.0.0.0"
+      },
+      {
+        "name": "System",
+        "version": "4.0.0.0"
+      },
+      {
+        "name": "System.Runtime.Serialization",
+        "version": "4.0.0.0"
+      },
+      {
+        "name": "System.Core",
+        "version": "4.0.0.0"
+      },
+      {
+        "name": "System.Drawing",
+        "version": "4.0.0.0"
+      }
+    ]
+  },
+  "engine_checks": [
+    "PASS two-host atomic update, unchanged runtimes and idempotence",
+    "PASS wrong second-host baseline rejects every target before writes",
+    "PASS wrong source hash rejects all hosts",
+    "PASS native and additional runtime hashes are mandatory",
+    "PASS unsafe Windows and relative paths rejected",
+    "PASS source and target symlinks rejected",
+    "PASS rollback restores both hosts after four committed files",
+    "PASS rollback refuses a substituted parent symlink without deleting outside data",
+    "PASS stale verification rejected before backup or target writes",
+    "PASS already-current rows can coexist with old rows",
+    "PASS backup failure cannot modify targets",
+    "PASS EXE DLL RHP mutation, duplicate paths and runtime overlap rejected",
+    "PASS duplicate or nested selected roots rejected",
+    "ALL PASSED 13 meaningful engine checks; no native Windows UI execution."
+  ],
+  "scope": "Windows .NET Framework cross-compilation and PE inspection; actual transaction engine tested on Linux net8. Windows UI and native host operation were not executed."
+}

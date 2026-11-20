@@ -1,0 +1,83 @@
+{
+  "status": "passed",
+  "host": "LOFIHOME.Aspire",
+  "baseline_version": "0.3.2",
+  "catalog_count": 305,
+  "original_304_entries_preserved": true,
+  "original_source_shapes_preserved": true,
+  "id": "patterns__capnhat_b-063",
+  "name": "B-063",
+  "revision": 2,
+  "holes": 290,
+  "stored_vertices": 38848,
+  "mesh_vertices": 38840,
+  "mesh_triangles": 39418,
+  "whole_panel_tiles": 1,
+  "bounds": [
+    0,
+    0,
+    600,
+    1300
+  ],
+  "two_d_three_d_same_contours": true,
+  "dxf": {
+    "format": "R12/AC1009",
+    "closed_loops": 291,
+    "vertices": 38840,
+    "sha256": "636a3761b0081893294883253c8d05180ccdbb5a4a21665d23d17d50118af674"
+  },
+  "aspire_vectors": {
+    "format": "LOFIHOME1",
+    "closed_loops": 291,
+    "vertices": 38840,
+    "identical_to_dxf_readback": true,
+    "sha256": "68e07f90818cdf523bd1374b1b9172cedee894fc65633d3e2c9a1dca07b4d959"
+  },
+  "scoped_mesh_guard": [
+    {
+      "scenario": "wrong_revision",
+      "rejected": true
+    },
+    {
+      "scenario": "missing_metadata",
+      "rejected": true
+    },
+    {
+      "scenario": "wrong_source_hash",
+      "rejected": true
+    },
+    {
+      "scenario": "wrong_build_flag",
+      "rejected": true
+    },
+    {
+      "scenario": "wrong_shape_id",
+      "rejected": true
+    }
+  ],
+  "revision_handling": {
+    "revision1_and2_preserve_verified_builtin": true,
+    "revision3_replaces_data_and_uses_standard_limit": true
+  },
+  "patch_files": 13,
+  "preserved_native_files": 12,
+  "license_and_bridge_unchanged": true,
+  "regressions": [
+    {
+      "id": "patterns__vach_001",
+      "contours_unchanged": true,
+      "dxf_bytes_unchanged": true
+    },
+    {
+      "id": "patterns__dvd24_b091",
+      "contours_unchanged": true,
+      "dxf_bytes_unchanged": true
+    },
+    {
+      "id": "patterns__vach_anh_kk",
+      "contours_unchanged": true,
+      "dxf_bytes_unchanged": true
+    }
+  ],
+  "scope": "Actual Aspire catalog, geometry, mesh, DXF and native vector transaction serializer in Node VM; Windows installer, WebView2, Aspire gadget and native Aspire were not executed."
+}

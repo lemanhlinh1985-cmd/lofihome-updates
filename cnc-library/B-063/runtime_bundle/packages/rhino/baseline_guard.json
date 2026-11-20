@@ -1,0 +1,145 @@
+{
+  "format": "LOFIHOME_LIBRARY_OVERLAY_1",
+  "product": "LOFIHOME.Rhino.CNC",
+  "baseline_version": "1.1.3",
+  "version_file": "ui/html/cnc/index.html",
+  "version_file_sha256": "5a8c76f65f7d1dcda9971f78b828ee5690a0feb181154bd6d14572afd5acbdfb",
+  "version_file_after_sha256": "64bf805dfd68a5209e286d79a7ded48fe777938f1f730c4f577f24a5d0ca285a",
+  "version_file_type": "html",
+  "version_file_marker": "Rhino 1.1.3 · CNC + MAP",
+  "installation_path": "Choose the existing Thu_vien_LOFIHOME folder used by the installed Rhino plugin",
+  "default_paths": [],
+  "sample": {
+    "id": "b-063",
+    "runtime_id": "patterns__capnhat_b-063",
+    "name": "B-063",
+    "revision": 2,
+    "width_mm": 600,
+    "height_mm": 1300,
+    "holes": 290,
+    "source_json_sha256": "1e41c874e93b78f9a7669684d723dfdb7c2a0ae1478c026b1efbba9ca80c602a"
+  },
+  "files": [
+    {
+      "path": "ui/cnc_source_198/catalog.json",
+      "before_sha256": "46f3c00e35c65368ba4b368bf04bb9b1c4ba0539931949661c7f33870620afb9",
+      "sha256": "c4412699401e7246bb861bdf8683972e838a336680bf39de5f0628801f7e31e4",
+      "bytes": 131848
+    },
+    {
+      "path": "ui/cnc_source_198/patterns/B-063.dxf",
+      "before_sha256": null,
+      "sha256": "51f5271613861d0cd8248ac81db6f50acc49f1fd930166ee1dd779f5b45b7f1f",
+      "bytes": 2422422
+    },
+    {
+      "path": "ui/cnc_source_198/patterns/B-063.json",
+      "before_sha256": null,
+      "sha256": "ece9782c5a99f9571e7bf7dc54378668b390f9b7374b3bdd7002cbcf3ade1061",
+      "bytes": 769341
+    },
+    {
+      "path": "ui/cnc_source_198/prepared/patterns__capnhat_b-063.json",
+      "before_sha256": null,
+      "sha256": "ece9782c5a99f9571e7bf7dc54378668b390f9b7374b3bdd7002cbcf3ade1061",
+      "bytes": 769341
+    },
+    {
+      "path": "ui/cnc_source_198/prepared/patterns__capnhat_b-063.svg",
+      "before_sha256": null,
+      "sha256": "488d12b9ba2e7e186ee51d2d6fa851a779e4610351ab03dbee2d9fd461c51460",
+      "bytes": 392118
+    },
+    {
+      "path": "ui/html/cnc/b063_sample_preset.js",
+      "before_sha256": null,
+      "sha256": "c0d3f9d1f8a5167a57f2c60117f4cd3412a650e016e8b3f143446ac5225b8f07",
+      "bytes": 6014
+    },
+    {
+      "path": "ui/html/cnc/dxf_r12.js",
+      "before_sha256": null,
+      "sha256": "77df5d04792de511096ffd13e4e03253dbaab7ca42bc09e0391963f60db1c453",
+      "bytes": 34290
+    },
+    {
+      "path": "ui/html/cnc/index.html",
+      "before_sha256": "5a8c76f65f7d1dcda9971f78b828ee5690a0feb181154bd6d14572afd5acbdfb",
+      "sha256": "64bf805dfd68a5209e286d79a7ded48fe777938f1f730c4f577f24a5d0ca285a",
+      "bytes": 7706
+    },
+    {
+      "path": "ui/html/cnc/panel_geometry.js",
+      "before_sha256": "06fea13d042aeb59a2f114f0f90dff057ea1591cb23c7ad745833b27e0e74c70",
+      "sha256": "1889062cadca3aa1ddfc766a2b0eb7822b3d266f4f5b894df8df0c367b75d8bd",
+      "bytes": 74417
+    },
+    {
+      "path": "ui/html/cnc/panel_ui.js",
+      "before_sha256": "b5f65bbc149bfda458b9240c4c0110fdcc26e08f16b1aad44cb66df663c29384",
+      "sha256": "a29b1927e91b330e9fc00308ea181d4babed6bb589a7562683507be47f359db4",
+      "bytes": 149185
+    },
+    {
+      "path": "ui/html/cnc/source_catalog.js",
+      "before_sha256": "67aa44746aa8f181b5cf91c29c77c63cb2c5efa2b17a74a84eba2e5920266bf3",
+      "sha256": "43557358e38fa8d63dc0fb352492d425c218b8fcd41838c2d74ebd5e0c821a60",
+      "bytes": 131881
+    },
+    {
+      "path": "ui/html/cnc/source_library.js",
+      "before_sha256": "b25ab6d8dbb6dbaa79ae1717e12f9c5c6c8ba3d705d5120ca8871587fe303a34",
+      "sha256": "0ef43ebd191fa231fd94f55b211f7202571b0958eaeb4280bf91e9a69806b396",
+      "bytes": 25231
+    },
+    {
+      "path": "ui/html/cnc/source_shapes/patterns__capnhat_b-063.js",
+      "before_sha256": null,
+      "sha256": "b3d1e4137f913e2688786c3113eb015790e8e6e8879295108a971a2c6903ea51",
+      "bytes": 769437
+    }
+  ],
+  "preserved_native_files": [
+    {
+      "path": "license_public.pem",
+      "sha256": "2c7ca65676cbedd2c6de67d7aa325f4f581d0ca961bae3280742598741e73d28"
+    }
+  ],
+  "required_runtime_files": [
+    {
+      "path": "ui/html/cnc/corel_adapter.js",
+      "sha256": "9d0f49a2aae554a3a5fb6187937df8dcdf06403350e7004e1a88072567a761c9"
+    },
+    {
+      "path": "ui/html/cnc/rhino_updates.js",
+      "sha256": "e4c509c56396d6add2265ac39ec8b04fdebfb3d4e6ed0fdf74b3abf0d44ae4b8"
+    },
+    {
+      "path": "ui/html/cnc/source_presets.js",
+      "sha256": "78a2451eb13a56fb5e925054b54d49f29b62017a50ffd4cfa78018c70ccd805c"
+    },
+    {
+      "path": "ui/html/cnc/source_menu_defaults.js",
+      "sha256": "0b39d5d1ae825ee07edb846ef8d1dc606745b0580e21c4487b47cc75e999f5ce"
+    },
+    {
+      "path": "ui/html/cnc/b91_sample_preset.js",
+      "sha256": "02fcd60a2d910f91bd26d9146cd7b9f9e9ccd652c52ba8979fe81b30bce0dc6b"
+    },
+    {
+      "path": "ui/html/cnc/geometry.js",
+      "sha256": "6e569240d6ede9d7548e897197b487ffa2dae35a471adc34242891496ff13a7d"
+    },
+    {
+      "path": "ui/html/cnc/vendor/clipper.js",
+      "sha256": "c0e224a7e6e2c1e7d534491090ba04425b04b7a80733e1ea915b7a7d24ed3002"
+    },
+    {
+      "path": "ui/html/cnc/vendor/earcut.min.js",
+      "sha256": "fd606b4ed5a2db3b1f7c3a994377cae9be011b298b36f87f2a8bd872f8153c4d"
+    }
+  ],
+  "native_update_channel_changed": false,
+  "publication_status": "prepared_not_published",
+  "notes": "Target exactly Thu_vien_LOFIHOME. Verify all baseline/new hashes and required runtime dependencies. The version file is HTML, not JSON. Native RHP/DLLs are sibling folders outside this overlay root; no native file is replaced. Their authoritative package hashes are recorded separately in native_package_hashes.json."
+}

@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "overlay": "/workspace/scratch/f896d15861b1/cnc_work/b063_all_hosts/jdp/overlay",
+  "files": 8,
+  "payload_bytes": 3077075,
+  "target_root": "%LOCALAPPDATA%\\LOFIHOME_JDP\\0.3.4\\app",
+  "preserved_native_files": 11,
+  "required_runtime_files": 11,
+  "reconstructed_runtime_files_verified": 2169,
+  "user_store_outside_target": "%LOCALAPPDATA%\\LOFIHOME_JDP\\ThuVien\\thu-vien.json",
+  "native_binary_update": false,
+  "default_source_url_changed": false
+}

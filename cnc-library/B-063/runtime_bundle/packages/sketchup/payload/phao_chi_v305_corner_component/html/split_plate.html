@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LOFIHOME · Chia tấm</title><link rel="stylesheet" href="split_plate.css"></head>
+<body><header><strong>CHIA TẤM LOFIHOME</strong><span>V317.198 · SketchUp 2021+</span></header><main>
+<p class="intro">Chia tấm phẳng thành các phần độc lập tại vị trí cũ.</p>
+<form id="options"><fieldset><legend>Đường cắt</legend><div class="modes">
+<label><input type="radio" name="mode" value="straight"><span><b>Cắt thẳng</b><small>Theo mm hoặc chia đều</small></span></label>
+<label><input type="radio" name="mode" value="diagonal"><span><b>Hai điểm</b><small>Tự do hoặc chéo 45°</small></span></label>
+<label><input type="radio" name="mode" value="drawn" checked><span><b>Line đã vẽ</b><small>Line thẳng / gấp khúc</small></span></label>
+</div></fieldset>
+<fieldset id="straightDirection" hidden><legend>Hướng cắt theo cạnh tấm</legend><div class="modes directions">
+<label><input type="radio" name="direction" value="vertical" checked><span><b>│ Cắt đứng</b><small>Đường cắt chạy dọc tấm</small></span></label>
+<label><input type="radio" name="direction" value="horizontal"><span><b>─ Cắt ngang</b><small>Đường cắt chạy ngang tấm</small></span></label>
+</div><p class="help">Hướng theo trục của tấm. Có thể bấm Tab để đổi hướng khi rê chuột.</p></fieldset>
+<label class="field" for="scope">Phạm vi cắt</label><select id="scope"><option value="single">Chi tiết được bấm chọn</option><option value="whole">Các tấm đã chọn / cả nhóm được bấm</option></select>
+<p class="help" id="scopeHelp">Cắt riêng chi tiết trong nhóm; giữ các chi tiết khác.</p>
+<label class="check"><input id="locked" type="checkbox">Cắt cả chi tiết đang khóa</label>
+<div id="guide" class="guide"></div>
+<p class="note">Chọn mặt lớn của tấm kín, có tiết diện đều. Cắt nhiều tấm cùng lúc: các tấm cần song song. Đường cắt không có bề rộng lưỡi cưa.</p>
+<div class="actions"><button id="begin" type="submit">Bắt đầu cắt</button><button id="cancel" type="button">Hủy lượt cắt</button></div>
+</form><div id="status" role="status" aria-live="polite">Đang kết nối…</div><footer>Giữ đường line đã vẽ. Ctrl+Z khôi phục toàn bộ tấm gốc.</footer>
+</main><script src="vendor/core-js.min.js"></script><script src="cnc/vendor/clipper.js"></script><script src="split_geometry.js"></script><script src="split_plate.js"></script></body></html>

@@ -1,0 +1,67 @@
+{
+  "status": "passed",
+  "scope": "Production source choose, panel selection/config/input/control handlers, B-063 addon, sample receive and geometry in a minimal DOM/event VM. Browser layout, WebView2, Windows installer and native Aspire not exercised.",
+  "cases": [
+    {
+      "path": "static catalog",
+      "status": "passed",
+      "first": {
+        "width": 600,
+        "height": 1300,
+        "name": "B-063",
+        "tiles": 1,
+        "parts": 1,
+        "holes": 290,
+        "points": 38840,
+        "warnings": []
+      },
+      "locked_resize": {
+        "width": 1200,
+        "height": 2600,
+        "name": "B-063",
+        "tiles": 1,
+        "parts": 1,
+        "holes": 290,
+        "points": 38840,
+        "warnings": []
+      },
+      "unlocked_resize": {
+        "width": 1400,
+        "height": 2800,
+        "name": "B-063",
+        "tiles": 1,
+        "parts": 1,
+        "holes": 290,
+        "points": 38840,
+        "warnings": []
+      },
+      "module_lock_survives_field_inputs": true,
+      "module_lock_survives_mode_and_pattern_reset": true,
+      "layout_toggle_preserved": true,
+      "saved_config_preserved": true,
+      "module_mode_preserved": true,
+      "loaded_event_preserved": true,
+      "custom_regions_preserved": true,
+      "custom_outline_preserved": true,
+      "reset_restored": true,
+      "ordinary_pattern_controls_restored": true
+    }
+  ],
+  "regressions": {
+    "legacy_config": {
+      "holes": 290,
+      "missing_flag_preserves_tiling": true
+    },
+    "ordinary_pattern": {
+      "same_contours_as_before": true,
+      "width": 1400,
+      "height": 2800,
+      "name": "Vách 001",
+      "tiles": 112,
+      "parts": 1,
+      "holes": 530,
+      "points": 5686,
+      "warnings": []
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "format": "LOFIHOME_OWNER_SIGNING_INPUT_1",
+  "status": "unsigned_input_not_an_update_manifest",
+  "product": "LOFIHOME.Rhino.CNC",
+  "native_signed_channel": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/rhino-library/latest.json",
+  "baseline_revision": 1,
+  "proposed_revision": 2,
+  "proposed_release_tag": "rhino-library-2",
+  "model_file": "f9e1ebe4bb6a39822603eb1202e8fd1e2876ff52ed9dfb6d0c5baee953dec41e.json",
+  "model_sha256": "f9e1ebe4bb6a39822603eb1202e8fd1e2876ff52ed9dfb6d0c5baee953dec41e",
+  "model_bytes": 770486,
+  "unsigned_payload_file": "rhino-library.payload.unsigned.json",
+  "original_b91_item_preserved": true,
+  "requires_owner_signing": true,
+  "runtime_overlay_required_for_full_b063_support": true,
+  "not_publishable_as_latest_json": true,
+  "instructions": [
+    "Recheck the current signed feed before release and merge newer items; do not overwrite concurrent updates.",
+    "Install or distribute the reviewed Rhino 1.1.3 B-063 runtime overlay before advertising full-panel/3D support.",
+    "Use the existing owner signing process for the exact unsigned UTF-8 payload bytes; retain the native signature envelope and verifier.",
+    "The proposed model belongs under rhino-library-2 as <sha256>.json. Confirm the release number is still free before publication.",
+    "Publish only a valid owner-signed envelope to rhino-library/latest.json. Do not upload this signing-input file as a signed manifest."
+  ]
+}

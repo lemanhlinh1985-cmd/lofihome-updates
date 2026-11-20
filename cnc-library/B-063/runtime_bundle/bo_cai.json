@@ -1,0 +1,99 @@
+{
+  "format": "LOFIHOME_LIBRARY_INSTALLER_1",
+  "title": "LOFIHOME · Cập nhật mẫu B-063",
+  "sample": {
+    "id": "b-063",
+    "name": "B-063",
+    "revision": 2,
+    "width_mm": 600,
+    "height_mm": 1300
+  },
+  "hosts": [
+    {
+      "id": "sketchup",
+      "name": "SketchUp",
+      "manifest": "packages/sketchup/baseline_guard.json",
+      "payload": "packages/sketchup/payload",
+      "default_paths": [
+        "%APPDATA%\\SketchUp\\SketchUp 2021\\SketchUp\\Plugins",
+        "%APPDATA%\\SketchUp\\SketchUp 2022\\SketchUp\\Plugins",
+        "%APPDATA%\\SketchUp\\SketchUp 2023\\SketchUp\\Plugins",
+        "%APPDATA%\\SketchUp\\SketchUp 2024\\SketchUp\\Plugins",
+        "%APPDATA%\\SketchUp\\SketchUp 2025\\SketchUp\\Plugins",
+        "%APPDATA%\\SketchUp\\SketchUp 2026\\SketchUp\\Plugins",
+        "%APPDATA%\\SketchUp\\SketchUp 2027\\SketchUp\\Plugins"
+      ],
+      "process_names": [
+        "SketchUp"
+      ],
+      "folder_hint": "Chọn thư mục Plugins của SketchUp có tệp phao_chi_v305_corner_component.rb."
+    },
+    {
+      "id": "corel",
+      "name": "CorelDRAW",
+      "manifest": "packages/corel/baseline_guard.json",
+      "payload": "packages/corel/payload",
+      "default_paths": [
+        "%LOCALAPPDATA%\\LOFIHOME\\Corel"
+      ],
+      "process_names": [
+        "CorelDRW",
+        "LOFIHOME.Corel"
+      ],
+      "folder_hint": "Chọn thư mục LOFIHOME Corel có LOFIHOME.Corel.exe."
+    },
+    {
+      "id": "aspire",
+      "name": "Aspire",
+      "manifest": "packages/aspire/baseline_guard.json",
+      "payload": "packages/aspire/payload",
+      "default_paths": [
+        "%LOCALAPPDATA%\\LOFIHOME_Aspire\\ThanhCongCu\\0.3.2\\Panel"
+      ],
+      "process_names": [
+        "Aspire",
+        "LOFIHOME.Aspire"
+      ],
+      "folder_hint": "Chọn thư mục Panel của LOFIHOME Aspire có LOFIHOME.Aspire.exe."
+    },
+    {
+      "id": "autocad",
+      "name": "AutoCAD",
+      "manifest": "packages/autocad/baseline_guard.json",
+      "payload": "packages/autocad/payload",
+      "default_paths": [
+        "%LOCALAPPDATA%\\LOFIHOME\\AutoCAD"
+      ],
+      "process_names": [
+        "acad",
+        "LOFIHOME.AutoCAD"
+      ],
+      "folder_hint": "Chọn thư mục LOFIHOME AutoCAD có LOFIHOME.AutoCAD.exe."
+    },
+    {
+      "id": "jdp",
+      "name": "JDPaint",
+      "manifest": "packages/jdp/baseline_guard.json",
+      "payload": "packages/jdp/payload",
+      "default_paths": [
+        "%LOCALAPPDATA%\\LOFIHOME_JDP\\0.3.4\\app"
+      ],
+      "process_names": [
+        "JDPaint",
+        "LOFIHOME.JDP"
+      ],
+      "folder_hint": "Chọn thư mục app của LOFIHOME JDP 0.3.4 có LOFIHOME.JDP.exe."
+    },
+    {
+      "id": "rhino",
+      "name": "Rhino",
+      "manifest": "packages/rhino/baseline_guard.json",
+      "payload": "packages/rhino/payload",
+      "default_paths": [],
+      "process_names": [
+        "Rhino"
+      ],
+      "folder_hint": "Chọn thư mục có license_public.pem và ui\\html\\cnc\\index.html. Rhino 6–9 thường là Thu_vien_LOFIHOME; Rhino 5 chọn thư mục plugin đã cài có thư mục ui."
+    }
+  ]
+}

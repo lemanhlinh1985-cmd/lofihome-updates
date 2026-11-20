@@ -1,0 +1,97 @@
+﻿LOFIHOME — BỔ SUNG B-063 CHO 6 PHẦN MỀM
+
+Mẫu: B-063, bản sửa 2 đã được duyệt.
+Khổ gốc: 600 × 1300 mm, tỷ lệ 1:1; 290 lỗ khoét, 1 phần nền liền.
+Chi tiết được đánh dấu xanh đã bỏ. Giữ bản DXF đã được người dùng nạp vào JDPaint.
+
+1. CẬP NHẬT THƯ VIỆN TRÊN MÁY WINDOWS
+
+  1) Giải nén toàn bộ B-063_CAP_NHAT_6_PHAN_MEM.zip vào một thư mục.
+  2) Lưu bản vẽ đang làm, đóng phần mềm và bảng LOFIHOME sẽ cập nhật.
+  3) Mở CAP_NHAT_THU_VIEN_B063.exe trong thư mục đã giải nén.
+  4) Đánh dấu các thư viện đang dùng. Nếu chưa hiện đường dẫn, chọn dòng
+     phần mềm đó rồi bấm "Chọn thư mục…".
+  5) Bấm "Kiểm tra". Khi kết quả đúng bản nền, bấm "Cập nhật B-063".
+  6) Mở lại phần mềm → thư viện vách LOFIHOME → chọn mẫu B-063.
+     Trong bộ JDP đầy đủ, mẫu nằm ở nhóm Hình học.
+
+Giữ CAP_NHAT_THU_VIEN_B063.exe, bo_cai.json và thư mục packages cùng nhau.
+Có thể chọn riêng phần mềm cần dùng; máy không cần cài đủ cả sáu phần mềm.
+
+2. ĐÚNG PHIÊN BẢN LOFIHOME VÀ ĐÚNG THƯ MỤC
+
+Các số dưới đây là phiên bản bộ LOFIHOME, không phải số phiên bản phần mềm CAD.
+
+SketchUp: LOFIHOME 317.197; gói này nâng lên 317.198.
+  Chọn thư mục Plugins có phao_chi_v305_corner_component.rb.
+  Tự tìm các đường dẫn SketchUp 2021–2027 nếu có; mỗi bản là một dòng riêng.
+
+CorelDRAW: LOFIHOME Corel 1.0.26.
+  Thường là %LOCALAPPDATA%\LOFIHOME\Corel, có LOFIHOME.Corel.exe.
+
+Aspire: bảng LOFIHOME Aspire 0.3.2; giữ nguyên bản vá thanh công cụ 0.3.3.
+  Thường là %LOCALAPPDATA%\LOFIHOME_Aspire\ThanhCongCu\0.3.2\Panel,
+  có LOFIHOME.Aspire.exe. Bản tích hợp được chuẩn bị cho Aspire 9.5.14 trở lên.
+
+AutoCAD: LOFIHOME AutoCAD 1.0.0.
+  Thường là %LOCALAPPDATA%\LOFIHOME\AutoCAD, có LOFIHOME.AutoCAD.exe.
+
+JDPaint: LOFIHOME JDP 0.3.4.
+  Thường là %LOCALAPPDATA%\LOFIHOME_JDP\0.3.4\app, có LOFIHOME.JDP.exe.
+  Nếu máy còn LOFIHOME JDP 0.3.3 hoặc cũ hơn, cần dùng bộ JDP 0.3.4 đầy đủ
+  tương ứng trước; bộ bổ sung này sẽ dừng khi tệp nền không đúng.
+
+Rhino: LOFIHOME Rhino 1.1.3.
+  Chọn thư mục có license_public.pem và ui\html\cnc\index.html.
+  Rhino 6–9 thường dùng thư mục Thu_vien_LOFIHOME.
+  Rhino 5 có thể đặt thư viện ngay trong thư mục plugin đã cài, có thư mục ui.
+  Kiểm tra tệp thực tế quyết định đúng thư mục; không chỉ dựa vào tên thư mục.
+
+Nếu báo không đúng bản nền, giữ nguyên thông báo và kiểm tra lại phiên bản/
+đường dẫn. Bộ cập nhật kiểm tra tất cả các dòng được chọn trước khi thay tệp.
+
+3. SAO LƯU VÀ KIỂM TRA SAU CẬP NHẬT
+
+Bản sao tự động nằm tại:
+  %LOCALAPPDATA%\LOFIHOME\LibraryBackups
+
+Mỗi lần cập nhật có một thư mục riêng. FILES.txt ghi tệp đích và tệp sao lưu
+được đánh số; RESULT.txt ghi kết quả. Nếu lỗi khi ghi, bộ cập nhật cố gắng
+phục hồi các tệp đã thay và báo rõ tệp nào chưa thể phục hồi.
+
+Khi mở B-063, kiểm tra tên mẫu, kích thước 600 × 1300 mm và 290 lỗ khoét.
+Sau đó dùng chức năng đưa hình vào phần mềm như trước. Bản nguồn DXF dùng
+đơn vị mm; khi nhập DXF vào JDPaint chọn mm.
+
+4. CẬP NHẬT TRÊN MÁY CHỦ VÀ KÊNH CẬP NHẬT CHÍNH THỨC
+
+Gói này bổ sung dữ liệu và phần giao diện cần thiết cho sáu thư viện đã cài.
+Nó không cài mới sáu phần mềm CAD và không tạo sẵn sáu tệp gốc SKP/CDR/CRV3D/
+DWG/JDP/3DM. Mẫu được dựng hoặc gửi sang phần mềm bằng bộ kết nối LOFIHOME.
+
+JDPaint và Aspire dùng được nguồn JSON chung. Nạp JSON cập nhật hình học;
+gói bổ sung này còn cung cấp phần xử lý B-063 cả tấm và mức dữ liệu xem 3D.
+
+Kênh cập nhật chính thức của CorelDRAW và Rhino có kiểm tra chữ ký. Dữ liệu
+chờ ký được để riêng trong gói đưa lên GitHub; không thay các kênh đã ký.
+Muốn cập nhật tự động qua chính các kênh đó cần chủ hệ thống ký phát hành.
+
+Riêng Corel 1.0.26: nếu thực hiện sửa lỗi/cài lại từ bản phát hành cũ, cơ chế
+kiểm tra tệp có thể đưa phần thư viện về bản cũ và làm B-063 không hiện nữa.
+Khi đó nạp lại gói B-063 lên đúng bản nền. Chỉ kiểm tra có cập nhật chưa
+không tự thực hiện việc sửa lỗi này.
+
+Cài lại bộ AutoCAD 1.0.0 đầy đủ cũ cũng có thể thay các tệp thư viện. Sau
+khi sửa/cài lại, áp dụng lại B-063 nếu bộ cập nhật xác nhận đúng bản nền.
+Nếu đã nâng LOFIHOME lên phiên bản khác, cần gói B-063 tương ứng.
+Nút cập nhật thư viện trong Rhino 1.1.3 không thay giao diện B-063 đã cài.
+
+5. PHẠM VI ĐÃ KIỂM TRA
+
+Đã kiểm tra mã giao diện và hình học thực tế, đường bao kín, đọc lại DXF,
+phóng kích thước, bản xem 3D, các mẫu cũ và mã kiểm tra tệp của cả sáu bộ nền.
+Bộ cập nhật đã qua kiểm tra giao dịch, sao lưu/phục hồi và chạy lại không đổi.
+
+Chưa chạy trực tiếp giao diện bộ cập nhật hay sáu phần mềm CAD trên Windows.
+Bản DXF B-063 đã được chính người dùng xác nhận nạp được vào JDPaint.
+Báo cáo kèm ở BAO_CAO_KIEM_TRA; mã nguồn bộ cập nhật ở MA_NGUON_BO_CAP_NHAT.

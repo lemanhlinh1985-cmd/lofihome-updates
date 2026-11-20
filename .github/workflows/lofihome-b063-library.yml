@@ -1,0 +1,36 @@
+name: LOFIHOME B-063 - 6 phan mem
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'cnc-library/B-063/**'
+      - 'automation/publish_b063.py'
+      - '.github/workflows/lofihome-b063-library.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: lofihome-release
+  cancel-in-progress: false
+
+jobs:
+  publish-b063:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - name: Checkout the requested commit
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+          fetch-depth: 1
+      - name: Verify all assets and publish the managed B-063 releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >-
+          python3 automation/publish_b063.py --publish
+          --repo-root .
+          --output-dir "$RUNNER_TEMP/b063-release"

@@ -1,0 +1,617 @@
+{
+  "format": "LOFIHOME_B063_RELEASE_1",
+  "files": {
+    ".gitattributes": {
+      "bytes": 147,
+      "sha256": "65f407c87ea780834b1cbbfc028f88816824743d1b6612c6423ae267dc676a97"
+    },
+    "B-063.dxf": {
+      "bytes": 2422422,
+      "sha256": "51f5271613861d0cd8248ac81db6f50acc49f1fd930166ee1dd779f5b45b7f1f"
+    },
+    "B-063.json": {
+      "bytes": 769050,
+      "sha256": "1e41c874e93b78f9a7669684d723dfdb7c2a0ae1478c026b1efbba9ca80c602a"
+    },
+    "B-063.png": {
+      "bytes": 464048,
+      "sha256": "a3c714f71677aefd2683f94847607bad6edf4417ca56949cfea91fbc425c3422"
+    },
+    "B-063.svg": {
+      "bytes": 392124,
+      "sha256": "37266a64d17ab9a57224d0c56d6b92ecc9973c08cfa7abf83a4ec0d831ef80c9"
+    },
+    "B-063_chi_tiet.png": {
+      "bytes": 111007,
+      "sha256": "3920c49f134caeed46ad174c5283a81d3cdc4e23dddbcf26dc228d854f8e5ed9"
+    },
+    "metadata.json": {
+      "bytes": 1003,
+      "sha256": "80dbd71ad30b2d6f9ce5d64814e865a80b2cf6643ad4646bef732bbc9eb6e87d"
+    },
+    "owner_signing_inputs/DOC_TRUOC.txt": {
+      "bytes": 273,
+      "sha256": "907e7481ad3e2f1c1d1bb0378f5d16672984f4ec7f33efe22b9a6369dd71171e"
+    },
+    "owner_signing_inputs/corel/owner_signing_input_unsigned.json": {
+      "bytes": 4881,
+      "sha256": "9a4f20bfd8a6fac2f9c9f311f445b7c3571879e846d8ab69a51ebda2d4072ca8"
+    },
+    "owner_signing_inputs/rhino/f9e1ebe4bb6a39822603eb1202e8fd1e2876ff52ed9dfb6d0c5baee953dec41e.json": {
+      "bytes": 770486,
+      "sha256": "f9e1ebe4bb6a39822603eb1202e8fd1e2876ff52ed9dfb6d0c5baee953dec41e"
+    },
+    "owner_signing_inputs/rhino/owner_signing_input_unsigned.json": {
+      "bytes": 1476,
+      "sha256": "bda4132b8e25416936edc7b2d64a9558d9bf29a2bfcddadd00913d0f9468e884"
+    },
+    "owner_signing_inputs/rhino/rhino-library.payload.unsigned.json": {
+      "bytes": 337,
+      "sha256": "cdfaeb1efcfa852b1cbc7b94fa126a12da2e8e6873cc7ad2db9a025f93061421"
+    },
+    "runtime_bundle/BAO_CAO_KIEM_TRA/BUILD_VERIFICATION.json": {
+      "bytes": 3400,
+      "sha256": "598f0a88ab8e535c577b0e16f5296e68621c63dd48f27f0052b6ffa790aad820"
+    },
+    "runtime_bundle/BAO_CAO_KIEM_TRA/ENGINE_CHECKS.txt": {
+      "bytes": 810,
+      "sha256": "41fde0a8d1ca60927dab495bd2210492a94972f26ea7d1c7d529e2082a088dbc"
+    },
+    "runtime_bundle/BAO_CAO_KIEM_TRA/SIX_HOST_DRY_RUN.json": {
+      "bytes": 2919,
+      "sha256": "0de82d965ee9f7c4064eba91c6e92886bd0064cd86d81d8ea3b1f672fd4fb10e"
+    },
+    "runtime_bundle/BAO_CAO_KIEM_TRA/SOURCE_FILES.json": {
+      "bytes": 1225,
+      "sha256": "5c98dd27e098288b07d39eea1cd1b04f323865b82c15c0ff35e8aae8d5355135"
+    },
+    "runtime_bundle/BAO_CAO_KIEM_TRA/UPDATE_PERSISTENCE.json": {
+      "bytes": 10096,
+      "sha256": "18964edaf8936bef2a726ec24913e332e6ec326e7a34a299fc1e0377fa2ade10"
+    },
+    "runtime_bundle/CAP_NHAT_THU_VIEN_B063.exe": {
+      "bytes": 30208,
+      "sha256": "052c8488e343e965e581ee142aaf0b24286643e9acf33fb74fa8952f3b04385a"
+    },
+    "runtime_bundle/DOC_TRUOC_KHI_CAP_NHAT.txt": {
+      "bytes": 5859,
+      "sha256": "5144b27409b7039828f3289bceb644cd21add77df5dbff0f1507228e77c30080"
+    },
+    "runtime_bundle/MA_NGUON_BO_CAP_NHAT/DOC_MA_NGUON.txt": {
+      "bytes": 1792,
+      "sha256": "6100f27a08f9c3a58f29dee9ac1087b861233f8b6272c9862a939f2d6c9c5708"
+    },
+    "runtime_bundle/MA_NGUON_BO_CAP_NHAT/EngineChecks.cs": {
+      "bytes": 10852,
+      "sha256": "c75992b02bf349f8594d339515be3740f077096919333cb35d974b334bcee18c"
+    },
+    "runtime_bundle/MA_NGUON_BO_CAP_NHAT/InspectPe.cs": {
+      "bytes": 3087,
+      "sha256": "a949856955f04f0f0d08c213e09138cc756a71dbcd8e9bab70c3befbaed999ac"
+    },
+    "runtime_bundle/MA_NGUON_BO_CAP_NHAT/OverlayEngine.cs": {
+      "bytes": 20114,
+      "sha256": "0780434e912ba09e432b12f5b8f6fc2327ba18139cecfdb4dec2a54506233c44"
+    },
+    "runtime_bundle/MA_NGUON_BO_CAP_NHAT/TOOLCHAIN_PROVENANCE.json": {
+      "bytes": 1832,
+      "sha256": "f86f5c550f200b65f0b47314b9f7327ffb8934988f7ac42272f46bb9d8ff383a"
+    },
+    "runtime_bundle/MA_NGUON_BO_CAP_NHAT/UpdaterUI.cs": {
+      "bytes": 9264,
+      "sha256": "50c0e8ecdc1d1110b40c3a63deeb99e36cb4d89ab1ad2b8984beda29b59985ac"
+    },
+    "runtime_bundle/MA_NGUON_BO_CAP_NHAT/app.manifest": {
+      "bytes": 558,
+      "sha256": "754182a4de07060c751d9f6667fb3b41b3a6257f3cc8bd1edd0b7b9709c0c1f5"
+    },
+    "runtime_bundle/MA_NGUON_BO_CAP_NHAT/build_updater.py": {
+      "bytes": 3991,
+      "sha256": "8268761761b222f880635958474c208059654f0547fe61ff3359056aeae30c44"
+    },
+    "runtime_bundle/bo_cai.json": {
+      "bytes": 3127,
+      "sha256": "1235bf134a3afcf0506ca1b219e813bf6049931b003d996feea74691770fd73e"
+    },
+    "runtime_bundle/packages/aspire/B-063.json": {
+      "bytes": 769050,
+      "sha256": "1e41c874e93b78f9a7669684d723dfdb7c2a0ae1478c026b1efbba9ca80c602a"
+    },
+    "runtime_bundle/packages/aspire/DOC_TRUOC_KHI_CAP_NHAT.txt": {
+      "bytes": 3199,
+      "sha256": "d5b5a80f52150d0061f875637abe2e45f3ccdfc2229e4ba0d9462cd3ae6482f0"
+    },
+    "runtime_bundle/packages/aspire/aspire_validation.json": {
+      "bytes": 2070,
+      "sha256": "83ce07c5ebb9889a244e8eee2ee4453341c44b8810355298d73f8061bc321a26"
+    },
+    "runtime_bundle/packages/aspire/baseline_guard.json": {
+      "bytes": 4459,
+      "sha256": "96ce7d3218ffa4ade28eabbeab6f8cdee37b433fc4eab1f9f95e50f3ff0cab30"
+    },
+    "runtime_bundle/packages/aspire/patch-manifest.json": {
+      "bytes": 3419,
+      "sha256": "ab00b94889ff3165243c8ba32aaebada52eb5e0a2088da10ea5072703324a520"
+    },
+    "runtime_bundle/packages/aspire/payload/cnc_source_198/catalog.json": {
+      "bytes": 131776,
+      "sha256": "fc09ebb2b21298fdf0d225446f1fd27bfabde81ffa4810ff3807ee5319b3e029"
+    },
+    "runtime_bundle/packages/aspire/payload/cnc_source_198/patterns/B-063.dxf": {
+      "bytes": 2422422,
+      "sha256": "51f5271613861d0cd8248ac81db6f50acc49f1fd930166ee1dd779f5b45b7f1f"
+    },
+    "runtime_bundle/packages/aspire/payload/cnc_source_198/patterns/B-063.json": {
+      "bytes": 769050,
+      "sha256": "1e41c874e93b78f9a7669684d723dfdb7c2a0ae1478c026b1efbba9ca80c602a"
+    },
+    "runtime_bundle/packages/aspire/payload/cnc_source_198/prepared/B-063.json": {
+      "bytes": 769273,
+      "sha256": "e05d6a938e8889a8ea9f18e2d99126e8c8fe5f52e0168554282efac1ac7f008f"
+    },
+    "runtime_bundle/packages/aspire/payload/cnc_source_198/prepared/B-063.svg": {
+      "bytes": 392124,
+      "sha256": "37266a64d17ab9a57224d0c56d6b92ecc9973c08cfa7abf83a4ec0d831ef80c9"
+    },
+    "runtime_bundle/packages/aspire/payload/html/cnc/b063_sample_preset.js": {
+      "bytes": 6014,
+      "sha256": "c0d3f9d1f8a5167a57f2c60117f4cd3412a650e016e8b3f143446ac5225b8f07"
+    },
+    "runtime_bundle/packages/aspire/payload/html/cnc/index.html": {
+      "bytes": 7773,
+      "sha256": "492fa29275d9a19dcedafe6a5243b99916516c9fcfbd113c9d254c0167c36793"
+    },
+    "runtime_bundle/packages/aspire/payload/html/cnc/panel_geometry.js": {
+      "bytes": 73898,
+      "sha256": "ff16b7c185818b6623709598af5ea2ecd4b4a909d44341727a7120c3bfa007ae"
+    },
+    "runtime_bundle/packages/aspire/payload/html/cnc/panel_ui.js": {
+      "bytes": 146987,
+      "sha256": "5f5e836610e2f36c227028c04ab089d2973870f617093b1259df53cf5243c0e4"
+    },
+    "runtime_bundle/packages/aspire/payload/html/cnc/sample_library.js": {
+      "bytes": 5443,
+      "sha256": "a04a46264242443be176b298b20cec10e9e910170329131a5797992e00607a5a"
+    },
+    "runtime_bundle/packages/aspire/payload/html/cnc/source_catalog.js": {
+      "bytes": 131808,
+      "sha256": "7840410714eeb384c5980e2d9d0a05e4df780649a18a29814a42ed29731ace95"
+    },
+    "runtime_bundle/packages/aspire/payload/html/cnc/source_library.js": {
+      "bytes": 25069,
+      "sha256": "239b9728543dff678315966b39cfc5fca45a92a7e5e79ccb3f3276dd58e5a8b0"
+    },
+    "runtime_bundle/packages/aspire/payload/html/cnc/source_shapes/patterns__capnhat_b-063.js": {
+      "bytes": 769369,
+      "sha256": "08e795af9f32ac783f392ddbba33cfb67282d557811f015d01dc5a9663505a41"
+    },
+    "runtime_bundle/packages/aspire/selection_after.json": {
+      "bytes": 1765,
+      "sha256": "a9f906eaa2c46feba6c2cc28d8299bebc0e90b6beaea4f08b1bc609b7b46cb17"
+    },
+    "runtime_bundle/packages/autocad/baseline_guard.json": {
+      "bytes": 4545,
+      "sha256": "825154309841553211da00cba6526e3d7af51ffc3e47ecf21e8be274e8104543"
+    },
+    "runtime_bundle/packages/autocad/integration.json": {
+      "bytes": 1860,
+      "sha256": "5889a8d014ddd2f29de269eab48ae67d11a5c748842206ddb6558874b6da68aa"
+    },
+    "runtime_bundle/packages/autocad/payload/cnc_source_198/catalog.json": {
+      "bytes": 131848,
+      "sha256": "c4412699401e7246bb861bdf8683972e838a336680bf39de5f0628801f7e31e4"
+    },
+    "runtime_bundle/packages/autocad/payload/cnc_source_198/patterns/B-063.dxf": {
+      "bytes": 2422422,
+      "sha256": "51f5271613861d0cd8248ac81db6f50acc49f1fd930166ee1dd779f5b45b7f1f"
+    },
+    "runtime_bundle/packages/autocad/payload/cnc_source_198/patterns/B-063.json": {
+      "bytes": 769341,
+      "sha256": "ece9782c5a99f9571e7bf7dc54378668b390f9b7374b3bdd7002cbcf3ade1061"
+    },
+    "runtime_bundle/packages/autocad/payload/cnc_source_198/prepared/patterns__capnhat_b-063.json": {
+      "bytes": 769341,
+      "sha256": "ece9782c5a99f9571e7bf7dc54378668b390f9b7374b3bdd7002cbcf3ade1061"
+    },
+    "runtime_bundle/packages/autocad/payload/cnc_source_198/prepared/patterns__capnhat_b-063.svg": {
+      "bytes": 392118,
+      "sha256": "488d12b9ba2e7e186ee51d2d6fa851a779e4610351ab03dbee2d9fd461c51460"
+    },
+    "runtime_bundle/packages/autocad/payload/html/cnc/b063_sample_preset.js": {
+      "bytes": 6014,
+      "sha256": "c0d3f9d1f8a5167a57f2c60117f4cd3412a650e016e8b3f143446ac5225b8f07"
+    },
+    "runtime_bundle/packages/autocad/payload/html/cnc/dxf_r12.js": {
+      "bytes": 34290,
+      "sha256": "77df5d04792de511096ffd13e4e03253dbaab7ca42bc09e0391963f60db1c453"
+    },
+    "runtime_bundle/packages/autocad/payload/html/cnc/index.html": {
+      "bytes": 7736,
+      "sha256": "9fce745f1a61c5d76e5adc1c6e323d5e320400ba2414aade1c9f9d12a47c04a6"
+    },
+    "runtime_bundle/packages/autocad/payload/html/cnc/panel_geometry.js": {
+      "bytes": 74417,
+      "sha256": "1889062cadca3aa1ddfc766a2b0eb7822b3d266f4f5b894df8df0c367b75d8bd"
+    },
+    "runtime_bundle/packages/autocad/payload/html/cnc/panel_ui.js": {
+      "bytes": 148751,
+      "sha256": "c299ad20354df4a86b6f85985ac1787ad8e39740eeca995ff282ee4b209ad9ca"
+    },
+    "runtime_bundle/packages/autocad/payload/html/cnc/source_catalog.js": {
+      "bytes": 131880,
+      "sha256": "bb2d30928e876ed187fa266f9894a1f236af61468e365687f002ec7f150cb45c"
+    },
+    "runtime_bundle/packages/autocad/payload/html/cnc/source_library.js": {
+      "bytes": 25026,
+      "sha256": "9fd0156772ffc312f49cdcbaa403992422a203a1b5de663c277467e85405db57"
+    },
+    "runtime_bundle/packages/autocad/payload/html/cnc/source_shapes/patterns__capnhat_b-063.js": {
+      "bytes": 769437,
+      "sha256": "b3d1e4137f913e2688786c3113eb015790e8e6e8879295108a971a2c6903ea51"
+    },
+    "runtime_bundle/packages/autocad/polygon_validation.json": {
+      "bytes": 1509,
+      "sha256": "daafc2985c95540dce0b56233b108b90634c70a953aa3f1d1aa239b017d35820"
+    },
+    "runtime_bundle/packages/autocad/ui_validation.json": {
+      "bytes": 1837,
+      "sha256": "b58ccc6dd6207eea30ecc6ed3b58a94c366e80025b9cd7e8f3eee1e252cde7a8"
+    },
+    "runtime_bundle/packages/autocad/validation.json": {
+      "bytes": 3288,
+      "sha256": "037412a74ac3f624159042c400a49784f5e6a82019afbf1420a35c037b26d350"
+    },
+    "runtime_bundle/packages/corel/baseline_guard.json": {
+      "bytes": 5087,
+      "sha256": "1b2fcf6df03ee9b0c4753f871a035824f28bc4e702580481d0d2481f7402ee71"
+    },
+    "runtime_bundle/packages/corel/integration.json": {
+      "bytes": 1820,
+      "sha256": "9a428db5a8ec168b06afe2964e8e1846eda25eebfceadc4389759fa100e729a4"
+    },
+    "runtime_bundle/packages/corel/owner_signing_input_unsigned.json": {
+      "bytes": 4881,
+      "sha256": "9a4f20bfd8a6fac2f9c9f311f445b7c3571879e846d8ab69a51ebda2d4072ca8"
+    },
+    "runtime_bundle/packages/corel/payload/cnc_source_198/catalog.json": {
+      "bytes": 131848,
+      "sha256": "c4412699401e7246bb861bdf8683972e838a336680bf39de5f0628801f7e31e4"
+    },
+    "runtime_bundle/packages/corel/payload/cnc_source_198/patterns/B-063.dxf": {
+      "bytes": 2422422,
+      "sha256": "51f5271613861d0cd8248ac81db6f50acc49f1fd930166ee1dd779f5b45b7f1f"
+    },
+    "runtime_bundle/packages/corel/payload/cnc_source_198/patterns/B-063.json": {
+      "bytes": 769341,
+      "sha256": "ece9782c5a99f9571e7bf7dc54378668b390f9b7374b3bdd7002cbcf3ade1061"
+    },
+    "runtime_bundle/packages/corel/payload/cnc_source_198/prepared/patterns__capnhat_b-063.json": {
+      "bytes": 769341,
+      "sha256": "ece9782c5a99f9571e7bf7dc54378668b390f9b7374b3bdd7002cbcf3ade1061"
+    },
+    "runtime_bundle/packages/corel/payload/cnc_source_198/prepared/patterns__capnhat_b-063.svg": {
+      "bytes": 392118,
+      "sha256": "488d12b9ba2e7e186ee51d2d6fa851a779e4610351ab03dbee2d9fd461c51460"
+    },
+    "runtime_bundle/packages/corel/payload/html/cnc/b063_sample_preset.js": {
+      "bytes": 6014,
+      "sha256": "c0d3f9d1f8a5167a57f2c60117f4cd3412a650e016e8b3f143446ac5225b8f07"
+    },
+    "runtime_bundle/packages/corel/payload/html/cnc/dxf_r12.js": {
+      "bytes": 34290,
+      "sha256": "77df5d04792de511096ffd13e4e03253dbaab7ca42bc09e0391963f60db1c453"
+    },
+    "runtime_bundle/packages/corel/payload/html/cnc/index.html": {
+      "bytes": 7747,
+      "sha256": "327aaa9112e9d7a0f3482862b7c84a279f2abc83040695fead348effedbc9bca"
+    },
+    "runtime_bundle/packages/corel/payload/html/cnc/panel_geometry.js": {
+      "bytes": 74417,
+      "sha256": "1889062cadca3aa1ddfc766a2b0eb7822b3d266f4f5b894df8df0c367b75d8bd"
+    },
+    "runtime_bundle/packages/corel/payload/html/cnc/panel_ui.js": {
+      "bytes": 148726,
+      "sha256": "7d256650d0c38307e474369c97db3e06d947e36b17c039b12af6bea7aec1d0e6"
+    },
+    "runtime_bundle/packages/corel/payload/html/cnc/source_catalog.js": {
+      "bytes": 131880,
+      "sha256": "bb2d30928e876ed187fa266f9894a1f236af61468e365687f002ec7f150cb45c"
+    },
+    "runtime_bundle/packages/corel/payload/html/cnc/source_library.js": {
+      "bytes": 24632,
+      "sha256": "e1b7c997772d9669b2eaf86df9d8cb273f58d8fed3017e585ef4ba5842a869d3"
+    },
+    "runtime_bundle/packages/corel/payload/html/cnc/source_shapes/patterns__capnhat_b-063.js": {
+      "bytes": 769437,
+      "sha256": "b3d1e4137f913e2688786c3113eb015790e8e6e8879295108a971a2c6903ea51"
+    },
+    "runtime_bundle/packages/corel/polygon_validation.json": {
+      "bytes": 1507,
+      "sha256": "57a8ea6b4741fee3f6cdd65c9b12bc541a081052aa86a250ff979d902b1d51e7"
+    },
+    "runtime_bundle/packages/corel/ui_validation.json": {
+      "bytes": 1837,
+      "sha256": "b58ccc6dd6207eea30ecc6ed3b58a94c366e80025b9cd7e8f3eee1e252cde7a8"
+    },
+    "runtime_bundle/packages/corel/validation.json": {
+      "bytes": 3287,
+      "sha256": "6b2303160b1367f9aebe1e8dd279fc8e5bf81b1ffa723e7ad05f023aaa9c69b0"
+    },
+    "runtime_bundle/packages/jdp/baseline_guard.json": {
+      "bytes": 6167,
+      "sha256": "bff70088395afa47ae12927e1c9cb86e1b59e2e41a7894f088c28ec5d2b918fc"
+    },
+    "runtime_bundle/packages/jdp/payload/cnc_source_198/catalog.json": {
+      "bytes": 165875,
+      "sha256": "07fac30aedc72619fb723eb355b0f1486250d8d4561c25212ec1be84cea962bb"
+    },
+    "runtime_bundle/packages/jdp/payload/cnc_source_198/patterns/B-063.json": {
+      "bytes": 769050,
+      "sha256": "1e41c874e93b78f9a7669684d723dfdb7c2a0ae1478c026b1efbba9ca80c602a"
+    },
+    "runtime_bundle/packages/jdp/payload/cnc_source_198/prepared/B-063.json": {
+      "bytes": 769273,
+      "sha256": "2afd49cfcbdd2f27d79bd4527dbe08cb8d02bb6e6334aba5c5cfcd06935090f5"
+    },
+    "runtime_bundle/packages/jdp/payload/cnc_source_198/prepared/B-063.svg": {
+      "bytes": 392124,
+      "sha256": "37266a64d17ab9a57224d0c56d6b92ecc9973c08cfa7abf83a4ec0d831ef80c9"
+    },
+    "runtime_bundle/packages/jdp/payload/html/cnc/panel_geometry.js": {
+      "bytes": 74145,
+      "sha256": "16da25ea8a6510a54e711e7cf7f11070809736c412a672d9b2cee9823d33ad07"
+    },
+    "runtime_bundle/packages/jdp/payload/html/cnc/sample_library.js": {
+      "bytes": 5518,
+      "sha256": "0fce2fcd4173717f27e02ba9ec6f143c1317f9a0116ee0cff32778a76ec21f7c"
+    },
+    "runtime_bundle/packages/jdp/payload/html/cnc/source_catalog.js": {
+      "bytes": 131721,
+      "sha256": "d8e3263fb3b54f031e57627fbfc1112432bffe4e974dffff3a77d0dbd1a3a16b"
+    },
+    "runtime_bundle/packages/jdp/payload/html/cnc/source_shapes/patterns__capnhat_b-063.js": {
+      "bytes": 769369,
+      "sha256": "c0d29ec64b8cff453859602e992c91c0c7c6547a37a5ccb510cbf20592fed5f9"
+    },
+    "runtime_bundle/packages/jdp/validation.json": {
+      "bytes": 483,
+      "sha256": "9e74039a8ce33065eb4128b631ff1bbddd0309af7cd9b1a33d9140ec0f84579b"
+    },
+    "runtime_bundle/packages/rhino/HUONG_DAN_RHINO_B063.txt": {
+      "bytes": 3226,
+      "sha256": "709f1cf2c12472553f45a04132eaa834f7818f854d18ebad28b1046785e4d616"
+    },
+    "runtime_bundle/packages/rhino/baseline_guard.json": {
+      "bytes": 5601,
+      "sha256": "c9cdb0c0e4334b060565651c22404cad4f11dbb03e41f16bd6764298420402b0"
+    },
+    "runtime_bundle/packages/rhino/geometry_validation.json": {
+      "bytes": 3310,
+      "sha256": "da4f8d35811d2ed74c5f8f69c66694b0f6ae15a88003bc59bc09c40907bea1c5"
+    },
+    "runtime_bundle/packages/rhino/native_package_hashes.json": {
+      "bytes": 5411,
+      "sha256": "8da5f0273ae888b3dc4b32c4e7e4c5143adc7dc27af3d4ba463d75a427b1a238"
+    },
+    "runtime_bundle/packages/rhino/payload/ui/cnc_source_198/catalog.json": {
+      "bytes": 131848,
+      "sha256": "c4412699401e7246bb861bdf8683972e838a336680bf39de5f0628801f7e31e4"
+    },
+    "runtime_bundle/packages/rhino/payload/ui/cnc_source_198/patterns/B-063.dxf": {
+      "bytes": 2422422,
+      "sha256": "51f5271613861d0cd8248ac81db6f50acc49f1fd930166ee1dd779f5b45b7f1f"
+    },
+    "runtime_bundle/packages/rhino/payload/ui/cnc_source_198/patterns/B-063.json": {
+      "bytes": 769341,
+      "sha256": "ece9782c5a99f9571e7bf7dc54378668b390f9b7374b3bdd7002cbcf3ade1061"
+    },
+    "runtime_bundle/packages/rhino/payload/ui/cnc_source_198/prepared/patterns__capnhat_b-063.json": {
+      "bytes": 769341,
+      "sha256": "ece9782c5a99f9571e7bf7dc54378668b390f9b7374b3bdd7002cbcf3ade1061"
+    },
+    "runtime_bundle/packages/rhino/payload/ui/cnc_source_198/prepared/patterns__capnhat_b-063.svg": {
+      "bytes": 392118,
+      "sha256": "488d12b9ba2e7e186ee51d2d6fa851a779e4610351ab03dbee2d9fd461c51460"
+    },
+    "runtime_bundle/packages/rhino/payload/ui/html/cnc/b063_sample_preset.js": {
+      "bytes": 6014,
+      "sha256": "c0d3f9d1f8a5167a57f2c60117f4cd3412a650e016e8b3f143446ac5225b8f07"
+    },
+    "runtime_bundle/packages/rhino/payload/ui/html/cnc/dxf_r12.js": {
+      "bytes": 34290,
+      "sha256": "77df5d04792de511096ffd13e4e03253dbaab7ca42bc09e0391963f60db1c453"
+    },
+    "runtime_bundle/packages/rhino/payload/ui/html/cnc/index.html": {
+      "bytes": 7706,
+      "sha256": "64bf805dfd68a5209e286d79a7ded48fe777938f1f730c4f577f24a5d0ca285a"
+    },
+    "runtime_bundle/packages/rhino/payload/ui/html/cnc/panel_geometry.js": {
+      "bytes": 74417,
+      "sha256": "1889062cadca3aa1ddfc766a2b0eb7822b3d266f4f5b894df8df0c367b75d8bd"
+    },
+    "runtime_bundle/packages/rhino/payload/ui/html/cnc/panel_ui.js": {
+      "bytes": 149185,
+      "sha256": "a29b1927e91b330e9fc00308ea181d4babed6bb589a7562683507be47f359db4"
+    },
+    "runtime_bundle/packages/rhino/payload/ui/html/cnc/source_catalog.js": {
+      "bytes": 131881,
+      "sha256": "43557358e38fa8d63dc0fb352492d425c218b8fcd41838c2d74ebd5e0c821a60"
+    },
+    "runtime_bundle/packages/rhino/payload/ui/html/cnc/source_library.js": {
+      "bytes": 25231,
+      "sha256": "0ef43ebd191fa231fd94f55b211f7202571b0958eaeb4280bf91e9a69806b396"
+    },
+    "runtime_bundle/packages/rhino/payload/ui/html/cnc/source_shapes/patterns__capnhat_b-063.js": {
+      "bytes": 769437,
+      "sha256": "b3d1e4137f913e2688786c3113eb015790e8e6e8879295108a971a2c6903ea51"
+    },
+    "runtime_bundle/packages/rhino/polygon_validation.json": {
+      "bytes": 1507,
+      "sha256": "d5c4de7d3cd456c38ec323d7a0d7de4df0994524a57f2fea5709e7938f79da41"
+    },
+    "runtime_bundle/packages/rhino/ui_validation.json": {
+      "bytes": 1823,
+      "sha256": "a5b9d11035d9f0845494afacecb8afcfda11531a3628bb0e768516248946262a"
+    },
+    "runtime_bundle/packages/rhino/update_validation.json": {
+      "bytes": 1082,
+      "sha256": "6515a61c21263b1eb107ca54960a187d3a3cddce2804c0cfbe44d8d048a429d9"
+    },
+    "runtime_bundle/packages/rhino/validation.json": {
+      "bytes": 9626,
+      "sha256": "eca38f8340b312d2845569f7e1426c969c44e6aa8a9738d548bbea9d85a00d1e"
+    },
+    "runtime_bundle/packages/sketchup/baseline_guard.json": {
+      "bytes": 35676,
+      "sha256": "fcfdfebabfc6355ae89f5054218fc891c7bc3c0b5da80605608b770411ea679e"
+    },
+    "runtime_bundle/packages/sketchup/payload/phao_chi_v305_corner_component/HUONG_DAN_SU2023.txt": {
+      "bytes": 5509,
+      "sha256": "3bb7b4fcf4fd54b10b4501ece89f4c4b03f543cb77174b204ecbeeb3018ad8c4"
+    },
+    "runtime_bundle/packages/sketchup/payload/phao_chi_v305_corner_component/THU_VIEN_DI_DONG.txt": {
+      "bytes": 3066,
+      "sha256": "85e48be9f2236c98f15ef294f9e797f69a547e333629529d655677b10bfeecee"
+    },
+    "runtime_bundle/packages/sketchup/payload/phao_chi_v305_corner_component/cnc_panel.rb": {
+      "bytes": 22981,
+      "sha256": "4b00178bc23637fa61e453fcda33c73d05f8bd5776aa7f99eff77bcf6101a9cd"
+    },
+    "runtime_bundle/packages/sketchup/payload/phao_chi_v305_corner_component/cnc_source_198/catalog.json": {
+      "bytes": 131851,
+      "sha256": "b3cf4e02c0cee7eff4feaf4fe5796b1d9eac6f5f2d2090ce098647db6fbc967a"
+    },
+    "runtime_bundle/packages/sketchup/payload/phao_chi_v305_corner_component/cnc_source_198/patterns/B-063.dxf": {
+      "bytes": 2422422,
+      "sha256": "51f5271613861d0cd8248ac81db6f50acc49f1fd930166ee1dd779f5b45b7f1f"
+    },
+    "runtime_bundle/packages/sketchup/payload/phao_chi_v305_corner_component/cnc_source_198/patterns/B-063.json": {
+      "bytes": 769341,
+      "sha256": "ece9782c5a99f9571e7bf7dc54378668b390f9b7374b3bdd7002cbcf3ade1061"
+    },
+    "runtime_bundle/packages/sketchup/payload/phao_chi_v305_corner_component/cnc_source_198/prepared/patterns__capnhat_b-063.json": {
+      "bytes": 769341,
+      "sha256": "ece9782c5a99f9571e7bf7dc54378668b390f9b7374b3bdd7002cbcf3ade1061"
+    },
+    "runtime_bundle/packages/sketchup/payload/phao_chi_v305_corner_component/cnc_source_198/prepared/patterns__capnhat_b-063.svg": {
+      "bytes": 392118,
+      "sha256": "488d12b9ba2e7e186ee51d2d6fa851a779e4610351ab03dbee2d9fd461c51460"
+    },
+    "runtime_bundle/packages/sketchup/payload/phao_chi_v305_corner_component/cnc_source_198/prepared/patterns__capnhat_b-063_mesh.json": {
+      "bytes": 2211528,
+      "sha256": "1cbbf757ccaab4f9d41aa6e8f9b2ee3c78c732a0d135eed5a9c48d392604816b"
+    },
+    "runtime_bundle/packages/sketchup/payload/phao_chi_v305_corner_component/cnc_source_contours_model.rb": {
+      "bytes": 5463,
+      "sha256": "8ee66a83b91a0b137436517fc532795dd478a02fbc865fd43d24de5f5371ff15"
+    },
+    "runtime_bundle/packages/sketchup/payload/phao_chi_v305_corner_component/cnc_source_library.rb": {
+      "bytes": 11303,
+      "sha256": "4aabd7da295fea22918da93035edd25bb355505ea5e6425d3ea77e1f3863cea2"
+    },
+    "runtime_bundle/packages/sketchup/payload/phao_chi_v305_corner_component/cnc_tools.rb": {
+      "bytes": 13547,
+      "sha256": "ca928713a81325aad42f22f22b80117fff65d76c8a89aef5c5ae225994a93f33"
+    },
+    "runtime_bundle/packages/sketchup/payload/phao_chi_v305_corner_component/html/cnc/b063_sample_preset.js": {
+      "bytes": 6014,
+      "sha256": "c0d3f9d1f8a5167a57f2c60117f4cd3412a650e016e8b3f143446ac5225b8f07"
+    },
+    "runtime_bundle/packages/sketchup/payload/phao_chi_v305_corner_component/html/cnc/dxf_r12.js": {
+      "bytes": 34290,
+      "sha256": "77df5d04792de511096ffd13e4e03253dbaab7ca42bc09e0391963f60db1c453"
+    },
+    "runtime_bundle/packages/sketchup/payload/phao_chi_v305_corner_component/html/cnc/index.html": {
+      "bytes": 7401,
+      "sha256": "27ee17efda1abb80ae709af1a8ffebc77fe5ba9806658ab7f92eb2133ecfd29b"
+    },
+    "runtime_bundle/packages/sketchup/payload/phao_chi_v305_corner_component/html/cnc/panel_geometry.js": {
+      "bytes": 67624,
+      "sha256": "97379f7317567c21471651a6e240c627c9f272d8b007a0c5618236d2e09bdf4d"
+    },
+    "runtime_bundle/packages/sketchup/payload/phao_chi_v305_corner_component/html/cnc/panel_ui.js": {
+      "bytes": 142807,
+      "sha256": "84748cccc2cabc17f6a257624122abd30dcb679d9d483a9761f8c42a8b91bfbb"
+    },
+    "runtime_bundle/packages/sketchup/payload/phao_chi_v305_corner_component/html/cnc/source_catalog.js": {
+      "bytes": 131883,
+      "sha256": "0379efae8695b199e6d50d1c869be0f9048156c48afcfa399ba9263c13a1cd3d"
+    },
+    "runtime_bundle/packages/sketchup/payload/phao_chi_v305_corner_component/html/cnc/source_library.js": {
+      "bytes": 24344,
+      "sha256": "4713c875bc0901719bba5e1ec88e5e8edc8d707932f8cdd739c4d868ef680b7f"
+    },
+    "runtime_bundle/packages/sketchup/payload/phao_chi_v305_corner_component/html/cnc/source_shapes/patterns__capnhat_b-063.js": {
+      "bytes": 769437,
+      "sha256": "b3d1e4137f913e2688786c3113eb015790e8e6e8879295108a971a2c6903ea51"
+    },
+    "runtime_bundle/packages/sketchup/payload/phao_chi_v305_corner_component/html/index.html": {
+      "bytes": 198663,
+      "sha256": "6b80758c70834c7ac267f2ee2fa97068f4ca60ec2408bfc27cd4632d2696f583"
+    },
+    "runtime_bundle/packages/sketchup/payload/phao_chi_v305_corner_component/html/line_cleanup.html": {
+      "bytes": 2478,
+      "sha256": "28036211bd2c667c5b49bbe19c0312a5ad0c2b09c142a1324cfb2a9c3f945f58"
+    },
+    "runtime_bundle/packages/sketchup/payload/phao_chi_v305_corner_component/html/split_plate.html": {
+      "bytes": 2705,
+      "sha256": "057c36b36c6cf8d1ce63f3eb28853758e6c17c14092aac56e1e2dd3fff9b31dd"
+    },
+    "runtime_bundle/packages/sketchup/payload/phao_chi_v305_corner_component/internet_update.rb": {
+      "bytes": 20043,
+      "sha256": "042545ecab8858dd83f70cac503694eec2f2e74c319432ef2f48f645ea3f5432"
+    },
+    "runtime_bundle/packages/sketchup/payload/phao_chi_v305_corner_component/main.rb": {
+      "bytes": 325532,
+      "sha256": "f8276e5daae8909f290cd091f5f0b076614b0350639fd65da51165f69c7212db"
+    },
+    "runtime_bundle/packages/sketchup/payload/phao_chi_v305_corner_component/ornament_job.rb": {
+      "bytes": 26909,
+      "sha256": "e09d126d79b17454bf2a2a1f4b9f2397fe4192b704f7e071fdda4cdce7603717"
+    },
+    "runtime_bundle/packages/sketchup/payload/phao_chi_v305_corner_component/portable_library/manifest.json": {
+      "bytes": 464766,
+      "sha256": "8cf0cde3f655437d9f038591ccea39706cbbda1036491daa453db89d3170928f"
+    },
+    "runtime_bundle/packages/sketchup/payload/phao_chi_v305_corner_component/portable_library.rb": {
+      "bytes": 16375,
+      "sha256": "1d214571eab6750e22a2dbbf96be1206c5be8ac9a37b303823d469600ef00c93"
+    },
+    "runtime_bundle/packages/sketchup/payload/phao_chi_v305_corner_component.rb": {
+      "bytes": 905,
+      "sha256": "dde72e778db91d1af4748c3d3a64213839bd74bf4d409dd2022e4519ede6a069"
+    },
+    "runtime_bundle/packages/sketchup/validation.json": {
+      "bytes": 345,
+      "sha256": "0f19ae87281ddfdd112fc860ea13c7f5bf7f57264d9c52ea97e07c132db2e7c8"
+    },
+    "sketchup317198/full_delta.zip": {
+      "bytes": 2663245,
+      "sha256": "1c6e82ed1346bd00ef1253825bc978fc64ecd0f6a705c6dfa04db8a06f593e96"
+    },
+    "sketchup317198/latest.json": {
+      "bytes": 1022,
+      "sha256": "73c99627d4fd0b160d7edf0b6a3bba5133255d8f8d3b5f2671f66f328cedfdaa"
+    },
+    "sketchup317198/quick_delta.zip": {
+      "bytes": 2819729,
+      "sha256": "9bd4a6913deeac122c728615840d8b0907e4efc1404348814ff8054510f3b897"
+    },
+    "sketchup317198/report.json": {
+      "bytes": 7376,
+      "sha256": "04d48ff9c381509800ab6a618269786e9338424dcfb7aa0a3f793e38ca19497d"
+    }
+  },
+  "baseline": {
+    "full": {
+      "url": "https://github.com/lemanhlinh1985-cmd/lofihome-updates/releases/download/v317.197/LOFIHOME_V317_197_SU2021_PLUS_NHOM_ZALO.rbz",
+      "bytes": 1705799057,
+      "sha256": "a19ee689cfe37e6b640dac13aa2c49290b51d849e9eab9efa66ae3d14860ebe0"
+    },
+    "quick": {
+      "url": "https://github.com/lemanhlinh1985-cmd/lofihome-updates/releases/download/v317.197/LOFIHOME_V317_197_CAP_NHAT_NHANH.rbz",
+      "bytes": 66629565,
+      "sha256": "eb1866d0d855b522fa7c686459a1d156fdcfee0666f24bafdae10c705acc95ed"
+    }
+  }
+}

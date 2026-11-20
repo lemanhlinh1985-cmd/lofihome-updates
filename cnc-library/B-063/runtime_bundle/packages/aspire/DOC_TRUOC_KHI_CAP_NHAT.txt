@@ -1,0 +1,37 @@
+﻿B-063 — BỔ SUNG THƯ VIỆN LOFIHOME ASPIRE
+
+Áp dụng cho bảng LOFIHOME Aspire 0.3.2 đang hoạt động; giữ nguyên nút mở / thanh công cụ 0.3.3 nếu đã cài. Không phải bộ cài Aspire hoặc bộ cài LOFIHOME mới.
+
+NỘI DUNG
+- Tên bản vẽ: B-063, bản đã duyệt revision 2.
+- Kích thước gốc: 600 × 1300 mm; một tấm, 290 lỗ kín.
+- Thư viện gốc 304 mẫu được giữ nguyên và bổ sung B-063 thành 305 mẫu.
+- Chọn mẫu B-063 sẽ dùng bố cục toàn tấm và tên B-063. Có khóa tỷ lệ, chỉnh kích thước và chế độ lặp theo cỡ hoa văn khi cần.
+- Mẫu nằm sẵn trên máy và dùng được ngoại tuyến sau khi áp dụng gói.
+
+ÁP DỤNG
+1. Đóng bảng LOFIHOME và đóng Aspire trước khi cập nhật.
+2. Trong bộ cập nhật chung, chọn Aspire rồi chọn thư mục Panel của bản 0.3.2 nếu chưa tự nhận. Vị trí thường dùng:
+   %LOCALAPPDATA%\LOFIHOME_Aspire\ThanhCongCu\0.3.2\Panel
+3. Bộ cập nhật phải kiểm tra baseline_guard.json và toàn bộ mã SHA256 trước khi ghi các tệp ở payload. Chỉ cập nhật khi đúng bản nền. Không ép chép lên bản khác hoặc bỏ kiểm tra mã tệp.
+4. Mở lại LOFIHOME, vào Thư viện → Mẫu cập nhật, chọn B-063. Mặc định là 600 × 1300 mm.
+5. Tạo hoặc mở công việc trong Aspire, dùng nút gửi/chèn của bảng LOFIHOME và gadget nhận mẫu đã cài. Cầu nối và định dạng giao dịch .vec gốc của Aspire được giữ nguyên.
+
+NGUỒN CHUNG
+Khi máy chủ đã xuất bản mẫu, nguồn mẫu đang được cầu nối Aspire dùng là:
+https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/jdp-library/latest.json
+Trong bảng LOFIHOME: Cập nhật mẫu → Kiểm tra và tải. Có thể nhập B-063.json qua Nhập gói JSON từ máy. Gói bổ sung UI này vẫn cần để có mặc định toàn tấm và xem 3D cho đúng B-063 đã duyệt.
+Không đưa tệp mẫu vào latest.json của bộ cài phần mềm.
+
+KIỂM TRA ĐÃ THỰC HIỆN
+- Dữ liệu đường bao khớp chính xác bản B-063 đã duyệt; chênh lệch diện tích đối xứng bằng 0 mm².
+- Dựng 2D và 3D được 1 tấm, 290 lỗ; 38.840 điểm hiệu dụng và 39.418 tam giác.
+- DXF R12 và dữ liệu gửi Aspire LOFIHOME1 đọc lại được 291 đường bao kín, đúng 600 × 1300 mm.
+- Các mặc định, khóa tỷ lệ, thay đổi kích thước, cấu hình đã lưu và các mẫu đối chiếu cũ đã qua kiểm tra mã JavaScript thực tế.
+- Giữ nguyên toàn bộ EXE/DLL, khóa, bộ kết nối và mã gadget nhận mẫu.
+- Chưa chạy bộ cài, WebView2 hoặc gadget trong Aspire thật trên Windows; cần kiểm tra thao tác nhận mẫu tại máy sử dụng.
+
+TỆP KIỂM CHỨNG
+baseline_guard.json: các mã tệp trước/sau và tệp cầu nối phải được giữ nguyên.
+aspire_validation.json: kết quả hình học, DXF, .vec, giới hạn lưới và hồi quy.
+selection_after.json: kết quả chọn mẫu, thông số và cấu hình.
