@@ -6,6 +6,7 @@ on:
     paths:
       - 'cnc-library/B-063/**'
       - 'automation/publish_b063.py'
+      - 'automation/tests/test_b063_publisher.py'
       - '.github/workflows/lofihome-b063-library.yml'
   workflow_dispatch:
 
@@ -27,6 +28,8 @@ jobs:
           ref: ${{ github.sha }}
           persist-credentials: false
           fetch-depth: 1
+      - name: Test publisher state handling
+        run: python3 -B -m unittest discover -s automation/tests -p test_b063_publisher.py -v
       - name: Verify all assets and publish the managed B-063 releases
         env:
           GH_TOKEN: ${{ github.token }}

@@ -352,6 +352,7 @@ class GitHub:
         need(os.environ.get('GH_TOKEN'), 'GH_TOKEN must be the workflow repository token')
         self.cache = cache
         self.definitions = definitions
+        self.known_release_ids = {}
         self.env = os.environ.copy()
         self.env.pop('GH_DEBUG', None)
         self.env['GH_PROMPT_DISABLED'] = '1'
@@ -418,25 +419,45 @@ class GitHub:
         result['assets'] = normalized
         return result
 
+    def remember_release_id(self, tag, rid):
+        need(tag in (COMMON_TAG, SKETCHUP_TAG), 'Unexpected managed release tag')
+        need(type(rid) is int and rid > 0, 'Invalid managed release ID')
+        previous = self.known_release_ids.get(tag)
+        need(previous is None or previous == rid, 'Conflicting managed release ID: ' + tag)
+        self.known_release_ids[tag] = rid
+
     def snapshot(self):
         # The /releases/tags endpoint is a published-release lookup. Authenticated
-        # listing exposes drafts, so a lost create/upload response can resume.
-        found = {}
+        # listing discovers existing drafts, so a lost create/upload response
+        # can resume. Retain validated IDs when that list temporarily lags.
+        found = dict(self.known_release_ids)
+        listed = set()
         for page in range(1, 51):
             rows = self.api(f'repos/{REPO}/releases?per_page=100&page={page}')
             need(isinstance(rows, list) and len(rows) <= 100, 'Invalid release listing')
             for row in rows:
                 tag = row.get('tag_name')
                 if tag in (COMMON_TAG, SKETCHUP_TAG):
-                    need(tag not in found, 'Multiple releases use the managed tag: ' + tag)
+                    need(tag not in listed, 'Multiple releases use the managed tag: ' + tag)
+                    listed.add(tag)
                     rid = row.get('id')
                     need(type(rid) is int and rid > 0, 'Invalid listed release ID')
+                    need(tag not in found or found[tag] == rid, 'Conflicting managed release ID: ' + tag)
                     found[tag] = rid
             if len(rows) < 100:
                 break
         else:
             raise ValueError('Release listing exceeds the checked pagination limit')
-        releases = {tag:self.normalize(self.api(f'repos/{REPO}/releases/{rid}')) for tag,rid in found.items()}
+        releases = {}
+        definitions = {item['tag']:item for item in self.definitions.values()}
+        for tag, rid in found.items():
+            release = self.api(f'repos/{REPO}/releases/{rid}')
+            need(isinstance(release, dict), 'Managed release is missing at its known ID: ' + tag)
+            need(release.get('id') == rid and release.get('tag_name') == tag, 'Managed release identity changed: ' + tag)
+            normalized = self.normalize(release)
+            inspect_release(normalized, definitions[tag])
+            self.remember_release_id(tag, rid)
+            releases[tag] = normalized
         tags = {tag:self.api(f'repos/{REPO}/git/ref/tags/{tag}', allow_missing=True) for tag in (COMMON_TAG, SKETCHUP_TAG)}
         latest = self.normalize(self.api(f'repos/{REPO}/releases/latest'))
         # Read main after potentially slow asset checks, immediately before the
@@ -446,10 +467,17 @@ class GitHub:
                 'sketchup':releases.get(SKETCHUP_TAG), 'tag_refs':tags}
 
     def create(self, definition, commit):
-        return self.api(f'repos/{REPO}/releases', 'POST', {
+        release = self.api(f'repos/{REPO}/releases', 'POST', {
             'tag_name':definition['tag'], 'target_commitish':commit,
             'name':definition['name'], 'body':definition['body'],
             'draft':True, 'prerelease':False, 'make_latest':'false', 'generate_release_notes':False})
+        need(isinstance(release, dict), 'Create release returned no release identity')
+        need(release.get('tag_name') == definition['tag'] and release.get('name') == definition['name'] and release.get('body') == definition['body'], 'Created release identity differs')
+        need(release.get('draft') is True and release.get('prerelease') is False, 'Created release is not the expected draft')
+        # A newly created draft may not appear in the list immediately. Keep
+        # its returned ID and verify it through direct GET before any upload.
+        self.remember_release_id(definition['tag'], release.get('id'))
+        return release
 
     def upload(self, tag, path):
         # Deliberately omit --clobber; an asset appearing in a race is an error.
@@ -479,6 +507,7 @@ def publish(releases, client, commit):
             snapshot, plan = guarded()
             if name not in plan[kind]['upload']:
                 continue
+            need(snapshot.get(kind) is not None, 'Managed draft is missing before upload: ' + definition['tag'])
             need(snapshot[kind]['draft'], 'Only managed drafts can receive assets')
             checked_file(item['path'], item)
             client.upload(definition['tag'], item['path'])
@@ -487,6 +516,7 @@ def publish(releases, client, commit):
         if plan[kind]['publish_draft'] or plan[kind]['make_latest']:
             client.promote(snapshot[kind], latest=kind == 'sketchup')
     snapshot, plan = guarded()
+    need(snapshot.get('common') is not None and snapshot.get('sketchup') is not None, 'Managed release is missing from the final snapshot')
     need(not snapshot['common']['draft'] and not snapshot['sketchup']['draft'] and snapshot['latest']['id'] == snapshot['sketchup']['id'], 'Release publication has not reached the verified final state')
     return {'common':COMMON_TAG, 'sketchup':SKETCHUP_TAG, 'latest':SKETCHUP_TAG, 'status':'published_verified'}
 
