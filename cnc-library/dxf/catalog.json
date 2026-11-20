@@ -50,6 +50,31 @@
       "title": "L-016",
       "units": "mm",
       "width_mm": 561.6164708754725
+    },
+    {
+      "files": {
+        "dxf": {
+          "bytes": 197305,
+          "filename": "中式1.dxf",
+          "path": "cnc-library/dxf/中式1/中式1.dxf",
+          "sha256": "4ec5de452affcf1d4c42001f8116e2b04f4962527fc8ad82e307d46077b0709f",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/%E4%B8%AD%E5%BC%8F1/%E4%B8%AD%E5%BC%8F1.dxf"
+        },
+        "preview": {
+          "bytes": 237470,
+          "filename": "preview.png",
+          "path": "cnc-library/dxf/中式1/preview.png",
+          "sha256": "7ef1c3773b1bc0e3395b9f965ce3a1a6b712223385a767460433df5216b7ae3f",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/%E4%B8%AD%E5%BC%8F1/preview.png"
+        }
+      },
+      "height_mm": 337.999542936087,
+      "id": "中式1",
+      "metadata_path": "cnc-library/dxf/中式1/metadata.json",
+      "metadata_sha256": "2f89528060fc5038d24d718bfa521d24f7bf9c83b16c1b133f3a6cacd63b86b0",
+      "title": "中式1",
+      "units": "mm",
+      "width_mm": 758.000008
     }
   ],
   "repository": "lemanhlinh1985-cmd/lofihome-updates",
