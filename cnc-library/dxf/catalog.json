@@ -4,6 +4,31 @@
     {
       "files": {
         "dxf": {
+          "bytes": 2422422,
+          "filename": "B-063.dxf",
+          "path": "cnc-library/dxf/B-063/B-063.dxf",
+          "sha256": "51f5271613861d0cd8248ac81db6f50acc49f1fd930166ee1dd779f5b45b7f1f",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/B-063/B-063.dxf"
+        },
+        "preview": {
+          "bytes": 464048,
+          "filename": "preview.png",
+          "path": "cnc-library/dxf/B-063/preview.png",
+          "sha256": "a3c714f71677aefd2683f94847607bad6edf4417ca56949cfea91fbc425c3422",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/B-063/preview.png"
+        }
+      },
+      "height_mm": 1300,
+      "id": "B-063",
+      "metadata_path": "cnc-library/dxf/B-063/metadata.json",
+      "metadata_sha256": "044546d23ee8c30982c0c27215b71c70f40f3b7c559fbae6c0f00c9fe1a7ace3",
+      "title": "B-063",
+      "units": "mm",
+      "width_mm": 600
+    },
+    {
+      "files": {
+        "dxf": {
           "bytes": 1247068,
           "filename": "L-016.dxf",
           "path": "cnc-library/dxf/L-016/L-016.dxf",

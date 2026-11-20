@@ -1,0 +1,36 @@
+{
+  "files": {
+    "dxf": {
+      "bytes": 2422422,
+      "filename": "B-063.dxf",
+      "path": "cnc-library/dxf/B-063/B-063.dxf",
+      "sha256": "51f5271613861d0cd8248ac81db6f50acc49f1fd930166ee1dd779f5b45b7f1f",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/B-063/B-063.dxf"
+    },
+    "preview": {
+      "bytes": 464048,
+      "filename": "preview.png",
+      "path": "cnc-library/dxf/B-063/preview.png",
+      "sha256": "a3c714f71677aefd2683f94847607bad6edf4417ca56949cfea91fbc425c3422",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/B-063/preview.png"
+    }
+  },
+  "height_mm": 1300,
+  "id": "B-063",
+  "preview_dimensions": {
+    "height_px": 2528,
+    "width_px": 1152
+  },
+  "schema": "lofihome-dxf-v1",
+  "source_filename": "B-063.dxf",
+  "title": "B-063",
+  "units": "mm",
+  "validation": {
+    "acad_version": "AC1009",
+    "cad_geometry_validated": false,
+    "check": "text_structure_only",
+    "embedded_insunits": null,
+    "entity_records": 39422
+  },
+  "width_mm": 600
+}
