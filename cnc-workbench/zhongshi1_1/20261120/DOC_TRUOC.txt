@@ -1,0 +1,34 @@
+﻿中式1(1) — DXF LÀM MƯỢT, BẢN LÀM VIỆC
+
+Nguồn: 中式1(1).skp. Giữ đúng tên file và kích thước bản vẽ.
+Khổ nguồn: 758.000008000 × 337.999542936 mm (xấp xỉ 758 × 338 mm).
+Đơn vị mm, tỷ lệ 1:1, XY và Z=0; góc dưới trái chuyển về (0,0).
+
+ĐÃ BIÊN SOẠN
+- Làm mượt 32 đoạn cong thuộc 12 đường bao chi tiết móc cuộn bằng Bézier bậc ba.
+- Giữ nguyên 179 đường bao còn lại, gồm khung ngoài và mắt lưới hình học.
+- Khóa các góc thiết kế và đầu mút đoạn thẳng dài trong phần xử lý.
+- Xuất DXF R12 bằng 191 POLYLINE kín, tổng 7,942 điểm.
+- Sai lệch biên được kiểm tra và chặn dưới 0.020 mm so với nguồn.
+  Cận kiểm chứng của DXF này: 0.008527 mm, đã cộng sai số làm sạch nguồn.
+- Tất cả đường bao đơn giản, không tự giao; các đường trong không giao/chạm nhau.
+
+CÁC TỆP
+中式1(1).dxf: tệp chính để nhập vào phần mềm CAD/JDPaint.
+中式1(1).svg: bản Bézier để xem/phóng lớn hoặc chỉnh tiếp trong phần mềm hỗ trợ SVG.
+中式1(1)_xem_truoc.png: ảnh toàn bộ mẫu, dựng từ chính dữ liệu DXF đã xuất.
+中式1(1)_chi_tiet.png: so sánh nét nguồn và nét đã làm mượt, cùng tỷ lệ.
+KIEM_TRA_DXF.json: số liệu kiểm tra, kích thước và SHA256.
+DUONG_CONG_BEZIER.json: dữ liệu đường cong nguồn phục vụ chỉnh sửa tiếp.
+
+NHẬP DXF
+Chọn định dạng DXF và đơn vị mm, tỷ lệ 1:1.
+DXF R12 không dùng INSUNITS; cần chọn mm trong hộp thoại nhập.
+Không có chữ kích thước hay đường dẫn hướng nằm trong DXF chính.
+Chưa chạy thử trực tiếp bản mới trong JDPaint/AutoCAD trên Windows.
+Chưa gán dao, chiều sâu, bù dao hoặc đường chạy CNC.
+
+QUY TRÌNH ANH ĐÃ CHỌN
+Đưa bản làm việc lên máy chủ để tải sang máy khác biên soạn/kiểm tra tiếp.
+Chỉ tích hợp vào thư viện ứng dụng và phát hành cập nhật sau khi anh xác nhận
+bản cuối. Tệp này chưa được dùng để thay đổi nguồn cập nhật của phần mềm.
