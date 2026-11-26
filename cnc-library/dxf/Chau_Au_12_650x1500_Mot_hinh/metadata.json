@@ -1,0 +1,36 @@
+{
+  "files": {
+    "dxf": {
+      "bytes": 111753,
+      "filename": "Chau_Au_12_650x1500_Mot_hinh.dxf",
+      "path": "cnc-library/dxf/Chau_Au_12_650x1500_Mot_hinh/Chau_Au_12_650x1500_Mot_hinh.dxf",
+      "sha256": "ce85a38f4e3087fcba7d85dfb83da587db54106730cc143915a3add5cdc71dad",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Chau_Au_12_650x1500_Mot_hinh/Chau_Au_12_650x1500_Mot_hinh.dxf"
+    },
+    "preview": {
+      "bytes": 256349,
+      "filename": "preview.png",
+      "path": "cnc-library/dxf/Chau_Au_12_650x1500_Mot_hinh/preview.png",
+      "sha256": "1910ee5160e69a2b1a0fbc46e4aaa40dd6b02416cb998c48f9515b2e77091e4c",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Chau_Au_12_650x1500_Mot_hinh/preview.png"
+    }
+  },
+  "height_mm": 1500,
+  "id": "Chau_Au_12_650x1500_Mot_hinh",
+  "preview_dimensions": {
+    "height_px": 1410,
+    "width_px": 635
+  },
+  "schema": "lofihome-dxf-v1",
+  "source_filename": "Chau_Au_12_650x1500_Mot_hinh.dxf",
+  "title": "欧式12 – 650 × 1500 mm – Một hình",
+  "units": "mm",
+  "validation": {
+    "acad_version": "AC1024",
+    "cad_geometry_validated": false,
+    "check": "text_structure_only",
+    "embedded_insunits": 4,
+    "entity_records": 77
+  },
+  "width_mm": 650
+}

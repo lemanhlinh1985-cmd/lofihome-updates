@@ -29,6 +29,231 @@
     {
       "files": {
         "dxf": {
+          "bytes": 18522,
+          "filename": "Bien_Goc_10_Doan_thang_108x34.dxf",
+          "path": "cnc-library/dxf/Bien_Goc_10_Doan_thang_108x34/Bien_Goc_10_Doan_thang_108x34.dxf",
+          "sha256": "4b0d970ca811318eaf76b17e84082f5206c100a39e80e27b58227404c051c945",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Bien_Goc_10_Doan_thang_108x34/Bien_Goc_10_Doan_thang_108x34.dxf"
+        },
+        "preview": {
+          "bytes": 5675,
+          "filename": "preview.png",
+          "path": "cnc-library/dxf/Bien_Goc_10_Doan_thang_108x34/preview.png",
+          "sha256": "0c8464bffdc855b2d78b4bbe58c62e709debc7a40dccfe8c7ff595b6f016fca1",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Bien_Goc_10_Doan_thang_108x34/preview.png"
+        }
+      },
+      "height_mm": 34,
+      "id": "Bien_Goc_10_Doan_thang_108x34",
+      "metadata_path": "cnc-library/dxf/Bien_Goc_10_Doan_thang_108x34/metadata.json",
+      "metadata_sha256": "71f0b7d3bc3d84213881ffed5c3847ad2b0c7875c2482a20b58d377c2a18b663",
+      "title": "边角10 – Viền hồi văn, đoạn thẳng 108 × 34 mm",
+      "units": "mm",
+      "width_mm": 108
+    },
+    {
+      "files": {
+        "dxf": {
+          "bytes": 18393,
+          "filename": "Bien_Goc_10_Goc_90_67x67.dxf",
+          "path": "cnc-library/dxf/Bien_Goc_10_Goc_90_67x67/Bien_Goc_10_Goc_90_67x67.dxf",
+          "sha256": "4548e2b2432806f1b73f1ded76879ebcc866dfbd6e261aec474d28504c980297",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Bien_Goc_10_Goc_90_67x67/Bien_Goc_10_Goc_90_67x67.dxf"
+        },
+        "preview": {
+          "bytes": 27445,
+          "filename": "preview.png",
+          "path": "cnc-library/dxf/Bien_Goc_10_Goc_90_67x67/preview.png",
+          "sha256": "bd32c35586335bfbeb68cb4afc9d0035ef9de7ad5ccd48087cd162a22ac5ed74",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Bien_Goc_10_Goc_90_67x67/preview.png"
+        }
+      },
+      "height_mm": 67,
+      "id": "Bien_Goc_10_Goc_90_67x67",
+      "metadata_path": "cnc-library/dxf/Bien_Goc_10_Goc_90_67x67/metadata.json",
+      "metadata_sha256": "3c409594731373329a758d076b5fb0ea30954c257e026a49c72e87b9105838fa",
+      "title": "边角10 – Viền hồi văn, góc 90° 67 × 67 mm, rộng 34 mm",
+      "units": "mm",
+      "width_mm": 67
+    },
+    {
+      "files": {
+        "dxf": {
+          "bytes": 90176,
+          "filename": "Chau_Au_118_300x300_Mot_hinh.dxf",
+          "path": "cnc-library/dxf/Chau_Au_118_300x300_Mot_hinh/Chau_Au_118_300x300_Mot_hinh.dxf",
+          "sha256": "bb526678c59f673d75c981e8196e67772f76331ef5b396cd1d6d379519e5c3a5",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Chau_Au_118_300x300_Mot_hinh/Chau_Au_118_300x300_Mot_hinh.dxf"
+        },
+        "preview": {
+          "bytes": 420653,
+          "filename": "preview.png",
+          "path": "cnc-library/dxf/Chau_Au_118_300x300_Mot_hinh/preview.png",
+          "sha256": "f6ced3ed64dc64fc70178156ea371f2f140057cf85f127ba07c8003754ea4ead",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Chau_Au_118_300x300_Mot_hinh/preview.png"
+        }
+      },
+      "height_mm": 300,
+      "id": "Chau_Au_118_300x300_Mot_hinh",
+      "metadata_path": "cnc-library/dxf/Chau_Au_118_300x300_Mot_hinh/metadata.json",
+      "metadata_sha256": "b4752152c453e8eac43aced02c4a8787b0755ab888c5c7818a6a4694432825c4",
+      "title": "欧式118 – 300 × 300 mm – Một hình",
+      "units": "mm",
+      "width_mm": 300
+    },
+    {
+      "files": {
+        "dxf": {
+          "bytes": 61155,
+          "filename": "Chau_Au_119_650x1500_Mot_hinh.dxf",
+          "path": "cnc-library/dxf/Chau_Au_119_650x1500_Mot_hinh/Chau_Au_119_650x1500_Mot_hinh.dxf",
+          "sha256": "c0b1b3bb5a53bbbd060862978ad5491b75d812aa8f731874bb6362ef64b8b02e",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Chau_Au_119_650x1500_Mot_hinh/Chau_Au_119_650x1500_Mot_hinh.dxf"
+        },
+        "preview": {
+          "bytes": 325444,
+          "filename": "preview.png",
+          "path": "cnc-library/dxf/Chau_Au_119_650x1500_Mot_hinh/preview.png",
+          "sha256": "65c8dc3242d910ea68c9580c3ea9e02b66adc1d694842bc06ddeb13b6c89de81",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Chau_Au_119_650x1500_Mot_hinh/preview.png"
+        }
+      },
+      "height_mm": 1500,
+      "id": "Chau_Au_119_650x1500_Mot_hinh",
+      "metadata_path": "cnc-library/dxf/Chau_Au_119_650x1500_Mot_hinh/metadata.json",
+      "metadata_sha256": "cf5a3fba3f8b898bb26a08483cd7bfb941c3cb042de8d50f2acb948c9ed143be",
+      "title": "欧式119 – 650 × 1500 mm – Một hình",
+      "units": "mm",
+      "width_mm": 650
+    },
+    {
+      "files": {
+        "dxf": {
+          "bytes": 202744,
+          "filename": "Chau_Au_120_650x1500_Mot_hinh.dxf",
+          "path": "cnc-library/dxf/Chau_Au_120_650x1500_Mot_hinh/Chau_Au_120_650x1500_Mot_hinh.dxf",
+          "sha256": "18de8a2cc25c39f7c3cf7b1254cdfd56f849142fdc7e69f17e7f1394f6188ab0",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Chau_Au_120_650x1500_Mot_hinh/Chau_Au_120_650x1500_Mot_hinh.dxf"
+        },
+        "preview": {
+          "bytes": 494253,
+          "filename": "preview.png",
+          "path": "cnc-library/dxf/Chau_Au_120_650x1500_Mot_hinh/preview.png",
+          "sha256": "d281418a27f331d9dbf6257ed5773eac47f0533aeedd1db4b25b34a10c10bfe2",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Chau_Au_120_650x1500_Mot_hinh/preview.png"
+        }
+      },
+      "height_mm": 1500,
+      "id": "Chau_Au_120_650x1500_Mot_hinh",
+      "metadata_path": "cnc-library/dxf/Chau_Au_120_650x1500_Mot_hinh/metadata.json",
+      "metadata_sha256": "4da127e4e5f21913c514de0b113cba7c1f36f074a0c761420be57b27a008b69c",
+      "title": "欧式120 – 650 × 1500 mm – Một hình",
+      "units": "mm",
+      "width_mm": 650
+    },
+    {
+      "files": {
+        "dxf": {
+          "bytes": 124427,
+          "filename": "Chau_Au_128_300x300_Mot_hinh.dxf",
+          "path": "cnc-library/dxf/Chau_Au_128_300x300_Mot_hinh/Chau_Au_128_300x300_Mot_hinh.dxf",
+          "sha256": "e7f3e0e5d92bc21734dc302b3529049665ef494c340ae112a2e80c41dd103984",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Chau_Au_128_300x300_Mot_hinh/Chau_Au_128_300x300_Mot_hinh.dxf"
+        },
+        "preview": {
+          "bytes": 429791,
+          "filename": "preview.png",
+          "path": "cnc-library/dxf/Chau_Au_128_300x300_Mot_hinh/preview.png",
+          "sha256": "98567969450627d9bd84201bf811aa5e974ebc3a3889e1182a5e93e176e3807d",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Chau_Au_128_300x300_Mot_hinh/preview.png"
+        }
+      },
+      "height_mm": 300,
+      "id": "Chau_Au_128_300x300_Mot_hinh",
+      "metadata_path": "cnc-library/dxf/Chau_Au_128_300x300_Mot_hinh/metadata.json",
+      "metadata_sha256": "a9e0446cb81fcc9d447e71bc0a453804327a83bfac2d009ef3b2a1d05921ef82",
+      "title": "欧式128 – 300 × 300 mm – Một hình",
+      "units": "mm",
+      "width_mm": 300
+    },
+    {
+      "files": {
+        "dxf": {
+          "bytes": 111753,
+          "filename": "Chau_Au_12_650x1500_Mot_hinh.dxf",
+          "path": "cnc-library/dxf/Chau_Au_12_650x1500_Mot_hinh/Chau_Au_12_650x1500_Mot_hinh.dxf",
+          "sha256": "ce85a38f4e3087fcba7d85dfb83da587db54106730cc143915a3add5cdc71dad",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Chau_Au_12_650x1500_Mot_hinh/Chau_Au_12_650x1500_Mot_hinh.dxf"
+        },
+        "preview": {
+          "bytes": 256349,
+          "filename": "preview.png",
+          "path": "cnc-library/dxf/Chau_Au_12_650x1500_Mot_hinh/preview.png",
+          "sha256": "1910ee5160e69a2b1a0fbc46e4aaa40dd6b02416cb998c48f9515b2e77091e4c",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Chau_Au_12_650x1500_Mot_hinh/preview.png"
+        }
+      },
+      "height_mm": 1500,
+      "id": "Chau_Au_12_650x1500_Mot_hinh",
+      "metadata_path": "cnc-library/dxf/Chau_Au_12_650x1500_Mot_hinh/metadata.json",
+      "metadata_sha256": "70138e8e6f0716a19d4284205ca54a9b4389b0463868282a0761d41e978845d0",
+      "title": "欧式12 – 650 × 1500 mm – Một hình",
+      "units": "mm",
+      "width_mm": 650
+    },
+    {
+      "files": {
+        "dxf": {
+          "bytes": 105224,
+          "filename": "Chau_Au_137_650x1500_Mot_hinh.dxf",
+          "path": "cnc-library/dxf/Chau_Au_137_650x1500_Mot_hinh/Chau_Au_137_650x1500_Mot_hinh.dxf",
+          "sha256": "802846a1da1b284a9cb6f7ecc9409b6803e432ae1debd269c594e519eff7a13c",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Chau_Au_137_650x1500_Mot_hinh/Chau_Au_137_650x1500_Mot_hinh.dxf"
+        },
+        "preview": {
+          "bytes": 336726,
+          "filename": "preview.png",
+          "path": "cnc-library/dxf/Chau_Au_137_650x1500_Mot_hinh/preview.png",
+          "sha256": "e45e7519a57dc975d228162439b32ea6078b8ec49242139618ccaf0923cf190b",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Chau_Au_137_650x1500_Mot_hinh/preview.png"
+        }
+      },
+      "height_mm": 1500,
+      "id": "Chau_Au_137_650x1500_Mot_hinh",
+      "metadata_path": "cnc-library/dxf/Chau_Au_137_650x1500_Mot_hinh/metadata.json",
+      "metadata_sha256": "7bdfe01167950198d88a12632ec76eb7804e7b178a1d232ad58d6b7cbe8b9466",
+      "title": "欧式137 – 650 × 1500 mm – Một hình",
+      "units": "mm",
+      "width_mm": 650
+    },
+    {
+      "files": {
+        "dxf": {
+          "bytes": 45789,
+          "filename": "Chau_Au_60_300x300_Mot_hinh.dxf",
+          "path": "cnc-library/dxf/Chau_Au_60_300x300_Mot_hinh/Chau_Au_60_300x300_Mot_hinh.dxf",
+          "sha256": "67c57f7217b11b658f96929b990295f702d8727e35e1e6ca5aa3e22c62bead3c",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Chau_Au_60_300x300_Mot_hinh/Chau_Au_60_300x300_Mot_hinh.dxf"
+        },
+        "preview": {
+          "bytes": 304691,
+          "filename": "preview.png",
+          "path": "cnc-library/dxf/Chau_Au_60_300x300_Mot_hinh/preview.png",
+          "sha256": "9a5b8b3b94e3dbb8203722de0c9ffad9d76af03c728d3ad8fc5cb7b7b00a4821",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Chau_Au_60_300x300_Mot_hinh/preview.png"
+        }
+      },
+      "height_mm": 300,
+      "id": "Chau_Au_60_300x300_Mot_hinh",
+      "metadata_path": "cnc-library/dxf/Chau_Au_60_300x300_Mot_hinh/metadata.json",
+      "metadata_sha256": "c406fd1f9eb8d6ca176063c6d4ed70a6a46a0f137da7709560fc7eab598366d0",
+      "title": "欧式60 – 300 × 300 mm – Một hình",
+      "units": "mm",
+      "width_mm": 300
+    },
+    {
+      "files": {
+        "dxf": {
           "bytes": 1247068,
           "filename": "L-016.dxf",
           "path": "cnc-library/dxf/L-016/L-016.dxf",
@@ -275,6 +500,31 @@
       "title": "中式91 – 650 × 1500 mm – Một hình",
       "units": "mm",
       "width_mm": 650.0
+    },
+    {
+      "files": {
+        "dxf": {
+          "bytes": 58861,
+          "filename": "Trung_Hoa_93_650x1500_Mot_hinh.dxf",
+          "path": "cnc-library/dxf/Trung_Hoa_93_650x1500_Mot_hinh/Trung_Hoa_93_650x1500_Mot_hinh.dxf",
+          "sha256": "0f315435af6cd6898790acad1e7173f535993fb7b9c130484ffb204a62f36ca5",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Trung_Hoa_93_650x1500_Mot_hinh/Trung_Hoa_93_650x1500_Mot_hinh.dxf"
+        },
+        "preview": {
+          "bytes": 421887,
+          "filename": "preview.png",
+          "path": "cnc-library/dxf/Trung_Hoa_93_650x1500_Mot_hinh/preview.png",
+          "sha256": "899c181e0fb24a42875dd78293ad2b38b568043f300e49c56ed1bfd47a2f84b2",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Trung_Hoa_93_650x1500_Mot_hinh/preview.png"
+        }
+      },
+      "height_mm": 1500,
+      "id": "Trung_Hoa_93_650x1500_Mot_hinh",
+      "metadata_path": "cnc-library/dxf/Trung_Hoa_93_650x1500_Mot_hinh/metadata.json",
+      "metadata_sha256": "074f76b18e9675514848954d3dd7cc98102646eae235f41fcdf7fea256de6685",
+      "title": "中式93 – 650 × 1500 mm – Một hình",
+      "units": "mm",
+      "width_mm": 650
     },
     {
       "files": {
