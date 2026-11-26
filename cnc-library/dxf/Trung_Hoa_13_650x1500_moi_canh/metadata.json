@@ -1,0 +1,36 @@
+{
+  "files": {
+    "dxf": {
+      "bytes": 209515,
+      "filename": "Trung_Hoa_13_650x1500_moi_canh.dxf",
+      "path": "cnc-library/dxf/Trung_Hoa_13_650x1500_moi_canh/Trung_Hoa_13_650x1500_moi_canh.dxf",
+      "sha256": "cf6bd281dded1ae17ccf5748922b38c8a6cec285b9db9b7d803bbec43b671548",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Trung_Hoa_13_650x1500_moi_canh/Trung_Hoa_13_650x1500_moi_canh.dxf"
+    },
+    "preview": {
+      "bytes": 637328,
+      "filename": "preview.png",
+      "path": "cnc-library/dxf/Trung_Hoa_13_650x1500_moi_canh/preview.png",
+      "sha256": "c1412211f4afa8ee8697f097303fdd2655c11e06e01340bc050bcae91722be64",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Trung_Hoa_13_650x1500_moi_canh/preview.png"
+    }
+  },
+  "height_mm": 1500.0,
+  "id": "Trung_Hoa_13_650x1500_moi_canh",
+  "preview_dimensions": {
+    "height_px": 1410,
+    "width_px": 1301
+  },
+  "schema": "lofihome-dxf-v1",
+  "source_filename": "Trung_Hoa_13_650x1500_moi_canh.dxf",
+  "title": "中式13 – Hai cánh, mỗi cánh 650 × 1500 mm",
+  "units": "mm",
+  "validation": {
+    "acad_version": "AC1024",
+    "cad_geometry_validated": false,
+    "check": "text_structure_only",
+    "embedded_insunits": 4,
+    "entity_records": 204
+  },
+  "width_mm": 1379.89033
+}

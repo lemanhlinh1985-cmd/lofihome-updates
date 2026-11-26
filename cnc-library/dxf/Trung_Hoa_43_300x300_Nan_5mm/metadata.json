@@ -1,0 +1,36 @@
+{
+  "files": {
+    "dxf": {
+      "bytes": 71004,
+      "filename": "Trung_Hoa_43_300x300_Nan_5mm.dxf",
+      "path": "cnc-library/dxf/Trung_Hoa_43_300x300_Nan_5mm/Trung_Hoa_43_300x300_Nan_5mm.dxf",
+      "sha256": "272ae7a47478ae9a020cad30b5ab2c9b20fa737a093a00cdeea84db04e093dc4",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Trung_Hoa_43_300x300_Nan_5mm/Trung_Hoa_43_300x300_Nan_5mm.dxf"
+    },
+    "preview": {
+      "bytes": 140805,
+      "filename": "preview.png",
+      "path": "cnc-library/dxf/Trung_Hoa_43_300x300_Nan_5mm/preview.png",
+      "sha256": "76b635732efe5038ac8a750df1be2ac2438f86a3be8f6bb2b51dd5be87a47bfd",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Trung_Hoa_43_300x300_Nan_5mm/preview.png"
+    }
+  },
+  "height_mm": 300.0,
+  "id": "Trung_Hoa_43_300x300_Nan_5mm",
+  "preview_dimensions": {
+    "height_px": 1350,
+    "width_px": 1350
+  },
+  "schema": "lofihome-dxf-v1",
+  "source_filename": "Trung_Hoa_43_300x300_Nan_5mm.dxf",
+  "title": "中式43 – Họa tiết tròn 300 mm – Nan tối thiểu 5 mm",
+  "units": "mm",
+  "validation": {
+    "acad_version": "AC1024",
+    "cad_geometry_validated": false,
+    "check": "text_structure_only",
+    "embedded_insunits": 4,
+    "entity_records": 222
+  },
+  "width_mm": 300.0
+}

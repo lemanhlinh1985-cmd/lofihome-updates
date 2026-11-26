@@ -54,6 +54,131 @@
     {
       "files": {
         "dxf": {
+          "bytes": 61045,
+          "filename": "Trung_Hoa_130_650x1500_moi_canh.dxf",
+          "path": "cnc-library/dxf/Trung_Hoa_130_650x1500_moi_canh/Trung_Hoa_130_650x1500_moi_canh.dxf",
+          "sha256": "ab09cfc597bb664b6e31011996c707be482d82128b69a66ae0b5cc544f2021b4",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Trung_Hoa_130_650x1500_moi_canh/Trung_Hoa_130_650x1500_moi_canh.dxf"
+        },
+        "preview": {
+          "bytes": 107441,
+          "filename": "preview.png",
+          "path": "cnc-library/dxf/Trung_Hoa_130_650x1500_moi_canh/preview.png",
+          "sha256": "0b89aa270c692705085be5096dc9a69c3e673012bce79131958e64aa5374518d",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Trung_Hoa_130_650x1500_moi_canh/preview.png"
+        }
+      },
+      "height_mm": 1500.0,
+      "id": "Trung_Hoa_130_650x1500_moi_canh",
+      "metadata_path": "cnc-library/dxf/Trung_Hoa_130_650x1500_moi_canh/metadata.json",
+      "metadata_sha256": "b60a7f0e2b89d9ba48759403f2a64b140c3eca049750b46408afbc410d9fa681",
+      "title": "中式130 – Hai cánh, mỗi cánh 650 × 1500 mm",
+      "units": "mm",
+      "width_mm": 1418.884474
+    },
+    {
+      "files": {
+        "dxf": {
+          "bytes": 34094,
+          "filename": "Trung_Hoa_131_Hoa_tiet_chen_300x300.dxf",
+          "path": "cnc-library/dxf/Trung_Hoa_131_Hoa_tiet_chen_300x300/Trung_Hoa_131_Hoa_tiet_chen_300x300.dxf",
+          "sha256": "ac5691d6f83a43fbaa06e7a2ae1e9938eb50e63b64c63541e99bf74de3906fc7",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Trung_Hoa_131_Hoa_tiet_chen_300x300/Trung_Hoa_131_Hoa_tiet_chen_300x300.dxf"
+        },
+        "preview": {
+          "bytes": 53628,
+          "filename": "preview.png",
+          "path": "cnc-library/dxf/Trung_Hoa_131_Hoa_tiet_chen_300x300/preview.png",
+          "sha256": "5acf4a2d92dbacde0adb898cf6faa2bb7c5cad25fe397f595e17eafb7af2ce31",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Trung_Hoa_131_Hoa_tiet_chen_300x300/preview.png"
+        }
+      },
+      "height_mm": 300.0,
+      "id": "Trung_Hoa_131_Hoa_tiet_chen_300x300",
+      "metadata_path": "cnc-library/dxf/Trung_Hoa_131_Hoa_tiet_chen_300x300/metadata.json",
+      "metadata_sha256": "0536c3573768c9cbf94f16bdef494ce2e5d7b6ea3559b0917b8b72e2b26c6a8e",
+      "title": "中式131 – Họa tiết chèn bát giác 300 × 300 mm",
+      "units": "mm",
+      "width_mm": 300.0
+    },
+    {
+      "files": {
+        "dxf": {
+          "bytes": 32548,
+          "filename": "Trung_Hoa_136_650x1500_Hoi_van_deu.dxf",
+          "path": "cnc-library/dxf/Trung_Hoa_136_650x1500_Hoi_van_deu/Trung_Hoa_136_650x1500_Hoi_van_deu.dxf",
+          "sha256": "ff9fb2457538e34555f2ca416799d406b0bb16b5af9c9204068f84791d5ccc85",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Trung_Hoa_136_650x1500_Hoi_van_deu/Trung_Hoa_136_650x1500_Hoi_van_deu.dxf"
+        },
+        "preview": {
+          "bytes": 22636,
+          "filename": "preview.png",
+          "path": "cnc-library/dxf/Trung_Hoa_136_650x1500_Hoi_van_deu/preview.png",
+          "sha256": "fd830dcfc668651ebc17067fcbcc6559d1b1411da6abeadaccc540bac69454b0",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Trung_Hoa_136_650x1500_Hoi_van_deu/preview.png"
+        }
+      },
+      "height_mm": 1500.0,
+      "id": "Trung_Hoa_136_650x1500_Hoi_van_deu",
+      "metadata_path": "cnc-library/dxf/Trung_Hoa_136_650x1500_Hoi_van_deu/metadata.json",
+      "metadata_sha256": "950cb5a42fde9863055085ad40403a6a973cb9a09af284c71e923accaaaa56f0",
+      "title": "中式136 – Hồi văn đều – 650 × 1500 mm",
+      "units": "mm",
+      "width_mm": 650.0
+    },
+    {
+      "files": {
+        "dxf": {
+          "bytes": 209515,
+          "filename": "Trung_Hoa_13_650x1500_moi_canh.dxf",
+          "path": "cnc-library/dxf/Trung_Hoa_13_650x1500_moi_canh/Trung_Hoa_13_650x1500_moi_canh.dxf",
+          "sha256": "cf6bd281dded1ae17ccf5748922b38c8a6cec285b9db9b7d803bbec43b671548",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Trung_Hoa_13_650x1500_moi_canh/Trung_Hoa_13_650x1500_moi_canh.dxf"
+        },
+        "preview": {
+          "bytes": 637328,
+          "filename": "preview.png",
+          "path": "cnc-library/dxf/Trung_Hoa_13_650x1500_moi_canh/preview.png",
+          "sha256": "c1412211f4afa8ee8697f097303fdd2655c11e06e01340bc050bcae91722be64",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Trung_Hoa_13_650x1500_moi_canh/preview.png"
+        }
+      },
+      "height_mm": 1500.0,
+      "id": "Trung_Hoa_13_650x1500_moi_canh",
+      "metadata_path": "cnc-library/dxf/Trung_Hoa_13_650x1500_moi_canh/metadata.json",
+      "metadata_sha256": "7780ddec5ff0490e9c31f7d4ff4e3aa59959ffc4ce044782e5ef8970186a4d9d",
+      "title": "中式13 – Hai cánh, mỗi cánh 650 × 1500 mm",
+      "units": "mm",
+      "width_mm": 1379.89033
+    },
+    {
+      "files": {
+        "dxf": {
+          "bytes": 71004,
+          "filename": "Trung_Hoa_43_300x300_Nan_5mm.dxf",
+          "path": "cnc-library/dxf/Trung_Hoa_43_300x300_Nan_5mm/Trung_Hoa_43_300x300_Nan_5mm.dxf",
+          "sha256": "272ae7a47478ae9a020cad30b5ab2c9b20fa737a093a00cdeea84db04e093dc4",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Trung_Hoa_43_300x300_Nan_5mm/Trung_Hoa_43_300x300_Nan_5mm.dxf"
+        },
+        "preview": {
+          "bytes": 140805,
+          "filename": "preview.png",
+          "path": "cnc-library/dxf/Trung_Hoa_43_300x300_Nan_5mm/preview.png",
+          "sha256": "76b635732efe5038ac8a750df1be2ac2438f86a3be8f6bb2b51dd5be87a47bfd",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Trung_Hoa_43_300x300_Nan_5mm/preview.png"
+        }
+      },
+      "height_mm": 300.0,
+      "id": "Trung_Hoa_43_300x300_Nan_5mm",
+      "metadata_path": "cnc-library/dxf/Trung_Hoa_43_300x300_Nan_5mm/metadata.json",
+      "metadata_sha256": "eff46238d7f405f2d6ce87f3bde86d44ff46d8db68b21fec8e4de3baf33c676e",
+      "title": "中式43 – Họa tiết tròn 300 mm – Nan tối thiểu 5 mm",
+      "units": "mm",
+      "width_mm": 300.0
+    },
+    {
+      "files": {
+        "dxf": {
           "bytes": 624740,
           "filename": "Trung_Hoa_82_CNC.dxf",
           "path": "cnc-library/dxf/Trung_Hoa_82_CNC/Trung_Hoa_82_CNC.dxf",

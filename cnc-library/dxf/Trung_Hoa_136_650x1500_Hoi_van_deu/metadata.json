@@ -1,0 +1,36 @@
+{
+  "files": {
+    "dxf": {
+      "bytes": 32548,
+      "filename": "Trung_Hoa_136_650x1500_Hoi_van_deu.dxf",
+      "path": "cnc-library/dxf/Trung_Hoa_136_650x1500_Hoi_van_deu/Trung_Hoa_136_650x1500_Hoi_van_deu.dxf",
+      "sha256": "ff9fb2457538e34555f2ca416799d406b0bb16b5af9c9204068f84791d5ccc85",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Trung_Hoa_136_650x1500_Hoi_van_deu/Trung_Hoa_136_650x1500_Hoi_van_deu.dxf"
+    },
+    "preview": {
+      "bytes": 22636,
+      "filename": "preview.png",
+      "path": "cnc-library/dxf/Trung_Hoa_136_650x1500_Hoi_van_deu/preview.png",
+      "sha256": "fd830dcfc668651ebc17067fcbcc6559d1b1411da6abeadaccc540bac69454b0",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Trung_Hoa_136_650x1500_Hoi_van_deu/preview.png"
+    }
+  },
+  "height_mm": 1500.0,
+  "id": "Trung_Hoa_136_650x1500_Hoi_van_deu",
+  "preview_dimensions": {
+    "height_px": 1410,
+    "width_px": 635
+  },
+  "schema": "lofihome-dxf-v1",
+  "source_filename": "Trung_Hoa_136_650x1500_Hoi_van_deu.dxf",
+  "title": "中式136 – Hồi văn đều – 650 × 1500 mm",
+  "units": "mm",
+  "validation": {
+    "acad_version": "AC1024",
+    "cad_geometry_validated": false,
+    "check": "text_structure_only",
+    "embedded_insunits": 4,
+    "entity_records": 25
+  },
+  "width_mm": 650.0
+}
