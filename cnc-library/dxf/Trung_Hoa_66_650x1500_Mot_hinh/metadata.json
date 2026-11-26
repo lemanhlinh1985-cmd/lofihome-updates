@@ -1,0 +1,36 @@
+{
+  "files": {
+    "dxf": {
+      "bytes": 53678,
+      "filename": "Trung_Hoa_66_650x1500_Mot_hinh.dxf",
+      "path": "cnc-library/dxf/Trung_Hoa_66_650x1500_Mot_hinh/Trung_Hoa_66_650x1500_Mot_hinh.dxf",
+      "sha256": "aa9eb6d6a81343637cab4fee8ba939f77845c2d89280b77d8b65600807fcf993",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Trung_Hoa_66_650x1500_Mot_hinh/Trung_Hoa_66_650x1500_Mot_hinh.dxf"
+    },
+    "preview": {
+      "bytes": 599729,
+      "filename": "preview.png",
+      "path": "cnc-library/dxf/Trung_Hoa_66_650x1500_Mot_hinh/preview.png",
+      "sha256": "e1f8f705c8c546ee91c4abe19df6ccea60b6c4b837e4460b1b6dc6f9bba06588",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Trung_Hoa_66_650x1500_Mot_hinh/preview.png"
+    }
+  },
+  "height_mm": 1500.0,
+  "id": "Trung_Hoa_66_650x1500_Mot_hinh",
+  "preview_dimensions": {
+    "height_px": 1410,
+    "width_px": 635
+  },
+  "schema": "lofihome-dxf-v1",
+  "source_filename": "Trung_Hoa_66_650x1500_Mot_hinh.dxf",
+  "title": "中式66 – 650 × 1500 mm – Một hình",
+  "units": "mm",
+  "validation": {
+    "acad_version": "AC1024",
+    "cad_geometry_validated": false,
+    "check": "text_structure_only",
+    "embedded_insunits": 4,
+    "entity_records": 110
+  },
+  "width_mm": 650.0
+}

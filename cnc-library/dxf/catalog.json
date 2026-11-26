@@ -179,6 +179,56 @@
     {
       "files": {
         "dxf": {
+          "bytes": 42145,
+          "filename": "Trung_Hoa_52_300x300_Mot_hinh.dxf",
+          "path": "cnc-library/dxf/Trung_Hoa_52_300x300_Mot_hinh/Trung_Hoa_52_300x300_Mot_hinh.dxf",
+          "sha256": "7d16efeeeecbaf0334a8bc0c35deb907376fbb0c526db05930e36531b5b8c1e2",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Trung_Hoa_52_300x300_Mot_hinh/Trung_Hoa_52_300x300_Mot_hinh.dxf"
+        },
+        "preview": {
+          "bytes": 444620,
+          "filename": "preview.png",
+          "path": "cnc-library/dxf/Trung_Hoa_52_300x300_Mot_hinh/preview.png",
+          "sha256": "27a3f69df1cb6953ab855896ec77e7c28b1087233b549746155e6dea284f6bf4",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Trung_Hoa_52_300x300_Mot_hinh/preview.png"
+        }
+      },
+      "height_mm": 300.0,
+      "id": "Trung_Hoa_52_300x300_Mot_hinh",
+      "metadata_path": "cnc-library/dxf/Trung_Hoa_52_300x300_Mot_hinh/metadata.json",
+      "metadata_sha256": "396b035ca6a435baf773c812fc17e5d22dfd9f29dd18a14d69cf168d3dfef742",
+      "title": "中式52 – 300 × 300 mm – Một hình",
+      "units": "mm",
+      "width_mm": 300.0
+    },
+    {
+      "files": {
+        "dxf": {
+          "bytes": 53678,
+          "filename": "Trung_Hoa_66_650x1500_Mot_hinh.dxf",
+          "path": "cnc-library/dxf/Trung_Hoa_66_650x1500_Mot_hinh/Trung_Hoa_66_650x1500_Mot_hinh.dxf",
+          "sha256": "aa9eb6d6a81343637cab4fee8ba939f77845c2d89280b77d8b65600807fcf993",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Trung_Hoa_66_650x1500_Mot_hinh/Trung_Hoa_66_650x1500_Mot_hinh.dxf"
+        },
+        "preview": {
+          "bytes": 599729,
+          "filename": "preview.png",
+          "path": "cnc-library/dxf/Trung_Hoa_66_650x1500_Mot_hinh/preview.png",
+          "sha256": "e1f8f705c8c546ee91c4abe19df6ccea60b6c4b837e4460b1b6dc6f9bba06588",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Trung_Hoa_66_650x1500_Mot_hinh/preview.png"
+        }
+      },
+      "height_mm": 1500.0,
+      "id": "Trung_Hoa_66_650x1500_Mot_hinh",
+      "metadata_path": "cnc-library/dxf/Trung_Hoa_66_650x1500_Mot_hinh/metadata.json",
+      "metadata_sha256": "001f46d3076bd7d3f552b1a8b10c7c0eb42787f7364673778a2e7d7825b56071",
+      "title": "中式66 – 650 × 1500 mm – Một hình",
+      "units": "mm",
+      "width_mm": 650.0
+    },
+    {
+      "files": {
+        "dxf": {
           "bytes": 624740,
           "filename": "Trung_Hoa_82_CNC.dxf",
           "path": "cnc-library/dxf/Trung_Hoa_82_CNC/Trung_Hoa_82_CNC.dxf",
@@ -200,6 +250,31 @@
       "title": "Trung Hoa 82 (中式82) – Hai khung hoa văn CNC",
       "units": "mm",
       "width_mm": 173.923098
+    },
+    {
+      "files": {
+        "dxf": {
+          "bytes": 92891,
+          "filename": "Trung_Hoa_91_650x1500_Mot_hinh.dxf",
+          "path": "cnc-library/dxf/Trung_Hoa_91_650x1500_Mot_hinh/Trung_Hoa_91_650x1500_Mot_hinh.dxf",
+          "sha256": "c81c80351053b5b8265160eb69965c4a076e1e1938b98b2f04c3605705207de2",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Trung_Hoa_91_650x1500_Mot_hinh/Trung_Hoa_91_650x1500_Mot_hinh.dxf"
+        },
+        "preview": {
+          "bytes": 569119,
+          "filename": "preview.png",
+          "path": "cnc-library/dxf/Trung_Hoa_91_650x1500_Mot_hinh/preview.png",
+          "sha256": "36f3b4d1bfb3aebbfc8f860885378456d8561757896440a10e136a28ecc42e07",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Trung_Hoa_91_650x1500_Mot_hinh/preview.png"
+        }
+      },
+      "height_mm": 1500.0,
+      "id": "Trung_Hoa_91_650x1500_Mot_hinh",
+      "metadata_path": "cnc-library/dxf/Trung_Hoa_91_650x1500_Mot_hinh/metadata.json",
+      "metadata_sha256": "cc07c96b39e838dfca2b1ca66bec0e267f4dd109c63ccac0aaa811f999368eab",
+      "title": "中式91 – 650 × 1500 mm – Một hình",
+      "units": "mm",
+      "width_mm": 650.0
     },
     {
       "files": {
