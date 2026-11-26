@@ -54,6 +54,31 @@
     {
       "files": {
         "dxf": {
+          "bytes": 624740,
+          "filename": "Trung_Hoa_82_CNC.dxf",
+          "path": "cnc-library/dxf/Trung_Hoa_82_CNC/Trung_Hoa_82_CNC.dxf",
+          "sha256": "978897585b27814527486465bb2bf69c325236fe38f3c8fb4cc56c5a2176067c",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Trung_Hoa_82_CNC/Trung_Hoa_82_CNC.dxf"
+        },
+        "preview": {
+          "bytes": 778136,
+          "filename": "preview.png",
+          "path": "cnc-library/dxf/Trung_Hoa_82_CNC/preview.png",
+          "sha256": "ba8a4bf79d05c0cd0a59f04ce0e6009e66903003393f5d4e059e682cc862d83f",
+          "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Trung_Hoa_82_CNC/preview.png"
+        }
+      },
+      "height_mm": 160.278802,
+      "id": "Trung_Hoa_82_CNC",
+      "metadata_path": "cnc-library/dxf/Trung_Hoa_82_CNC/metadata.json",
+      "metadata_sha256": "b879f3921880edd0b15a5e5b6715f7c4ff3312c27563dc12376679b55997aa37",
+      "title": "Trung Hoa 82 (中式82) – Hai khung hoa văn CNC",
+      "units": "mm",
+      "width_mm": 173.923098
+    },
+    {
+      "files": {
+        "dxf": {
           "bytes": 197305,
           "filename": "中式1.dxf",
           "path": "cnc-library/dxf/中式1/中式1.dxf",
