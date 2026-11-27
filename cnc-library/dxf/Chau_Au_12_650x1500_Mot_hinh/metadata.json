@@ -1,17 +1,17 @@
 {
   "files": {
     "dxf": {
-      "bytes": 111753,
+      "bytes": 307822,
       "filename": "Chau_Au_12_650x1500_Mot_hinh.dxf",
       "path": "cnc-library/dxf/Chau_Au_12_650x1500_Mot_hinh/Chau_Au_12_650x1500_Mot_hinh.dxf",
-      "sha256": "ce85a38f4e3087fcba7d85dfb83da587db54106730cc143915a3add5cdc71dad",
+      "sha256": "cf9af612eaa897a2524997ce818fd40cf9870977602382b2cac387e1f8ba0f88",
       "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Chau_Au_12_650x1500_Mot_hinh/Chau_Au_12_650x1500_Mot_hinh.dxf"
     },
     "preview": {
-      "bytes": 256349,
+      "bytes": 231168,
       "filename": "preview.png",
       "path": "cnc-library/dxf/Chau_Au_12_650x1500_Mot_hinh/preview.png",
-      "sha256": "1910ee5160e69a2b1a0fbc46e4aaa40dd6b02416cb998c48f9515b2e77091e4c",
+      "sha256": "5b3619fca055c04b9d26fa46deb01838ab608536f0990c397210e7a5bce794c7",
       "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Chau_Au_12_650x1500_Mot_hinh/preview.png"
     }
   },
@@ -23,7 +23,7 @@
   },
   "schema": "lofihome-dxf-v1",
   "source_filename": "Chau_Au_12_650x1500_Mot_hinh.dxf",
-  "title": "欧式12 – 650 × 1500 mm – Một hình",
+  "title": "欧式12 · Châu Âu 12 · Nét mượt, khung 40 mm",
   "units": "mm",
   "validation": {
     "acad_version": "AC1024",

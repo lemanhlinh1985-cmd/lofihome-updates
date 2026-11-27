@@ -1,36 +1,36 @@
 {
   "files": {
     "dxf": {
-      "bytes": 202744,
+      "bytes": 542758,
       "filename": "Chau_Au_120_650x1500_Mot_hinh.dxf",
       "path": "cnc-library/dxf/Chau_Au_120_650x1500_Mot_hinh/Chau_Au_120_650x1500_Mot_hinh.dxf",
-      "sha256": "18de8a2cc25c39f7c3cf7b1254cdfd56f849142fdc7e69f17e7f1394f6188ab0",
+      "sha256": "1236a852ab9eb62982dd11ba8bd87891f21f0eacc8162b4c9841c91ddec05632",
       "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Chau_Au_120_650x1500_Mot_hinh/Chau_Au_120_650x1500_Mot_hinh.dxf"
     },
     "preview": {
-      "bytes": 494253,
+      "bytes": 478113,
       "filename": "preview.png",
       "path": "cnc-library/dxf/Chau_Au_120_650x1500_Mot_hinh/preview.png",
-      "sha256": "d281418a27f331d9dbf6257ed5773eac47f0533aeedd1db4b25b34a10c10bfe2",
+      "sha256": "2dd0486e4da241f6ed05b29749b6b8ba6c322eef1c9dd701a34e78c9d61456bc",
       "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Chau_Au_120_650x1500_Mot_hinh/preview.png"
     }
   },
   "height_mm": 1500,
   "id": "Chau_Au_120_650x1500_Mot_hinh",
   "preview_dimensions": {
-    "height_px": 1410,
-    "width_px": 635
+    "height_px": 1520,
+    "width_px": 670
   },
   "schema": "lofihome-dxf-v1",
   "source_filename": "Chau_Au_120_650x1500_Mot_hinh.dxf",
-  "title": "欧式120 – 650 × 1500 mm – Một hình",
+  "title": "欧式120 · Châu Âu 120 · Hai nhánh đỡ lá, đầu lá bo tròn",
   "units": "mm",
   "validation": {
-    "acad_version": "AC1024",
+    "acad_version": null,
     "cad_geometry_validated": false,
     "check": "text_structure_only",
     "embedded_insunits": 4,
-    "entity_records": 215
+    "entity_records": 259
   },
   "width_mm": 650
 }

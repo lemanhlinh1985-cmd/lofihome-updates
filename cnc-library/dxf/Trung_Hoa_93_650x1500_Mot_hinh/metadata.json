@@ -1,36 +1,36 @@
 {
   "files": {
     "dxf": {
-      "bytes": 58861,
+      "bytes": 401168,
       "filename": "Trung_Hoa_93_650x1500_Mot_hinh.dxf",
       "path": "cnc-library/dxf/Trung_Hoa_93_650x1500_Mot_hinh/Trung_Hoa_93_650x1500_Mot_hinh.dxf",
-      "sha256": "0f315435af6cd6898790acad1e7173f535993fb7b9c130484ffb204a62f36ca5",
+      "sha256": "4982b3df32c7822c339974d29f30975969e4f970aaee9091314ec01bd2672e31",
       "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Trung_Hoa_93_650x1500_Mot_hinh/Trung_Hoa_93_650x1500_Mot_hinh.dxf"
     },
     "preview": {
-      "bytes": 421887,
+      "bytes": 423314,
       "filename": "preview.png",
       "path": "cnc-library/dxf/Trung_Hoa_93_650x1500_Mot_hinh/preview.png",
-      "sha256": "899c181e0fb24a42875dd78293ad2b38b568043f300e49c56ed1bfd47a2f84b2",
+      "sha256": "d236e4e4f208fc7b8c629e2d9a73ff63ec45661e17feed7bbb8f1080fe6c7487",
       "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/cnc-library/dxf/Trung_Hoa_93_650x1500_Mot_hinh/preview.png"
     }
   },
   "height_mm": 1500,
   "id": "Trung_Hoa_93_650x1500_Mot_hinh",
   "preview_dimensions": {
-    "height_px": 1410,
-    "width_px": 635
+    "height_px": 1520,
+    "width_px": 670
   },
   "schema": "lofihome-dxf-v1",
   "source_filename": "Trung_Hoa_93_650x1500_Mot_hinh.dxf",
-  "title": "中式93 – 650 × 1500 mm – Một hình",
+  "title": "中式93 · Trung Hoa 93 · Cỡ hoa văn 280 mm, nét mượt",
   "units": "mm",
   "validation": {
-    "acad_version": "AC1024",
+    "acad_version": null,
     "cad_geometry_validated": false,
     "check": "text_structure_only",
     "embedded_insunits": 4,
-    "entity_records": 97
+    "entity_records": 669
   },
   "width_mm": 650
 }
