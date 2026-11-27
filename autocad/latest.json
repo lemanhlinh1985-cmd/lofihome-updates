@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "product": "LOFIHOME.AutoCAD",
-  "version": "1.0.3",
-  "notes": "Hình học đặc biệt · Khung hai vùng. Tạo, đọc và cập nhật khung trong bản vẽ AutoCAD. Hỗ trợ key LF1 cũ và mới.",
+  "version": "1.0.4",
+  "notes": "Bổ sung 7 mẫu Hình học, 4 mẫu Họa tiết chèn và bộ Chạy viền Biên Góc 10.",
   "files": [
     {
       "path": "LOFIHOME.AutoCAD.exe",
@@ -34,8 +34,8 @@
     {
       "path": "autocad_version.json",
       "size": 253,
-      "sha256": "51fa134b6cf49f1b981002e26c433cf71ec411535a4cc6eb6b16eda48481cfac",
-      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.3/files/autocad_version.json"
+      "sha256": "d8fdfaf518a6a458fd0708ea7236202535594636952802c2ce727b67a81ea599",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/autocad_version.json"
     },
     {
       "path": "cnc_source_198/SOURCE_NOTICE.txt",
@@ -43,9 +43,22 @@
       "sha256": "a8de85006374c5b905732be9ef37a3f9cee94b867e3cb973b4c9e60060a06458"
     },
     {
+      "path": "cnc_source_198/borders/bien_goc_10.json",
+      "size": 3023,
+      "sha256": "ff7bd472e7fe6133fa8261f30dcda8b95c7508678705a285f9be753ad6747080",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/borders/bien_goc_10.json"
+    },
+    {
+      "path": "cnc_source_198/borders/bien_goc_10.png",
+      "size": 10869,
+      "sha256": "9b101552aef58e0dcc99b37afd053069c6f8dc034c39229fe1f8a4fa3074f8b5",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/borders/bien_goc_10.png"
+    },
+    {
       "path": "cnc_source_198/catalog.json",
-      "size": 143775,
-      "sha256": "093a2c6796eeaf41e889c7f3268fda972901dc5054b1f86b610cc1d391f03ec4"
+      "size": 155533,
+      "sha256": "fffb9273f40daf0237eff39317ac6e2891028575f4466f6e8053c8ba37963883",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/catalog.json"
     },
     {
       "path": "cnc_source_198/cutout_patterns/duc_001.json",
@@ -618,6 +631,42 @@
       "sha256": "38b222780d7d81ebd09e6831fb57ab74d2c26bdadd7fe2134220c5aaf794a7ee"
     },
     {
+      "path": "cnc_source_198/inserts/dvd24_oushi118.json",
+      "size": 234692,
+      "sha256": "31112b5b31a1112a8e1f044e63e1137aa528aaf397ca9df8e7bd72915f21afda",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/inserts/dvd24_oushi118.json"
+    },
+    {
+      "path": "cnc_source_198/inserts/dvd24_oushi118.png",
+      "size": 184348,
+      "sha256": "3c4fc5b0ea7968f1e1f726a4a2155fd02e1903083646667643c2a6eb465b0871",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/inserts/dvd24_oushi118.png"
+    },
+    {
+      "path": "cnc_source_198/inserts/dvd24_oushi128.json",
+      "size": 230227,
+      "sha256": "03124ce201ceab63df08fedc812d1d9ce50df4ad6b62be8af2029dae0e9b63f4",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/inserts/dvd24_oushi128.json"
+    },
+    {
+      "path": "cnc_source_198/inserts/dvd24_oushi128.png",
+      "size": 182879,
+      "sha256": "e8a611b5bcb8c4675822de21c23f2baff880fccef38f43457e3218d3a42d690a",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/inserts/dvd24_oushi128.png"
+    },
+    {
+      "path": "cnc_source_198/inserts/dvd24_oushi60.json",
+      "size": 123155,
+      "sha256": "d1d1a397b6a9029f8bf424e30131840bfbd404ce3ba461413303405c39e49e3f",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/inserts/dvd24_oushi60.json"
+    },
+    {
+      "path": "cnc_source_198/inserts/dvd24_oushi60.png",
+      "size": 130099,
+      "sha256": "9e8f51e6f154398387b89f188775515a0e83f640575f1173e213c57447018547",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/inserts/dvd24_oushi60.png"
+    },
+    {
       "path": "cnc_source_198/inserts/dvd24_zhongshi131.json",
       "size": 8437,
       "sha256": "ca13b1b458c0d001e082aaa4bc384d9f3a82a5f0c37c4a898b28a0a44e94d361"
@@ -636,6 +685,18 @@
       "path": "cnc_source_198/inserts/dvd24_zhongshi43.png",
       "size": 31064,
       "sha256": "175e3d3bdea255bbfc14181be9ee892dd0b25d605e11617bbaf99ad1f4555083"
+    },
+    {
+      "path": "cnc_source_198/inserts/dvd24_zhongshi52.json",
+      "size": 143531,
+      "sha256": "c7842d41f5ff6ce7c721eb70564f5688dedfd62c37eb2343e0be7be321860bed",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/inserts/dvd24_zhongshi52.json"
+    },
+    {
+      "path": "cnc_source_198/inserts/dvd24_zhongshi52.png",
+      "size": 191445,
+      "sha256": "5597aae5d82d29632f78569cdf13b92462fb9a87716c1d0ae1c395cce809091d",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/inserts/dvd24_zhongshi52.png"
     },
     {
       "path": "cnc_source_198/inserts/hinh_005.json",
@@ -1669,8 +1730,15 @@
     },
     {
       "path": "cnc_source_198/menu_layout.json",
-      "size": 7126,
-      "sha256": "cf6182da2af0eb48946bb87cdc51f7841b76e007c5a76b8828cb7beb37e482a0"
+      "size": 7448,
+      "sha256": "ba5c8d5d6748dd6f5ed907acd0a938abbffe4d306b164079efbff1b4e69edd44",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/menu_layout.json"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/borders__bien_goc_10.skp",
+      "size": 30429,
+      "sha256": "523b6d596d7f0a5aab0fb00589b330c675ce680195dbc17e85c8b25fa8583a9f",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/models_su2020/borders__bien_goc_10.skp"
     },
     {
       "path": "cnc_source_198/models_su2020/cutout_patterns__duc_001.skp",
@@ -1953,6 +2021,24 @@
       "sha256": "abcfff6472ddd71c193a12a8fb265293d5650a6658a26c4c6c72231a831052ec"
     },
     {
+      "path": "cnc_source_198/models_su2020/inserts__dvd24_oushi118.skp",
+      "size": 2364399,
+      "sha256": "1458bafcbd4403c54617d47be6ac60118c447713dcec42f2522b1848d20e2aaa",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/models_su2020/inserts__dvd24_oushi118.skp"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__dvd24_oushi128.skp",
+      "size": 2319735,
+      "sha256": "9fa9b968d0c3cde1f2aa5ce5eb8535dbe12ddf1f7962a3b751de506c02c179d1",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/models_su2020/inserts__dvd24_oushi128.skp"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__dvd24_oushi60.skp",
+      "size": 1048271,
+      "sha256": "98452aae2fdef8de0273f39b66758f39faf476fac69bf9c3023544b3342f00d7",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/models_su2020/inserts__dvd24_oushi60.skp"
+    },
+    {
       "path": "cnc_source_198/models_su2020/inserts__dvd24_zhongshi131.skp",
       "size": 75077,
       "sha256": "6b9a16060ed7161ab970bc360e39fcbe98cc4b1e2de0a955e2a324c9ac80619a"
@@ -1961,6 +2047,12 @@
       "path": "cnc_source_198/models_su2020/inserts__dvd24_zhongshi43.skp",
       "size": 722343,
       "sha256": "9daaeca7d39323ba15a5e8c2f0a2e0e0fa0edf00300597c28c94bf15690ecb6e"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__dvd24_zhongshi52.skp",
+      "size": 1240514,
+      "sha256": "8e6965d96f9e2fb55b0bcb0eebe5763234d8c36556b8400c23b6713e6d6dce1f",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/models_su2020/inserts__dvd24_zhongshi52.skp"
     },
     {
       "path": "cnc_source_198/models_su2020/inserts__hinh_005.skp",
@@ -2488,6 +2580,30 @@
       "sha256": "4b1e306f1526afd3db855b39e6bf63e5fd5bdf0c1316186a2eaeb066c58fbcdb"
     },
     {
+      "path": "cnc_source_198/models_su2020/patterns__dvd24_oushi119.skp",
+      "size": 200995,
+      "sha256": "04b7adeea59e850461cd7586c0ac06dc1ac495ffb19f3f900387757f64f08159",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/models_su2020/patterns__dvd24_oushi119.skp"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__dvd24_oushi12.skp",
+      "size": 3865660,
+      "sha256": "e9b0112e84f1fcb5f8099f016540aa23c390ca86f3583aba232533976fd9eb91",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/models_su2020/patterns__dvd24_oushi12.skp"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__dvd24_oushi120.skp",
+      "size": 6213807,
+      "sha256": "a1f930c616eda6f0430985eaf27fd9de695b24e5144bfade0f8aa808fa356c51",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/models_su2020/patterns__dvd24_oushi120.skp"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__dvd24_oushi137.skp",
+      "size": 4131767,
+      "sha256": "f9f13eba4e7c87646960d056a82bbd58d657e383ab867cc48b3ebd72da55addb",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/models_su2020/patterns__dvd24_oushi137.skp"
+    },
+    {
       "path": "cnc_source_198/models_su2020/patterns__dvd24_zhongshi1.skp",
       "size": 640369,
       "sha256": "d8563d4a787a21fd07208c5879d2ac422e4b910a837c08313bed9a45ad00de88"
@@ -2506,6 +2622,24 @@
       "path": "cnc_source_198/models_su2020/patterns__dvd24_zhongshi136.skp",
       "size": 81673,
       "sha256": "6dea134648e35de67bce46b1a0a67bc3ba3cea3e35166a0303da5d1587511bcc"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__dvd24_zhongshi66.skp",
+      "size": 150428,
+      "sha256": "2a6aa66250a711baa8f3a5855ca6396a846b82201f0031836ee174e600ce919b",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/models_su2020/patterns__dvd24_zhongshi66.skp"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__dvd24_zhongshi91.skp",
+      "size": 282023,
+      "sha256": "d7c73cc3f3b48706d5279dd149acdc52b55ffd50da3b8341a0fb2e782657ebf6",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/models_su2020/patterns__dvd24_zhongshi91.skp"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__dvd24_zhongshi93.skp",
+      "size": 4109788,
+      "sha256": "c3908697c8a851192061fa3994fc1e4dda1691221764742829423682d7ccde4d",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/models_su2020/patterns__dvd24_zhongshi93.skp"
     },
     {
       "path": "cnc_source_198/models_su2020/patterns__mau_la_kv_1.skp",
@@ -3313,6 +3447,78 @@
       "sha256": "d7116da0f7c3d3a89d2f8feb79d20a8196ab2b5355bac655675f028822e2f802"
     },
     {
+      "path": "cnc_source_198/patterns/dvd24_oushi119.json",
+      "size": 24562,
+      "sha256": "a95b6c96b299a01be02268d9fff2ee076e237ef974ef410d654ad76de6832e88",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/patterns/dvd24_oushi119.json"
+    },
+    {
+      "path": "cnc_source_198/patterns/dvd24_oushi119.png",
+      "size": 163923,
+      "sha256": "7385955ab0da7ea3e0e5909c8c92a762bd453cb3963d645116b0a021b754fda9",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/patterns/dvd24_oushi119.png"
+    },
+    {
+      "path": "cnc_source_198/patterns/dvd24_oushi119.skp",
+      "size": 200995,
+      "sha256": "04b7adeea59e850461cd7586c0ac06dc1ac495ffb19f3f900387757f64f08159",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/patterns/dvd24_oushi119.skp"
+    },
+    {
+      "path": "cnc_source_198/patterns/dvd24_oushi12.json",
+      "size": 379034,
+      "sha256": "b79cf358b6985ca0aebc1b251750a6f9d17dfd6bcf50a505cf1231c38d59dae9",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/patterns/dvd24_oushi12.json"
+    },
+    {
+      "path": "cnc_source_198/patterns/dvd24_oushi12.png",
+      "size": 121298,
+      "sha256": "bcdf85fb0ab7cc33c5c16ec622aaad4609487ef979d728b46a6c52ad9607da4b",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/patterns/dvd24_oushi12.png"
+    },
+    {
+      "path": "cnc_source_198/patterns/dvd24_oushi12.skp",
+      "size": 3865660,
+      "sha256": "e9b0112e84f1fcb5f8099f016540aa23c390ca86f3583aba232533976fd9eb91",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/patterns/dvd24_oushi12.skp"
+    },
+    {
+      "path": "cnc_source_198/patterns/dvd24_oushi120.json",
+      "size": 371816,
+      "sha256": "cb9d3bf49f6c7db3f8294cdc4ddc905506786ae2c7a5d85f8486b3e6bb6f46ef",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/patterns/dvd24_oushi120.json"
+    },
+    {
+      "path": "cnc_source_198/patterns/dvd24_oushi120.png",
+      "size": 210328,
+      "sha256": "8a9d30a3dcf0f61f50cd2b212499065c13685a2316a725a45e0fea89c75e90f6",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/patterns/dvd24_oushi120.png"
+    },
+    {
+      "path": "cnc_source_198/patterns/dvd24_oushi120.skp",
+      "size": 6213807,
+      "sha256": "a1f930c616eda6f0430985eaf27fd9de695b24e5144bfade0f8aa808fa356c51",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/patterns/dvd24_oushi120.skp"
+    },
+    {
+      "path": "cnc_source_198/patterns/dvd24_oushi137.json",
+      "size": 402716,
+      "sha256": "ad11efef22c34464d26e5a79e1dba5afdb8259732832897f1afe30982579b77b",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/patterns/dvd24_oushi137.json"
+    },
+    {
+      "path": "cnc_source_198/patterns/dvd24_oushi137.png",
+      "size": 170164,
+      "sha256": "e6a9e56a794bf4facf9fac3e2692d3a848d145d08d2784249da480f6c928208b",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/patterns/dvd24_oushi137.png"
+    },
+    {
+      "path": "cnc_source_198/patterns/dvd24_oushi137.skp",
+      "size": 4131767,
+      "sha256": "f9f13eba4e7c87646960d056a82bbd58d657e383ab867cc48b3ebd72da55addb",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/patterns/dvd24_oushi137.skp"
+    },
+    {
       "path": "cnc_source_198/patterns/dvd24_zhongshi1.json",
       "size": 71311,
       "sha256": "c79c52fe24a5ff3c4de85a34cf1d06b5f80179b1638000db92f854ddd3a89621"
@@ -3351,6 +3557,60 @@
       "path": "cnc_source_198/patterns/dvd24_zhongshi136.png",
       "size": 19601,
       "sha256": "ef7f4670a7f8530409c94ee707d5fc938cdee5feccf6a48bc11dedcd00f858d2"
+    },
+    {
+      "path": "cnc_source_198/patterns/dvd24_zhongshi66.json",
+      "size": 18191,
+      "sha256": "3e3df5a9914f2121c3df666fb1bada421653c634754cc6a8a856323d0a076ebd",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/patterns/dvd24_zhongshi66.json"
+    },
+    {
+      "path": "cnc_source_198/patterns/dvd24_zhongshi66.png",
+      "size": 291708,
+      "sha256": "55625741294b935b8cf29bcb669dedf5c96bbbe44b62f4f45e5725e4e2c47581",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/patterns/dvd24_zhongshi66.png"
+    },
+    {
+      "path": "cnc_source_198/patterns/dvd24_zhongshi66.skp",
+      "size": 150428,
+      "sha256": "2a6aa66250a711baa8f3a5855ca6396a846b82201f0031836ee174e600ce919b",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/patterns/dvd24_zhongshi66.skp"
+    },
+    {
+      "path": "cnc_source_198/patterns/dvd24_zhongshi91.json",
+      "size": 34950,
+      "sha256": "bd59a966c11c58118ee06d7f7bf038597e3219b17b2002b346eff002b5640ded",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/patterns/dvd24_zhongshi91.json"
+    },
+    {
+      "path": "cnc_source_198/patterns/dvd24_zhongshi91.png",
+      "size": 244539,
+      "sha256": "5ba69ff88ad680e0378197413c5cc6bdae127a36d0cac4c9237f7e20b8fe71a2",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/patterns/dvd24_zhongshi91.png"
+    },
+    {
+      "path": "cnc_source_198/patterns/dvd24_zhongshi91.skp",
+      "size": 282023,
+      "sha256": "d7c73cc3f3b48706d5279dd149acdc52b55ffd50da3b8341a0fb2e782657ebf6",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/patterns/dvd24_zhongshi91.skp"
+    },
+    {
+      "path": "cnc_source_198/patterns/dvd24_zhongshi93.json",
+      "size": 248521,
+      "sha256": "a5d53fde240065a36c3f4f880040050e474393c3acb759dbb608a05aef563371",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/patterns/dvd24_zhongshi93.json"
+    },
+    {
+      "path": "cnc_source_198/patterns/dvd24_zhongshi93.png",
+      "size": 316750,
+      "sha256": "9fe4130766b2323dae5c25e2b0c333fdd0a4bda2d93b432d01200c0ca741527f",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/patterns/dvd24_zhongshi93.png"
+    },
+    {
+      "path": "cnc_source_198/patterns/dvd24_zhongshi93.skp",
+      "size": 4109788,
+      "sha256": "c3908697c8a851192061fa3994fc1e4dda1691221764742829423682d7ccde4d",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/patterns/dvd24_zhongshi93.skp"
     },
     {
       "path": "cnc_source_198/patterns/khung_vien/kv_1.png",
@@ -4818,6 +5078,18 @@
       "sha256": "86642f4806022570dce8fd49cfe8a4e05578aa1a293529b13626a59b92ca0ed3"
     },
     {
+      "path": "cnc_source_198/prepared/borders__bien_goc_10.json",
+      "size": 3000,
+      "sha256": "98b8b6e867b07c63606d0924cd5126e88c1b28b38ee60e9f438192a33cd5d3b2",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/prepared/borders__bien_goc_10.json"
+    },
+    {
+      "path": "cnc_source_198/prepared/borders__bien_goc_10.svg",
+      "size": 2583,
+      "sha256": "e5b681bf2de2120567b35d69fd9c4a0ea560cab9c5a20b3f50e0c208916d8273",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/prepared/borders__bien_goc_10.svg"
+    },
+    {
       "path": "cnc_source_198/prepared/cutout_patterns__duc_001.json",
       "size": 6324,
       "sha256": "8b79a1073e20cf5dc139d1586c76653ed4f78e4a43eca7b065e4b6dc471359c1"
@@ -5378,6 +5650,42 @@
       "sha256": "3f58f5e2af4dea52f3c009c5a2b17b6cd1f8b729e686b01089893403990c6e23"
     },
     {
+      "path": "cnc_source_198/prepared/inserts__dvd24_oushi118.json",
+      "size": 234657,
+      "sha256": "8bc9dc70ce76c6c56a3a4f2f3d4255ff60120176788580d0bd9a0675a95152cb",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/prepared/inserts__dvd24_oushi118.json"
+    },
+    {
+      "path": "cnc_source_198/prepared/inserts__dvd24_oushi118.svg",
+      "size": 228881,
+      "sha256": "60cf290ae54a9849c11a205d26ab3c73779908fff3b7401c0f669f14e8ec7df8",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/prepared/inserts__dvd24_oushi118.svg"
+    },
+    {
+      "path": "cnc_source_198/prepared/inserts__dvd24_oushi128.json",
+      "size": 230192,
+      "sha256": "05757f0d12ab482aec53e7a44a0f089b931f6dca795f3b450366167eb93a0cf1",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/prepared/inserts__dvd24_oushi128.json"
+    },
+    {
+      "path": "cnc_source_198/prepared/inserts__dvd24_oushi128.svg",
+      "size": 224380,
+      "sha256": "4cff9473ce5f074d668c70de0238618eea39ff26fcc0e6c32f63e7a990bd1c5d",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/prepared/inserts__dvd24_oushi128.svg"
+    },
+    {
+      "path": "cnc_source_198/prepared/inserts__dvd24_oushi60.json",
+      "size": 123122,
+      "sha256": "6d564d6366c77442772b9eb020b4c518d48f7b312e45c98f5d1a35d438828400",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/prepared/inserts__dvd24_oushi60.json"
+    },
+    {
+      "path": "cnc_source_198/prepared/inserts__dvd24_oushi60.svg",
+      "size": 120049,
+      "sha256": "6a251f0ac65c9c836cddbbf9ed8828af8930537c4aab448a958ff63bd495e8ab",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/prepared/inserts__dvd24_oushi60.svg"
+    },
+    {
       "path": "cnc_source_198/prepared/inserts__dvd24_zhongshi131.json",
       "size": 8402,
       "sha256": "4e48e6d00157ba2e5055594c1fd04d8a36cbc0ec62f559fb968e5ae5b926bd12"
@@ -5396,6 +5704,18 @@
       "path": "cnc_source_198/prepared/inserts__dvd24_zhongshi43.svg",
       "size": 68855,
       "sha256": "cfc0314ce767debd6d0e1bc18f22c16229fab291f6a96d6a9817b5f0a1dd280a"
+    },
+    {
+      "path": "cnc_source_198/prepared/inserts__dvd24_zhongshi52.json",
+      "size": 143498,
+      "sha256": "df83fc5c934e8756bde6aa34c095feafb020a5335918b2f2aafd964cbfb6856a",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/prepared/inserts__dvd24_zhongshi52.json"
+    },
+    {
+      "path": "cnc_source_198/prepared/inserts__dvd24_zhongshi52.svg",
+      "size": 140299,
+      "sha256": "fb55f30a1db54f9617ffc9b617c79d18e71500330c6a9594e6e2d19b36377d1f",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/prepared/inserts__dvd24_zhongshi52.svg"
     },
     {
       "path": "cnc_source_198/prepared/inserts__hinh_005.json",
@@ -6448,6 +6768,54 @@
       "sha256": "5c391639c8427bd6f37760104388f4763e30ca1afbbfeb43277b361b158f00fb"
     },
     {
+      "path": "cnc_source_198/prepared/patterns__dvd24_oushi119.json",
+      "size": 24562,
+      "sha256": "a95b6c96b299a01be02268d9fff2ee076e237ef974ef410d654ad76de6832e88",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/prepared/patterns__dvd24_oushi119.json"
+    },
+    {
+      "path": "cnc_source_198/prepared/patterns__dvd24_oushi119.svg",
+      "size": 24009,
+      "sha256": "7c0d4981d42f2fe76a654ceaf6c52231f9c94faa0e0b6cdf3c5ade9ff62309e4",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/prepared/patterns__dvd24_oushi119.svg"
+    },
+    {
+      "path": "cnc_source_198/prepared/patterns__dvd24_oushi12.json",
+      "size": 379034,
+      "sha256": "b79cf358b6985ca0aebc1b251750a6f9d17dfd6bcf50a505cf1231c38d59dae9",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/prepared/patterns__dvd24_oushi12.json"
+    },
+    {
+      "path": "cnc_source_198/prepared/patterns__dvd24_oushi12.svg",
+      "size": 369796,
+      "sha256": "75fe96856dc9cc59a1ab3bb0c9e3367d2dbd8d91a135cc9bea576ad690aac37d",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/prepared/patterns__dvd24_oushi12.svg"
+    },
+    {
+      "path": "cnc_source_198/prepared/patterns__dvd24_oushi120.json",
+      "size": 371816,
+      "sha256": "cb9d3bf49f6c7db3f8294cdc4ddc905506786ae2c7a5d85f8486b3e6bb6f46ef",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/prepared/patterns__dvd24_oushi120.json"
+    },
+    {
+      "path": "cnc_source_198/prepared/patterns__dvd24_oushi120.svg",
+      "size": 578204,
+      "sha256": "af289b212a52b39b4068d856773380c5a5cb83bf8f4f1fab55e9247a0f95a44f",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/prepared/patterns__dvd24_oushi120.svg"
+    },
+    {
+      "path": "cnc_source_198/prepared/patterns__dvd24_oushi137.json",
+      "size": 402716,
+      "sha256": "ad11efef22c34464d26e5a79e1dba5afdb8259732832897f1afe30982579b77b",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/prepared/patterns__dvd24_oushi137.json"
+    },
+    {
+      "path": "cnc_source_198/prepared/patterns__dvd24_oushi137.svg",
+      "size": 392735,
+      "sha256": "219fb027789a11c9f7cb12eeec0c1c8ae4913c1407e74b79a1833979c0a07be4",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/prepared/patterns__dvd24_oushi137.svg"
+    },
+    {
       "path": "cnc_source_198/prepared/patterns__dvd24_zhongshi1.json",
       "size": 71311,
       "sha256": "c79c52fe24a5ff3c4de85a34cf1d06b5f80179b1638000db92f854ddd3a89621"
@@ -6486,6 +6854,42 @@
       "path": "cnc_source_198/prepared/patterns__dvd24_zhongshi136.svg",
       "size": 9268,
       "sha256": "b50f28a60983bf9e14ca7afc84b34607d6a3524ace45ab8ad7273d787e365cd2"
+    },
+    {
+      "path": "cnc_source_198/prepared/patterns__dvd24_zhongshi66.json",
+      "size": 18191,
+      "sha256": "3e3df5a9914f2121c3df666fb1bada421653c634754cc6a8a856323d0a076ebd",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/prepared/patterns__dvd24_zhongshi66.json"
+    },
+    {
+      "path": "cnc_source_198/prepared/patterns__dvd24_zhongshi66.svg",
+      "size": 17621,
+      "sha256": "f4281cf4fb9988bf3187cd26de49873b65d3463f92f33e12292991311bc34154",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/prepared/patterns__dvd24_zhongshi66.svg"
+    },
+    {
+      "path": "cnc_source_198/prepared/patterns__dvd24_zhongshi91.json",
+      "size": 34950,
+      "sha256": "bd59a966c11c58118ee06d7f7bf038597e3219b17b2002b346eff002b5640ded",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/prepared/patterns__dvd24_zhongshi91.json"
+    },
+    {
+      "path": "cnc_source_198/prepared/patterns__dvd24_zhongshi91.svg",
+      "size": 33742,
+      "sha256": "68f5c3e941aab9cf2b33f91efcb3eaee2879396f993a5dd28f47105769118dfa",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/prepared/patterns__dvd24_zhongshi91.svg"
+    },
+    {
+      "path": "cnc_source_198/prepared/patterns__dvd24_zhongshi93.json",
+      "size": 248521,
+      "sha256": "a5d53fde240065a36c3f4f880040050e474393c3acb759dbb608a05aef563371",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/prepared/patterns__dvd24_zhongshi93.json"
+    },
+    {
+      "path": "cnc_source_198/prepared/patterns__dvd24_zhongshi93.svg",
+      "size": 389360,
+      "sha256": "29bf2803cd4185503eec45773cd294b191b0ffee68494120ca0a3e195091c3d6",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/prepared/patterns__dvd24_zhongshi93.svg"
     },
     {
       "path": "cnc_source_198/prepared/patterns__vach_001.json",
@@ -7884,8 +8288,9 @@
     },
     {
       "path": "cnc_source_198/shared_library.json",
-      "size": 61131,
-      "sha256": "fdd5d3f22edbb26a1aef1bcd8a8b57119d78fd14ef8dce1e74a2cd773e398e50"
+      "size": 63583,
+      "sha256": "910e36a19807dd89df42bc359c468956027f16c14b498f0e4566ee2caa3c4001",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/shared_library.json"
     },
     {
       "path": "cnc_source_198/special/khung_hai_vung.svg",
@@ -8957,8 +9362,8 @@
     {
       "path": "html/cnc/autocad_updates.js",
       "size": 1285,
-      "sha256": "42f2f0c560e5bab3ab2e4319f652225ddbe6adc934736affda6490cd93aeba1c",
-      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.3/files/html/cnc/autocad_updates.js"
+      "sha256": "d05c15d2453b4eb266229c11c9af39c922543c7286ab4c1589abfb0379d79a90",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/html/cnc/autocad_updates.js"
     },
     {
       "path": "html/cnc/b91_sample_preset.js",
@@ -8998,8 +9403,8 @@
     {
       "path": "html/cnc/index.html",
       "size": 7827,
-      "sha256": "a1af58107d7d6c52086c1296bc341010568871338e73a7294893d94517f127b9",
-      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.3/files/html/cnc/index.html"
+      "sha256": "747fab4187d2de3827bee680b80df4dc4816978dbbba8ade4415df18b8dd9a1b",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/html/cnc/index.html"
     },
     {
       "path": "html/cnc/insert_ring.js",
@@ -9028,8 +9433,9 @@
     },
     {
       "path": "html/cnc/panel_border.js",
-      "size": 54925,
-      "sha256": "2427ea0b52ba7ac3069e1d094c7e62c9c867c03b9745a7c7b643f3570babb959"
+      "size": 60747,
+      "sha256": "0639019414ffb31ad5fcecd02076e5f235fd771f64780deeda12a632bf6bacc8",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/html/cnc/panel_border.js"
     },
     {
       "path": "html/cnc/panel_dimensions.js",
@@ -9043,8 +9449,9 @@
     },
     {
       "path": "html/cnc/panel_region_batch.js",
-      "size": 12801,
-      "sha256": "1e7988ffa79ffdf6e18625cc081b484756de55e6d9a6b96a0d4ffca7a099f32b"
+      "size": 13894,
+      "sha256": "0a9130db41537f795dfe53f31cb1285f3a28cb5c7c078dc9b87aeea8ae8ec705",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/html/cnc/panel_region_batch.js"
     },
     {
       "path": "html/cnc/panel_regions.js",
@@ -9063,8 +9470,9 @@
     },
     {
       "path": "html/cnc/panel_ui.js",
-      "size": 158078,
-      "sha256": "1b0f8513593fbabe3e1b38772acfe5db2ecc36bb0cb2bf818aa24c135f66f00d"
+      "size": 158416,
+      "sha256": "607b72a93295411d164c4a23aaf2af9d262a46f4c98c4bc4b8c95e183fa19a81",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/html/cnc/panel_ui.js"
     },
     {
       "path": "html/cnc/panel_viewport.css",
@@ -9078,8 +9486,9 @@
     },
     {
       "path": "html/cnc/source_catalog.js",
-      "size": 143806,
-      "sha256": "a454d8e72fddcb1d2457bdc13797ef432c6dbce55f0de6a54cbfa3f5212a59eb"
+      "size": 155564,
+      "sha256": "b1bc3867bb5810a908c2fc42553d2873f3edd55d890e768c13450eee7ae1ab48",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/html/cnc/source_catalog.js"
     },
     {
       "path": "html/cnc/source_library.css",
@@ -9093,13 +9502,20 @@
     },
     {
       "path": "html/cnc/source_menu_defaults.js",
-      "size": 7154,
-      "sha256": "cf69f8dcb2df8edac300fb9ce13127f302a7c5f90984eb34667aa9f2c4afcb2b"
+      "size": 7476,
+      "sha256": "7a785bf479089380c0259f4d04ba2fa2ae125847d9e31026215faa38b76b756b",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/html/cnc/source_menu_defaults.js"
     },
     {
       "path": "html/cnc/source_presets.js",
       "size": 1870,
       "sha256": "78a2451eb13a56fb5e925054b54d49f29b62017a50ffd4cfa78018c70ccd805c"
+    },
+    {
+      "path": "html/cnc/source_shapes/borders__bien_goc_10.js",
+      "size": 3094,
+      "sha256": "3a6630c234bfd06bad193fc82bdf7ae6f7c73e53fa4be7447c5db549af3170d4",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/html/cnc/source_shapes/borders__bien_goc_10.js"
     },
     {
       "path": "html/cnc/source_shapes/cutout_patterns__duc_001.js",
@@ -9382,6 +9798,24 @@
       "sha256": "20afda2bcc1d646667d38436aad9a4c9464e62b85e5982618c3434088f47190b"
     },
     {
+      "path": "html/cnc/source_shapes/inserts__dvd24_oushi118.js",
+      "size": 234754,
+      "sha256": "c9a4a3341447a8e7907bb6f0ae4b5bfbb3e3129030f141078bae830e413c94e6",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/html/cnc/source_shapes/inserts__dvd24_oushi118.js"
+    },
+    {
+      "path": "html/cnc/source_shapes/inserts__dvd24_oushi128.js",
+      "size": 230289,
+      "sha256": "590e144c5516b80d2e25b026c6c8bd83b063ec37a7e76feee73619b97fbb0982",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/html/cnc/source_shapes/inserts__dvd24_oushi128.js"
+    },
+    {
+      "path": "html/cnc/source_shapes/inserts__dvd24_oushi60.js",
+      "size": 123218,
+      "sha256": "9fd43dc634304c7a7f61df4a7b88c9c5c4d180e81ee1a2f153b427cf328095a5",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/html/cnc/source_shapes/inserts__dvd24_oushi60.js"
+    },
+    {
       "path": "html/cnc/source_shapes/inserts__dvd24_zhongshi131.js",
       "size": 8501,
       "sha256": "8a128601f4784b6293da189d1041f80946ab9019b6689884793cbc3bdad2bd96"
@@ -9390,6 +9824,12 @@
       "path": "html/cnc/source_shapes/inserts__dvd24_zhongshi43.js",
       "size": 91262,
       "sha256": "3f0ac6e2a569ad955321ef22d28370195bf516bd0bbfdd07966cd2775dd844ba"
+    },
+    {
+      "path": "html/cnc/source_shapes/inserts__dvd24_zhongshi52.js",
+      "size": 143597,
+      "sha256": "e55113ee40e621aa944b2d07b51972cd32f3bffb30130c33ec98803b9e9ac522",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/html/cnc/source_shapes/inserts__dvd24_zhongshi52.js"
     },
     {
       "path": "html/cnc/source_shapes/inserts__hinh_005.js",
@@ -9917,6 +10357,30 @@
       "sha256": "ef7ab0dba95c56130104ecac92cbe844bd7670bcfdebe41267e4467798a5b360"
     },
     {
+      "path": "html/cnc/source_shapes/patterns__dvd24_oushi119.js",
+      "size": 24659,
+      "sha256": "90cde39333efc963a0a48ca3f695f53832f34026af98f207e6073804bd2a7c1d",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/html/cnc/source_shapes/patterns__dvd24_oushi119.js"
+    },
+    {
+      "path": "html/cnc/source_shapes/patterns__dvd24_oushi12.js",
+      "size": 379130,
+      "sha256": "6b00ded00386702350f9216bdd04ae6a79703d3e9791cebe72ceed063f742c3c",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/html/cnc/source_shapes/patterns__dvd24_oushi12.js"
+    },
+    {
+      "path": "html/cnc/source_shapes/patterns__dvd24_oushi120.js",
+      "size": 371913,
+      "sha256": "e8597f58bbf711609d53865732f7f78febfd94c9abe5adb167fc44563fc0044f",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/html/cnc/source_shapes/patterns__dvd24_oushi120.js"
+    },
+    {
+      "path": "html/cnc/source_shapes/patterns__dvd24_oushi137.js",
+      "size": 402813,
+      "sha256": "4eb0a6d53caae4c977440250d3ca75350614f1f2b5a250ffbc595213ab78965d",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/html/cnc/source_shapes/patterns__dvd24_oushi137.js"
+    },
+    {
       "path": "html/cnc/source_shapes/patterns__dvd24_zhongshi1.js",
       "size": 71409,
       "sha256": "005430af402026ade118373025f83548f43ff77c00c22d68d626e2343fa2dce0"
@@ -9935,6 +10399,24 @@
       "path": "html/cnc/source_shapes/patterns__dvd24_zhongshi136.js",
       "size": 9067,
       "sha256": "1e070bfe91bb6664f141d63af1108c15809fca8d00c2b93d4be24c43ee2bdfbe"
+    },
+    {
+      "path": "html/cnc/source_shapes/patterns__dvd24_zhongshi66.js",
+      "size": 18290,
+      "sha256": "89554b77d0aa52ba2a8bcaf87b4276826102fd915437f8907f11fbed7ba9244d",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/html/cnc/source_shapes/patterns__dvd24_zhongshi66.js"
+    },
+    {
+      "path": "html/cnc/source_shapes/patterns__dvd24_zhongshi91.js",
+      "size": 35049,
+      "sha256": "efc2c23d89a7ed37048fecd93473cb26d736beff217cadf69349cd647c0051df",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/html/cnc/source_shapes/patterns__dvd24_zhongshi91.js"
+    },
+    {
+      "path": "html/cnc/source_shapes/patterns__dvd24_zhongshi93.js",
+      "size": 248620,
+      "sha256": "62c07ff68fd681f6cb61d28b85764327bdc8128e0071fe76c9dd904a7f2a84d4",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/html/cnc/source_shapes/patterns__dvd24_zhongshi93.js"
     },
     {
       "path": "html/cnc/source_shapes/patterns__mau_la_kv_1.js",
@@ -10648,15 +11130,15 @@
     },
     {
       "path": "html/cnc/special_frame.js",
-      "size": 60531,
-      "sha256": "eb1833e3fff0bd5fe564a16c544910feaeeaeddd994703c266e900cf87b8748b",
-      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.3/files/html/cnc/special_frame.js"
+      "size": 60733,
+      "sha256": "28ea6215df2c983f70a9d1eada2599b766d1302e388114410da626947bfad28f",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/html/cnc/special_frame.js"
     },
     {
       "path": "html/cnc/special_frame_patterns.js",
-      "size": 19478,
-      "sha256": "ddb4f8580c21795800229d51b899f33ce0c610438dd8d9ff3abb800f650c661f",
-      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.3/files/html/cnc/special_frame_patterns.js"
+      "size": 19650,
+      "sha256": "1461e16111c6011f8ec90c7d9f2b0698d2b5e41c029e6141ed3f24a2c4e60b07",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/html/cnc/special_frame_patterns.js"
     },
     {
       "path": "html/cnc/style.css",
@@ -16105,8 +16587,8 @@
     }
   ],
   "payload": {
-    "url": "https://github.com/lemanhlinh1985-cmd/lofihome-updates/releases/download/autocad-v1.0.3/LOFIHOME_AutoCAD_payload.zip",
-    "size": 744134806,
-    "sha256": "6154aaaef22b5fc5df4bf6d138bbba3a93d5d01cc05719d025770d212866047d"
+    "url": "https://github.com/lemanhlinh1985-cmd/lofihome-updates/releases/download/autocad-v1.0.4/LOFIHOME_AutoCAD_payload.zip",
+    "size": 763412878,
+    "sha256": "54ec3349c07794698ad9dbdbec4281c809c0e366db5d66c56582ebb08f6fad56"
   }
 }
