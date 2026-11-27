@@ -1,108 +1,51 @@
 {
   "schema": 1,
   "product": "LOFIHOME.AutoCAD",
-  "version": "1.0.0",
-  "notes": "Bản CNC + MAP dùng chung key Corel. Mục tiêu AutoCAD đầy đủ Windows 2007–2027; đã thử trực tiếp AutoCAD 2022.",
+  "version": "1.0.3",
+  "notes": "Hình học đặc biệt · Khung hai vùng. Tạo, đọc và cập nhật khung trong bản vẽ AutoCAD. Hỗ trợ key LF1 cũ và mới.",
   "files": [
     {
+      "path": "LOFIHOME.AutoCAD.exe",
+      "size": 109568,
+      "sha256": "6cdb915578bd22afecf4960e637e1d2bed2fc08e39091512e5d4b614b6f4594c",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.3/files/LOFIHOME.AutoCAD.exe"
+    },
+    {
+      "path": "LOFIHOME.AutoCAD.exe.config",
+      "size": 160,
+      "sha256": "15348eee1c55ebb2efbfbd19ff7d3690fe8dbc53545c4b69fef652e55db52b8e"
+    },
+    {
+      "path": "LOFIHOME.License.Runtime.dll",
+      "size": 87040,
+      "sha256": "31f5ef9ad8c478676f47de190b77db665715373c2ec8e8999ef1ddbe05764259",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.3/files/LOFIHOME.License.Runtime.dll"
+    },
+    {
+      "path": "Microsoft.Web.WebView2.Core.dll",
+      "size": 703328,
+      "sha256": "acdd517b951829f763d1255f32df1e6a936cb8623a7ebff6b8b24172dede6bd6"
+    },
+    {
+      "path": "Microsoft.Web.WebView2.WinForms.dll",
+      "size": 38792,
+      "sha256": "c66437f80886aecf074804b61af4cc10ad90a95310c8e0a717f31ea377c26b03"
+    },
+    {
       "path": "autocad_version.json",
-      "size": 236,
-      "sha256": "2bbbb00a8cdf2ed35408be314a002ce7a5942e14bdf4ae2d1eeae96b5a9ef63b"
+      "size": 253,
+      "sha256": "51fa134b6cf49f1b981002e26c433cf71ec411535a4cc6eb6b16eda48481cfac",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.3/files/autocad_version.json"
     },
     {
-      "path": "cnc_source_198/borders/anh_dong_tien_may_cuon.json",
-      "size": 11866,
-      "sha256": "f4f05e4fdc177e9a4d1a5ae833c543b9b0523ce48492fb94af75562a273f6278"
-    },
-    {
-      "path": "cnc_source_198/borders/anh_dong_tien_may_cuon.png",
-      "size": 10860,
-      "sha256": "5aec355879276fb20b3a294c161f7df40c2540718ae785db694c407a1587724c"
-    },
-    {
-      "path": "cnc_source_198/borders/anh_dong_tien_may_cuon.skp",
-      "size": 141299,
-      "sha256": "4314488d2f85881df5e800649fcf54044a1a8582a063a9ce05c32f1c15048486"
-    },
-    {
-      "path": "cnc_source_198/borders/anh_dong_tien_trien_vuong.json",
-      "size": 4749,
-      "sha256": "fc3b86bee6bd4d49aee03c1bf6cef66f8a967abe14f019182b73e2f95faa68f0"
-    },
-    {
-      "path": "cnc_source_198/borders/anh_dong_tien_trien_vuong.png",
-      "size": 3322,
-      "sha256": "a32a294744e36dc8db3e43657d4b75b4c8139e979a9b08c795bbcbcb226f3af4"
-    },
-    {
-      "path": "cnc_source_198/borders/anh_dong_tien_trien_vuong.skp",
-      "size": 62251,
-      "sha256": "639db1b71861122ef92a4859542e43abc52bc7964b7746a48acbaed83af4d511"
-    },
-    {
-      "path": "cnc_source_198/borders/anh_la_cuon.json",
-      "size": 9253,
-      "sha256": "a4abae9d93fed5d3328ea58304d9db07fa9346c79deb9080061c4a19acba8f65"
-    },
-    {
-      "path": "cnc_source_198/borders/anh_la_cuon.png",
-      "size": 6071,
-      "sha256": "fea965d73f7c323d273a75dcedbff5875520f35fe7e5c6fc699f22e3ba7834b3"
-    },
-    {
-      "path": "cnc_source_198/borders/anh_la_cuon.skp",
-      "size": 113620,
-      "sha256": "ba7766fe514417a4bd6b82b6957638142cd0d95383d2e92d0fa7c8babb3f4d98"
-    },
-    {
-      "path": "cnc_source_198/borders/anh_may_cuon.json",
-      "size": 5710,
-      "sha256": "97e9bcafda453a09c14745935de665ce6f9a638d137fc9bd0cccd7c0f62b2def"
-    },
-    {
-      "path": "cnc_source_198/borders/anh_may_cuon.png",
-      "size": 5644,
-      "sha256": "b0d66ccd047649cc4510881ae744c7c10f06d1578be6d533e2d39a602488842a"
-    },
-    {
-      "path": "cnc_source_198/borders/anh_may_cuon.skp",
-      "size": 72398,
-      "sha256": "d4f9c947d90d3ccadbd5149f0b1c4d24cbdf521330bd28f674407a06a02352ef"
-    },
-    {
-      "path": "cnc_source_198/borders/anh_thanh_gia_day_la.json",
-      "size": 5113,
-      "sha256": "d2402b3087bf7eb23eaed67324f8060cae86d276c8f31cc44f70fba9ed6af930"
-    },
-    {
-      "path": "cnc_source_198/borders/anh_thanh_gia_day_la.png",
-      "size": 4204,
-      "sha256": "c850a7faf9be7494124a645cdc8402230b6ffc6ee748af3b72abd2398d3bf884"
-    },
-    {
-      "path": "cnc_source_198/borders/anh_thanh_gia_day_la.skp",
-      "size": 65932,
-      "sha256": "ea0e1f2b609562fab22e8cce0a6688fb4bb42fd240e859ac756f816b95d96b99"
-    },
-    {
-      "path": "cnc_source_198/borders/anh_trien_vuong.json",
-      "size": 2274,
-      "sha256": "b0d9c6cc6ef696d5db7806298fd760dc621ae65ddad0740dd6db31e20d6ecfa1"
-    },
-    {
-      "path": "cnc_source_198/borders/anh_trien_vuong.png",
-      "size": 1658,
-      "sha256": "c1115c505f39cf0b8c1dd96bbdc74b438f11dc57b260615e0abe94e86ddcf960"
-    },
-    {
-      "path": "cnc_source_198/borders/anh_trien_vuong.skp",
-      "size": 34485,
-      "sha256": "0846b381cf0eb6cd1d406793ddf599430ceab6cfb45d537bb7a048218fb83164"
+      "path": "cnc_source_198/SOURCE_NOTICE.txt",
+      "size": 1614,
+      "sha256": "a8de85006374c5b905732be9ef37a3f9cee94b867e3cb973b4c9e60060a06458"
     },
     {
       "path": "cnc_source_198/catalog.json",
-      "size": 130721,
-      "sha256": "46f3c00e35c65368ba4b368bf04bb9b1c4ba0539931949661c7f33870620afb9"
+      "size": 143775,
+      "sha256": "093a2c6796eeaf41e889c7f3268fda972901dc5054b1f86b610cc1d391f03ec4"
     },
     {
       "path": "cnc_source_198/cutout_patterns/duc_001.json",
@@ -658,6 +601,41 @@
       "path": "cnc_source_198/inserts/duc_008.png",
       "size": 15961,
       "sha256": "903a4f65ec6c55e3dd520cf7bf03eedd5f21b2b82304ca3c29a927e66037cf91"
+    },
+    {
+      "path": "cnc_source_198/inserts/dvd24_b046.json",
+      "size": 448867,
+      "sha256": "455aa279fd76a644c1ab3afbb3a225fd661f9147a3a15bcd5c5dca6f6a9904f3"
+    },
+    {
+      "path": "cnc_source_198/inserts/dvd24_b046.png",
+      "size": 58715,
+      "sha256": "615784d7a75eab20f046c2759ee6e1c1ef13a2e7f7114d4a9d1be70be1132dc6"
+    },
+    {
+      "path": "cnc_source_198/inserts/dvd24_b046.skp",
+      "size": 128412,
+      "sha256": "38b222780d7d81ebd09e6831fb57ab74d2c26bdadd7fe2134220c5aaf794a7ee"
+    },
+    {
+      "path": "cnc_source_198/inserts/dvd24_zhongshi131.json",
+      "size": 8437,
+      "sha256": "ca13b1b458c0d001e082aaa4bc384d9f3a82a5f0c37c4a898b28a0a44e94d361"
+    },
+    {
+      "path": "cnc_source_198/inserts/dvd24_zhongshi131.png",
+      "size": 26732,
+      "sha256": "3fb0ce6974ce5aa0c1e027cc66085097bfd4e8ee4de785e1b3ffa87d58465b23"
+    },
+    {
+      "path": "cnc_source_198/inserts/dvd24_zhongshi43.json",
+      "size": 89950,
+      "sha256": "cbf2bf182657a71c7578595065653d2a47e322d5439d869c19fb569821cb65ea"
+    },
+    {
+      "path": "cnc_source_198/inserts/dvd24_zhongshi43.png",
+      "size": 31064,
+      "sha256": "175e3d3bdea255bbfc14181be9ee892dd0b25d605e11617bbaf99ad1f4555083"
     },
     {
       "path": "cnc_source_198/inserts/hinh_005.json",
@@ -1691,43 +1669,1543 @@
     },
     {
       "path": "cnc_source_198/menu_layout.json",
-      "size": 9310,
-      "sha256": "ed132dae342309bf44f23be99a4733512adb0b85dbdbe1943f1c985f1ba2c73d"
+      "size": 7126,
+      "sha256": "cf6182da2af0eb48946bb87cdc51f7841b76e007c5a76b8828cb7beb37e482a0"
     },
     {
-      "path": "cnc_source_198/models_su2020/borders__anh_dong_tien_may_cuon.skp",
-      "size": 141299,
-      "sha256": "4314488d2f85881df5e800649fcf54044a1a8582a063a9ce05c32f1c15048486"
+      "path": "cnc_source_198/models_su2020/cutout_patterns__duc_001.skp",
+      "size": 88963,
+      "sha256": "30319add2f267d1ea046ac559a7bcfadc547f5a47e3b909f971c3d73cac78b52"
     },
     {
-      "path": "cnc_source_198/models_su2020/borders__anh_dong_tien_trien_vuong.skp",
-      "size": 62251,
-      "sha256": "639db1b71861122ef92a4859542e43abc52bc7964b7746a48acbaed83af4d511"
+      "path": "cnc_source_198/models_su2020/cutout_patterns__duc_003.skp",
+      "size": 1556171,
+      "sha256": "700e695a7e8f9a5af16d7de99acbd05f1f56d8d926ae4674b2a77693075476f8"
     },
     {
-      "path": "cnc_source_198/models_su2020/borders__anh_la_cuon.skp",
-      "size": 113620,
-      "sha256": "ba7766fe514417a4bd6b82b6957638142cd0d95383d2e92d0fa7c8babb3f4d98"
+      "path": "cnc_source_198/models_su2020/cutout_patterns__duc_006.skp",
+      "size": 365665,
+      "sha256": "8b3413aaaef5e48aa37790866b853e9a3f617aa0b05c101cdb630d01635afcce"
     },
     {
-      "path": "cnc_source_198/models_su2020/borders__anh_may_cuon.skp",
-      "size": 72398,
-      "sha256": "d4f9c947d90d3ccadbd5149f0b1c4d24cbdf521330bd28f674407a06a02352ef"
+      "path": "cnc_source_198/models_su2020/cutout_patterns__duc_007.skp",
+      "size": 2708652,
+      "sha256": "5a0df9bc7e01bd5bf7c3b5338c0bf44d53f176b8daf806ddb03ebdc8e16e99db"
     },
     {
-      "path": "cnc_source_198/models_su2020/borders__anh_thanh_gia_day_la.skp",
-      "size": 65932,
-      "sha256": "ea0e1f2b609562fab22e8cce0a6688fb4bb42fd240e859ac756f816b95d96b99"
+      "path": "cnc_source_198/models_su2020/cutout_patterns__duc_008.skp",
+      "size": 1346138,
+      "sha256": "fd04399925afa9f95b98cff1c7ccb99d583d0a4137f4fba5527fa5433245c2e7"
     },
     {
-      "path": "cnc_source_198/models_su2020/borders__anh_trien_vuong.skp",
-      "size": 34485,
-      "sha256": "0846b381cf0eb6cd1d406793ddf599430ceab6cfb45d537bb7a048218fb83164"
+      "path": "cnc_source_198/models_su2020/cutout_patterns__duc_009.skp",
+      "size": 14262,
+      "sha256": "8187e86bfec7176af466b8791396551405619c3768e200290e08675102aeac89"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/cutout_patterns__duc_010.skp",
+      "size": 12302,
+      "sha256": "d496796f01be872f0c3042c1a86394c4fe8927e9443991385e8ac2b7a84ef88f"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/cutout_patterns__duc_011.skp",
+      "size": 13282,
+      "sha256": "2a0c7fac601fcca085525970c789d219b2a7af1316af9cf6baf5a3e60d746364"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/cutout_patterns__duc_012.skp",
+      "size": 18358,
+      "sha256": "9a1c27d0fde5d2a341893709949a52de74540d350d6feb49995b4b912d95dfa4"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/cutout_patterns__duc_013.skp",
+      "size": 468804,
+      "sha256": "63793ed1b1f6f9666ebdec2d6c2fff63bfd5649fa718eb6fc9243333d80d1aab"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/cutout_patterns__duc_014.skp",
+      "size": 287181,
+      "sha256": "ce5c7e37df13241f19be5e3585ebe87c618448e91fd87db359ce0c5c007af49d"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/cutout_patterns__duc_015.skp",
+      "size": 1003915,
+      "sha256": "2dfc15cd2a5a9aa9dd187207745059f315564591a7e8ec19fbe5050511b12c69"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/cutout_patterns__duc_016.skp",
+      "size": 742112,
+      "sha256": "45f24bbbf1477df072fe7aeaab7cdb0dd54795df47ab929bd1cf29c113aec535"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/cutout_patterns__duc_017.skp",
+      "size": 509074,
+      "sha256": "e62e003e182c2a6b8faa85abdbee222afd091c767f19b0220d71003d2382aaf1"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/cutout_patterns__duc_018.skp",
+      "size": 4496268,
+      "sha256": "78ac9bd43717495341a9302b4ca047fa16f8cf035d1bd1b0fae7a4f0f2a2de06"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/cutout_patterns__duc_019.skp",
+      "size": 6562370,
+      "sha256": "b7d86d567edf3cd5359eb6686fdf5ef290befdfae7ff91be85918c2a03053019"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/cutout_patterns__duc_020.skp",
+      "size": 5771036,
+      "sha256": "59ab1ed3f989593eec69ab05c0e52513802e01e72bebee935e63d4256faaf174"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/cutout_patterns__duc_021.skp",
+      "size": 5142194,
+      "sha256": "1090529a1a5379047a4b7b3e756783d84e8a14c05b6129e97c34c1f95aa58592"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/cutout_patterns__duc_022.skp",
+      "size": 2499619,
+      "sha256": "5eef43c419da2fe914559c915c10efd9f086d51caa198517d1ee9223184bd3fb"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/cutout_patterns__duc_023.skp",
+      "size": 3141747,
+      "sha256": "75c8dc5810064bcaa614b6d14a1e2073b9bb3b0cbbddf6056df274fd6a4464e8"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/cutout_patterns__duc_024.skp",
+      "size": 489247,
+      "sha256": "8b1a76826e0b28c6b0fd8b9880f13f4b7fa89cf94949cc47ea9e705d9b98fb19"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/cutout_patterns__duc_025.skp",
+      "size": 404850,
+      "sha256": "2f3d52c2df41aa2ff18b3cec56af5d035847ee3cc651e2b107f4b50dc1b74446"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/cutout_patterns__duc_026.skp",
+      "size": 2090756,
+      "sha256": "e5c7f9a1ce6ecb2c55de3ce51213299615bae1619edf80684fe9f69709a7441b"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/cutout_patterns__duc_027.skp",
+      "size": 2917565,
+      "sha256": "befe18de1b8da58ed0239c01f4aef70a320f1a76a73cd52b00d334acc27d0226"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/cutout_patterns__duc_tam_016.skp",
+      "size": 3521054,
+      "sha256": "54605c14f519a4881aac4dfd4cdccdd2b9713233e4fb31504bc2ffb83dcd8d15"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__diem_001.skp",
+      "size": 696376,
+      "sha256": "6a2494304192dec8e017d02594ba64edf7d285cf5f1a147f21d2936cc3713d42"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__diem_002.skp",
+      "size": 656437,
+      "sha256": "cec20f639692879a9ae3e9e0d2ff0f2ad1d3291e05d69b72e750f804a0b8b1d4"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__diem_003.skp",
+      "size": 983792,
+      "sha256": "36d75c72c0493a67f3aa26d0723c3fad46d922ffe950c47c5e7cd4af60dffb76"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__diem_004.skp",
+      "size": 696376,
+      "sha256": "a9ee0e88a28fc03d6fd9ecbbd8e90ef4a104daf26641353627a0c181dd604139"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__diem_005.skp",
+      "size": 779792,
+      "sha256": "7f5d8487165389ce81116f120f24c2a88ca901716c10aab6f3489052ea1ff50b"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__diem_006.skp",
+      "size": 209602,
+      "sha256": "6c34ea7f9574fb4183474e488c1151a4c0299a771ac06379de991b4b197460e9"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__diem_007.skp",
+      "size": 1156852,
+      "sha256": "e1423f1ecf372c093b82eaf5b1aa5e337bd7d85ac486547c894b58f3ded44013"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__diem_008.skp",
+      "size": 696376,
+      "sha256": "22296134aa5f0a1e31a8daf8f6a4624f6915e311afe785969de8a1592803e5bd"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__diem_009.skp",
+      "size": 111681,
+      "sha256": "3011a65b35ac6e1d2ad6c8e56f5667946674251a05aec2d57105e1aacaa062a4"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__diem_010.skp",
+      "size": 70774,
+      "sha256": "859c85ffa014c3904cb500143242a0684ec9c02bafd04d3e07a9f4d73c705748"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__diem_011.skp",
+      "size": 62347,
+      "sha256": "1e2031b34db77cd306d1ad068fbf4ed4709db225c11a4290cfc5c7430882ec04"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__diem_012.skp",
+      "size": 107273,
+      "sha256": "3a00a724b9639ded55e540b6be3c30586825d159f0cd1bd7a0e69012a9319abe"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__diem_013.skp",
+      "size": 604386,
+      "sha256": "5f5c47a84836e2fb76b5329d587e1d2d0bcbd90fe33777ce0ef5d9464b44825b"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__diem_014.skp",
+      "size": 1003766,
+      "sha256": "b627d9c6896df044cddf1cebcae3e1409ce473f237f8704adc79442530e466e3"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__diem_015.skp",
+      "size": 124862,
+      "sha256": "627c3a4cd7f192753dfea3ca4dcc6e9f78121f370baabebdc79bf5b346072cb3"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__diem_016.skp",
+      "size": 251569,
+      "sha256": "af37e4610fbe1aa6561e530ece7dfbecffa1b47293fdf1be80248e7a28900554"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__diem_017.skp",
+      "size": 37482,
+      "sha256": "f1199a2cf409724aa64ebce3b6a58655b2448240539e243cb4067064ebe00f29"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__diem_018.skp",
+      "size": 267501,
+      "sha256": "d7ab5846b6bb75956a9192e3dc86e0ff2054eef8311fce24b0f07f8fa4369d2f"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__diem_019.skp",
+      "size": 27711,
+      "sha256": "fa245dfc9d7cf366012fec5b65523f942e988539156f98b5207d9487a058a5ad"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__diem_020.skp",
+      "size": 14511,
+      "sha256": "b82a2ecbb756ba65c2f4a862dff94ac0898e1f9500fc434be840dcaf3d4dc565"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__diem_021.skp",
+      "size": 267501,
+      "sha256": "2501d59dfd2a25cbfb6643aaf0bf6ba43b2ee930537e95c8d3abca25dcf3c47b"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__diem_022.skp",
+      "size": 52826,
+      "sha256": "944298aa68c2669e0bf7009f62be2a03418275ff05ee4a812621d7206326bbb2"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__diem_023.skp",
+      "size": 65466,
+      "sha256": "5e1494ece658c5879563853b5e2200b598bcb5972c1917df3523445c35a2406a"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__diem_024.skp",
+      "size": 39506,
+      "sha256": "58ecfba8fd8b4bbc58051fe733ed33971f35dbba6523c231eb5ebb60058c6660"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__diem_025.skp",
+      "size": 548273,
+      "sha256": "33ce898685bbb8e5c06a9c3f9977fe23d29c783600d9eca82648a40147a11b6b"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__diem_026.skp",
+      "size": 39793,
+      "sha256": "ca8b2f3c8986931ee95c79f5bfc08aceca2eb8c3e8f3176b8a2e986ffbcaf573"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__diem_027.skp",
+      "size": 120160,
+      "sha256": "0a18b11381b97847423ad974bc772e8445fdea3e59fcf449e1553358b9da0242"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__diem_028.skp",
+      "size": 486390,
+      "sha256": "b020d2cee198bb54a72021331281a7c7efcb45ed448ce4a3fbf1b9d85a589fb2"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__diem_029.skp",
+      "size": 235358,
+      "sha256": "d5f18d73cb99cc566b70f810ef16356734c2ff046b26badd27a6987cd0d73ad3"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__duc_008.skp",
+      "size": 253194,
+      "sha256": "d97d7c32857c242a5ce44260c30848ef21cadd7923ece87d54265d4d1d7c3c71"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__dvd24_b046.skp",
+      "size": 3710079,
+      "sha256": "abcfff6472ddd71c193a12a8fb265293d5650a6658a26c4c6c72231a831052ec"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__dvd24_zhongshi131.skp",
+      "size": 75077,
+      "sha256": "6b9a16060ed7161ab970bc360e39fcbe98cc4b1e2de0a955e2a324c9ac80619a"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__dvd24_zhongshi43.skp",
+      "size": 722343,
+      "sha256": "9daaeca7d39323ba15a5e8c2f0a2e0e0fa0edf00300597c28c94bf15690ecb6e"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_005.skp",
+      "size": 215621,
+      "sha256": "d41749db31e715846c6c4e057e772c96a242e9017ca282322e54d4dc3ae9e4da"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_an_023.skp",
+      "size": 167637,
+      "sha256": "195eef3e560eac1ca0d2de8e91c737ebc18cf12fff1c677e607271ab3d9b4e43"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_duc_022.skp",
+      "size": 196214,
+      "sha256": "20f6ba4a9dac792634ac7f42696ad5285d88854348d568913d7673fae2859305"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_gia_012.skp",
+      "size": 162547,
+      "sha256": "57a82518f22e479d0017574e198b3aabcab613c807171fbc7592a6b417acd892"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_hoa_015.skp",
+      "size": 158298,
+      "sha256": "5968bd5a660b11221f3b66f9c70a8c16cdb4df0069fc16ed93f0c7a284c1d426"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_hoa_sen_021.skp",
+      "size": 618402,
+      "sha256": "0c916c798e0a7682a3368602908686ab9a0665a5b1f781b3ad780ee69d3be248"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_hoa_sen_025.skp",
+      "size": 3019893,
+      "sha256": "fcba8a09c43f20068955d523bc69ca4c2a92c52e2dc592bf48a8e4de0fc74a63"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_hoa_sen_033.skp",
+      "size": 260365,
+      "sha256": "8b370b01fce72d3c10d734a037f6692d93950e145ab237bef5677a79e1f23f8d"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_loc_011.skp",
+      "size": 371915,
+      "sha256": "871f01600e0c02fea8dea9cd79363906d5c088ce5cbc8babb36878a1de1633aa"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_luu_017.skp",
+      "size": 201233,
+      "sha256": "b7fc49a989b1b5e0b63a60cd460d3d79f92fe3aba27275084ecee79861b76f9c"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_phat_018.skp",
+      "size": 221314,
+      "sha256": "a6aa9dc157ddb2ce38a9a6e05d261cbc5f0bfb88b32dae27a43c4e2e2f795b55"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_thinh_016.skp",
+      "size": 247148,
+      "sha256": "431e262fe3c68a09165aa813d46d1091e4f5ed8e799eaf40eccce7f30d3fe389"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_009.skp",
+      "size": 431203,
+      "sha256": "dc65144617a04008a2847c6e69052c40d005b01ce2850b7452f649384a39a2a2"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_020.skp",
+      "size": 115437,
+      "sha256": "ad57e43265543edc936dad496e9c83e878ff98b45c2d4f18a8da11739b051b88"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_024.skp",
+      "size": 15716695,
+      "sha256": "db9ff83a133954a75c64297e30c332a74fc2cfcb73153eff6afdebd382f34c6f"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_026.skp",
+      "size": 800216,
+      "sha256": "65a58351e621d9033ffca72ccd4e1a868531b3c0e32a9608de944868ba0fcea7"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_027.skp",
+      "size": 66963,
+      "sha256": "f481bc1d3dc0a14053e0333c3f69067e95cc91e0656c674306cff116f0f992c2"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_028.skp",
+      "size": 714934,
+      "sha256": "e771da52d5de96276d6d677a162b0ec2ced39d62b26d2d38e48758899cb545d1"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_029.skp",
+      "size": 741784,
+      "sha256": "2b56b88bf1bf70ba0cf5c2f0c2606723401cc7e99362fa4d87645c8b141e9ac9"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_030.skp",
+      "size": 3243246,
+      "sha256": "5dd323151343d9e86e5b7dc17ad0229103f23731d00d0ced293becf809cd29c2"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_031.skp",
+      "size": 574277,
+      "sha256": "cb97922ce5eb9f1895809ae8a8ea05b1406cd560a3c4d42b08b3d1ce68e823c9"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_032.skp",
+      "size": 231784,
+      "sha256": "993cd0aeb8abbde0098bd7e87852ccddee2671323e63c5e8003393b39b5e741d"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_034.skp",
+      "size": 88959,
+      "sha256": "3ac0b8df59e2cabb1a07e7a7482e11bcc23d36bab5c853a2d1c58bb1343dfd58"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_035.skp",
+      "size": 122806,
+      "sha256": "80de1cb806ff5d6b62137f09964b6de59ab47112bac5e18c841f6453dba24ba9"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_036.skp",
+      "size": 7104461,
+      "sha256": "5c9c293ee8952f3f348a59cefc33d9391bc5ad46f5dda9dd39ceed727d068e32"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_038.skp",
+      "size": 686155,
+      "sha256": "f0ac4c3c9183d9206bd9aa4aec664671322ef68be0e3dcf4a07f97437ff151ef"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_039.skp",
+      "size": 504488,
+      "sha256": "c75800c1bc25c939b003281c08d0999ce9f28ab3dfefbaa431a63ed58a4c887a"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_040.skp",
+      "size": 217065,
+      "sha256": "c3fa9f7b50a5f31fea128eecdc7cca7324a4733aec27f7ab1ddc606bc5cff503"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_041.skp",
+      "size": 218786,
+      "sha256": "cbe718334c512950efa98439d33fbc445db9ad91e7701c34ab07d2ea71c97e2d"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_042.skp",
+      "size": 1361662,
+      "sha256": "4031112316d005c477fc7f3a78434c2dcbe2604fa728468ff8e86703cc9c2080"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_043.skp",
+      "size": 820895,
+      "sha256": "bd7065fc2d844fb5288ea027a774fd54a0284634083405e682695f893a032c11"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_044.skp",
+      "size": 357863,
+      "sha256": "4f043ccc42e1904bf728b27969fa85024d20fd3e322afb818d4399ef8adc3e06"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_045.skp",
+      "size": 244941,
+      "sha256": "b49eed8ca923e390a8fd9b2925621d5de0e739d51a24d0e5ac0b459855213919"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_046.skp",
+      "size": 237179,
+      "sha256": "deba31dc1f7ee5deb0ad83f37a69e0c812357717ec9671a48f39e4e4ed6df83f"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_047.skp",
+      "size": 7586024,
+      "sha256": "1804cb298967bcef67e0d8642a433048b2f8a2d64a7f8b4b2884daf293740c87"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_048.skp",
+      "size": 119831,
+      "sha256": "7726b397eefc15a921b48fda3058fdd7ab6f4b9c3c7634cf3add4f2f122e60f5"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_049.skp",
+      "size": 882375,
+      "sha256": "5e33c6786da431928d99a4a45f7c01bf20834c3a34d7308f0962865cfcefd8a4"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_050.skp",
+      "size": 1361057,
+      "sha256": "20c15c193a88b41b2c05423061ae02b729a7ad616f96635287b635dc6babfd17"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_051.skp",
+      "size": 1752955,
+      "sha256": "56ad294449bae345594cd677f301246d1dc40272f8b4802a9185d606d50d234a"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_052.skp",
+      "size": 554449,
+      "sha256": "65ee3845db5589fd359de5dcdc60eedd1be307b3ccdf7da479dc0581bd7dc866"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_053.skp",
+      "size": 2665052,
+      "sha256": "ca519a906ddc67afadf7358a0e5f827badb534792261051d6497eac38ef8740d"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_054.skp",
+      "size": 279053,
+      "sha256": "087a17663df383715c9d73d1c96e72611a86d4ae3350446091d88e8fc0d75a40"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_055.skp",
+      "size": 258806,
+      "sha256": "fb5f9370990c7183be4c5f192d273582ad2112c94017a3ae25663c41e73a6352"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_056.skp",
+      "size": 882375,
+      "sha256": "ebbc1c0bc17305d994729ec2e90cd0e97fffee58e771752219da56373defdd10"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_057.skp",
+      "size": 325291,
+      "sha256": "9dffd053ead54844f1c7df5a127e69883bc3bcbbf635bddd0b4cbfb929282276"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_058.skp",
+      "size": 115869,
+      "sha256": "f028ebd8ab91d4c41d05040ee53f113a2f5d8b34e418e5ab2a6304be4d1b9c1b"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_059.skp",
+      "size": 211637,
+      "sha256": "18215007ba4d5098448e69abcf7d21fe9fadabd3775c5c19eaf4543a6b23d436"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_060.skp",
+      "size": 725254,
+      "sha256": "2d501f47676c9b56ab0ea478a182de840c5185d272936f86a1beafba48a9d59c"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_061.skp",
+      "size": 745607,
+      "sha256": "6bd66af2bd8a22f8c2acab82d053f2cb2b9089bcb36c88e739498fbb11f0b764"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_062.skp",
+      "size": 767427,
+      "sha256": "9faaad51f2bfb8d61032d13736e7cac1c20e391fe81976a1e86db18290f46d89"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_063.skp",
+      "size": 819495,
+      "sha256": "926c719d3a067c21f0c3b3ddff94254d36fa304b647cbf6bc9b584a28f015ff7"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_064.skp",
+      "size": 833632,
+      "sha256": "0b767dc8e21604a375937e9cd067931d20d76541ae1a57cc20f1f5ab10081883"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_065.skp",
+      "size": 2111373,
+      "sha256": "29b7480de97095e05c2f7234bd742fa7ebb66df149d12d628a2e60edc65d35ce"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_066.skp",
+      "size": 2166515,
+      "sha256": "e8b6c7d6559546c31d6b1f1222d3d31751192459c17f3cdc7c3e1538a73bda7f"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_067.skp",
+      "size": 3691805,
+      "sha256": "794f027024fcb4d2c9225dd6636f9358ed8347d163a87723843f19df08190c20"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_068.skp",
+      "size": 160900,
+      "sha256": "b10fd97c5ff19c0fffb81c8189e8a7c0cfca66f95a6aa3c5fec1a8ca260bd9aa"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_069.skp",
+      "size": 794067,
+      "sha256": "99cf45931caa3acba83202c989f60e457efdbbc4408ef80065c329124bd6c5ef"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_070.skp",
+      "size": 1098254,
+      "sha256": "d5a0c24cdcf95171f2e7eb35bccbf4ba864b7758d445029284cd8b07ba23d7fc"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_071.skp",
+      "size": 218356,
+      "sha256": "0b4627ce0f4bbc49a0baa624e623992db62d2b8536b22425ddb67b8d992a77cd"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_072.skp",
+      "size": 1408253,
+      "sha256": "a8af296d6c3861a8d77fa6f2328ca25f53f1c4baf5d07b9cdd3e37daafdfe385"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_073.skp",
+      "size": 6547385,
+      "sha256": "02caa4ff5b151b44e931558eeb10933246f6edcf800eca1a2e2173e386aebee9"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_074.skp",
+      "size": 802520,
+      "sha256": "4978f7c8f516f50a5e2e5a4c68735b803e1625ba68f5f91f76b9b96512a48977"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_075.skp",
+      "size": 637326,
+      "sha256": "48255cffeff096d89110926acb5261a793167660e6b982708d223c9f8f8f7ba2"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_076.skp",
+      "size": 1129517,
+      "sha256": "3ca1408ab31db751c9d94ce47db5149f5066b087685b8f39a4f01c325bfc9703"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_077.skp",
+      "size": 282122,
+      "sha256": "15df80ab3ec21316f40e890a163e60845ee5e6124746bf2154e07cf0108842f9"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_078.skp",
+      "size": 3700095,
+      "sha256": "04fea2ebcb90f1b9483e65c1f5bc768ae3ba76b4049948e116dbe038cd278cd7"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_079.skp",
+      "size": 1291386,
+      "sha256": "fa2b891da41cce305ae9aee20020fc246ae1b2f84bef5c8620e2acf81c6f0af4"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_080.skp",
+      "size": 217065,
+      "sha256": "1828e755b6a84b4b2e14f9780ba8aa2d74f59cceee4c9583aa59118a4b33a71d"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_081.skp",
+      "size": 234597,
+      "sha256": "180260cd7cae05d9c27cf5430399637f08a3470d59705775f67a1e7d69152aa6"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_082.skp",
+      "size": 3481185,
+      "sha256": "5cc3c2b80afdbfa58257a03ce6956138f17c0c644bfc4bac10a4b17bcdeb4c2c"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_083.skp",
+      "size": 124491,
+      "sha256": "50a671b9ad9f900afa0fce4db75c4081afd417111fff00553182adc736d20fc7"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_084.skp",
+      "size": 649519,
+      "sha256": "2f3fc8136ec4d4bdf5bf6adf531f7f271c7f9c4cfdb8f3ec2dd2dbdb26d9ed0e"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_085.skp",
+      "size": 1125288,
+      "sha256": "95e3826583765060aca17e08c01040f9605c9260a7cac0ebf20eb5b024618280"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_086.skp",
+      "size": 287534,
+      "sha256": "e82369b37f017bcdc31d7b5a010af699bc2f74015fb39f3da2efc5c99a9c387a"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_087.skp",
+      "size": 266489,
+      "sha256": "a8da7d6aae84b1879b8d06db1ac24348f55377f7ee539b93c6d9b4da8d43628e"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_088.skp",
+      "size": 177930,
+      "sha256": "4385f4be8436b588d7f290b279ac1a0eaa96766f096eaa123d754f42a6a52cf0"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_089.skp",
+      "size": 192935,
+      "sha256": "8cc2682a8728d460cbaf690467110c47ad58c4f0f0447ae76b45ce98b3e63a74"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_090.skp",
+      "size": 214537,
+      "sha256": "9e06685d94db43a5f362ec790768d8538e7281fe7f64962192263e71d513b731"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_091.skp",
+      "size": 111601,
+      "sha256": "548944b27a4c72eb865b1558d9cde4c5ff2f06b4cb5d5f4a9b77ab2d377de9ac"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_092.skp",
+      "size": 139029,
+      "sha256": "f6138174d0f41e37792b104c6dae8f9ebd6a0f97a3df81312d0f573b3b659ad3"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_093.skp",
+      "size": 140033,
+      "sha256": "d91cfe3067463836ac9a193e5c79346ce8c7ba7f6ad924802327e35f497b1beb"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_094.skp",
+      "size": 128470,
+      "sha256": "3280c8f9d72bfaacc6a6670fa6d19da68886332eb8775af6972a74a8c00464fd"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_095.skp",
+      "size": 152313,
+      "sha256": "bbf7b6d8bfe3d31b38637d72df62a7a7bcb48d6a63680054cdf697e58c99c03b"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_096.skp",
+      "size": 135713,
+      "sha256": "e8cc1ccc0c53afc8609d46c26007147efd2a0cbe43b69172956ac60bb5a2b7e5"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_097.skp",
+      "size": 161868,
+      "sha256": "c2db74d5dd7ff96d1a998410ff3bd0dbe59de96b92b94fc836aacbb39eb80580"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_098.skp",
+      "size": 115114,
+      "sha256": "05a990d95b166e52973480bd95ac6540631ab55b7d49e8e9bdec2614b432c8c7"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_099.skp",
+      "size": 144748,
+      "sha256": "338a29ebeae6abf33ebe28d2e2ca10a182c0c989fb6e4d6954d98c83fd1a822b"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_100.skp",
+      "size": 120654,
+      "sha256": "a82844d11195322dbecaa52668bb01e3c3485e90f92aeb0235882d66c915cccf"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_101.skp",
+      "size": 139244,
+      "sha256": "e6e76dc44d67a5c283eae1141ef51a4a845a4c76b08fde74c31da71cea895244"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_102.skp",
+      "size": 126157,
+      "sha256": "b2957cd4d7dfadfdc261b0ae9fcfd5c956f96a56136f0176f96253ad46c19dd0"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_103.skp",
+      "size": 127968,
+      "sha256": "75633f3eac0999925f51ab3b1a2c49132b43f398252fc470a72d7e4ed9f4f77e"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_104.skp",
+      "size": 137738,
+      "sha256": "d1b5c926bf8e6f9c2476226371c1210b25f56365b027932dd390d61272e33c08"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_tron_105.skp",
+      "size": 342590,
+      "sha256": "1cf8dbb666ea21e4fb7a34578f0471ed3e09b8d5385def1badd083f102b96825"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_trong_013.skp",
+      "size": 254749,
+      "sha256": "d30df2c46655aa9b181e4e98c870c75cba8bf83247fb129debd907146ac41bf8"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_truyen_014.skp",
+      "size": 326997,
+      "sha256": "35e230df8351c4e608f722dcf20b6924a39c4267724e0f9933aeadea3a185bb6"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hinh_vuong_019.skp",
+      "size": 283576,
+      "sha256": "65fbc0eb76274ee72fca509e8f7d07ce68c6122d36628659ba737ee18b924846"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__hoa_van_002.skp",
+      "size": 313938,
+      "sha256": "7b611efc87b1b25ffeedfc401536f5929b4fa160b8e773d666a730798b1810ec"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__loc_001.skp",
+      "size": 181145,
+      "sha256": "83033bc1ef27cd940b661b0917c390d942e21dde385e081bc583b1c07f60177a"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__phuc_003.skp",
+      "size": 248696,
+      "sha256": "a4781f001e9a5df6923bc6f78e70bb45ea6c868c74918044d6fcf9beac88eb25"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__phuc_006.skp",
+      "size": 400268,
+      "sha256": "1fbcb59368a72d21e710173e10e82029a796cc193fc8415348f7870d6700cfd7"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__phuc_037.skp",
+      "size": 2322437,
+      "sha256": "ab956b3928eb35b439755c38221e532565a9a635993b5b106dfb0e8fd93ddec0"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__quang_007.skp",
+      "size": 316516,
+      "sha256": "4bfa7b1ce1cb149c28eba404eec38709ef92936cda025840ea0def451738362f"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/inserts__tho_004.skp",
+      "size": 192206,
+      "sha256": "d93f4fa876e169b61e9650b0f293dc193b6c21dad126068431989bb8a12336d3"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__dvd24_b063.skp",
+      "size": 5527994,
+      "sha256": "84e27b96062e4317c74731466d6a3bacc272462491de624316d83b7c5bda0651"
     },
     {
       "path": "cnc_source_198/models_su2020/patterns__dvd24_b091.skp",
       "size": 235727,
       "sha256": "4b1e306f1526afd3db855b39e6bf63e5fd5bdf0c1316186a2eaeb066c58fbcdb"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__dvd24_zhongshi1.skp",
+      "size": 640369,
+      "sha256": "d8563d4a787a21fd07208c5879d2ac422e4b910a837c08313bed9a45ad00de88"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__dvd24_zhongshi13.skp",
+      "size": 5814070,
+      "sha256": "b70d5c61535691166e9e512bacff25e158b64b86496086dfb39aa8b91d60b9c5"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__dvd24_zhongshi130.skp",
+      "size": 88130,
+      "sha256": "a933aa2a7f4ad3e87daef51e9ef78548362a835ce69f161b182591ce07ff72ff"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__dvd24_zhongshi136.skp",
+      "size": 81673,
+      "sha256": "6dea134648e35de67bce46b1a0a67bc3ba3cea3e35166a0303da5d1587511bcc"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__mau_la_kv_1.skp",
+      "size": 186012,
+      "sha256": "cbe9c8b336e304a1d33b007ff29132573324106029f3f5945c939e9fcc6b32d1"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__mau_la_kv_2.skp",
+      "size": 314718,
+      "sha256": "f379f456a38e8a52ee164c45e03b3885fd4f7db752e95e7e4fde1f73109c7fe4"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__mau_la_kv_3.skp",
+      "size": 320319,
+      "sha256": "ef705b0ee4e155db3a8e7f78a749c67204f4af51afc47503f4b27ea1539894be"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_001.skp",
+      "size": 39110,
+      "sha256": "680159f929ca491370bdd0c9ca0894b9432737d1a9dd296ba149d5b57e57d8ac"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_002.skp",
+      "size": 33942,
+      "sha256": "431661b234da9ff56fae92ccc1887c627b4e4396502466b4b5ea364e3a890adf"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_003.skp",
+      "size": 49819,
+      "sha256": "2212335df124261232af01eae78f0aae2beb2f409781371e1dcf052e1b0ddf63"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_004.skp",
+      "size": 34162,
+      "sha256": "20a67ec4cc61d9ec511b109d7003a97704a6aae23bdc622a40e28a4ad1c48b2a"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_005.skp",
+      "size": 33522,
+      "sha256": "544858a5c351492524425bdda8033f009d10b953744889da3dd5b7a7d6b44a0e"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_006.skp",
+      "size": 392079,
+      "sha256": "46655c0d9bfd417fb2dbc1b829f92e8cb8911e9c6c65c8f193cbd960a97e1b11"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_007.skp",
+      "size": 235397,
+      "sha256": "abb2b5bc3419a49f223d8b231dcfb5b7d2ff6d66e06ac261b2731b7e444ae25f"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_008.skp",
+      "size": 17352,
+      "sha256": "9dc22e4fdb06c6c6e08ce7cb47ad42063a06d0768caca90674b9e20a0d7ff952"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_009.skp",
+      "size": 25347,
+      "sha256": "3dae39b70b4a9039bcea692f6564bb005525958841b4eb6b608bbd9b5fa03608"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_010.skp",
+      "size": 29434,
+      "sha256": "74f2cfe0b78c15a1babca68d20317b369c78c7295cdd3e646995b3c971f19e56"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_011.skp",
+      "size": 29434,
+      "sha256": "924060ba322e9c0cd194d512787b19e48fc7227b65bac74ad696d82b9d98a778"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_012.skp",
+      "size": 37108,
+      "sha256": "3aa27af8929b9d3394395be76bc482cd958a9d194b2c88a362e513a51a72e52f"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_013.skp",
+      "size": 32320,
+      "sha256": "67a0bbb4ee45dada57ab96999d19da7a0142f1c8f0473298b4073e9d7cf73e8d"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_014.skp",
+      "size": 33522,
+      "sha256": "704b439afc7f6a4fd7cb6742e123b3a60e8b58aeaed7106c7895f4330eae8e26"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_015.skp",
+      "size": 209008,
+      "sha256": "d72ae794150100c7b347078beffdb0e28e4d9760df356a369a94198df774333d"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_016.skp",
+      "size": 24307,
+      "sha256": "fd609072c7965e09c3f2c247b3fe693bc8898457c233c150d8d5b84beec8d7c0"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_017.skp",
+      "size": 34454,
+      "sha256": "c8f110e179d9b93a0eb9d252ab8896f3c9a2624acf934012f0eff1c90a6b54d5"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_018.skp",
+      "size": 17208,
+      "sha256": "08074e7417ae2e5881b9f5b0f292c45186405d3809927057669bd3ecd7e824fb"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_019.skp",
+      "size": 37108,
+      "sha256": "b24e11ac5fec2146bd53bcaf22c3b65b6a4b106465fd6e42ffb0d583b611e307"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_020.skp",
+      "size": 32320,
+      "sha256": "f53d1716093f673985d2251e7de9c08c66271556d2e0a2b61a565692eeaf11e5"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_021.skp",
+      "size": 37108,
+      "sha256": "63ed7e7477977bf116984aef01ed945520ceaa3194f0c56231febe2d44736705"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_022.skp",
+      "size": 96570,
+      "sha256": "eee297f5b3da0492ce242fff933ef5c9f8932077b4e4cb93a4595e551ec67ef1"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_023.skp",
+      "size": 39116,
+      "sha256": "a1390e56143697e06ba04e5ae8a03098574c88f47ac49b86b849479fe856977e"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_024.skp",
+      "size": 33522,
+      "sha256": "4598762234da2fdaf960ce994b9ecbf8a733a82ba848855dbd4d4842109082f3"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_025.skp",
+      "size": 50017,
+      "sha256": "88124b9a44b08063620dfafa42623615d4268da7e250d408c2b9fb863326043d"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_026.skp",
+      "size": 55036,
+      "sha256": "64f947329e4479ce27ab9d2534654f73b7eb362c84db7fc9723ef0e5b5cfdb51"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_027.skp",
+      "size": 24307,
+      "sha256": "5bbb3c5a018b43a1349ef614d662be24b1f71e2461826b40949f54bce512b2a4"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_028.skp",
+      "size": 33522,
+      "sha256": "8aa634503e213e61d70f3a2b3e109a1f0ced4f72e81af0e64c366a817e6d75a7"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_029.skp",
+      "size": 209008,
+      "sha256": "0d0786bfa02b462ac1f321a3d3f1c98f81e8e5069a8c358b948db805f9746bea"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_030.skp",
+      "size": 49819,
+      "sha256": "d5621c9801a112beee7edb3c1ff6bd7ae6ce9c62f721fc174b7f4de7ff1ca6e3"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_031.skp",
+      "size": 22384,
+      "sha256": "17b5471a582c13ed75280b8e4b9e6993588fa07ef7febd4bf26ee6825e42c030"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_032.skp",
+      "size": 28467,
+      "sha256": "db2c47c0f1f3199c152624e24a1e86c02d6a5a2d447dce912008b2ed8828a88b"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_033.skp",
+      "size": 23267,
+      "sha256": "0baf535b82610dca81ffad3d9af697a0871fe623b8c07d1dd9e18f061c5bbdcc"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_034.skp",
+      "size": 29578,
+      "sha256": "2b116f35783e8aebb059a92eccada7ea64f7d88312e74a0a1d82910f97e5b67c"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_035.skp",
+      "size": 95364,
+      "sha256": "68310fb253c59949f239b4c14664f838c60a047509e6f90074f7f4a6e3c7ca74"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_036.skp",
+      "size": 29434,
+      "sha256": "e168f0aee213edc74cb55cb0ab67225826b97aafd8b42a09191528d3d05d4aea"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_037.skp",
+      "size": 18337,
+      "sha256": "9669297ea4680ddc6ac2b255a7eb10264ea8be8dad0d9a405ea2f07c122708d0"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_038.skp",
+      "size": 164390,
+      "sha256": "0c6d0e3d1dce43740dd359a6f57b58a245631e25b26fd82ef0659dd6af131610"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_039.skp",
+      "size": 53906,
+      "sha256": "12664d1d89ebde54245e7e7a37ae906ed47e10189f0b542894ce56ea7cfae73e"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_040.skp",
+      "size": 134450,
+      "sha256": "2ae39022b031198ee73018255cfcb0befa75b00ebb3f6b865fe8f4da0f9530fc"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_041.skp",
+      "size": 18337,
+      "sha256": "57820e2a262065f33ac640e45746a684525e377765a24a91a280a24d198904b2"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_042.skp",
+      "size": 157808,
+      "sha256": "0108e94d2078e38e795834da5c5f626b3e3b69a3f484857ca446beac10d9e0bc"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_043.skp",
+      "size": 33522,
+      "sha256": "3ded37099bb6abeb49e33fa6c4021829aed2a7362fc0a22b1e068d6424fd8b86"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_044.skp",
+      "size": 33522,
+      "sha256": "1d5b391d9db9701d5df83d84aa3bed151fa43b5ce9941cb94975bd6b48fab49f"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_045.skp",
+      "size": 29578,
+      "sha256": "e0777724f7eee8066510ac1f50894719ef8444bd44fb0a337050c50136a017b5"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_046.skp",
+      "size": 577551,
+      "sha256": "301fd6176f09c6fee60efe995c0d0c4e7d1b9a068b118dee45df455e97888716"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_047.skp",
+      "size": 46375,
+      "sha256": "3aa130fd5dcd5bb0fee3a6c789ead33708c34f96ea0330c6fd0c1b22050213c7"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_048.skp",
+      "size": 344412,
+      "sha256": "d37843ba0473a53c57328ae48a8178195cef24e74d7dbd22dab0cbde3ca5b2dd"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_049.skp",
+      "size": 38632,
+      "sha256": "46ca2bc8f5f21e26ec7efa89a39529cce89ea7a38c979f34b178bf4a90154f3b"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_050.skp",
+      "size": 64429,
+      "sha256": "77b9d6bf9e386debb4070d719bb03722d2b241a9068c25c7aeb19866d57f3b84"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_051.skp",
+      "size": 47309,
+      "sha256": "395b8c405dcdda3248767fdfe748d2bedc24e1170ec6af2e543426f022003414"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_052.skp",
+      "size": 72535,
+      "sha256": "6398358356acf1818e57d71bd5955753451a8fdbd1f7775f6fb7636d6b5816b2"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_053.skp",
+      "size": 18337,
+      "sha256": "6fb2885817f51054fa8b88aa2b900a33004f468edfff6427dd6e9c95016ecce7"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_054.skp",
+      "size": 149190,
+      "sha256": "a8f97a3044fcac070158ab21ee90bf79f2e153ee7d32a3212907c860119151c7"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_055.skp",
+      "size": 28772,
+      "sha256": "7cda5da43e0dae34892f765b8dde6d67c38830eb0ec3c228118d645246d1abf1"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_056.skp",
+      "size": 60646,
+      "sha256": "9134a12d78e406bdf9fe612a1b0beff43a3225ee092153f7be10f76a1ee3f7ff"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_057.skp",
+      "size": 92631,
+      "sha256": "08639759eb7ce23efa27a4cf44cf3217b2ae2efd4d6a19ce576c875eb45e524b"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_058.skp",
+      "size": 24773,
+      "sha256": "6e1893157b55775a14428d7d358c297fcb84121642dd652db123413836782175"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_059.skp",
+      "size": 208580,
+      "sha256": "b558212f619ab26f5285c8b8f97d6db73b870dafe71af1068e36fa5b2eebac8b"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_060.skp",
+      "size": 21349,
+      "sha256": "2bf03532930b508b1bb12dddd270e8afcc97534769591d39b71c5da3ef3c7bb4"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_061.skp",
+      "size": 14268,
+      "sha256": "d7c979d11af76fe1c149b5cce8811a63799052dc389485c0a12fe7fa48219331"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_062.skp",
+      "size": 16300,
+      "sha256": "950ecd76041ffda77cd94f06af9d2edb9124d93d13423b22a281b46b6d231ff2"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_063.skp",
+      "size": 21403,
+      "sha256": "07d5b3a270c0f8193c4cba304ec992bac68f80470ecc448b7dd7a1b5392c6434"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_064.skp",
+      "size": 48544,
+      "sha256": "9b5f5f2973dcb78b58e24b1f9af138c75ac06380d1a7841795b9d67ca9a1661f"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_065.skp",
+      "size": 32088,
+      "sha256": "52fd5dd8b09d8e8bd4e9783f6f35fef69757f3de799d581bd2ce9e099225af1d"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_066.skp",
+      "size": 24307,
+      "sha256": "0e614a0dd26b0404107de9b18e1fba63f151613321df412dbc2593f4499127e5"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_067.skp",
+      "size": 24307,
+      "sha256": "e1ffd4789e124ea4cdc06df6ca775a59b657934eac78bf103e2f22317e22a6ec"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_068.skp",
+      "size": 14250,
+      "sha256": "55c36d11ae55a9e7c01763c82dc962e78ed0cebf6c9bab85c1287c646c155a6b"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_069.skp",
+      "size": 35118,
+      "sha256": "1a38a1177eebf413310ca54c50d5b5e519f4f14069e1476e90934519e7bd3d0f"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_070.skp",
+      "size": 294360,
+      "sha256": "a33decf229b75beb8e40de7c653c961b02d2ba01d244ff20b7079e2d84cb7de2"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_071.skp",
+      "size": 40639,
+      "sha256": "fbe18735830de9313b3cbbe66c1fa35ac2f0a895da9028671283397f35fff3be"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_072.skp",
+      "size": 55410,
+      "sha256": "07ab9dd3e791336905dec45fbe4f8cccf2307318344466340af9458f510c4b55"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_073.skp",
+      "size": 137300,
+      "sha256": "d6d523102bfdd93a0fde7e1cf5fbcdf2a580151942260b1e94caecc85b372b41"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_074.skp",
+      "size": 24271,
+      "sha256": "ebff0f1760dc2fce4b1465e161e642fe5b79192ac2d5117edc3071ba275c5b30"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_075.skp",
+      "size": 39760,
+      "sha256": "0f6a2a13a7cf2a4bbaa0ad2670249c95e715d5b4e3ce684d04c955863a522d4b"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_076.skp",
+      "size": 156573,
+      "sha256": "c60d525c31ed23b8351c1d08435d8d75b1e1d9745f0dcac23c6f28a36c8cfb43"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_077.skp",
+      "size": 44690,
+      "sha256": "9b14ef5262f5a36dd4bf0e9621fe62494030a3795ac1d0b3c9e5539ee946a565"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_078.skp",
+      "size": 11328,
+      "sha256": "40de967c41d7e8a2318a3277a2ab7b96809bcd263f0ada234ebadd5743d4f7e6"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_079.skp",
+      "size": 429581,
+      "sha256": "96a700d3c4dab7e30a1664c3029190fe4b97bb5bb1a317354f5a03066b7c9289"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_080.skp",
+      "size": 196083,
+      "sha256": "4f93987fc4f53b7add9dad805a481675ee71e42f16ab7656e2a58edb72bb794f"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_081.skp",
+      "size": 33450,
+      "sha256": "c7b21129e2f62e58ba2be471bb5c3a432dd655ba9347a6fdd15cd021d71701cc"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_082.skp",
+      "size": 17262,
+      "sha256": "ef7769f20524f752027fa8e90db924dd0577cd27b7fc18a52b082148302df6ac"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_083.skp",
+      "size": 58299,
+      "sha256": "489d7c753888d66bddbeabef79089cf200f40325c65c9998ff0822585715c83e"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_084.skp",
+      "size": 59624,
+      "sha256": "b0bb2ef9e4572a844d16a6a881fd24b8a64dfd304c71af0030711cecdcd61cd1"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_085.skp",
+      "size": 96785,
+      "sha256": "69c28ddfe7a70a92781cb112539da4540840dd58f2ddc8fc7de06badce752c29"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_086.skp",
+      "size": 14340,
+      "sha256": "64181b35d0cd042bed8235bb13e2d1c496af72b31356aa4d055b67453e70252c"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_087.skp",
+      "size": 73480,
+      "sha256": "38ae33cffaf524aa1b0598479b7f2d51caf47944903a5fec6984fae2e13c7b61"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_088.skp",
+      "size": 64949,
+      "sha256": "728c10e54e18bfcf3bb884d1174e0224f3337a1fd9f4bb84704e12f63828f3f5"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_089.skp",
+      "size": 22281,
+      "sha256": "0463397ab6d7eceb1968fcb6ea427c519cdbe75962b560612c023d32422970ec"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_090.skp",
+      "size": 28377,
+      "sha256": "aac0e8eb3e4b8a2a77e262573b7393e5f8ffeb00d3ffdc7a97f121760254297e"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_091.skp",
+      "size": 24343,
+      "sha256": "1a6e38b99615a7713f7b629a4be7ac94e077fcae6adbb9594daabd94fa0a3e5d"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_092.skp",
+      "size": 29865,
+      "sha256": "3cf26da3d9cb2e216cb4093ce446a51167d3dad094aadef835d83102cf1de60c"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_093.skp",
+      "size": 26441,
+      "sha256": "a2f83e6dfebc247cff26d1db7e56681e4105511fe0ab0601de15a10bbb0c0e17"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_094.skp",
+      "size": 124178,
+      "sha256": "763455607c325c6a3e30929cb7b1ac839d20afcc378a900ceb2f068da15b0361"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_095.skp",
+      "size": 445200,
+      "sha256": "4daf3d24b955ebff7daa9818811d3704f04b2ae38c943cd37fb8a444621e6281"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_096.skp",
+      "size": 61721,
+      "sha256": "5f40c68fb5c1b7375ac07d34c05375de618c7f7ad61fd74412103065d2a9696e"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_097.skp",
+      "size": 161742,
+      "sha256": "7dc5d49ee388dd26d2cf98dfdfeef3a9daef9ba3ec11818d08dc5bf7c2b8ac8f"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_098.skp",
+      "size": 1185723,
+      "sha256": "40a1ea8f5881c42fcea9f07a1615dd030c666721e7d04629e3c6472f08dd44ae"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_099.skp",
+      "size": 42343,
+      "sha256": "faa096620f096f6ec41ce78173bae8b2b809ea6b68ba31497342e15ae86a6e3c"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_100.skp",
+      "size": 163743,
+      "sha256": "1f5e27e54433cc4fa0a767d27d1470457bcdde7342cab329370428275c09b04f"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_101.skp",
+      "size": 24863,
+      "sha256": "6056574e9dc7a8bb690ff11e5e899ac68035f86e14b30ebaa04612aa278b6224"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_102.skp",
+      "size": 765024,
+      "sha256": "7611c291e964a44eb95ae8f9cefce5ff24824b749031a9636c9b03d64866393f"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_103.skp",
+      "size": 14286,
+      "sha256": "ecea56de881a93813dd9039c93cafd5e6ce607cec5feafaf2d3bbe590ef23df0"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_104.skp",
+      "size": 78177,
+      "sha256": "81d8693faabf47f0cb249c149f82f9dc749d729b41f9fed806db7a4e5e219dcf"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_105.skp",
+      "size": 96624,
+      "sha256": "4437befd51ec7f653340a4c68dde1e426a18bcf92e8bf318e23d22c87a658aef"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_106.skp",
+      "size": 396615,
+      "sha256": "f800727449b0abc8876d773203bfdfa251aa900a35492189272bcc309cb4118b"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_107.skp",
+      "size": 21403,
+      "sha256": "0ee13aa275d91a510be6478f2c5860f3271d037070564cb35428ae926865b0a3"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_108.skp",
+      "size": 108387,
+      "sha256": "7655bc90f2e8556dd0bb2e30ba223eb12dbc6eb9bdf0037a6595e64732352122"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_109.skp",
+      "size": 486436,
+      "sha256": "00abec9745af81d9b91000e622fb7a35e60f54087ffcc533de449a091f10bf7c"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_110.skp",
+      "size": 64429,
+      "sha256": "8ccf3547fc9d24d4fc66355dba19f204b081ff82427c1342983884f616762567"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_111.skp",
+      "size": 45353,
+      "sha256": "75aea3001f3d5dca563f4e341759f61f1a1094b59f5469d31973841d81ba8f58"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_112.skp",
+      "size": 83396,
+      "sha256": "641b54eb38afda3cb83c81249bef9b663aada5325dc19058aaf74671119a7f37"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_113.skp",
+      "size": 49317,
+      "sha256": "76c309130fb732ca9c2bd1292a7917535d95cf016c306a57f308d50020cce206"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_114.skp",
+      "size": 89187,
+      "sha256": "43461808e87c85faeb8fd8c9b1c1390b438a631dcf63bc988ff24e9b715561ea"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_115.skp",
+      "size": 72535,
+      "sha256": "808af50d10c59f72f0d03b501d82b32e5313959ef39bfd537816b294ac0f07a7"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_116.skp",
+      "size": 181478,
+      "sha256": "506405e3a776ce602142760182e7d896c1c745ace45afb0036be2601716c7dce"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_117.skp",
+      "size": 37502,
+      "sha256": "baf2a4ca5e1544dab478c3fe35ffc6244057be8dadf1018872fb9bbf30abb24b"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_118.skp",
+      "size": 14268,
+      "sha256": "82ddee454e82f4fd6c6dff2181676bfb4933e1ca733851df05588f07af6b139a"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_119.skp",
+      "size": 71977,
+      "sha256": "f879d87863aad646fe80c277a679e46788ee7800d2749c74649d4a10ab9ff883"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_120.skp",
+      "size": 12798,
+      "sha256": "41d7c9a6173f84f46b8e17e0ed9e15537a230828f630f93934cadc06fd189672"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_121.skp",
+      "size": 146569,
+      "sha256": "bf3c7019162d823c45bbd8ce9511836e35d4a3105d5c6bf7fc123795a02f56a7"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_122.skp",
+      "size": 89759,
+      "sha256": "92e60dc0fe73985397244f0c64644caa7d29136cf327ced0c2c92eb241ad7419"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_123.skp",
+      "size": 27427,
+      "sha256": "83f003561426e310388c510bc8ca347c5a8047afafc2d9cd6644e7d623b144d2"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_124.skp",
+      "size": 468661,
+      "sha256": "318cab53f7b88df98b2ab168a1312849ae5d8f4cfc1f4d7cd096075b0d51142a"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_125.skp",
+      "size": 267485,
+      "sha256": "de4192443817157803e7ec1d76505abb8bb6f5ebe54e7ec817aeafd59c177e17"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_126.skp",
+      "size": 164390,
+      "sha256": "e36619cb15897eb696db4e901ee7b71f7328ffa2b90cee19820fd7c69b1e418d"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_127.skp",
+      "size": 14340,
+      "sha256": "f6f1646469e7052d860fb0250e0895631ddadd08a8782b5fc614f085b74d0d7f"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_128.skp",
+      "size": 34328,
+      "sha256": "4fc5f32c7ad80d9dd6ce497cfef2de53d7a79ed167e156b3208be9ebb3fe86ac"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_129.skp",
+      "size": 112113,
+      "sha256": "547523f798b25a9f7c8e3466a13ebbe7068010383e2bea18a0498552647aacfc"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_130.skp",
+      "size": 29434,
+      "sha256": "7d1c609260832d500d5fb0497b95ed183b38b3768c77cf788fd225e3cf388f54"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_131.skp",
+      "size": 60484,
+      "sha256": "4d3277908a216ab228fa165f0970bebc78066b58f9f7dbaa19721e6dda16a0fa"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_132.skp",
+      "size": 12344,
+      "sha256": "fa78882625b321150c7248f1e26f9c6ba807e4045ced76f3ddd9132afd424806"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_133.skp",
+      "size": 53886,
+      "sha256": "d23a46c005f9d0e9cc06b36c871a5a0cc612230be3f0f22391c1e6f58c2006f3"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_134.skp",
+      "size": 27265,
+      "sha256": "9c1d94f73d66147b64b0dfff008d9a7497dfcf8f80ccdf3331cbcf636e40eba5"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_135.skp",
+      "size": 29775,
+      "sha256": "4a7d17b6b9c4fe84c277f32849046015778dd8b3a92ad0bd644950fb3af45b9c"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_136.skp",
+      "size": 24199,
+      "sha256": "42e81bf9fa99c9499cc466568a1eab1b494824ea1c9e31204e093741ac69e7f3"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_137.skp",
+      "size": 95638,
+      "sha256": "944c2ca807ff5f051b2deed61b1e10fe7eb4f3e66243c65e7869ee08a7c36339"
     },
     {
       "path": "cnc_source_198/models_su2020/patterns__vach_anh_033.skp",
@@ -1738,6 +3216,86 @@
       "path": "cnc_source_198/models_su2020/patterns__vach_anh_kk.skp",
       "size": 81086,
       "sha256": "86642f4806022570dce8fd49cfe8a4e05578aa1a293529b13626a59b92ca0ed3"
+    },
+    {
+      "path": "cnc_source_198/native_su2020/patterns__mau_la_kv_1.skp",
+      "size": 186000,
+      "sha256": "f94d160d6b84b530ad6a0ea7fdc8d2bdfab73991e6ca8a205e62d07773b733e8"
+    },
+    {
+      "path": "cnc_source_198/native_su2020/patterns__mau_la_kv_2.skp",
+      "size": 314706,
+      "sha256": "5103b86cd3c9f075fcde2f14085623ab80e079196f512f8a76c4d072708566b6"
+    },
+    {
+      "path": "cnc_source_198/native_su2020/patterns__mau_la_kv_3.skp",
+      "size": 320307,
+      "sha256": "7d71b3b5ca9acf1c17540426097374388758b5ff841129147b1313b0b85b4d71"
+    },
+    {
+      "path": "cnc_source_198/native_su2020/patterns__vach_001.skp",
+      "size": 66060,
+      "sha256": "bc7728fc75bb0b31477892c128f4399a50bd03e87de51b4d3fe5f3bbe6a3a8fa"
+    },
+    {
+      "path": "cnc_source_198/native_su2020/patterns__vach_002.skp",
+      "size": 55515,
+      "sha256": "c122b7ffa0c42d9035846ef02f179026e84ddf2cc688ff64d35f6184d6fca025"
+    },
+    {
+      "path": "cnc_source_198/native_su2020/patterns__vach_003.skp",
+      "size": 72418,
+      "sha256": "7710a7c4d9666001c8f929ef74a58630632b1b07576224e5eb7e3d8d9bd8704b"
+    },
+    {
+      "path": "cnc_source_198/native_su2020/patterns__vach_004.skp",
+      "size": 63967,
+      "sha256": "1a0f8a73139c2018aaa5baf95eb8b5fb0ce43cd38a3e66a2298f41cf99c21897"
+    },
+    {
+      "path": "cnc_source_198/native_su2020/patterns__vach_005.skp",
+      "size": 53817,
+      "sha256": "faab23850c7d18347a72da563e53f53301e4e74af1f28676b6d46fd5f504fabd"
+    },
+    {
+      "path": "cnc_source_198/native_su2020/patterns__vach_006.skp",
+      "size": 451344,
+      "sha256": "0b9e577731dbbb49684e91cbecaa56bfe268ca2d3adc9432e1911dd475aff60f"
+    },
+    {
+      "path": "cnc_source_198/native_su2020/patterns__vach_007.skp",
+      "size": 326892,
+      "sha256": "d059ba82b075644986ce8ff3def47aae743efc64cb490ac1946c026ec2733fec"
+    },
+    {
+      "path": "cnc_source_198/native_su2020/patterns__vach_008.skp",
+      "size": 33428,
+      "sha256": "1c95055e1e317ba909aa107077cb84800e794d630fd7d999392622d805378e1e"
+    },
+    {
+      "path": "cnc_source_198/native_su2020/patterns__vach_009.skp",
+      "size": 40843,
+      "sha256": "7097771d5a3e96e1af7c2171885a3265a4af84a9d21461618106139a434d9c03"
+    },
+    {
+      "path": "cnc_source_198/native_su2020/patterns__vach_010.skp",
+      "size": 45289,
+      "sha256": "563d9988a531008b45fba03ca27a5e2a488e1d3747ce8d4ff0c16017dd745e40"
+    },
+    {
+      "path": "cnc_source_198/patterns/dvd24_b063.json",
+      "size": 654961,
+      "sha256": "d7f8121fd2ecbb09b1a9220c167e32af583a3cfd587c9ecf42915e43b62ec77e"
+    },
+    {
+      "path": "cnc_source_198/patterns/dvd24_b063.png",
+      "size": 60452,
+      "sha256": "8622e041d779c9063555d3099c5e25c5e79f8582b4d2f7b17fb57763200e6d54"
+    },
+    {
+      "path": "cnc_source_198/patterns/dvd24_b063.skp",
+      "size": 5527994,
+      "sha256": "84e27b96062e4317c74731466d6a3bacc272462491de624316d83b7c5bda0651"
     },
     {
       "path": "cnc_source_198/patterns/dvd24_b091.json",
@@ -1755,6 +3313,61 @@
       "sha256": "d7116da0f7c3d3a89d2f8feb79d20a8196ab2b5355bac655675f028822e2f802"
     },
     {
+      "path": "cnc_source_198/patterns/dvd24_zhongshi1.json",
+      "size": 71311,
+      "sha256": "c79c52fe24a5ff3c4de85a34cf1d06b5f80179b1638000db92f854ddd3a89621"
+    },
+    {
+      "path": "cnc_source_198/patterns/dvd24_zhongshi1.png",
+      "size": 148007,
+      "sha256": "441ef8e5bd462adcaadd1da488da535999630642ec57e83797149f66f769ad4b"
+    },
+    {
+      "path": "cnc_source_198/patterns/dvd24_zhongshi13.json",
+      "size": 554851,
+      "sha256": "cdae3e5bf13301d4d56fff0eaa1f082d350aa2f7fbfbb709c6b5a166fb6ed193"
+    },
+    {
+      "path": "cnc_source_198/patterns/dvd24_zhongshi13.png",
+      "size": 171975,
+      "sha256": "165cb09b5d6141847f6dc76a12f2741d827f0008711e232487ee9f65d1057a7b"
+    },
+    {
+      "path": "cnc_source_198/patterns/dvd24_zhongshi130.json",
+      "size": 10294,
+      "sha256": "811b4827d7b5c46b157b66ee7f02da1677491c7296d66affeab1db5831c159d5"
+    },
+    {
+      "path": "cnc_source_198/patterns/dvd24_zhongshi130.png",
+      "size": 37412,
+      "sha256": "e765e371d00dc236f7d7e3e4a8202e580ac73e16be22ff4ab69444424b12a9c7"
+    },
+    {
+      "path": "cnc_source_198/patterns/dvd24_zhongshi136.json",
+      "size": 9002,
+      "sha256": "6ad24378ed21934ff8b26309471048333c8b1f926fa371340df9f745037608b8"
+    },
+    {
+      "path": "cnc_source_198/patterns/dvd24_zhongshi136.png",
+      "size": 19601,
+      "sha256": "ef7f4670a7f8530409c94ee707d5fc938cdee5feccf6a48bc11dedcd00f858d2"
+    },
+    {
+      "path": "cnc_source_198/patterns/khung_vien/kv_1.png",
+      "size": 2722,
+      "sha256": "6df5570a8279e8c772ca22dfa37db79f00abdf83aa3ddb276153ff6a2507fd15"
+    },
+    {
+      "path": "cnc_source_198/patterns/khung_vien/kv_2.png",
+      "size": 6752,
+      "sha256": "221bf4edf4fe14979906937bc07fdbefa5f9917c31ff1a56c6116e754209222e"
+    },
+    {
+      "path": "cnc_source_198/patterns/khung_vien/kv_3.png",
+      "size": 7908,
+      "sha256": "130fa677cfa34a5940812f1bd290fe33686a64ddb56f3c4b0aa8f45e2140b0e4"
+    },
+    {
       "path": "cnc_source_198/patterns/vach_001.json",
       "size": 6796,
       "sha256": "f724cae167276bc840752bf4090ffddbc3063b00e4b4d21b8504cf8dd1991310"
@@ -1763,6 +3376,11 @@
       "path": "cnc_source_198/patterns/vach_001.png",
       "size": 6263,
       "sha256": "d50526a7c203fccf61870d446e42434565afccf4e7b4e6ca85b84d1385734ea9"
+    },
+    {
+      "path": "cnc_source_198/patterns/vach_001.skp",
+      "size": 35560,
+      "sha256": "3ca349724eab28ce0801c60a6886d66a0b7ae5db63fafa069c6737fe4d1b50e2"
     },
     {
       "path": "cnc_source_198/patterns/vach_002.json",
@@ -1775,6 +3393,11 @@
       "sha256": "170ba7fbdb2d467d5fee03ddc8a3014b9fd48ab7cdd21c4cfe9101a6d5ba6772"
     },
     {
+      "path": "cnc_source_198/patterns/vach_002.skp",
+      "size": 29961,
+      "sha256": "3dfb8976f41ad6467cb58184493be428c2bf3eb34fc3f3bf4de9707d7788a2e3"
+    },
+    {
       "path": "cnc_source_198/patterns/vach_003.json",
       "size": 10146,
       "sha256": "c6660ae9b7160d8939b562fff61848049ef67c89a4b8ab15f71c80f79b70f887"
@@ -1783,6 +3406,11 @@
       "path": "cnc_source_198/patterns/vach_003.png",
       "size": 8488,
       "sha256": "e35bf2ac09acac462fb17dca40166c203de7f77560aa48e4a271edab46cd189a"
+    },
+    {
+      "path": "cnc_source_198/patterns/vach_003.skp",
+      "size": 33580,
+      "sha256": "d353d8a7e873b49cf5410a2aaf95450b2107cd349af77b9f0312c8eabd9e2aa9"
     },
     {
       "path": "cnc_source_198/patterns/vach_004.json",
@@ -1795,6 +3423,11 @@
       "sha256": "52251d45d63fb564999c440aae7f7ae9b36fae7034b7d786ce246ba7ccc71ae6"
     },
     {
+      "path": "cnc_source_198/patterns/vach_004.skp",
+      "size": 36087,
+      "sha256": "a121cdc2a15b28975ecd74d0c005e23941133430cbcabb17e5c0be7f526e5385"
+    },
+    {
       "path": "cnc_source_198/patterns/vach_005.json",
       "size": 6435,
       "sha256": "4af581e2bf4a0e9b694979abd0e06d8cf87bf21d00bbce1a9fd0d203c3722cec"
@@ -1803,6 +3436,11 @@
       "path": "cnc_source_198/patterns/vach_005.png",
       "size": 3831,
       "sha256": "3baf4b667012f3c431e7eda0f826b85cf010c2204af981e3c91dd60c824f7524"
+    },
+    {
+      "path": "cnc_source_198/patterns/vach_005.skp",
+      "size": 25169,
+      "sha256": "3f28c9b95fea9b7ae8a31b3f1fcf15986b5ce0be45d335f607fc8d539e20752c"
     },
     {
       "path": "cnc_source_198/patterns/vach_006.json",
@@ -1815,6 +3453,11 @@
       "sha256": "0dd33e5dd7120deead492a60430b10c695cf26c26f606947ed5de50884571044"
     },
     {
+      "path": "cnc_source_198/patterns/vach_006.skp",
+      "size": 208274,
+      "sha256": "cb476169c422d04fca4b69a2a221e9fc513941e48bf35c8aa4b006344f25baaa"
+    },
+    {
       "path": "cnc_source_198/patterns/vach_007.json",
       "size": 116292,
       "sha256": "6941009ab702449779e205496e82537ba3eddc9d3b99585108bdc733a60c08f8"
@@ -1823,6 +3466,11 @@
       "path": "cnc_source_198/patterns/vach_007.png",
       "size": 14779,
       "sha256": "38b141c3848793324a2f8ab160bc15ee1a84893b261acb9b8a3ae4efcb98de4a"
+    },
+    {
+      "path": "cnc_source_198/patterns/vach_007.skp",
+      "size": 152458,
+      "sha256": "08a0e73b5dc168514ad6f5e8a1afaf2cdfb2c7985a7dcc4ecae7caca02ef4752"
     },
     {
       "path": "cnc_source_198/patterns/vach_008.json",
@@ -1835,6 +3483,11 @@
       "sha256": "553fc7694acc43d565289890f8c0c5e0a77961bb12710ea6962816039be681a6"
     },
     {
+      "path": "cnc_source_198/patterns/vach_008.skp",
+      "size": 14517,
+      "sha256": "1fdfd5189613fca8e1701d1590071b9cb0e21a09c51bb023df377c75e0d2471e"
+    },
+    {
       "path": "cnc_source_198/patterns/vach_009.json",
       "size": 9167,
       "sha256": "eddbf3f869774cf8dbbf09378de1ae76cec0b18e8646735dfef85e607e704e7e"
@@ -1845,6 +3498,11 @@
       "sha256": "2ba820b472cce95f2a359b67a43f26d12f63848a34a83ee93f992d889c3e02bc"
     },
     {
+      "path": "cnc_source_198/patterns/vach_009.skp",
+      "size": 16449,
+      "sha256": "5d1f5c9a7b6b0d2f5f821f94a437ae7d272a81f23cbc8a53428fda4a71dbc7fb"
+    },
+    {
       "path": "cnc_source_198/patterns/vach_010.json",
       "size": 5373,
       "sha256": "167723a376096684edbb8288495b10ffcf937b708a29109b06441c1bda116339"
@@ -1853,6 +3511,11 @@
       "path": "cnc_source_198/patterns/vach_010.png",
       "size": 3451,
       "sha256": "01eccbe7608da983a1daef74e947e196e3e709d8ce8d77d191e6336639ca774f"
+    },
+    {
+      "path": "cnc_source_198/patterns/vach_010.skp",
+      "size": 18654,
+      "sha256": "4b8a74b9044ffb552cd0a5d41bc38d6482bbc730bb3a1876dea60c15b2f9afc2"
     },
     {
       "path": "cnc_source_198/patterns/vach_011.json",
@@ -2056,8 +3719,8 @@
     },
     {
       "path": "cnc_source_198/patterns/vach_031.json",
-      "size": 6491,
-      "sha256": "e14ca1f95053db60e6360d521ea15cc3f5dc0c91ba9fd5f7cad526097cbd0ce8"
+      "size": 6385,
+      "sha256": "cc74fde2df42db23dffaff76d09d9081b967f4a83fbd9b21b4d949d8aa76fa69"
     },
     {
       "path": "cnc_source_198/patterns/vach_031.png",
@@ -3155,66 +4818,6 @@
       "sha256": "86642f4806022570dce8fd49cfe8a4e05578aa1a293529b13626a59b92ca0ed3"
     },
     {
-      "path": "cnc_source_198/prepared/borders__anh_dong_tien_may_cuon.json",
-      "size": 11866,
-      "sha256": "f4f05e4fdc177e9a4d1a5ae833c543b9b0523ce48492fb94af75562a273f6278"
-    },
-    {
-      "path": "cnc_source_198/prepared/borders__anh_dong_tien_may_cuon.svg",
-      "size": 12121,
-      "sha256": "307fc4ce139ebb786a7095355d7b4500f25a5dd0393dde1413557e4827823258"
-    },
-    {
-      "path": "cnc_source_198/prepared/borders__anh_dong_tien_trien_vuong.json",
-      "size": 4749,
-      "sha256": "fc3b86bee6bd4d49aee03c1bf6cef66f8a967abe14f019182b73e2f95faa68f0"
-    },
-    {
-      "path": "cnc_source_198/prepared/borders__anh_dong_tien_trien_vuong.svg",
-      "size": 4871,
-      "sha256": "06d101f4e0b796f22d8511275326deb2d962a226b3f2c248143032b9dc5ab4ca"
-    },
-    {
-      "path": "cnc_source_198/prepared/borders__anh_la_cuon.json",
-      "size": 9253,
-      "sha256": "a4abae9d93fed5d3328ea58304d9db07fa9346c79deb9080061c4a19acba8f65"
-    },
-    {
-      "path": "cnc_source_198/prepared/borders__anh_la_cuon.svg",
-      "size": 9490,
-      "sha256": "629ece34913da2fdd8d9b8a58d002ff70c3f74c3cb7894d130673d3bc3bc4353"
-    },
-    {
-      "path": "cnc_source_198/prepared/borders__anh_may_cuon.json",
-      "size": 5710,
-      "sha256": "97e9bcafda453a09c14745935de665ce6f9a638d137fc9bd0cccd7c0f62b2def"
-    },
-    {
-      "path": "cnc_source_198/prepared/borders__anh_may_cuon.svg",
-      "size": 5827,
-      "sha256": "ff92882b9de2b7523912b1e152efb8012cc0f98651a2c7c868869e95fc47afc0"
-    },
-    {
-      "path": "cnc_source_198/prepared/borders__anh_thanh_gia_day_la.json",
-      "size": 5113,
-      "sha256": "d2402b3087bf7eb23eaed67324f8060cae86d276c8f31cc44f70fba9ed6af930"
-    },
-    {
-      "path": "cnc_source_198/prepared/borders__anh_thanh_gia_day_la.svg",
-      "size": 5239,
-      "sha256": "d1de1d0812e9cd61860288c33d233e6ec48975b233713036f0ffb718186eb3a4"
-    },
-    {
-      "path": "cnc_source_198/prepared/borders__anh_trien_vuong.json",
-      "size": 2274,
-      "sha256": "b0d9c6cc6ef696d5db7806298fd760dc621ae65ddad0740dd6db31e20d6ecfa1"
-    },
-    {
-      "path": "cnc_source_198/prepared/borders__anh_trien_vuong.svg",
-      "size": 2401,
-      "sha256": "cf7277b1fc64cacd6420edaeaa53d0f7c28aeb8b13584f58127802a9e293c932"
-    },
-    {
       "path": "cnc_source_198/prepared/cutout_patterns__duc_001.json",
       "size": 6324,
       "sha256": "8b79a1073e20cf5dc139d1586c76653ed4f78e4a43eca7b065e4b6dc471359c1"
@@ -3763,6 +5366,36 @@
       "path": "cnc_source_198/prepared/inserts__duc_008.svg",
       "size": 19126,
       "sha256": "bc6d15928ba7fccbdd58d9d47728c3651babc6aeb5ff7cf9f777b444acbcbeaa"
+    },
+    {
+      "path": "cnc_source_198/prepared/inserts__dvd24_b046.json",
+      "size": 448867,
+      "sha256": "455aa279fd76a644c1ab3afbb3a225fd661f9147a3a15bcd5c5dca6f6a9904f3"
+    },
+    {
+      "path": "cnc_source_198/prepared/inserts__dvd24_b046.svg",
+      "size": 277493,
+      "sha256": "3f58f5e2af4dea52f3c009c5a2b17b6cd1f8b729e686b01089893403990c6e23"
+    },
+    {
+      "path": "cnc_source_198/prepared/inserts__dvd24_zhongshi131.json",
+      "size": 8402,
+      "sha256": "4e48e6d00157ba2e5055594c1fd04d8a36cbc0ec62f559fb968e5ae5b926bd12"
+    },
+    {
+      "path": "cnc_source_198/prepared/inserts__dvd24_zhongshi131.svg",
+      "size": 8181,
+      "sha256": "e67a502a7f00f02847ac1bee43e01ebaf7171087fa9653032e655650a89c568d"
+    },
+    {
+      "path": "cnc_source_198/prepared/inserts__dvd24_zhongshi43.json",
+      "size": 89917,
+      "sha256": "1de4f3b62e451d0d3afe705c35a9561db28f28058eeefde948cdb8c34b9bf463"
+    },
+    {
+      "path": "cnc_source_198/prepared/inserts__dvd24_zhongshi43.svg",
+      "size": 68855,
+      "sha256": "cfc0314ce767debd6d0e1bc18f22c16229fab291f6a96d6a9817b5f0a1dd280a"
     },
     {
       "path": "cnc_source_198/prepared/inserts__hinh_005.json",
@@ -4795,6 +6428,16 @@
       "sha256": "1e46aaa71373cc34066e21ab1c952076735b44e0e7746b690e0e0368cdd814e4"
     },
     {
+      "path": "cnc_source_198/prepared/patterns__dvd24_b063.json",
+      "size": 654961,
+      "sha256": "d7f8121fd2ecbb09b1a9220c167e32af583a3cfd587c9ecf42915e43b62ec77e"
+    },
+    {
+      "path": "cnc_source_198/prepared/patterns__dvd24_b063.svg",
+      "size": 638369,
+      "sha256": "25867f38ada6501fabe2b8ed61500691633a1b173bb7e6e3d8b54df3bf1783bc"
+    },
+    {
       "path": "cnc_source_198/prepared/patterns__dvd24_b091.json",
       "size": 35617,
       "sha256": "151fadb8c902f11195e1218ab4e27f835f3faef17ac51fd7a2b6c627db1c1f17"
@@ -4803,6 +6446,46 @@
       "path": "cnc_source_198/prepared/patterns__dvd24_b091.svg",
       "size": 26679,
       "sha256": "5c391639c8427bd6f37760104388f4763e30ca1afbbfeb43277b361b158f00fb"
+    },
+    {
+      "path": "cnc_source_198/prepared/patterns__dvd24_zhongshi1.json",
+      "size": 71311,
+      "sha256": "c79c52fe24a5ff3c4de85a34cf1d06b5f80179b1638000db92f854ddd3a89621"
+    },
+    {
+      "path": "cnc_source_198/prepared/patterns__dvd24_zhongshi1.svg",
+      "size": 72501,
+      "sha256": "2fc8b5bb1cd3d9997d29b98826a9aa05b0bd09ca8b385c3127e45898222d6d2a"
+    },
+    {
+      "path": "cnc_source_198/prepared/patterns__dvd24_zhongshi13.json",
+      "size": 554818,
+      "sha256": "2d7ab2ef96d6e7ca7c80283bfe79280a70a6b45c95f1aed87bec6483b384183d"
+    },
+    {
+      "path": "cnc_source_198/prepared/patterns__dvd24_zhongshi13.svg",
+      "size": 541364,
+      "sha256": "ad918ee915c3114e5a1a6f882df0b9155c354c25d2c62384c1685121a0bb3be1"
+    },
+    {
+      "path": "cnc_source_198/prepared/patterns__dvd24_zhongshi130.json",
+      "size": 10259,
+      "sha256": "1389d8f41b351c10e21c45a448c433f76c04fd834c49e33a2439ffdcc68befc4"
+    },
+    {
+      "path": "cnc_source_198/prepared/patterns__dvd24_zhongshi130.svg",
+      "size": 9999,
+      "sha256": "b7081e742e0756145e20e4460e29d63ebe980aa5ef898b576a8d1a67bafc909f"
+    },
+    {
+      "path": "cnc_source_198/prepared/patterns__dvd24_zhongshi136.json",
+      "size": 8967,
+      "sha256": "3f219b57b7e223e85087947a9c87070a8ede8fb6b3fd12b40be69782f62d8ef5"
+    },
+    {
+      "path": "cnc_source_198/prepared/patterns__dvd24_zhongshi136.svg",
+      "size": 9268,
+      "sha256": "b50f28a60983bf9e14ca7afc84b34607d6a3524ace45ab8ad7273d787e365cd2"
     },
     {
       "path": "cnc_source_198/prepared/patterns__vach_001.json",
@@ -5106,13 +6789,13 @@
     },
     {
       "path": "cnc_source_198/prepared/patterns__vach_031.json",
-      "size": 1106,
-      "sha256": "50a04b2a558a771fabd2aeb1b223f0bf5240afb2ae235194163725bd1c88c47e"
+      "size": 1090,
+      "sha256": "5b6ca76c3eb82f02664d6cfefdd96a5fce2994165115f0191e3582e90550585e"
     },
     {
       "path": "cnc_source_198/prepared/patterns__vach_031.svg",
-      "size": 1050,
-      "sha256": "75d81da348a7669758915fba2d11a6034b2a1d8666059835be60a804ae696c79"
+      "size": 1035,
+      "sha256": "6858d8900bc48bf93091cb01ce707ee930d74b7d282aca1525f0f468a502d349"
     },
     {
       "path": "cnc_source_198/prepared/patterns__vach_032.json",
@@ -5336,13 +7019,18 @@
     },
     {
       "path": "cnc_source_198/prepared/patterns__vach_054.json",
-      "size": 10557,
-      "sha256": "845e1fe55c338889e01d0ed073605628b8325c7f544dcf59d7bf1b513e88a5b3"
+      "size": 11083,
+      "sha256": "44fbb5360164c9fc59448a3d42186dffa1ce5017a8b6f1529b8cceac56a6c656"
+    },
+    {
+      "path": "cnc_source_198/prepared/patterns__vach_054.png",
+      "size": 9792,
+      "sha256": "db8391e3b74b5356ac246b3f8424a3a37d7e52037e78564aea7f0fb17aeaa44b"
     },
     {
       "path": "cnc_source_198/prepared/patterns__vach_054.svg",
-      "size": 9549,
-      "sha256": "150ff02072dd233b6b266a4de79a4a8e61bb0632a785f7b1e8d130bfa0d4a713"
+      "size": 9540,
+      "sha256": "6606d83743f6f29c0bdccac9af82bc69735dee95b043cd6c3e3308c35d9d82a8"
     },
     {
       "path": "cnc_source_198/prepared/patterns__vach_055.json",
@@ -6196,13 +7884,14 @@
     },
     {
       "path": "cnc_source_198/shared_library.json",
-      "size": 70882,
-      "sha256": "d681dc28150ae05b5d67a62d211a455368c0df7628a8d506fe30c171488bf201"
+      "size": 61131,
+      "sha256": "fdd5d3f22edbb26a1aef1bcd8a8b57119d78fd14ef8dce1e74a2cd773e398e50"
     },
     {
-      "path": "cnc_source_198/SOURCE_NOTICE.txt",
-      "size": 1614,
-      "sha256": "a8de85006374c5b905732be9ef37a3f9cee94b867e3cb973b4c9e60060a06458"
+      "path": "cnc_source_198/special/khung_hai_vung.svg",
+      "size": 283,
+      "sha256": "3192190c446bc643c00ed81cebaa98a7897cf2c30f47f1d35c9e43f84f2e704c",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.3/files/cnc_source_198/special/khung_hai_vung.svg"
     },
     {
       "path": "cnc_source_198/ui/motif_previews/duc_008_background.svg",
@@ -7260,9 +8949,16 @@
       "sha256": "8445c74cbb401339f462538ab2f7e1c09e41627870169aa94bf1a7928c264801"
     },
     {
+      "path": "html/cnc/autocad_special_frame_host.js",
+      "size": 7856,
+      "sha256": "547a461a5dfa97069c986bcbe1551ae05c6f1b8ef97b9edf981b769bbac2daf1",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.3/files/html/cnc/autocad_special_frame_host.js"
+    },
+    {
       "path": "html/cnc/autocad_updates.js",
       "size": 1285,
-      "sha256": "19916c33b3f3004e34234a12592a701c0c6a1ac8bc6f5b575b1499cf2ffe901f"
+      "sha256": "42f2f0c560e5bab3ab2e4319f652225ddbe6adc934736affda6490cd93aeba1c",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.3/files/html/cnc/autocad_updates.js"
     },
     {
       "path": "html/cnc/b91_sample_preset.js",
@@ -7276,8 +8972,13 @@
     },
     {
       "path": "html/cnc/corel_adapter.js",
-      "size": 9035,
-      "sha256": "39c44ac94b86a5bb56ba743d4979ddcc3a92e341c6086f3d184d6524e4fa0a72"
+      "size": 10651,
+      "sha256": "24cab2281cbefacc571d1d9bb5298974137d9de595e5a08cdbf20882aac9a7b6"
+    },
+    {
+      "path": "html/cnc/frame_board_geometry.js",
+      "size": 7291,
+      "sha256": "92065e110ba786ce0ef3398b9c2e0c9e13027835e30e061bc9f0b7ed5d2a2d14"
     },
     {
       "path": "html/cnc/geometry.js",
@@ -7296,8 +8997,9 @@
     },
     {
       "path": "html/cnc/index.html",
-      "size": 7657,
-      "sha256": "03fad223c85fcd455238ad33002a1c9953ddd52c7f7a5bf90ae357735166e82a"
+      "size": 7827,
+      "sha256": "a1af58107d7d6c52086c1296bc341010568871338e73a7294893d94517f127b9",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.3/files/html/cnc/index.html"
     },
     {
       "path": "html/cnc/insert_ring.js",
@@ -7336,8 +9038,8 @@
     },
     {
       "path": "html/cnc/panel_geometry.js",
-      "size": 72984,
-      "sha256": "06fea13d042aeb59a2f114f0f90dff057ea1591cb23c7ad745833b27e0e74c70"
+      "size": 85697,
+      "sha256": "248cecf0fb8487b141ef5119f5c0ef20363035814be5d0c9749778caf835d687"
     },
     {
       "path": "html/cnc/panel_region_batch.js",
@@ -7361,8 +9063,8 @@
     },
     {
       "path": "html/cnc/panel_ui.js",
-      "size": 148571,
-      "sha256": "ae52eaac5ca50c008f00fb3e9872f8596f22c96d0f47b2912ad01fdf49c348bc"
+      "size": 158078,
+      "sha256": "1b0f8513593fbabe3e1b38772acfe5db2ecc36bb0cb2bf818aa24c135f66f00d"
     },
     {
       "path": "html/cnc/panel_viewport.css",
@@ -7376,8 +9078,8 @@
     },
     {
       "path": "html/cnc/source_catalog.js",
-      "size": 130754,
-      "sha256": "67aa44746aa8f181b5cf91c29c77c63cb2c5efa2b17a74a84eba2e5920266bf3"
+      "size": 143806,
+      "sha256": "a454d8e72fddcb1d2457bdc13797ef432c6dbce55f0de6a54cbfa3f5212a59eb"
     },
     {
       "path": "html/cnc/source_library.css",
@@ -7386,48 +9088,18 @@
     },
     {
       "path": "html/cnc/source_library.js",
-      "size": 25026,
-      "sha256": "74ce71cfbef8345f6bb22ea8054d2523ebdf2b0772714f8cb315e187ea5190df"
+      "size": 28776,
+      "sha256": "15b297ad04c94ce847c2e008cd35b8fd496dad5b50524e3bf9b3e6c2bf16e623"
     },
     {
       "path": "html/cnc/source_menu_defaults.js",
-      "size": 7081,
-      "sha256": "0b39d5d1ae825ee07edb846ef8d1dc606745b0580e21c4487b47cc75e999f5ce"
+      "size": 7154,
+      "sha256": "cf69f8dcb2df8edac300fb9ce13127f302a7c5f90984eb34667aa9f2c4afcb2b"
     },
     {
       "path": "html/cnc/source_presets.js",
       "size": 1870,
       "sha256": "78a2451eb13a56fb5e925054b54d49f29b62017a50ffd4cfa78018c70ccd805c"
-    },
-    {
-      "path": "html/cnc/source_shapes/borders__anh_dong_tien_may_cuon.js",
-      "size": 11970,
-      "sha256": "ca2ee1749ba67b20f0e4e48fcf0b8ddb859fa13d2bbe37b883a8a0c32c88bc21"
-    },
-    {
-      "path": "html/cnc/source_shapes/borders__anh_dong_tien_trien_vuong.js",
-      "size": 4856,
-      "sha256": "24bf707a39bb1dc03c13c99e093e8b51adf574f87d758ac1c7732003e1d4ccdf"
-    },
-    {
-      "path": "html/cnc/source_shapes/borders__anh_la_cuon.js",
-      "size": 9346,
-      "sha256": "36bd5aff94c20f8813018596b52b2f379bc102cc3e9da539cca919ab71967c51"
-    },
-    {
-      "path": "html/cnc/source_shapes/borders__anh_may_cuon.js",
-      "size": 5804,
-      "sha256": "9fbdd4747fd4cecafcf9feaf3eca4b676981fc4128d5e18e3c728b12c6e09088"
-    },
-    {
-      "path": "html/cnc/source_shapes/borders__anh_thanh_gia_day_la.js",
-      "size": 5215,
-      "sha256": "157f630573cd8b18d75fbae5adedd5eb389e1a777d873db00c11d7c79a637353"
-    },
-    {
-      "path": "html/cnc/source_shapes/borders__anh_trien_vuong.js",
-      "size": 2371,
-      "sha256": "8ee169cc502518236007e233a1ec339b08f53794976bc7e1ff80c5f9ce4789f6"
     },
     {
       "path": "html/cnc/source_shapes/cutout_patterns__duc_001.js",
@@ -7703,6 +9375,21 @@
       "path": "html/cnc/source_shapes/inserts__duc_008.js",
       "size": 21051,
       "sha256": "3400815ffb18ff94cb5465405ff7815cdb232e988c1ca3d472a5c7f07c2f3688"
+    },
+    {
+      "path": "html/cnc/source_shapes/inserts__dvd24_b046.js",
+      "size": 448959,
+      "sha256": "20afda2bcc1d646667d38436aad9a4c9464e62b85e5982618c3434088f47190b"
+    },
+    {
+      "path": "html/cnc/source_shapes/inserts__dvd24_zhongshi131.js",
+      "size": 8501,
+      "sha256": "8a128601f4784b6293da189d1041f80946ab9019b6689884793cbc3bdad2bd96"
+    },
+    {
+      "path": "html/cnc/source_shapes/inserts__dvd24_zhongshi43.js",
+      "size": 91262,
+      "sha256": "3f0ac6e2a569ad955321ef22d28370195bf516bd0bbfdd07966cd2775dd844ba"
     },
     {
       "path": "html/cnc/source_shapes/inserts__hinh_005.js",
@@ -8220,9 +9907,49 @@
       "sha256": "6ac1e39c6d927cc03303d24eaba19368f2dfea9e95f0d88a973eca70c91f1821"
     },
     {
+      "path": "html/cnc/source_shapes/patterns__dvd24_b063.js",
+      "size": 654990,
+      "sha256": "0333501167ce20d34ed46ca495012fca271f6ee40e35fa61f3719989196eb37f"
+    },
+    {
       "path": "html/cnc/source_shapes/patterns__dvd24_b091.js",
       "size": 35711,
       "sha256": "ef7ab0dba95c56130104ecac92cbe844bd7670bcfdebe41267e4467798a5b360"
+    },
+    {
+      "path": "html/cnc/source_shapes/patterns__dvd24_zhongshi1.js",
+      "size": 71409,
+      "sha256": "005430af402026ade118373025f83548f43ff77c00c22d68d626e2343fa2dce0"
+    },
+    {
+      "path": "html/cnc/source_shapes/patterns__dvd24_zhongshi13.js",
+      "size": 554917,
+      "sha256": "c650516a2f7169b6111182a6460007fd7d986ce048b7be5d2bb44378a8b1c653"
+    },
+    {
+      "path": "html/cnc/source_shapes/patterns__dvd24_zhongshi130.js",
+      "size": 10359,
+      "sha256": "4346ddf3218e1045637498dd78e0fa6b20f63e62d7fee04b690dc8d91eb992ab"
+    },
+    {
+      "path": "html/cnc/source_shapes/patterns__dvd24_zhongshi136.js",
+      "size": 9067,
+      "sha256": "1e070bfe91bb6664f141d63af1108c15809fca8d00c2b93d4be24c43ee2bdfbe"
+    },
+    {
+      "path": "html/cnc/source_shapes/patterns__mau_la_kv_1.js",
+      "size": 341,
+      "sha256": "3a9226df3a076ce9481deeca7ca78a41ee6f5bd692cddd56a15a271606488882"
+    },
+    {
+      "path": "html/cnc/source_shapes/patterns__mau_la_kv_2.js",
+      "size": 3558,
+      "sha256": "fbd933ad3fb37b90b9d1fc47c0b136640d191a45b6445041a0790913cc6033f2"
+    },
+    {
+      "path": "html/cnc/source_shapes/patterns__mau_la_kv_3.js",
+      "size": 4089,
+      "sha256": "7b4e1ceab5bb653c7592603962f71d4b842d67d75c70ee524cc2e69167b35130"
     },
     {
       "path": "html/cnc/source_shapes/patterns__vach_001.js",
@@ -8246,8 +9973,8 @@
     },
     {
       "path": "html/cnc/source_shapes/patterns__vach_005.js",
-      "size": 2337,
-      "sha256": "3c4595f3d028e2a28bf81e996a72346f1e7c36c75e4b198f6ccc902b64261cbf"
+      "size": 2330,
+      "sha256": "3b758c75813014fd96e0ed4246efdea17911004074dbafa1a35733fd67909806"
     },
     {
       "path": "html/cnc/source_shapes/patterns__vach_006.js",
@@ -8376,8 +10103,8 @@
     },
     {
       "path": "html/cnc/source_shapes/patterns__vach_031.js",
-      "size": 1133,
-      "sha256": "0f23c86871d50c99f55ed74123290f998ac7aea50547ee9498fc5723cd1c1e7a"
+      "size": 1115,
+      "sha256": "f8cafbf94851b1c4704bc6200cd698539d1e02d73383377e45c33f393daa3616"
     },
     {
       "path": "html/cnc/source_shapes/patterns__vach_032.js",
@@ -8491,8 +10218,8 @@
     },
     {
       "path": "html/cnc/source_shapes/patterns__vach_054.js",
-      "size": 10573,
-      "sha256": "797fb4a3575e354765fedde8dd394124a14e8ab8d5c71c1f9d900554d00a2b8c"
+      "size": 20521,
+      "sha256": "2b97170f46360a70cb35e3074e0fdc2bdbbfa72bac132582ea8623e8242a1b03"
     },
     {
       "path": "html/cnc/source_shapes/patterns__vach_055.js",
@@ -8511,8 +10238,8 @@
     },
     {
       "path": "html/cnc/source_shapes/patterns__vach_058.js",
-      "size": 1393,
-      "sha256": "f163d7ed99e26d774eda37617274396df88067d46a3ca3447edef41ff3ecc767"
+      "size": 1388,
+      "sha256": "8e095785389e81b0a82faa3092721487852c9f94891515a66e0785c9e12b0daa"
     },
     {
       "path": "html/cnc/source_shapes/patterns__vach_059.js",
@@ -8571,8 +10298,8 @@
     },
     {
       "path": "html/cnc/source_shapes/patterns__vach_070.js",
-      "size": 24366,
-      "sha256": "152eb5ce4520f06082b1476f74b96ae123d0219e87dd3627005fafe1596fbf98"
+      "size": 24306,
+      "sha256": "3a2573db29a7672c08beb765c58be664c86e42d3f9f00b659ad190abfff68343"
     },
     {
       "path": "html/cnc/source_shapes/patterns__vach_071.js",
@@ -8592,7 +10319,7 @@
     {
       "path": "html/cnc/source_shapes/patterns__vach_074.js",
       "size": 1412,
-      "sha256": "a14e1cc59a896484a951feaab250dcacfa5ec16cc6d2b9dd08fe883df1aca591"
+      "sha256": "667319a1bd6012f815c0d59dba067ee5390b4bdcd56bd8e8edd593b737fa1ef0"
     },
     {
       "path": "html/cnc/source_shapes/patterns__vach_075.js",
@@ -8766,8 +10493,8 @@
     },
     {
       "path": "html/cnc/source_shapes/patterns__vach_109.js",
-      "size": 40516,
-      "sha256": "e34ae493f2881c8a36c4bb0b6bb2910efef95c62356054db9d33bffa12c07975"
+      "size": 40531,
+      "sha256": "9a4c992fe26fc63912a1cc7fe1257901ec7836451f738f48ae96838cb6f12370"
     },
     {
       "path": "html/cnc/source_shapes/patterns__vach_110.js",
@@ -8821,8 +10548,8 @@
     },
     {
       "path": "html/cnc/source_shapes/patterns__vach_120.js",
-      "size": 535,
-      "sha256": "0d6b70781dc8bcc752af755d3b7a561b6c73d2a4d79d9e19519fa921bf85f526"
+      "size": 529,
+      "sha256": "012359f2c4977cc1a1130ad67e575c5196e1ea2bb60f51b2062463aa071a23f3"
     },
     {
       "path": "html/cnc/source_shapes/patterns__vach_121.js",
@@ -8841,8 +10568,8 @@
     },
     {
       "path": "html/cnc/source_shapes/patterns__vach_124.js",
-      "size": 38959,
-      "sha256": "65eac78569f6708e31445abef89638794b60ec8c9c35540df158720d054d94ac"
+      "size": 38948,
+      "sha256": "3f541d877ff5edf7c4b7f78a81bab8f4674d1f0b71f9f11409910090bec29e09"
     },
     {
       "path": "html/cnc/source_shapes/patterns__vach_125.js",
@@ -8918,6 +10645,18 @@
       "path": "html/cnc/source_shapes/patterns__vach_anh_kk.js",
       "size": 5893,
       "sha256": "a5c233d30ebc69909075e2cc90ae94fa96a3c8ebca343b28755aeee8eecf3821"
+    },
+    {
+      "path": "html/cnc/special_frame.js",
+      "size": 60531,
+      "sha256": "eb1833e3fff0bd5fe564a16c544910feaeeaeddd994703c266e900cf87b8748b",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.3/files/html/cnc/special_frame.js"
+    },
+    {
+      "path": "html/cnc/special_frame_patterns.js",
+      "size": 19478,
+      "sha256": "ddb4f8580c21795800229d51b899f33ce0c610438dd8d9ff3abb800f650c661f",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.3/files/html/cnc/special_frame_patterns.js"
     },
     {
       "path": "html/cnc/style.css",
@@ -10670,16 +12409,6 @@
       "sha256": "78a2ff7b191bb52d10f2f6d7378d031eabc0277268707a8fc69386a14ab09104"
     },
     {
-      "path": "html/cnc/vendor/clipper.js",
-      "size": 178337,
-      "sha256": "c0e224a7e6e2c1e7d534491090ba04425b04b7a80733e1ea915b7a7d24ed3002"
-    },
-    {
-      "path": "html/cnc/vendor/earcut.min.js",
-      "size": 13725,
-      "sha256": "fd606b4ed5a2db3b1f7c3a994377cae9be011b298b36f87f2a8bd872f8153c4d"
-    },
-    {
       "path": "html/cnc/vendor/LICENSE-clipper.txt",
       "size": 1338,
       "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
@@ -10693,6 +12422,16 @@
       "path": "html/cnc/vendor/LICENSE-jsbn.txt",
       "size": 1544,
       "sha256": "e0e396530fd1624126e9a7e0df94811e4062e03baeccb07bc33c934b0fd93a85"
+    },
+    {
+      "path": "html/cnc/vendor/clipper.js",
+      "size": 178337,
+      "sha256": "c0e224a7e6e2c1e7d534491090ba04425b04b7a80733e1ea915b7a7d24ed3002"
+    },
+    {
+      "path": "html/cnc/vendor/earcut.min.js",
+      "size": 13725,
+      "sha256": "fd606b4ed5a2db3b1f7c3a994377cae9be011b298b36f87f2a8bd872f8153c4d"
     },
     {
       "path": "html/cnc/window_fit.css",
@@ -10725,11 +12464,6 @@
       "sha256": "78d850a97f160392cbd3c63e97b30d1c5567974a3d74610f02332fdb28a3f130"
     },
     {
-      "path": "html/vendor/core-js.min.js",
-      "size": 264012,
-      "sha256": "8650bd1d47bd727f6bba651b0c9cada3d9dd63e19a0ba3b257a8f5939836beeb"
-    },
-    {
       "path": "html/vendor/LICENSE-babel.txt",
       "size": 1106,
       "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76"
@@ -10740,24 +12474,14 @@
       "sha256": "1f9573d2dd24dbeed40bd90f76e08f7b2ce178259d33c3636d20d71f03eea067"
     },
     {
+      "path": "html/vendor/core-js.min.js",
+      "size": 264012,
+      "sha256": "8650bd1d47bd727f6bba651b0c9cada3d9dd63e19a0ba3b257a8f5939836beeb"
+    },
+    {
       "path": "license_public.xml",
       "size": 583,
       "sha256": "88e84bf35512730ae056fca032179b05beb6973972476d9118c16d40906673a7"
-    },
-    {
-      "path": "LOFIHOME.AutoCAD.exe",
-      "size": 108032,
-      "sha256": "e503173ee195b8e06848410e55bc1b25666453b31d81029e9a901554ce0ceaa2"
-    },
-    {
-      "path": "LOFIHOME.AutoCAD.exe.config",
-      "size": 160,
-      "sha256": "15348eee1c55ebb2efbfbd19ff7d3690fe8dbc53545c4b69fef652e55db52b8e"
-    },
-    {
-      "path": "LOFIHOME.License.Runtime.dll",
-      "size": 84480,
-      "sha256": "b51a71f7db2815106bf853c68ec9ee0898672d0c9dae202fbe62225c219084cc"
     },
     {
       "path": "materials/catalog.json",
@@ -14370,16 +16094,6 @@
       "sha256": "d1b013807d7524365e01536bb96fe1705f04067da40a14ce5dd7630dcb1a425a"
     },
     {
-      "path": "Microsoft.Web.WebView2.Core.dll",
-      "size": 703328,
-      "sha256": "acdd517b951829f763d1255f32df1e6a936cb8623a7ebff6b8b24172dede6bd6"
-    },
-    {
-      "path": "Microsoft.Web.WebView2.WinForms.dll",
-      "size": 38792,
-      "sha256": "c66437f80886aecf074804b61af4cc10ad90a95310c8e0a717f31ea377c26b03"
-    },
-    {
       "path": "x64/WebView2Loader.dll",
       "size": 194912,
       "sha256": "d3fce90bdeecb08596e377dea6a316354dd8949e32ff09b89d51be00c14e21b6"
@@ -14391,8 +16105,8 @@
     }
   ],
   "payload": {
-    "url": "https://github.com/lemanhlinh1985-cmd/lofihome-updates/releases/download/autocad-v1.0.0/LOFIHOME_AutoCAD_payload.zip",
-    "size": 678311217,
-    "sha256": "69ad9ab1d97d659caa6811f88f8a90ddfdfc3fd407a92e54802f613cef061ff6"
+    "url": "https://github.com/lemanhlinh1985-cmd/lofihome-updates/releases/download/autocad-v1.0.3/LOFIHOME_AutoCAD_payload.zip",
+    "size": 744134806,
+    "sha256": "6154aaaef22b5fc5df4bf6d138bbba3a93d5d01cc05719d025770d212866047d"
   }
 }
