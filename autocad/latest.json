@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "product": "LOFIHOME.AutoCAD",
-  "version": "1.0.4",
-  "notes": "Bổ sung 7 mẫu Hình học, 4 mẫu Họa tiết chèn và bộ Chạy viền Biên Góc 10.",
+  "version": "1.0.5",
+  "notes": "Làm mượt Vách 076 và bổ sung Vách 076 · 650 × 1.500 mm với 524 lỗ kín.",
   "files": [
     {
       "path": "LOFIHOME.AutoCAD.exe",
@@ -34,8 +34,8 @@
     {
       "path": "autocad_version.json",
       "size": 253,
-      "sha256": "d8fdfaf518a6a458fd0708ea7236202535594636952802c2ce727b67a81ea599",
-      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/autocad_version.json"
+      "sha256": "d597e6ae53806721945008d80acde2845dc6035a04081fbdc20ab429d8699b98",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.5/files/autocad_version.json"
     },
     {
       "path": "cnc_source_198/SOURCE_NOTICE.txt",
@@ -56,9 +56,9 @@
     },
     {
       "path": "cnc_source_198/catalog.json",
-      "size": 155533,
-      "sha256": "fffb9273f40daf0237eff39317ac6e2891028575f4466f6e8053c8ba37963883",
-      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/catalog.json"
+      "size": 156889,
+      "sha256": "ccec0f7dda63474815d5a41d071bdff59986f15a02bc962554490d94639ecfcd",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.5/files/cnc_source_198/catalog.json"
     },
     {
       "path": "cnc_source_198/cutout_patterns/duc_001.json",
@@ -1730,9 +1730,9 @@
     },
     {
       "path": "cnc_source_198/menu_layout.json",
-      "size": 7448,
-      "sha256": "ba5c8d5d6748dd6f5ed907acd0a938abbffe4d306b164079efbff1b4e69edd44",
-      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/menu_layout.json"
+      "size": 7478,
+      "sha256": "ecec3302cb9737e6857deba3a622aad17e11fb9654e596a786e0dcbb23c21782",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.5/files/cnc_source_198/menu_layout.json"
     },
     {
       "path": "cnc_source_198/models_su2020/borders__bien_goc_10.skp",
@@ -3033,8 +3033,15 @@
     },
     {
       "path": "cnc_source_198/models_su2020/patterns__vach_076.skp",
-      "size": 156573,
-      "sha256": "c60d525c31ed23b8351c1d08435d8d75b1e1d9745f0dcac23c6f28a36c8cfb43"
+      "size": 359882,
+      "sha256": "d810988ea271260e4ac27ea3f054fa0788eb530a5994d59c834c9156d29f70c6",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.5/files/cnc_source_198/models_su2020/patterns__vach_076.skp"
+    },
+    {
+      "path": "cnc_source_198/models_su2020/patterns__vach_076_650x1500.skp",
+      "size": 10512405,
+      "sha256": "cf6f43131a5235e7526b2141d7d536c1b25d0eab3403b5a3c44316fa6f847788",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.5/files/cnc_source_198/models_su2020/patterns__vach_076_650x1500.skp"
     },
     {
       "path": "cnc_source_198/models_su2020/patterns__vach_077.skp",
@@ -4429,13 +4436,33 @@
     },
     {
       "path": "cnc_source_198/patterns/vach_076.json",
-      "size": 71809,
-      "sha256": "cf29d84f6680b83cdadba89a24a9f78944bfaff388ff96defae76a4ad267bad7"
+      "size": 106598,
+      "sha256": "79247d5fcd431f1b6a3e023c0eb80d1e3b437fb36fc3a1ab4b37a2e943a9517d",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.5/files/cnc_source_198/patterns/vach_076.json"
     },
     {
       "path": "cnc_source_198/patterns/vach_076.png",
-      "size": 18260,
-      "sha256": "8bdf5bca9ca83d4a79473846476cc4b2769176738d93a0c543fa4acfe46ed0af"
+      "size": 36341,
+      "sha256": "1dd675ec01f6ba4862afd9f08636b2b6abd6a1beb0134419433db6d00c230313",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.5/files/cnc_source_198/patterns/vach_076.png"
+    },
+    {
+      "path": "cnc_source_198/patterns/vach_076_650x1500.json",
+      "size": 1155076,
+      "sha256": "15f830c40c6771d7a2031079f5575c6e1968493334ed68e27ad9ac097f74594a",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.5/files/cnc_source_198/patterns/vach_076_650x1500.json"
+    },
+    {
+      "path": "cnc_source_198/patterns/vach_076_650x1500.png",
+      "size": 59311,
+      "sha256": "4ffdfa4e5193a23b5cbc4b550365e52c5b626a70cef1b12ede02c478c8f63949",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.5/files/cnc_source_198/patterns/vach_076_650x1500.png"
+    },
+    {
+      "path": "cnc_source_198/patterns/vach_076_650x1500.skp",
+      "size": 10512405,
+      "sha256": "cf6f43131a5235e7526b2141d7d536c1b25d0eab3403b5a3c44316fa6f847788",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.5/files/cnc_source_198/patterns/vach_076_650x1500.skp"
     },
     {
       "path": "cnc_source_198/patterns/vach_077.json",
@@ -7648,13 +7675,27 @@
     },
     {
       "path": "cnc_source_198/prepared/patterns__vach_076.json",
-      "size": 12659,
-      "sha256": "470577b79709b11887bfb2de86b88ec89ee8c8ab0ec9a969611e535e14990dac"
+      "size": 53259,
+      "sha256": "fbb1b0ad63fd7d511a1d7fc9deb6f9fd0c5a8b543179b1ff2ac8c5dfee43e323",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.5/files/cnc_source_198/prepared/patterns__vach_076.json"
     },
     {
       "path": "cnc_source_198/prepared/patterns__vach_076.svg",
-      "size": 11529,
-      "sha256": "b5ca2de622b52f7bc99721112ac9d8109622669157d644496aca04e2d344de25"
+      "size": 31613,
+      "sha256": "88027fcf424d5057e5f5cf3cd95cc67a8cf146cc708b6ea2486fe48167877f0e",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.5/files/cnc_source_198/prepared/patterns__vach_076.svg"
+    },
+    {
+      "path": "cnc_source_198/prepared/patterns__vach_076_650x1500.json",
+      "size": 1155076,
+      "sha256": "15f830c40c6771d7a2031079f5575c6e1968493334ed68e27ad9ac097f74594a",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.5/files/cnc_source_198/prepared/patterns__vach_076_650x1500.json"
+    },
+    {
+      "path": "cnc_source_198/prepared/patterns__vach_076_650x1500.svg",
+      "size": 113388,
+      "sha256": "a7c093efc4b57e627687835ca087ee77bc08bf6211a90bd841160e85877a1619",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.5/files/cnc_source_198/prepared/patterns__vach_076_650x1500.svg"
     },
     {
       "path": "cnc_source_198/prepared/patterns__vach_077.json",
@@ -8288,9 +8329,9 @@
     },
     {
       "path": "cnc_source_198/shared_library.json",
-      "size": 63583,
-      "sha256": "910e36a19807dd89df42bc359c468956027f16c14b498f0e4566ee2caa3c4001",
-      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/cnc_source_198/shared_library.json"
+      "size": 63813,
+      "sha256": "a70653ed6af1a18e4860c88a03478af1a2bc3a512e61a38e9431a664081e3d91",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.5/files/cnc_source_198/shared_library.json"
     },
     {
       "path": "cnc_source_198/special/khung_hai_vung.svg",
@@ -9362,8 +9403,8 @@
     {
       "path": "html/cnc/autocad_updates.js",
       "size": 1285,
-      "sha256": "d05c15d2453b4eb266229c11c9af39c922543c7286ab4c1589abfb0379d79a90",
-      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/html/cnc/autocad_updates.js"
+      "sha256": "563c8937e431d7664121f0e14a19f1c43ebdd7fe85bb72ad5cb26327edfdb7e1",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.5/files/html/cnc/autocad_updates.js"
     },
     {
       "path": "html/cnc/b91_sample_preset.js",
@@ -9403,8 +9444,8 @@
     {
       "path": "html/cnc/index.html",
       "size": 7827,
-      "sha256": "747fab4187d2de3827bee680b80df4dc4816978dbbba8ade4415df18b8dd9a1b",
-      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/html/cnc/index.html"
+      "sha256": "9442120282cf8410f14007b145fc10e96f80b8fc672da6ddf0cdc7b9d83317e6",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.5/files/html/cnc/index.html"
     },
     {
       "path": "html/cnc/insert_ring.js",
@@ -9486,9 +9527,9 @@
     },
     {
       "path": "html/cnc/source_catalog.js",
-      "size": 155564,
-      "sha256": "b1bc3867bb5810a908c2fc42553d2873f3edd55d890e768c13450eee7ae1ab48",
-      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/html/cnc/source_catalog.js"
+      "size": 156920,
+      "sha256": "dee55f8b8a2c6c0b031f1f4adee41261650a887763e53bbbf6447cdac8a57f4d",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.5/files/html/cnc/source_catalog.js"
     },
     {
       "path": "html/cnc/source_library.css",
@@ -9502,9 +9543,9 @@
     },
     {
       "path": "html/cnc/source_menu_defaults.js",
-      "size": 7476,
-      "sha256": "7a785bf479089380c0259f4d04ba2fa2ae125847d9e31026215faa38b76b756b",
-      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.4/files/html/cnc/source_menu_defaults.js"
+      "size": 7506,
+      "sha256": "79bfe4c83284c0fd35924543f6dae7c61b62bc3bf7ae495692cc2dddb33de461",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.5/files/html/cnc/source_menu_defaults.js"
     },
     {
       "path": "html/cnc/source_presets.js",
@@ -10810,8 +10851,15 @@
     },
     {
       "path": "html/cnc/source_shapes/patterns__vach_076.js",
-      "size": 12674,
-      "sha256": "968a37afd1b4f0a7b4891fa097ea4c523992aac1e8e05788fdb12d36a0f83f8a"
+      "size": 53271,
+      "sha256": "cf0f6063e78f23e645fa68ec9b21d5b0f68f233be43dc2b297f5aca025172b4a",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.5/files/html/cnc/source_shapes/patterns__vach_076.js"
+    },
+    {
+      "path": "html/cnc/source_shapes/patterns__vach_076_650x1500.js",
+      "size": 1155176,
+      "sha256": "aedc818007f36b04f953ee31125da32248d349c9e156f7bc27415d7610687d00",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.5/files/html/cnc/source_shapes/patterns__vach_076_650x1500.js"
     },
     {
       "path": "html/cnc/source_shapes/patterns__vach_077.js",
@@ -16587,8 +16635,8 @@
     }
   ],
   "payload": {
-    "url": "https://github.com/lemanhlinh1985-cmd/lofihome-updates/releases/download/autocad-v1.0.4/LOFIHOME_AutoCAD_payload.zip",
-    "size": 763412878,
-    "sha256": "54ec3349c07794698ad9dbdbec4281c809c0e366db5d66c56582ebb08f6fad56"
+    "url": "https://github.com/lemanhlinh1985-cmd/lofihome-updates/releases/download/autocad-v1.0.5/LOFIHOME_AutoCAD_payload.zip",
+    "size": 770146083,
+    "sha256": "4880718d39883701fcce274a5ae6bfece74fd529a968b061d46d467fee348098"
   }
 }
