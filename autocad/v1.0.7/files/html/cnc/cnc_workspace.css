@@ -1,0 +1,105 @@
+/* The CNC workspace follows the SketchUp standalone panel. */
+header[data-module="cnc"] {
+  justify-content: flex-end;
+  gap: 6px;
+  background: #19394b !important;
+}
+
+header[data-module="cnc"] > div:first-child {
+  flex: 1 1 230px;
+  order: -1;
+}
+
+header[data-module="cnc"] > button {
+  flex: 0 0 auto;
+  padding: 6px 8px;
+  color: #174b6b;
+  white-space: nowrap;
+}
+
+header[data-module="cnc"] > :is(#cncFitWindow, #splitPlate, #lineCleanup, #jdpCaptureNow) { order: 1; }
+header[data-module="cnc"] > :is(#corelMaps, #jdpMaterials) { order: 2; }
+header[data-module="cnc"] > :is(#corelCheckUpdates, #rhinoProgramUpdate, #jdpProgramUpdate) { order: 3; }
+header[data-module="cnc"] > [data-lofi-license] { order: 4; }
+header[data-module="cnc"] > button { order: 5; }
+
+header[data-module="cnc"] .build {
+  border: 0;
+  padding: 0;
+  color: #d5e6ec;
+  letter-spacing: normal;
+}
+
+header[data-module="cnc"] small { color: #c4d8df !important; }
+header[data-module="cnc"] #lofihomePhone { display: none !important; }
+#jdpWorkflow[hidden] { display: none !important; }
+
+#originalLibrary .original-heading.lofi-workspace-heading {
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 7px;
+}
+
+#originalLibrary .lofi-workspace-heading > :is(strong,small) { display: none; }
+#originalLibrary .lofi-workspace-heading .panel-mode { width: auto; margin: 0; }
+
+#lofiHeadingActions {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 6px;
+}
+
+#lofiHeadingActions > button { margin-left: 0; padding: 4px 8px; }
+
+#lofiPreviewToolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  min-width: 0;
+  gap: 5px 9px;
+}
+
+#lofiPreviewToolbar[hidden] { display: none; }
+.original-heading > #lofiPreviewToolbar { flex: 1 1 590px; }
+.panel-design > #lofiPreviewToolbar { flex-shrink: 0; margin-bottom: 6px; }
+
+#lofiPreviewToolbar :is(.preview-tools, .panel-zoom) {
+  align-items: center;
+  gap: 4px;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#lofiPreviewToolbar .preview-tools strong {
+  flex: 0 1 auto;
+  max-width: 190px;
+  overflow: hidden;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#lofiPreviewToolbar button {
+  min-height: 27px;
+  padding: 4px 7px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+#lofiPreviewToolbar .preview-tools .active,
+#lofiPreviewToolbar #panelSmooth.active {
+  color: white;
+  background: #087f63;
+  border-color: #087f63;
+}
+
+.original-heading > #lofiPreviewToolbar .panel-zoom small { display: none; }
+
+@media (max-width: 850px) {
+  header[data-module="cnc"] > div:first-child { flex-basis: 100%; }
+  .original-heading > #lofiPreviewToolbar { flex-basis: 100%; }
+}

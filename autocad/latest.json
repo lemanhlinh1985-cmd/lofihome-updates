@@ -1,14 +1,14 @@
 {
   "schema": 1,
   "product": "LOFIHOME.AutoCAD",
-  "version": "1.0.6",
-  "notes": "Cập nhật tính năng và thư viện CNC từ kho LOFIHOME, có kiểm tra chữ ký, tiến độ tải và nút Hủy. Có 320 mẫu CNC, 24 mẫu thiết kế và 363 vật liệu MAP, gồm Vách 076 đã làm mượt.",
+  "version": "1.0.7",
+  "notes": "Bố cục thư viện, vùng xem trước và bảng thông số theo giao diện LOFIHOME trong SketchUp.",
   "files": [
     {
       "path": "LOFIHOME.AutoCAD.exe",
       "size": 118272,
-      "sha256": "b4df7ab1c3df5b81da7aa413d7c705a4731038a4b4c1bbfb1a2748beb2783e0d",
-      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.6/files/LOFIHOME.AutoCAD.exe"
+      "sha256": "89171c4477e7bfcc05fede84b13757c9f8ff8e6c2b97d15c609c97f3418f51c1",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.7/files/LOFIHOME.AutoCAD.exe"
     },
     {
       "path": "LOFIHOME.AutoCAD.exe.config",
@@ -34,8 +34,8 @@
     {
       "path": "autocad_version.json",
       "size": 253,
-      "sha256": "83a0414fd0feafe9b2aed636cfe1e3aa336d6b49a63a93c605f98345bb596750",
-      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.6/files/autocad_version.json"
+      "sha256": "05bcbd22d625d1a95a59ce5404b456fab8a5842cc76056705f2b458f7bf0a85e",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.7/files/autocad_version.json"
     },
     {
       "path": "cnc_source_198/SOURCE_NOTICE.txt",
@@ -9403,13 +9403,25 @@
     {
       "path": "html/cnc/autocad_updates.js",
       "size": 1304,
-      "sha256": "70843f2cae7aae8bf13ee8f5fc61fe9cf6a9b253fe38944b3bd0eb5c16e5229f",
-      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.6/files/html/cnc/autocad_updates.js"
+      "sha256": "37fbb241bf372f05c3607a5c4c49b50552a5a53464feb2bc9567e6820f998622",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.7/files/html/cnc/autocad_updates.js"
     },
     {
       "path": "html/cnc/b91_sample_preset.js",
       "size": 4302,
       "sha256": "02fcd60a2d910f91bd26d9146cd7b9f9e9ccd652c52ba8979fe81b30bce0dc6b"
+    },
+    {
+      "path": "html/cnc/cnc_workspace.css",
+      "size": 2676,
+      "sha256": "a41bc7236b888c7671393a653e1eb305c6742b81c95bcfc302979b11b0be0424",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.7/files/html/cnc/cnc_workspace.css"
+    },
+    {
+      "path": "html/cnc/cnc_workspace.js",
+      "size": 3912,
+      "sha256": "4563b638fae9acb179aa136317dc2a8a5a43783988658c480fdf7c25e39fb242",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.7/files/html/cnc/cnc_workspace.js"
     },
     {
       "path": "html/cnc/corel.css",
@@ -9443,9 +9455,9 @@
     },
     {
       "path": "html/cnc/index.html",
-      "size": 7827,
-      "sha256": "78868034ed7f4a55cc5b903dea69ce4fcdab053a7b351ffc1c15bc30b3374a2c",
-      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.6/files/html/cnc/index.html"
+      "size": 7933,
+      "sha256": "fe361e017f3868171ebcd0264fdc5a0fbe73b969957391f0ed285ff44dd11293",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.7/files/html/cnc/index.html"
     },
     {
       "path": "html/cnc/insert_ring.js",
@@ -16635,8 +16647,8 @@
     }
   ],
   "payload": {
-    "url": "https://github.com/lemanhlinh1985-cmd/lofihome-updates/releases/download/autocad-v1.0.6/LOFIHOME_AutoCAD_payload.zip",
-    "size": 770150426,
-    "sha256": "e3587a44035557f1e519fd7bdc232e7cf166bd24ad3c162a4dca1c9492dffac2"
+    "url": "https://github.com/lemanhlinh1985-cmd/lofihome-updates/releases/download/autocad-v1.0.7/LOFIHOME_AutoCAD_payload.zip",
+    "size": 770153190,
+    "sha256": "79560a2e875b148fe954530199f7fae9c0dfd42bdf0d6e968b20cfb517038312"
   }
 }
