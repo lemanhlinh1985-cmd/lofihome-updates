@@ -1,14 +1,14 @@
 {
   "schema": 1,
   "product": "LOFIHOME.AutoCAD",
-  "version": "1.0.5",
-  "notes": "Làm mượt Vách 076 và bổ sung Vách 076 · 650 × 1.500 mm với 524 lỗ kín.",
+  "version": "1.0.6",
+  "notes": "Cập nhật tính năng và thư viện CNC từ kho LOFIHOME, có kiểm tra chữ ký, tiến độ tải và nút Hủy. Có 320 mẫu CNC, 24 mẫu thiết kế và 363 vật liệu MAP, gồm Vách 076 đã làm mượt.",
   "files": [
     {
       "path": "LOFIHOME.AutoCAD.exe",
-      "size": 109568,
-      "sha256": "6cdb915578bd22afecf4960e637e1d2bed2fc08e39091512e5d4b614b6f4594c",
-      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.3/files/LOFIHOME.AutoCAD.exe"
+      "size": 118272,
+      "sha256": "b4df7ab1c3df5b81da7aa413d7c705a4731038a4b4c1bbfb1a2748beb2783e0d",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.6/files/LOFIHOME.AutoCAD.exe"
     },
     {
       "path": "LOFIHOME.AutoCAD.exe.config",
@@ -34,8 +34,8 @@
     {
       "path": "autocad_version.json",
       "size": 253,
-      "sha256": "d597e6ae53806721945008d80acde2845dc6035a04081fbdc20ab429d8699b98",
-      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.5/files/autocad_version.json"
+      "sha256": "83a0414fd0feafe9b2aed636cfe1e3aa336d6b49a63a93c605f98345bb596750",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.6/files/autocad_version.json"
     },
     {
       "path": "cnc_source_198/SOURCE_NOTICE.txt",
@@ -9402,9 +9402,9 @@
     },
     {
       "path": "html/cnc/autocad_updates.js",
-      "size": 1285,
-      "sha256": "563c8937e431d7664121f0e14a19f1c43ebdd7fe85bb72ad5cb26327edfdb7e1",
-      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.5/files/html/cnc/autocad_updates.js"
+      "size": 1304,
+      "sha256": "70843f2cae7aae8bf13ee8f5fc61fe9cf6a9b253fe38944b3bd0eb5c16e5229f",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.6/files/html/cnc/autocad_updates.js"
     },
     {
       "path": "html/cnc/b91_sample_preset.js",
@@ -9444,8 +9444,8 @@
     {
       "path": "html/cnc/index.html",
       "size": 7827,
-      "sha256": "9442120282cf8410f14007b145fc10e96f80b8fc672da6ddf0cdc7b9d83317e6",
-      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.5/files/html/cnc/index.html"
+      "sha256": "78868034ed7f4a55cc5b903dea69ce4fcdab053a7b351ffc1c15bc30b3374a2c",
+      "url": "https://raw.githubusercontent.com/lemanhlinh1985-cmd/lofihome-updates/main/autocad/v1.0.6/files/html/cnc/index.html"
     },
     {
       "path": "html/cnc/insert_ring.js",
@@ -16635,8 +16635,8 @@
     }
   ],
   "payload": {
-    "url": "https://github.com/lemanhlinh1985-cmd/lofihome-updates/releases/download/autocad-v1.0.5/LOFIHOME_AutoCAD_payload.zip",
-    "size": 770146083,
-    "sha256": "4880718d39883701fcce274a5ae6bfece74fd529a968b061d46d467fee348098"
+    "url": "https://github.com/lemanhlinh1985-cmd/lofihome-updates/releases/download/autocad-v1.0.6/LOFIHOME_AutoCAD_payload.zip",
+    "size": 770150426,
+    "sha256": "e3587a44035557f1e519fd7bdc232e7cf166bd24ad3c162a4dca1c9492dffac2"
   }
 }

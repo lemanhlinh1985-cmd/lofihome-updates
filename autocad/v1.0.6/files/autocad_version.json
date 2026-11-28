@@ -1,0 +1,10 @@
+{
+  "version": "1.0.6",
+  "product": "LOFIHOME.AutoCAD",
+  "target": "Full AutoCAD Windows 2007–2027.1",
+  "native_tested": [
+    "AutoCAD 2022 Windows"
+  ],
+  "license": "Shared existing Corel key/trial on the same machine",
+  "profile": "cnc_map"
+}
